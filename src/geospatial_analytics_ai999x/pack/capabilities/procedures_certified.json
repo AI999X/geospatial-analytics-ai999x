@@ -1,0 +1,308 @@
+{
+ "certified": [
+  "geo_geodesic_destination",
+  "geo_geodesic_midpoint",
+  "geo_geodesic_polygon_area",
+  "geo_meridian_arc",
+  "geo_parallel_arc",
+  "geo_graticule_cell_area",
+  "geo_radii_of_curvature",
+  "geo_rhumb_line_inverse",
+  "geo_rhumb_line_destination",
+  "geo_geodetic_to_ecef",
+  "geo_ecef_to_geodetic",
+  "geo_geodetic_to_enu",
+  "geo_enu_to_geodetic",
+  "geo_look_angles",
+  "geo_auxiliary_latitudes",
+  "geo_utm_zone",
+  "geo_transverse_mercator_forward",
+  "geo_utm_forward",
+  "geo_utm_inverse",
+  "geo_web_mercator_forward",
+  "geo_web_mercator_inverse",
+  "geo_web_map_tile",
+  "geo_mercator_forward",
+  "geo_mercator_inverse",
+  "geo_lambert_conformal_conic_forward",
+  "geo_lambert_conformal_conic_inverse",
+  "geo_albers_equal_area_forward",
+  "geo_albers_equal_area_inverse",
+  "geo_polar_stereographic_forward",
+  "geo_lambert_azimuthal_equal_area_forward",
+  "geo_azimuthal_equidistant_forward",
+  "geo_sinusoidal_forward",
+  "geo_mollweide_forward",
+  "geo_orthographic_forward",
+  "geo_gnomonic_forward",
+  "geo_equirectangular_forward",
+  "geo_cylindrical_equal_area_forward",
+  "geo_tissot_indicatrix",
+  "geo_dms_to_decimal",
+  "geo_decimal_to_dms",
+  "geo_map_scale_ground_distance",
+  "geo_map_scale_from_distances",
+  "geo_geohash_encode",
+  "geo_geohash_decode",
+  "geo_mgrs_encode",
+  "geo_douglas_peucker_simplification",
+  "geo_discrete_frechet_distance",
+  "geo_polygon_compactness",
+  "geo_morans_i",
+  "geo_gearys_c",
+  "geo_getis_ord_general_g",
+  "geo_local_getis_ord_gi",
+  "geo_local_morans_i",
+  "geo_bivariate_morans_i",
+  "geo_join_counts",
+  "geo_spatial_lag",
+  "geo_knn_weights",
+  "geo_distance_band_weights",
+  "geo_nearest_neighbour_index",
+  "geo_quadrat_test",
+  "geo_ripley_k",
+  "geo_mean_center_standard_distance",
+  "geo_weighted_mean_center",
+  "geo_standard_deviational_ellipse",
+  "geo_kernel_density",
+  "geo_idw_interpolation",
+  "geo_empirical_semivariogram",
+  "geo_variogram_model_fit",
+  "geo_ordinary_kriging",
+  "geo_trend_surface",
+  "geo_rank_size_rule",
+  "geo_density_gradient",
+  "geo_gravity_model_poisson_fit",
+  "geo_vegetation_indices",
+  "geo_water_burn_built_indices",
+  "geo_toa_reflectance",
+  "geo_brightness_temperature",
+  "geo_ground_sample_distance",
+  "geo_classification_accuracy",
+  "geo_slope_aspect_horn",
+  "geo_hillshade",
+  "geo_terrain_curvature",
+  "geo_terrain_ruggedness",
+  "geo_d8_flow_direction",
+  "geo_d8_flow_accumulation",
+  "geo_watershed_delineation",
+  "geo_line_of_sight_profile",
+  "geo_gravity_accessibility",
+  "geo_huff_model",
+  "geo_two_step_floating_catchment",
+  "geo_service_area",
+  "geo_closest_facility",
+  "geo_p_median",
+  "geo_maximal_covering_location",
+  "geo_detour_index",
+  "geo_network_connectivity_indices",
+  "geo_shimbel_index",
+  "geo_segregation_evenness",
+  "geo_segregation_exposure"
+ ],
+ "generated": "2026-10-24",
+ "tool": "tools/certify_procedures.py",
+ "report": "release/procedure_certification.json",
+ "weak_references": [
+  {
+   "key": "geo_bivariate_morans_i",
+   "reference": "esda's Moran_BV implements the same statistic"
+  },
+  {
+   "key": "geo_brightness_temperature",
+   "reference": "scipy's brentq re-solves the defining radiance relation for T"
+  },
+  {
+   "key": "geo_d8_flow_direction",
+   "reference": "a vectorized numpy evaluation of the same steepest-drop rule"
+  },
+  {
+   "key": "geo_decimal_to_dms",
+   "reference": "the same conversion in Python's decimal arithmetic (a pure definition)"
+  },
+  {
+   "key": "geo_distance_band_weights",
+   "reference": "libpysal's DistanceBand builds the same neighbour sets"
+  },
+  {
+   "key": "geo_dms_to_decimal",
+   "reference": "the same sum computed in floating point (a pure definition)"
+  },
+  {
+   "key": "geo_empirical_semivariogram",
+   "reference": "gstools' vario_estimate evaluates the same Matheron estimator"
+  },
+  {
+   "key": "geo_equirectangular_forward",
+   "reference": "PROJ's eqc implements the same two linear formulas"
+  },
+  {
+   "key": "geo_gearys_c",
+   "reference": "esda implements the same Cliff-Ord formulas (it found a sign error in the shipped randomization variance, since fixed)"
+  },
+  {
+   "key": "geo_geohash_decode",
+   "reference": "pygeohash implements the same bisection definition"
+  },
+  {
+   "key": "geo_geohash_encode",
+   "reference": "pygeohash implements the same bisection definition"
+  },
+  {
+   "key": "geo_getis_ord_general_g",
+   "reference": "esda implements the same Getis-Ord moments"
+  },
+  {
+   "key": "geo_gravity_accessibility",
+   "reference": "networkx gives the network distances; the accessibility sum is the Hansen definition"
+  },
+  {
+   "key": "geo_ground_sample_distance",
+   "reference": "the same similar-triangle relation through the instantaneous field of view (a geometric identity)"
+  },
+  {
+   "key": "geo_hillshade",
+   "reference": "vector geometry (surface normal from a least-squares quadratic surface dotted with the sun vector) on quadratic terrain"
+  },
+  {
+   "key": "geo_huff_model",
+   "reference": "networkx gives the network distances; the probabilities are the Huff definition"
+  },
+  {
+   "key": "geo_idw_interpolation",
+   "reference": "scikit-learn's distance-weighted KNeighborsRegressor (with the power applied in its weight function)"
+  },
+  {
+   "key": "geo_join_counts",
+   "reference": "esda's Join_Counts counts the same joins (a counting definition)"
+  },
+  {
+   "key": "geo_kernel_density",
+   "reference": "scikit-learn's KernelDensity evaluates the same normalized kernels"
+  },
+  {
+   "key": "geo_knn_weights",
+   "reference": "libpysal's KNN builds the same neighbour sets"
+  },
+  {
+   "key": "geo_local_getis_ord_gi",
+   "reference": "esda's G_Local implements the same statistic and analytic moments"
+  },
+  {
+   "key": "geo_local_morans_i",
+   "reference": "esda's Moran_Local implements the same statistic and quadrants"
+  },
+  {
+   "key": "geo_look_angles",
+   "reference": "pyproj's topocentric conversion gives the ENU vector; azimuth and elevation are then the same atan2 definitions"
+  },
+  {
+   "key": "geo_map_scale_from_distances",
+   "reference": "the same quotient in floating point (a pure definition)"
+  },
+  {
+   "key": "geo_map_scale_ground_distance",
+   "reference": "the same product in floating point (a pure definition)"
+  },
+  {
+   "key": "geo_mean_center_standard_distance",
+   "reference": "pointpats computes the same mean centre and standard distance"
+  },
+  {
+   "key": "geo_morans_i",
+   "reference": "esda implements the same Cliff-Ord formulas (a library implementation of the definition)"
+  },
+  {
+   "key": "geo_nearest_neighbour_index",
+   "reference": "scipy's k-d tree gives the nearest-neighbour distances; the index is then the Clark-Evans definition"
+  },
+  {
+   "key": "geo_network_connectivity_indices",
+   "reference": "networkx counts the components and the cycle basis; alpha, beta and gamma are then Kansky's definitions"
+  },
+  {
+   "key": "geo_ordinary_kriging",
+   "reference": "pykrige solves the same kriging system (a library implementation of the defining equations)"
+  },
+  {
+   "key": "geo_parallel_arc",
+   "reference": "pyproj's geodetic-to-geocentric conversion gives the radius of the parallel; the arc is that radius times the longitude difference (a definition)"
+  },
+  {
+   "key": "geo_polygon_compactness",
+   "reference": "shapely computes the area, perimeter, convex hull and minimum bounding circle; the indices are those quantities combined by their definitions"
+  },
+  {
+   "key": "geo_quadrat_test",
+   "reference": "pointpats' QStatistic counts the same quadrats and chi-square"
+  },
+  {
+   "key": "geo_rhumb_line_inverse",
+   "reference": "scipy quadrature of the meridian and isometric-latitude integrals; the bearing and length are then composed with the same definitions (atan2 and dm/cos)"
+  },
+  {
+   "key": "geo_ripley_k",
+   "reference": "pointpats' k evaluates the same uncorrected estimator"
+  },
+  {
+   "key": "geo_segregation_evenness",
+   "reference": "the segregation library (pysal) evaluates the same Massey-Denton definitions"
+  },
+  {
+   "key": "geo_segregation_exposure",
+   "reference": "the segregation library (pysal) evaluates the same Massey-Denton definitions"
+  },
+  {
+   "key": "geo_slope_aspect_horn",
+   "reference": "the gradient of a least-squares quadratic surface (numpy) agrees with Horn's differences on quadratic terrain only, so random windows are drawn from quadratic surfaces"
+  },
+  {
+   "key": "geo_spatial_lag",
+   "reference": "libpysal's lag_spatial computes the same weighted sum"
+  },
+  {
+   "key": "geo_standard_deviational_ellipse",
+   "reference": "pointpats' ellipse (CrimeStat form) for the axes and a numpy eigenvector for the orientation"
+  },
+  {
+   "key": "geo_terrain_curvature",
+   "reference": "the exact biquadratic interpolation solved by numpy is the same surface the formulas encode"
+  },
+  {
+   "key": "geo_terrain_ruggedness",
+   "reference": "numpy evaluates the same definitions"
+  },
+  {
+   "key": "geo_toa_reflectance",
+   "reference": "pvlib's Spencer series gives the Earth-Sun distance factor; the reflectance is then the standard formula"
+  },
+  {
+   "key": "geo_two_step_floating_catchment",
+   "reference": "networkx gives the catchments (distance cut-offs); the ratios and sums are the 2SFCA definition"
+  },
+  {
+   "key": "geo_utm_zone",
+   "reference": "the utm library computes the same zone and band definitions (no different route exists for a lookup rule)"
+  },
+  {
+   "key": "geo_variogram_model_fit",
+   "reference": "scipy curve_fit (Levenberg-Marquardt) re-solves the same least-squares problem from a nearby start"
+  },
+  {
+   "key": "geo_vegetation_indices",
+   "reference": "spyndex evaluates the same published formulas from its catalogue (it checks the formulas and coefficients, not an independent computation)"
+  },
+  {
+   "key": "geo_water_burn_built_indices",
+   "reference": "spyndex evaluates the same published formulas from its catalogue"
+  },
+  {
+   "key": "geo_web_map_tile",
+   "reference": "mercantile computes the same Web Mercator tile definition"
+  },
+  {
+   "key": "geo_weighted_mean_center",
+   "reference": "pointpats computes the weighted centre; the weighted standard distance is numpy's weighted average of the same squared distances"
+  }
+ ]
+}
