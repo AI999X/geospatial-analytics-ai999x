@@ -203,6 +203,10 @@ $$
 
 *London to New York on a Mercator map (WGS84): the geodesic leaves at azimuth 288.373° and is 5585.81 km long; the rhumb line keeps bearing 258.088° and is 5810.37 km. Each path is 40 destination points computed by the package and projected by it; the rhumb line is straight on this map. Marked: the geodesic midpoint, latitude 52.385°, longitude -41.2786°.*
 
+![Destinations from latitude 52](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-geodesic-destination-map-2)
+
+*Destinations from latitude 52.2°, longitude 0.12° (WGS84) at every 10° of azimuth for distances 100, 200 and 400 km, each point a run of the package (111 runs), drawn in longitude–latitude (the circles widen east–west because a degree of longitude is shorter here). Marked: the worked example, azimuth 45° for 100 km → 52.8308°, 1.16915°, arriving at azimuth 45.8325°.*
+
 ```python
 geospatial_analytics_ai999x.solve('geo_geodesic_destination', lat1=52.2, lon1=0.12, azimuth=45, distance=100000.0, ellipsoid='WGS84')
 # -> lat2 = 52.8308, lon2 = 1.16915, azimuth2 = 45.8325   (SOLVED)
@@ -253,6 +257,10 @@ $$
 - **Assumes:** distinct points at most 150 degrees apart; latitudes strictly between -90 and 90
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![Geodesics from London to five cities drawn in longitude–latitude, each path 30 destination points along the initial azimuth the package returns, with the midpoint the package computes: New York: 52](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-geodesic-midpoint-map)
+
+*Geodesics from London to five cities drawn in longitude–latitude, each path 30 destination points along the initial azimuth the package returns, with the midpoint the package computes: New York: 52.385°, -41.2786° (5585.81 km); Cape Town: 8.94345°, 10.4769° (9635.07 km); Mumbai: 41.0888°, 45.0042° (7199.57 km); Tokyo: 69.0606°, 89.6146° (9583.99 km); Rio de Janeiro: 15.3347°, -25.999° (9251.66 km). Marked (thick): the worked example to New York; on these axes the geodesic bows poleward, so its midpoint lies north of both ends.*
+
 ```python
 geospatial_analytics_ai999x.solve('geo_geodesic_midpoint', lat1=51.5, lon1=-0.13, lat2=40.71, lon2=-74.01, ellipsoid='WGS84')
 # -> lat_mid = 52.385, lon_mid = -41.2786, distance = 5.58581e+06 m   (SOLVED)
@@ -298,6 +306,10 @@ $$
 - **Method:** Green's theorem on the ellipsoid: the authalic strip area $a^{2}$ q(phi)/2 integrated against the longitude along each geodesic edge (Gauss-Legendre in the auxiliary-sphere arc), summed over the edges
 - **Assumes:** a simple polygon not enclosing a pole; vertices within 88 degrees of the equator; edges at most 90 degrees long
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![The worked example's quadrilateral (latitudes [0, 0, 1, 1], longitudes [0, 1, 1, 0]) and the same shape moved 30° and 60° north, each with the geodesic area and perimeter the package returns: shifted by 0°: 12308](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-geodesic-polygon-area-polygons)
+
+*The worked example's quadrilateral (latitudes [0, 0, 1, 1], longitudes [0, 1, 1, 0]) and the same shape moved 30° and 60° north, each with the geodesic area and perimeter the package returns: shifted by 0°: 12308.8 km², perimeter 443.771 km; shifted by 30°: 10642.5 km², perimeter 413.712 km; shifted by 60°: 6122.94 km², perimeter 332.748 km. The same span of degrees encloses less ground toward the pole.*
 
 ```python
 geospatial_analytics_ai999x.solve('geo_geodesic_polygon_area', lats=[0, 0, 1, 1], lons=[0, 1, 1, 0], ellipsoid='WGS84')
@@ -345,6 +357,14 @@ $$
 - **Assumes:** latitudes between -90 and 90 and different
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![distance (meridian arc length between the latitudes) against lat1 (first latitude (decimal degrees)) from 0 to 90](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-meridian-arc-curve)
+
+*distance (meridian arc length between the latitudes) against lat1 (first latitude (decimal degrees)) from 0 to 90. One curve for each value of lat2 (second latitude (decimal degrees)): 90, 22.5, 67.5. Other inputs as in the worked example: ellipsoid = WGS84. 40 points per curve computed by geospatial-analytics-ai999x; marked: the worked example, lat1 = 0, distance = 1.0002e+07 m.*
+
+![distance (meridian arc length between the latitudes) over lat2 (second latitude (decimal degrees)) from 0 to 90 and lat1 (first latitude (decimal degrees)) from 0 to 90: each of the 21 × 15 cells is one run of geospatial-analytics-ai999x, shaded by its value (light 71120](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-meridian-arc-field)
+
+*distance (meridian arc length between the latitudes) over lat2 (second latitude (decimal degrees)) from 0 to 90 and lat1 (first latitude (decimal degrees)) from 0 to 90: each of the 21 × 15 cells is one run of geospatial-analytics-ai999x, shaded by its value (light 71120.6 m to dark 1.0002e+07 m); iso-lines at distance = 2.00e6, 4.00e6, 6.00e6, 8.00e6 m; blank cells: inputs the capability refuses. Other inputs as in the worked example: ellipsoid = WGS84. Marked: the worked example, lat2 = 90, lat1 = 0, distance = 1.0002e+07 m.*
+
 ```python
 geospatial_analytics_ai999x.solve('geo_meridian_arc', lat1=0, lat2=90, ellipsoid='WGS84')
 # -> distance = 1.0002e+07 m, m1 = 0 m, m2 = 1.0002e+07 m   (SOLVED)
@@ -389,6 +409,10 @@ $$
 - **Method:** radius of the parallel N(phi) cos(phi) times the longitude difference in radians
 - **Assumes:** latitude strictly between -90 and 90; different longitudes
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![distance (arc length along the parallel) against lat (latitude of the parallel (decimal degrees)) from 0 to 90](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-parallel-arc-curve)
+
+*distance (arc length along the parallel) against lat (latitude of the parallel (decimal degrees)) from 0 to 90. One curve for each value of lon2 (second longitude (decimal degrees)): 1, 0.5, 2. Other inputs as in the worked example: lon1 = 0, ellipsoid = WGS84. 40 points per curve computed by geospatial-analytics-ai999x; marked: the worked example, lat = 60, distance = 55800 m.*
 
 ```python
 geospatial_analytics_ai999x.solve('geo_parallel_arc', lat=60, lon1=0, lon2=1, ellipsoid='WGS84')
@@ -436,6 +460,10 @@ $$
 - **Assumes:** lat1 < lat2; 0 < lon2 - lon1 <= 360
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![The area of a 1° × 1° graticule cell on the WGS84 ellipsoid returned by the package for cells starting every 5° from the equator to 85° N: it falls with the cosine of latitude as the meridians converge](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-graticule-cell-area-bars)
+
+*The area of a 1° × 1° graticule cell on the WGS84 ellipsoid returned by the package for cells starting every 5° from the equator to 85° N: it falls with the cosine of latitude as the meridians converge. Marked: the worked example, 0°–1° N, 12308.5 km² (2.4131e-05 of the ellipsoid).*
+
 ```python
 geospatial_analytics_ai999x.solve('geo_graticule_cell_area', lat1=0, lat2=1, lon1=0, lon2=1, ellipsoid='WGS84')
 # -> area = 1.23085e+10 m^2, fraction_of_ellipsoid = 2.41311e-05   (SOLVED)
@@ -479,6 +507,10 @@ $$
 - **Method:** $M = a$($1-e^{2})/(1-e^{2}$ $sin^{2}$ phi)^(3/2), $N = a/sqrt$($1-e^{2}$ $sin^{2}$ phi)
 - **Assumes:** latitude between -90 and 90
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![M (meridional radius of curvature) against lat (latitude (decimal degrees)) from 0 to 90](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-radii-of-curvature-curve)
+
+*M (meridional radius of curvature) against lat (latitude (decimal degrees)) from 0 to 90. Outputs with the same unit drawn together: N (prime-vertical radius of curvature), R_gauss (Gaussian mean radius sqrt(M N)). Other inputs as in the worked example: ellipsoid = WGS84. 41 points computed by geospatial-analytics-ai999x; marked: the worked example, lat = 45, M = 6.36738e+06 m.*
 
 ```python
 geospatial_analytics_ai999x.solve('geo_radii_of_curvature', lat=45, ellipsoid='WGS84')
@@ -526,6 +558,10 @@ $$
 - **Assumes:** latitudes within 89 degrees of the equator; distinct points
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![From 50°, -5° to 58°, 3° (WGS84): the package returns the rhumb line's constant bearing 30](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-rhumb-line-inverse-map)
+
+*From 50°, -5° to 58°, 3° (WGS84): the package returns the rhumb line's constant bearing 30.4064° and length 1032.44 km; the path is drawn from 20 rhumb-line destinations along that bearing, and it ends at the target. For comparison, the geodesic (1031.89 km, from the package's geodesic runs) is shorter.*
+
 ```python
 geospatial_analytics_ai999x.solve('geo_rhumb_line_inverse', lat1=50.0, lon1=-5.0, lat2=58.0, lon2=3.0, ellipsoid='WGS84')
 # -> distance = 1.03244e+06 m, bearing = 30.4064   (SOLVED)
@@ -571,6 +607,10 @@ $$
 - **Method:** meridian distance advances by s cos(bearing) (Helmert's series, inverted by Newton steps); the longitude by tan(bearing) times the change of isometric latitude
 - **Assumes:** the line stays more than 1 degree from the poles; distance > 0
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![Rhumb lines from latitude 50°, longitude -5° at bearings 0° to 330° for 1500 km, every point a destination returned by the package and projected by its Mercator projection (132 points): each constant-bearing path is a straight ray on this map](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-rhumb-line-destination-map)
+
+*Rhumb lines from latitude 50°, longitude -5° at bearings 0° to 330° for 1500 km, every point a destination returned by the package and projected by its Mercator projection (132 points): each constant-bearing path is a straight ray on this map. Marked: the worked example, bearing 30° for 500 km → 53.8917°, -1.36121°.*
 
 ```python
 geospatial_analytics_ai999x.solve('geo_rhumb_line_destination', lat1=50.0, lon1=-5.0, bearing=30, distance=500000.0, ellipsoid='WGS84')
@@ -618,6 +658,10 @@ $$
 - **Assumes:** latitude between -90 and 90; height between -100 km and 100000 km
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![The point latitude 45°, longitude 10°, height 100](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-geodetic-to-ecef-frames)
+
+*The point latitude 45°, longitude 10°, height 100.0 m in Earth-centred, Earth-fixed coordinates as returned: X = 4.44903e+06 m, Y = 784484 m, Z = 4.48742e+06 m. Top: the meridian section through the point (the ellipsoid traced by the package at every 5° of latitude; horizontal axis √(X² + Y²), computed here from the returned X and Y). Bottom: the equatorial plane, the equator traced every 10° of longitude, and the point's X and Y.*
+
 ```python
 geospatial_analytics_ai999x.solve('geo_geodetic_to_ecef', lat=45, lon=10, h=100.0, ellipsoid='WGS84')
 # -> X = 4.44903e+06 m, Y = 784484 m, Z = 4.48742e+06 m   (SOLVED)
@@ -663,6 +707,10 @@ $$
 - **Method:** fixed-point iteration phi = atan2($Z + e^{2}$ N sin(phi), p) to convergence; $h = p$ cos(phi) + Z sin(phi) - a^2/N
 - **Assumes:** 6200 km <= distance from the centre <= 100000 km; not on the polar axis
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![The ECEF point X = 4517590](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-ecef-to-geodetic-section)
+
+*The ECEF point X = 4517590.879 m, Y = 796576.168 m, Z = 4487348.409 m converted by the package to latitude 44.56°, longitude 10°, height 49468.7 m. Drawn in the meridian plane near the point (√(X² + Y²) computed here from the inputs): the surface traced by the package's forward conversion at ±1.5° around the returned latitude, the foot of the normal (returned latitude at h = 0) and the point 49.4687 km above it along the normal.*
 
 ```python
 geospatial_analytics_ai999x.solve('geo_ecef_to_geodetic', X=4517590.879, Y=796576.168, Z=4487348.409, ellipsoid='WGS84')
@@ -714,6 +762,10 @@ $$
 - **Assumes:** origin not at a pole
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![Local east–north–up coordinates of the point 45](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-geodetic-to-enu-frames)
+
+*Local east–north–up coordinates of the point 45.976°, 7.658°, 4531.0 m seen from the origin 46.017°, 7.75°, 1673.0 m: returned e = -7134.76 m, n = -4556.32 m, u = 2852.39 m, slant range 8933.14 m. Top: the plan (east, north); bottom: the vertical plane through the target (horizontal distance √(e² + n²) computed here from the returned e and n).*
+
 ```python
 geospatial_analytics_ai999x.solve('geo_geodetic_to_enu', lat0=46.017, lon0=7.75, h0=1673.0, lat=45.976, lon=7.658, h=4531.0, ellipsoid='WGS84')
 # -> e = -7134.76 m, n = -4556.32 m, u = 2852.39 m, slant_range = 8933.14 m   (SOLVED)
@@ -762,6 +814,10 @@ $$
 - **Method:** rotate [e n u] back to an ECEF offset, add the origin's ECEF position, then convert ECEF to geodetic by iteration
 - **Assumes:** origin not at a pole; the point not deep inside the Earth
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![The local offset e = -7123](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-enu-to-geodetic-frames)
+
+*The local offset e = -7123.1 m, n = -4557.3 m, u = 2848.2 m from the origin 46.017°, 7.75°, 1673.0 m (inputs, drawn in plan and in the vertical plane) and the geodetic position the package returns for it: latitude 45.976°, longitude 7.65815°, height 4526.8 m.*
 
 ```python
 geospatial_analytics_ai999x.solve('geo_enu_to_geodetic', lat0=46.017, lon0=7.75, h0=1673.0, e=-7123.1, n=-4557.3, u=2848.2, ellipsoid='WGS84')
@@ -812,6 +868,10 @@ $$
 - **Assumes:** observer not at a pole; target distinct from the observer
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![A sky plot seen from 40](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-look-angles-sky)
+
+*A sky plot seen from 40.0°, -105.0°, 1600.0 m (zenith at the centre, horizon at the edge, azimuth clockwise from north): the look angles the package returns for targets at latitude 0.0°, height 35786 km and longitudes 170° W to 35° W, every 5° (those above the horizon) — the geostationary arc. Marked: the worked example at longitude -100.0°, azimuth 172.243°, elevation 43.4643°, slant range 37513.7 km.*
+
 ```python
 geospatial_analytics_ai999x.solve('geo_look_angles', lat0=40.0, lon0=-105.0, h0=1600.0, lat=0.0, lon=-100.0, h=35786000.0, ellipsoid='WGS84')
 # -> azimuth = 172.243, elevation = 43.4643, slant_range = 3.75137e+07 m   (SOLVED)
@@ -858,6 +918,10 @@ $$
 - **Assumes:** latitude strictly between -90 and 90
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![The five auxiliary latitudes the package returns on the WGS84 ellipsoid, every 3° of geodetic latitude, drawn as their difference from the geodetic latitude in arc-minutes (difference computed here): all vanish at the equator and the pole and are largest near 45°](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-auxiliary-latitudes-curve)
+
+*The five auxiliary latitudes the package returns on the WGS84 ellipsoid, every 3° of geodetic latitude, drawn as their difference from the geodetic latitude in arc-minutes (difference computed here): all vanish at the equator and the pole and are largest near 45°. Marked: the worked example at 45°, geocentric latitude 44.8076° (-11.5454′).*
+
 ```python
 geospatial_analytics_ai999x.solve('geo_auxiliary_latitudes', lat=45, ellipsoid='WGS84')
 # -> geocentric = 44.8076, reduced = 44.9038, conformal = 44.8077, authalic = 44.8717, rectifying = 44.8557   (SOLVED)
@@ -902,6 +966,10 @@ $$
 - **Method:** zone = floor((lon + 180)/6) + 1 with zone 32 widened over south-west Norway and zones $31/33/35/37$ over Svalbard; band = 8-degree letter from 80 S (X spans $72-84$ N)
 - **Assumes:** 80 S <= latitude <= 84 N
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![UTM zones (6° of longitude) and latitude bands (8°) over Europe, 18° W to 24° E and 32° N to 72° N: every label is the zone number and band letter the package returns for the cell's centre (35 runs); the grid lines are drawn at the 6° and 8° spacing](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-utm-zone-zones)
+
+*UTM zones (6° of longitude) and latitude bands (8°) over Europe, 18° W to 24° E and 32° N to 72° N: every label is the zone number and band letter the package returns for the cell's centre (35 runs); the grid lines are drawn at the 6° and 8° spacing. Marked: the worked example 51.5°, -0.13° in zone 30, band U (N), central meridian -3°.*
 
 ```python
 geospatial_analytics_ai999x.solve('geo_utm_zone', lat=51.5, lon=-0.13)
@@ -967,6 +1035,10 @@ $$
 - **Assumes:** within 10 degrees of longitude of the central meridian; latitude within 89 degrees of the equator
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![Transverse Mercator about the 15° E meridian: the graticule (parallels every 10°, meridians every 6°) traced through the package's forward projection with lat0 = 0, lon0 = 15, k0 = 0](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-transverse-mercator-forward-graticule)
+
+*Transverse Mercator about the 15° E meridian: the graticule (parallels every 10°, meridians every 6°) traced through the package's forward projection with lat0 = 0, lon0 = 15, k0 = 0.9996, ellipsoid = GRS80, FE = 500000.0, FN = 0.0 (222 projected points). Marked: the worked example, latitude 52.5°, longitude 13.4° → x = 391391 m, y = 5.81786e+06 m. Scale factor k = 0.999745, convergence γ = -1.26949°.*
+
 ```python
 geospatial_analytics_ai999x.solve('geo_transverse_mercator_forward', lat=52.5, lon=13.4, lat0=0, lon0=15, k0=0.9996, ellipsoid='GRS80', FE=500000.0, FN=0.0)
 # -> x = 391391 m, y = 5.81786e+06 m, k = 0.999745, gamma = -1.26949   (SOLVED)
@@ -1014,6 +1086,10 @@ $$
 - **Method:** zone from the longitude (Norway and Svalbard exceptions), then transverse Mercator by Krueger's series with $k_{0} = 0.9996$, false easting 500 km, false northing 10000 km in the south
 - **Assumes:** 80 S <= latitude <= 84 N
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![The 1° graticule of UTM zone 30 (6° W to 0°, 49° N to 54° N) traced through the package's UTM projection (297 points; the meridians converge northward, the central meridian 3° W is straight)](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-utm-forward-graticule)
+
+*The 1° graticule of UTM zone 30 (6° W to 0°, 49° N to 54° N) traced through the package's UTM projection (297 points; the meridians converge northward, the central meridian 3° W is straight). Marked: latitude 51.5°, longitude -0.13° → zone 30N, easting 699196 m, northing 5.70934e+06 m, scale factor 1.00009, convergence 2.24682°.*
 
 ```python
 geospatial_analytics_ai999x.solve('geo_utm_forward', lat=51.5, lon=-0.13, ellipsoid='WGS84')
@@ -1067,6 +1143,10 @@ $$
 - **Assumes:** 100 km <= easting <= 900 km; 0 <= northing <= 10000 km
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![The input UTM coordinates (zone 30N, easting 699316](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-utm-inverse-graticule)
+
+*The input UTM coordinates (zone 30N, easting 699316.0 m, northing 5710164.0 m) on the graticule traced by the package's UTM forward projection (160 points, parallels every 0.5°, meridians every 0.25°). Marked: the returned latitude 51.5074° and longitude -0.127803°.*
+
 ```python
 geospatial_analytics_ai999x.solve('geo_utm_inverse', easting=699316.0, northing=5710164.0, zone=30, hemisphere='N', ellipsoid='WGS84')
 # -> lat = 51.5074, lon = -0.127803   (SOLVED)
@@ -1110,6 +1190,10 @@ $$
 - **Assumes:** |latitude| <= 85.06 degrees (the square web-map extent)
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![Web Mercator world graticule: the graticule (parallels every 20°, meridians every 30°) traced through the package's forward projection with  (1086 projected points)](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-web-mercator-forward-graticule)
+
+*Web Mercator world graticule: the graticule (parallels every 20°, meridians every 30°) traced through the package's forward projection with  (1086 projected points). Marked: the worked example, latitude 51.5°, longitude -0.13° → x = -14471.5 m, y = 6.71022e+06 m.*
+
 ```python
 geospatial_analytics_ai999x.solve('geo_web_mercator_forward', lat=51.5, lon=-0.13)
 # -> x = -14471.5 m, y = 6.71022e+06 m   (SOLVED)
@@ -1152,6 +1236,10 @@ $$
 - **Method:** inverse spherical Mercator: lat = atan(sinh(y/R)), lon = x/R
 - **Assumes:** inside the web-map square
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![Web Mercator inverse around London: the input point x = -14471](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-web-mercator-inverse-graticule)
+
+*Web Mercator inverse around London: the input point x = -14471.5 m, y = 6710219.1 m placed on the graticule that the package's forward projection traces with the same parameters (236 points, parallels every 0.5°, meridians every 0.5°). Marked: the returned latitude 51.5° and longitude -0.13°, which lie where the point falls among the lines.*
 
 ```python
 geospatial_analytics_ai999x.solve('geo_web_mercator_inverse', x=-14471.5, y=6710219.1)
@@ -1197,6 +1285,10 @@ $$
 - **Method:** Web Mercator fractions x = (lon + 180)/360, y = 1/2 - asinh(tan lat)/(2 pi), scaled by 2^zoom and floored; quadkey digits interleave the bits of x and y
 - **Assumes:** |latitude| <= 85.0511; zoom $0-24$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![Web-map tiles at zoom 12 around latitude 51](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-web-map-tile-tiles)
+
+*Web-map tiles at zoom 12 around latitude 51.5°, longitude -0.13°: each small cell is coloured by the tile the package returns for its centre (1020 runs), alternately by the parity of tile x + y so the tile boundaries show. Marked: the worked example in tile x = 2046, y = 1362 (quadkey 031313131130).*
 
 ```python
 geospatial_analytics_ai999x.solve('geo_web_map_tile', lat=51.5, lon=-0.13, zoom=12)
@@ -1245,6 +1337,14 @@ $$
 - **Assumes:** |latitude| <= 89.5; |lat_ts| <= 85
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![Mercator world graticule: the graticule (parallels every 20°, meridians every 30°) traced through the package's forward projection with lon0 = 0, lat_ts = 0, ellipsoid = WGS84 (1086 projected points)](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-mercator-forward-graticule)
+
+*Mercator world graticule: the graticule (parallels every 20°, meridians every 30°) traced through the package's forward projection with lon0 = 0, lat_ts = 0, ellipsoid = WGS84 (1086 projected points). Marked: the worked example, latitude 51.5°, longitude -0.13° → x = -14471.5 m, y = 6.67676e+06 m. Scale factor at the point k = 1.60309.*
+
+![y (northing) against lat (latitude (decimal degrees)) from 0 to 90](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-mercator-forward-curve)
+
+*y (northing) against lat (latitude (decimal degrees)) from 0 to 90. One curve for each value of lat_ts (latitude of true scale (standard parallel) (decimal degrees)): 0, 67.5. Other inputs as in the worked example: lon = -0.13, lon0 = 0, ellipsoid = WGS84. 40 points per curve computed by geospatial-analytics-ai999x; marked: the worked example, lat = 51.5, y = 6.67676e+06 m.*
+
 ```python
 geospatial_analytics_ai999x.solve('geo_mercator_forward', lat=51.5, lon=-0.13, lon0=0, lat_ts=0, ellipsoid='WGS84')
 # -> x = -14471.5 m, y = 6.67676e+06 m, k = 1.60309   (SOLVED)
@@ -1290,6 +1390,10 @@ $$
 - **Method:** isometric latitude psi = y/(k0 a); conformal tangent sinh(psi); geodetic latitude by Newton iteration (Karney's tau method)
 - **Assumes:** |lat_ts| <= 85
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![Mercator inverse around London: the input point x = -14471](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-mercator-inverse-graticule)
+
+*Mercator inverse around London: the input point x = -14471.5 m, y = 6680752.0 m placed on the graticule that the package's forward projection traces with the same parameters (236 points, parallels every 0.5°, meridians every 0.5°). Marked: the returned latitude 51.5224° and longitude -0.13°, which lie where the point falls among the lines.*
 
 ```python
 geospatial_analytics_ai999x.solve('geo_mercator_inverse', x=-14471.5, y=6680752.0, lon0=0, lat_ts=0, ellipsoid='WGS84')
@@ -1343,6 +1447,14 @@ $$
 - **Assumes:** parallels within 89 degrees of the equator and not symmetric about it
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![Lambert conformal conic over North America: the graticule (parallels every 5°, meridians every 10°) traced through the package's forward projection with lat1 = 33, lat2 = 45, lat0 = 23, lon0 = -96, ellipsoid = GRS80 (503 projected points)](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-lambert-conformal-conic-forward-graticule)
+
+*Lambert conformal conic over North America: the graticule (parallels every 5°, meridians every 10°) traced through the package's forward projection with lat1 = 33, lat2 = 45, lat0 = 23, lon0 = -96, ellipsoid = GRS80 (503 projected points). Marked: the worked example, latitude 40°, longitude -100° → x = -339644 m, y = 1.9046e+06 m. Scale factor k = 0.994666, convergence γ = -2.52199°.*
+
+![x (easting) against lon (longitude (decimal degrees)) from -150 to -50](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-lambert-conformal-conic-forward-curve)
+
+*x (easting) against lon (longitude (decimal degrees)) from -150 to -50. One curve for each value of lon0 (central meridian (decimal degrees)): -96, -48, -192. Other inputs as in the worked example: lat = 40.0, lat1 = 33, lat2 = 45, lat0 = 23, ellipsoid = GRS80. 31 points per curve computed by geospatial-analytics-ai999x; marked: the worked example, lon = -100, x = -339644 m.*
+
 ```python
 geospatial_analytics_ai999x.solve('geo_lambert_conformal_conic_forward', lat=40.0, lon=-100.0, lat1=33, lat2=45, lat0=23, lon0=-96, ellipsoid='GRS80')
 # -> x = -339644 m, y = 1.9046e+06 m, k = 0.994666, gamma = -2.52199   (SOLVED)
@@ -1392,6 +1504,10 @@ $$
 - **Method:** rho and theta from the offsets, t = (rho/(aF))^$(1/n)$, isometric latitude -ln t, geodetic latitude by Newton iteration; $\lambda = lambda0 + \theta/n$
 - **Assumes:** parallels within 89 degrees of the equator and not symmetric about it
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![Lambert conformal conic inverse: a projected point located on its graticule: the input point x = -339545](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-lambert-conformal-conic-inverse-graticule)
+
+*Lambert conformal conic inverse: a projected point located on its graticule: the input point x = -339545.0 m, y = 1937380.0 m placed on the graticule that the package's forward projection traces with the same parameters (110 points, parallels every 5°, meridians every 5°). Marked: the returned latitude 40.2966° and longitude -100.016°, which lie where the point falls among the lines.*
 
 ```python
 geospatial_analytics_ai999x.solve('geo_lambert_conformal_conic_inverse', x=-339545.0, y=1937380.0, lat1=33, lat2=45, lat0=23, lon0=-96, ellipsoid='GRS80')
@@ -1445,6 +1561,14 @@ $$
 - **Assumes:** parallels within 89 degrees of the equator and not symmetric about it
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![Albers equal-area conic over North America: the graticule (parallels every 5°, meridians every 10°) traced through the package's forward projection with lat1 = 29](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-albers-equal-area-forward-graticule)
+
+*Albers equal-area conic over North America: the graticule (parallels every 5°, meridians every 10°) traced through the package's forward projection with lat1 = 29.5, lat2 = 45.5, lat0 = 23, lon0 = -96, ellipsoid = GRS80 (503 projected points). Marked: the worked example, latitude 40°, longitude -100° → x = -338391 m, y = 1.8941e+06 m. Scale factors at the point: k = 0.990969 along the parallel, h = 1.00911 along the meridian.*
+
+![x (easting) against lon (longitude (decimal degrees)) from -150 to -50](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-albers-equal-area-forward-curve)
+
+*x (easting) against lon (longitude (decimal degrees)) from -150 to -50. One curve for each value of lon0 (central meridian (decimal degrees)): -96, -48, -192. Other inputs as in the worked example: lat = 40.0, lat1 = 29.5, lat2 = 45.5, lat0 = 23, ellipsoid = GRS80. 31 points per curve computed by geospatial-analytics-ai999x; marked: the worked example, lon = -100, x = -338391 m.*
+
 ```python
 geospatial_analytics_ai999x.solve('geo_albers_equal_area_forward', lat=40.0, lon=-100.0, lat1=29.5, lat2=45.5, lat0=23, lon0=-96, ellipsoid='GRS80')
 # -> x = -338391 m, y = 1.8941e+06 m, k = 0.990969, h = 1.00911   (SOLVED)
@@ -1494,6 +1618,10 @@ $$
 - **Method:** rho and theta from the offsets, q = (C - (rho n/a)^2)/n, latitude from q by Newton iteration; $\lambda = lambda0 + \theta/n$
 - **Assumes:** parallels within 89 degrees of the equator and not symmetric about it; the point inside the projected area
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![Albers inverse: a projected point located on its graticule: the input point x = -338796](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-albers-equal-area-inverse-graticule)
+
+*Albers inverse: a projected point located on its graticule: the input point x = -338796.0 m, y = 1952260.0 m placed on the graticule that the package's forward projection traces with the same parameters (110 points, parallels every 5°, meridians every 5°). Marked: the returned latitude 40.5185° and longitude -100.034°, which lie where the point falls among the lines.*
 
 ```python
 geospatial_analytics_ai999x.solve('geo_albers_equal_area_inverse', x=-338796.0, y=1952260.0, lat1=29.5, lat2=45.5, lat0=23, lon0=-96, ellipsoid='GRS80')
@@ -1545,6 +1673,10 @@ $$
 - **Assumes:** the point in the pole's hemisphere (not at the pole); 30 <= |lat_ts| <= 89.99 in the same hemisphere
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![North polar stereographic graticule: the graticule (parallels every 5°, meridians every 30°) traced through the package's forward projection with pole = north, lat_ts = 70, lon0 = -45, ellipsoid = WGS84 (835 projected points)](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-polar-stereographic-forward-graticule)
+
+*North polar stereographic graticule: the graticule (parallels every 5°, meridians every 30°) traced through the package's forward projection with pole = north, lat_ts = 70, lon0 = -45, ellipsoid = WGS84 (835 projected points). Marked: the worked example, latitude 75°, longitude -40° → x = 142402 m, y = -1.62766e+06 m. Scale factor k = 0.986664.*
+
 ```python
 geospatial_analytics_ai999x.solve('geo_polar_stereographic_forward', lat=75.0, lon=-40.0, pole='north', lat_ts=70, lon0=-45, ellipsoid='WGS84')
 # -> x = 142402 m, y = -1.62766e+06 m, k = 0.986664   (SOLVED)
@@ -1592,6 +1724,10 @@ $$
 - **Method:** authalic latitudes beta = asin(q/q_p) on the authalic sphere R_q, then the spherical azimuthal equal-area formulas with Snyder's D factor
 - **Assumes:** centre within 89 degrees of the equator; point within 120 degrees of the centre
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![Lambert azimuthal equal-area over Europe: the graticule (parallels every 10°, meridians every 10°) traced through the package's forward projection with lat0 = 52, lon0 = 10, ellipsoid = GRS80, FE = 4321000](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-lambert-azimuthal-equal-area-forward-graticule)
+
+*Lambert azimuthal equal-area over Europe: the graticule (parallels every 10°, meridians every 10°) traced through the package's forward projection with lat0 = 52, lon0 = 10, ellipsoid = GRS80, FE = 4321000.0, FN = 3210000.0 (302 projected points). Marked: the worked example, latitude 50°, longitude 5° → x = 3.9628e+06 m, y = 2.99972e+06 m.*
 
 ```python
 geospatial_analytics_ai999x.solve('geo_lambert_azimuthal_equal_area_forward', lat=50.0, lon=5.0, lat0=52, lon0=10, ellipsoid='GRS80', FE=4321000.0, FN=3210000.0)
@@ -1647,6 +1783,10 @@ $$
 
 *Eight cities seen from London as the package computes them on the WGS84 ellipsoid — each arrow points along the initial azimuth, clockwise from north, with length the geodesic distance (an azimuthal equidistant view): New York 5585.81 km at 288.373°; Tokyo 9583.99 km at 31.6564°; Cape Town 9635.07 km at 164.613°; Rio de Janeiro 9251.66 km at 219.388°; Moscow 2509.19 km at 64.2336°; Mumbai 7199.57 km at 90.6929°; Reykjavík 1895.1 km at 326.304°; Nairobi 6805.98 km at 136.642°.*
 
+![Azimuthal equidistant map centred on London: the graticule (parallels every 20°, meridians every 30°) traced through the package's forward projection with lat0 = 51](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-azimuthal-equidistant-forward-graticule)
+
+*Azimuthal equidistant map centred on London: the graticule (parallels every 20°, meridians every 30°) traced through the package's forward projection with lat0 = 51.5, lon0 = -0.13, ellipsoid = WGS84 (928 projected points). Marked: the worked example, latitude 40.71°, longitude -74.01° → x = -5.30106e+06 m, y = 1.76067e+06 m. Returned geodesic distance 5585.81 km at azimuth 288.373°.*
+
 ```python
 geospatial_analytics_ai999x.solve('geo_azimuthal_equidistant_forward', lat=40.71, lon=-74.01, lat0=51.5, lon0=-0.13, ellipsoid='WGS84')
 # -> x = -5.30106e+06 m, y = 1.76067e+06 m, distance = 5.58581e+06 m, azimuth = 288.373   (SOLVED)
@@ -1691,6 +1831,10 @@ $$
 - **Method:** $x = N$ cos(phi) $(\lambda - lambda0)$, y = meridian distance m(phi) (Helmert's series)
 - **Assumes:** |latitude| <= 89.9
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![Sinusoidal world graticule: the graticule (parallels every 20°, meridians every 30°) traced through the package's forward projection with lon0 = 0, ellipsoid = WGS84 (1086 projected points)](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-sinusoidal-forward-graticule)
+
+*Sinusoidal world graticule: the graticule (parallels every 20°, meridians every 30°) traced through the package's forward projection with lon0 = 0, ellipsoid = WGS84 (1086 projected points). Marked: the worked example, latitude 45°, longitude 10° → x = 788468 m, y = 4.98494e+06 m.*
 
 ```python
 geospatial_analytics_ai999x.solve('geo_sinusoidal_forward', lat=45.0, lon=10.0, lon0=0, ellipsoid='WGS84')
@@ -1741,6 +1885,10 @@ $$
 
 *The world graticule in the Mollweide equal-area projection (sphere of radius 6371 km): every parallel and meridian is a chain of points projected by the package (576 points); marked: latitude 45°, longitude 90° → x = 7261.19 km, y = 5334.27 km.*
 
+![x (x) against lon (longitude (decimal degrees)) from 9 to 900 on a logarithmic axis](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-mollweide-forward-curve)
+
+*x (x) against lon (longitude (decimal degrees)) from 9 to 900 on a logarithmic axis. One curve for each value of R (radius of the sphere): 6.371e+06 m, 3.1855e+06 m, 1.2742e+07 m. Other inputs as in the worked example: lat = 45.0, lon0 = 0. 36 points per curve computed by geospatial-analytics-ai999x; marked: the worked example, lon = 90, x = 7.26119e+06 m.*
+
 ```python
 geospatial_analytics_ai999x.solve('geo_mollweide_forward', lat=45.0, lon=90.0, lon0=0, R=6371000.0)
 # -> x = 7.26119e+06 m, y = 5.33427e+06 m   (SOLVED)
@@ -1786,6 +1934,10 @@ $$
 - **Method:** $x = R$ cos(phi) sin(dlambda), $y = R$ (cos(phi0) sin(phi) - sin(phi0) cos(phi) cos(dlambda))
 - **Assumes:** the point on the visible hemisphere (cos c >= 0)
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![Orthographic view of the hemisphere centred at 45° N, 0°: the graticule (parallels every 20°, meridians every 30°) traced through the package's forward projection with lat0 = 45, lon0 = 0, R = 6371000](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-orthographic-forward-graticule)
+
+*Orthographic view of the hemisphere centred at 45° N, 0°: the graticule (parallels every 20°, meridians every 30°) traced through the package's forward projection with lat0 = 45, lon0 = 0, R = 6371000.0 (614 projected points) (the visible hemisphere only). Marked: the worked example, latitude 40°, longitude 10° → x = 847485 m, y = -502841 m.*
 
 ```python
 geospatial_analytics_ai999x.solve('geo_orthographic_forward', lat=40.0, lon=10.0, lat0=45, lon0=0, R=6371000.0)
@@ -1834,6 +1986,10 @@ $$
 - **Assumes:** the point within about 84 degrees of the centre (cos c >= 0.1)
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![Gnomonic projection centred at 45° N, 0°: the graticule (parallels every 10°, meridians every 15°) traced through the package's forward projection with lat0 = 45, lon0 = 0, R = 6371000](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-gnomonic-forward-graticule)
+
+*Gnomonic projection centred at 45° N, 0°: the graticule (parallels every 10°, meridians every 15°) traced through the package's forward projection with lat0 = 45, lon0 = 0, R = 6371000.0 (896 projected points) (points more than 62° from the centre left out). Marked: the worked example, latitude 40°, longitude 10° → x = 857808 m, y = -508966 m.*
+
 ```python
 geospatial_analytics_ai999x.solve('geo_gnomonic_forward', lat=40.0, lon=10.0, lat0=45, lon0=0, R=6371000.0)
 # -> x = 857808 m, y = -508966 m   (SOLVED)
@@ -1881,6 +2037,10 @@ $$
 - **Assumes:** sphere of radius $R > 0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![Equirectangular world graticule: the graticule (parallels every 20°, meridians every 30°) traced through the package's forward projection with lat_ts = 0, lat0 = 0, lon0 = 0, R = 6371000](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-equirectangular-forward-graticule)
+
+*Equirectangular world graticule: the graticule (parallels every 20°, meridians every 30°) traced through the package's forward projection with lat_ts = 0, lat0 = 0, lon0 = 0, R = 6371000.0 (554 projected points). Marked: the worked example, latitude 45°, longitude 10° → x = 1.11195e+06 m, y = 5.00377e+06 m.*
+
 ```python
 geospatial_analytics_ai999x.solve('geo_equirectangular_forward', lat=45.0, lon=10.0, lat_ts=0, lat0=0, lon0=0, R=6371000.0)
 # -> x = 1.11195e+06 m, y = 5.00377e+06 m   (SOLVED)
@@ -1926,6 +2086,10 @@ $$
 - **Method:** $x = R$ $(\lambda - lambda0)$ cos(lat_ts), $y = R$ sin(phi)/cos(lat_ts)
 - **Assumes:** standard parallel strictly between -90 and 90
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![Cylindrical equal-area world graticule: the graticule (parallels every 20°, meridians every 30°) traced through the package's forward projection with lat_ts = 45, lon0 = 0, R = 6371000](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-cylindrical-equal-area-forward-graticule)
+
+*Cylindrical equal-area world graticule: the graticule (parallels every 20°, meridians every 30°) traced through the package's forward projection with lat_ts = 45, lon0 = 0, R = 6371000.0 (1208 projected points). Marked: the worked example, latitude 45°, longitude 10° → x = 786267 m, y = 6.371e+06 m.*
 
 ```python
 geospatial_analytics_ai999x.solve('geo_cylindrical_equal_area_forward', lat=45.0, lon=10.0, lat_ts=45, lon0=0, R=6371000.0)
@@ -1975,6 +2139,14 @@ $$
 - **Method:** partial derivatives of the projection: h = |d(x,y)/dphi|, k = |d(x,y)/dlambda|/cos(phi), sin(theta') from their cross product; a' = sqrt($h^{2}+k^{2}+2hk$ sin theta'), b' = sqrt($h^{2}+k^{2}-2hk$ sin theta'), a = (a'+b')/2, b = (a'-b')/2, $\omega = 2$ asin((a-b)/(a+b)), $s = hk$ sin theta'
 - **Assumes:** |latitude| <= 80
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![Tissot's indicatrix along the central meridian (longitude 0) at latitudes 0° to 75° for five world projections: each ellipse has the returned parallel scale k as its horizontal semi-axis and the meridian scale h as its vertical one (on the central meridian the two directions are perpendicular); the dashed circle is scale 1, all drawn at one scale](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-tissot-indicatrix-ellipses)
+
+*Tissot's indicatrix along the central meridian (longitude 0) at latitudes 0° to 75° for five world projections: each ellipse has the returned parallel scale k as its horizontal semi-axis and the meridian scale h as its vertical one (on the central meridian the two directions are perpendicular); the dashed circle is scale 1, all drawn at one scale. Marked by size: Mercator at 60° is h = k = 2 (the worked example, areal scale 4); the equal-area projections keep h·k = 1 while their shape distorts.*
+
+![h (scale factor along the meridian) against lat (latitude (decimal degrees)) from 0 to 90](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-tissot-indicatrix-curve)
+
+*h (scale factor along the meridian) against lat (latitude (decimal degrees)) from 0 to 90. One curve for each value of projection (projection (spherical form, central meridian 0)): mercator, equirectangular, cylindrical_equal_area, sinusoidal. Other inputs as in the worked example: lon = 0. 36 points per curve computed by geospatial-analytics-ai999x; marked: the worked example, lat = 60, h = 2.*
 
 ```python
 geospatial_analytics_ai999x.solve('geo_tissot_indicatrix', projection='mercator', lat=60, lon=0)
@@ -2027,6 +2199,10 @@ $$
 - **Assumes:** 0 <= minutes <= 59; 0 <= seconds < 60; at most 90 (N/S) or 180 (E/W) degrees
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![The angle 51° 28′ 38](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-dms-to-decimal-scale)
+
+*The angle 51° 28′ 38.0″ N (inputs) on nested scales — seconds within the minute (bottom), the position within the degree (top) — and the returned decimal value 51.4772° (0.898447 rad).*
+
 ```python
 geospatial_analytics_ai999x.solve('geo_dms_to_decimal', degrees=51, minutes=28, seconds=38.0, hemisphere='N')
 # -> decimal = 51.4772, radians = 0.898447   (SOLVED)
@@ -2073,6 +2249,10 @@ $$
 - **Assumes:** |latitude| <= 90, |longitude| <= 180
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![The angle 51](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-decimal-to-dms-scale)
+
+*The angle 51.477222° (latitude) on two nested scales: the whole degree 51° divided into minutes, then minute 28′ divided into seconds. Returned: 51° 28′ 37.9992″ N.*
+
 ```python
 geospatial_analytics_ai999x.solve('geo_decimal_to_dms', decimal=51.477222, axis='latitude')
 # -> degrees = 51, minutes = 28, seconds = 37.9992, hemisphere = N   (SOLVED)
@@ -2116,6 +2296,14 @@ $$
 - **Assumes:** positive map distance and scale
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![ground_distance (ground distance) against map_distance (distance measured on the map) from 0](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-map-scale-ground-distance-curve)
+
+*ground_distance (ground distance) against map_distance (distance measured on the map) from 0.021 m to 0.063 m. One curve for each value of scale (scale denominator (1 : scale)): 50000, 25000, 100000. 31 points per curve computed by geospatial-analytics-ai999x; marked: the worked example, map_distance = 0.042 m, ground_distance = 2100 m.*
+
+![ground_distance (ground distance) over map_distance (distance measured on the map) from 0](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-map-scale-ground-distance-field)
+
+*ground_distance (ground distance) over map_distance (distance measured on the map) from 0.021 m to 0.063 m and scale (scale denominator (1 : scale)) from 25000 to 75000: each of the 21 × 15 cells is one run of geospatial-analytics-ai999x, shaded by its value (light 525 m to dark 4725 m); iso-lines at ground_distance = 1000, 2000, 3000, 4000 m. Marked: the worked example, map_distance = 0.042 m, scale = 50000, ground_distance = 2100 m.*
+
 ```python
 geospatial_analytics_ai999x.solve('geo_map_scale_ground_distance', map_distance=0.042, scale=50000)
 # -> ground_distance = 2100 m, ground_km = 2.1   (SOLVED)
@@ -2158,6 +2346,14 @@ $$
 - **Method:** S = ground distance / map distance in the same unit
 - **Assumes:** ground distance > map distance > 0
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![scale (scale denominator S (scale 1 : S)) against map_distance (distance on the map) from 0](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-map-scale-from-distances-curve)
+
+*scale (scale denominator S (scale 1 : S)) against map_distance (distance on the map) from 0.025 m to 0.075 m. One curve for each value of ground_distance (corresponding ground distance): 2500 m, 1250 m, 5000 m. 31 points per curve computed by geospatial-analytics-ai999x; marked: the worked example, map_distance = 0.05 m, scale = 50000.*
+
+![scale (scale denominator S (scale 1 : S)) over map_distance (distance on the map) from 0](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-map-scale-from-distances-field)
+
+*scale (scale denominator S (scale 1 : S)) over map_distance (distance on the map) from 0.025 m to 0.075 m and ground_distance (corresponding ground distance) from 1250 m to 3750 m: each of the 21 × 15 cells is one run of geospatial-analytics-ai999x, shaded by its value (light 16666.7 to dark 150000); iso-lines at scale = 25000, 50000, 75000, 1.00e5, 1.25e5. Marked: the worked example, map_distance = 0.05 m, ground_distance = 2500 m, scale = 50000.*
 
 ```python
 geospatial_analytics_ai999x.solve('geo_map_scale_from_distances', map_distance=0.05, ground_distance=2500.0)
@@ -2206,6 +2402,10 @@ $$
 - **Assumes:** 1 to 12 characters
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![The cell a geohash of each length covers at latitude 57](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-geohash-encode-curve)
+
+*The cell a geohash of each length covers at latitude 57.64911°, longitude 10.40744°: width and height are twice the longitude and latitude errors the package returns (doubled here), for 1 to 12 characters. Each character adds five bits, alternately splitting longitude and latitude, so the sizes fall in a zig-zag. Marked: the worked example, precision 11 → 'u4pruydqqvj', cell 1.3411e-06° × 1.3411e-06°.*
+
 ```python
 geospatial_analytics_ai999x.solve('geo_geohash_encode', lat=57.64911, lon=10.40744, precision=11)
 # -> geohash = u4pruydqqvj, lat_center = 57.6491, lon_center = 10.4074, lat_error = 6.70552e-07, lon_error = 6.70552e-07   (SOLVED)
@@ -2250,6 +2450,10 @@ $$
 - **Assumes:** 1 to 12 valid characters
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![The geohash 'u4pruydqqvj' read character by character: each prefix decoded by the package is a cell (centre ± returned error), and every added character subdivides the previous cell](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-geohash-decode-cells)
+
+*The geohash 'u4pruydqqvj' read character by character: each prefix decoded by the package is a cell (centre ± returned error), and every added character subdivides the previous cell. Top: prefixes of 1–3 characters ('u': 67.5° ± 22.5°, 22.5° ± 22.5°; 'u4': 59.0625° ± 2.8125°, 5.625° ± 5.625°; 'u4p': 56.9531° ± 0.703125°, 10.5469° ± 0.703125°); bottom: 3–5 characters, zoomed into the third cell. The dot is the full hash's centre, 57.6491°, 10.4074° (error 6.7055e-07°).*
+
 ```python
 geospatial_analytics_ai999x.solve('geo_geohash_decode', geohash='u4pruydqqvj')
 # -> lat_center = 57.6491, lon_center = 10.4074, lat_error = 6.70552e-07, lon_error = 6.70552e-07   (SOLVED)
@@ -2292,6 +2496,10 @@ $$
 - **Method:** UTM coordinates (Krueger series), 100 km column letter from the zone's set (A-H, J-R, S-Z), row letter cycling A-V (offset by 5 in even zones), digits truncated to 1 m; the zone is written with two digits
 - **Assumes:** 80 S <= latitude <= 84 N (polar regions use UPS)
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![Inside grid zone 32U (6° E to 12° E, 48° N to 56° N): at points every 1° the package's MGRS code, of which the two letters of the 100 km square are printed (48 runs); the letters change along easting and northing, not along the graticule](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-mgrs-encode-zones)
+
+*Inside grid zone 32U (6° E to 12° E, 48° N to 56° N): at points every 1° the package's MGRS code, of which the two letters of the 100 km square are printed (48 runs); the letters change along easting and northing, not along the graticule. Marked: the worked example 50.0°, 10.0° → 32UNA7166639109 (zone 32U, square NA, then 5-digit easting and northing within it).*
 
 ```python
 geospatial_analytics_ai999x.solve('geo_mgrs_encode', lat=50.0, lon=10.0)
@@ -2347,6 +2555,10 @@ $$
 
 *A 12-vertex line simplified by the Douglas–Peucker algorithm at two tolerances, the kept vertices as returned by the package: tolerance 0.4 keeps 8 vertices (0, 2, 4, 6, 7, 9, 10, 11); tolerance 1 keeps 4 vertices (0, 2, 4, 11).*
 
+![n_kept (number of kept vertices) against tolerance (distance tolerance (same unit as the coordinates)) from 0](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-douglas-peucker-simplification-curve)
+
+*n_kept (number of kept vertices) against tolerance (distance tolerance (same unit as the coordinates)) from 0.1 to 10 on a logarithmic axis. Other inputs as in the worked example: x = [0, 1, 2, 3, 4, 5, 6, 7], y = [0, 0.1, -0.1, 5, 6, 7, 8.1, 9]. 41 points computed by geospatial-analytics-ai999x; marked: the worked example, tolerance = 1, n_kept = 4.*
+
 ```python
 geospatial_analytics_ai999x.solve('geo_douglas_peucker_simplification', x=[0, 1, 2, 3, 4, 5, 6, 7], y=[0, 0.1, -0.1, 5, 6, 7, 8.1, 9], tolerance=1.0)
 # -> kept = [0.0, 2.0, 3.0, 7.0], n_kept = 4   (SOLVED)
@@ -2390,6 +2602,14 @@ $$
 - **Method:** dynamic programme (Eiter-Mannila): c(i,j) = max(d(i,j), min(c($i-1$,j), c($i-1$,j-1), c(i,j-1)))
 - **Assumes:** at least 2 vertices per line
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![Two polylines, ([0, 1, 2], [0, 0, 0]) and ([0, 2], [1, 1]) as x and y lists, and the discrete Fréchet distance the package returns, 1](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-discrete-frechet-distance-lines)
+
+*Two polylines, ([0, 1, 2], [0, 0, 0]) and ([0, 2], [1, 1]) as x and y lists, and the discrete Fréchet distance the package returns, 1.41421: the shortest leash that lets a walker on each line advance vertex by vertex, never backwards, while staying connected (drawn as a bar of that length).*
+
+![The discrete Fréchet distance returned by the package as the second line of the worked example (y2 = [1, 1]) is shifted vertically by −2 to 2 (31 runs): it is smallest when the second line runs along the first and grows with the separation](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-discrete-frechet-distance-curve)
+
+*The discrete Fréchet distance returned by the package as the second line of the worked example (y2 = [1, 1]) is shifted vertically by −2 to 2 (31 runs): it is smallest when the second line runs along the first and grows with the separation. Marked: no shift, 1.41421.*
 
 ```python
 geospatial_analytics_ai999x.solve('geo_discrete_frechet_distance', x1=[0, 1, 2], y1=[0, 0, 0], x2=[0, 2], y2=[1, 1])
@@ -2437,6 +2657,10 @@ $$
 - **Method:** shoelace area, perimeter, monotone-chain convex hull, Welzl minimum enclosing circle
 - **Assumes:** a simple polygon with distinct vertices
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![Five polygons and the compactness scores the package returns for each (1 = a circle): worked example: Polsby–Popper 0](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-polygon-compactness-polygons)
+
+*Five polygons and the compactness scores the package returns for each (1 = a circle): worked example: Polsby–Popper 0.76937, Reock 0.611155; square: Polsby–Popper 0.785398, Reock 0.63662; long strip: Polsby–Popper 0.417719, Reock 0.230625; L shape: Polsby–Popper 0.478602, Reock 0.38794; triangle: Polsby–Popper 0.604599, Reock 0.413496. The worked example ([0, 4, 4, 0]; [0, 0, 3, 3]) has area 12, perimeter 14, Schwartzberg 1.14007, convex-hull ratio 1.*
 
 ```python
 geospatial_analytics_ai999x.solve('geo_polygon_compactness', x=[0, 4, 4, 0], y=[0, 0, 3, 3])
@@ -2489,6 +2713,10 @@ $$
 - **Assumes:** $n  \geq  4$, values not all equal; no observation without neighbours
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![Moran scatter plot for y = [8, 6, 6, 3, 2, 1] with the contiguity matrix of the worked example: each unit's deviation from the mean against the deviation of its row-standardised spatial lag (lags returned by the package's spatial-lag capability; deviations computed here)](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-morans-i-scatter)
+
+*Moran scatter plot for y = [8, 6, 6, 3, 2, 1] with the contiguity matrix of the worked example: each unit's deviation from the mean against the deviation of its row-standardised spatial lag (lags returned by the package's spatial-lag capability; deviations computed here). The line through the origin has the returned Moran's I = 0.65625 as its slope (expected -0.2 without autocorrelation; z = 2.28068, p = 0.0225674 under normality). Points in the upper-right and lower-left quadrants are like-valued neighbours.*
+
 ```python
 geospatial_analytics_ai999x.solve('geo_morans_i', y=[8, 6, 6, 3, 2, 1], W=[[0, 1, 0, 0, 0, 0], [1, 0, 1, 0, 0, 0], [0, 1, 0, 1, 0, 0], [0, 0, 1, 0, 1, 0], [0, 0, 0, 1, 0, 1], [0, 0, 0, 0, 1, 0]], transform='row')
 # -> I = 0.65625, EI = -0.2, VI_norm = 0.140952, z_norm = 2.28068, p_norm = 0.0225674, VI_rand = 0.181793, z_rand = 2.00823, p_rand = 0.0446193   (SOLVED)
@@ -2536,6 +2764,10 @@ $$
 - **Assumes:** $n  \geq  4$, values not all equal; no observation without neighbours
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![The 6 units of the worked example as a network of their neighbour links (W; layout without meaning), each with its value y; on each link the squared difference of the two values (computed here from the inputs)](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-gearys-c-network)
+
+*The 6 units of the worked example as a network of their neighbour links (W; layout without meaning), each with its value y; on each link the squared difference of the two values (computed here from the inputs). Geary's C compares these with the overall variance; the package returns C = 0.195312 (below 1: neighbours are alike), z = -2.41406 under normality, -2.21289 under randomisation.*
+
 ```python
 geospatial_analytics_ai999x.solve('geo_gearys_c', y=[8, 6, 6, 3, 2, 1], W=[[0, 1, 0, 0, 0, 0], [1, 0, 1, 0, 0, 0], [0, 1, 0, 1, 0, 0], [0, 0, 1, 0, 1, 0], [0, 0, 0, 1, 0, 1], [0, 0, 0, 0, 1, 0]], transform='row')
 # -> C = 0.195312, VC_norm = 0.111111, z_norm = -2.41406, VC_rand = 0.132231, z_rand = -2.21289   (SOLVED)
@@ -2581,6 +2813,10 @@ $$
 - **Assumes:** positive values, $n  \geq  4$; binary weights, no observation without neighbours
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![Units with values y = [10, 12, 11, 2, 3, 2] linked by the worked example's weights (layout without meaning): the high values form one connected group](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-getis-ord-general-g-network)
+
+*Units with values y = [10, 12, 11, 2, 3, 2] linked by the worked example's weights (layout without meaning): the high values form one connected group. The package returns General G = 0.656814 against its expectation 0.466667 (variance 0.00892117, z = 2.01317): high values cluster.*
+
 ```python
 geospatial_analytics_ai999x.solve('geo_getis_ord_general_g', y=[10, 12, 11, 2, 3, 2], W=[[0, 1, 1, 0, 0, 0], [1, 0, 1, 0, 0, 0], [1, 1, 0, 1, 0, 0], [0, 0, 1, 0, 1, 1], [0, 0, 0, 1, 0, 1], [0, 0, 0, 1, 1, 0]])
 # -> G = 0.656814, EG = 0.466667, VG = 0.00892117, z_norm = 2.01317   (SOLVED)
@@ -2625,6 +2861,10 @@ $$
 - **Assumes:** positive values, $n  \geq  4$; binary weights, no observation without neighbours
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![Local Getis–Ord statistics (gi_star) on the units of the worked example (values y = [10, 12, 11, 2, 3, 2], links of W, layout without meaning): each node shows its value and the z-score the package returns, coloured hot (z > 1](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-local-getis-ord-gi-network)
+
+*Local Getis–Ord statistics (gi_star) on the units of the worked example (values y = [10, 12, 11, 2, 3, 2], links of W, layout without meaning): each node shows its value and the z-score the package returns, coloured hot (z > 1.96) or cold (z < −1.96); returned G values: 0.825, 0.825, 0.875, 0.45, 0.175, 0.175.*
+
 ```python
 geospatial_analytics_ai999x.solve('geo_local_getis_ord_gi', y=[10, 12, 11, 2, 3, 2], W=[[0, 1, 1, 0, 0, 0], [1, 0, 1, 0, 0, 0], [1, 1, 0, 1, 0, 0], [0, 0, 1, 0, 1, 1], [0, 0, 0, 1, 0, 1], [0, 0, 0, 1, 1, 0]], statistic='gi_star')
 # -> Gs = [0.825, 0.825, 0.875, 0.45, 0.175, 0.175], Zs = [2.21006630298, 2.21006630298, 1.50264699011, -1.56275286971, -2.21006630298, -2.21006630298]   (SOLVED)
@@ -2668,6 +2908,10 @@ $$
 - **Assumes:** $n  \geq  4$, values not all equal; no observation without neighbours
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![Local Moran's I for y = [8, 6, 6, 3, 2, 1] with the worked example's weights: each unit in the Moran scatter (deviation from the mean against its row-standardised lag, lags from the package's spatial-lag capability), coloured by the quadrant and labelled with the local I the package returns: unit 1 I = 0](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-local-morans-i-scatter)
+
+*Local Moran's I for y = [8, 6, 6, 3, 2, 1] with the worked example's weights: each unit in the Moran scatter (deviation from the mean against its row-standardised lag, lags from the package's spatial-lag capability), coloured by the quadrant and labelled with the local I the package returns: unit 1 I = 0.818452 (quadrant 1), unit 2 I = 0.595238 (quadrant 1), unit 3 I = 0.0372024 (quadrant 1), unit 4 I = 0.0595238 (quadrant 3), unit 5 I = 0.729167 (quadrant 3), unit 6 I = 1.04167 (quadrant 3).*
+
 ```python
 geospatial_analytics_ai999x.solve('geo_local_morans_i', y=[8, 6, 6, 3, 2, 1], W=[[0, 1, 0, 0, 0, 0], [1, 0, 1, 0, 0, 0], [0, 1, 0, 1, 0, 0], [0, 0, 1, 0, 1, 0], [0, 0, 0, 1, 0, 1], [0, 0, 0, 0, 1, 0]])
 # -> Is = [0.818452380952, 0.595238095238, 0.0372023809524, 0.0595238095238, 0.729166666667, 1.04166666667], quadrant = [1.0, 1.0, 1.0, 3.0, 3.0, 3.0]   (SOLVED)
@@ -2710,6 +2954,10 @@ $$
 - **Method:** $I_xy = zx$' W $zy / (n - 1)$ with both variables standardized (sample standard deviation) and row-standardized W
 - **Assumes:** $n  \geq  4$, neither variable constant; no observation without neighbours
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![Each unit's x = [8, 6, 6, 3, 2, 1] against the mean of y = [7, 7, 5, 4, 1, 2] over its neighbours (the row-standardised lag returned by the package's spatial-lag capability, with the worked example's weights): high x sits beside high y](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-bivariate-morans-i-scatter)
+
+*Each unit's x = [8, 6, 6, 3, 2, 1] against the mean of y = [7, 7, 5, 4, 1, 2] over its neighbours (the row-standardised lag returned by the package's spatial-lag capability, with the worked example's weights): high x sits beside high y. The package returns the bivariate Moran's I = 0.89176.*
 
 ```python
 geospatial_analytics_ai999x.solve('geo_bivariate_morans_i', x=[8, 6, 6, 3, 2, 1], y=[7, 7, 5, 4, 1, 2], W=[[0, 1, 0, 0, 0, 0], [1, 0, 1, 0, 0, 0], [0, 1, 0, 1, 0, 0], [0, 0, 1, 0, 1, 0], [0, 0, 0, 1, 0, 1], [0, 0, 0, 0, 1, 0]])
@@ -2756,6 +3004,10 @@ $$
 - **Assumes:** binary symmetric weights
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![Binary map y = [1, 1, 0, 0, 1, 0] (1 = black B, 0 = white W) on the links of the worked example's weights (layout without meaning); each link is coloured by the kind of join it is (classified here from the inputs)](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-join-counts-network)
+
+*Binary map y = [1, 1, 0, 0, 1, 0] (1 = black B, 0 = white W) on the links of the worked example's weights (layout without meaning); each link is coloured by the kind of join it is (classified here from the inputs). The package counts BB = 1, BW = 6, WW = 1 of J = 8 joins: many black–white joins, a dispersed pattern.*
+
 ```python
 geospatial_analytics_ai999x.solve('geo_join_counts', y=[1, 1, 0, 0, 1, 0], W=[[0, 1, 1, 0, 0, 0], [1, 0, 1, 1, 0, 0], [1, 1, 0, 0, 1, 0], [0, 1, 0, 0, 1, 1], [0, 0, 1, 1, 0, 1], [0, 0, 0, 1, 1, 0]])
 # -> BB = 1, BW = 6, WW = 1, J = 8   (SOLVED)
@@ -2798,6 +3050,10 @@ $$
 - **Method:** lag_i = sum_j w_ij y_j (weights row-standardized first if asked)
 - **Assumes:** no observation without neighbours
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![For each unit, its value y = [8, 6, 6, 3] beside the spatial lag the package returns with the worked example's weights (row-standardised): the lag is the neighbours' mean, 4](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-spatial-lag-bars)
+
+*For each unit, its value y = [8, 6, 6, 3] beside the spatial lag the package returns with the worked example's weights (row-standardised): the lag is the neighbours' mean, 4.5, 7, 4.5, 7, which smooths the map.*
 
 ```python
 geospatial_analytics_ai999x.solve('geo_spatial_lag', y=[8, 6, 6, 3], W=[[0, 1, 0, 1], [1, 0, 1, 0], [0, 1, 0, 1], [1, 0, 1, 0]], transform='row')
@@ -2843,6 +3099,10 @@ $$
 - **Method:** sort each point's distances to the others and mark the k smallest
 - **Assumes:** distinct points; $1  \leq  k < n$, no tie at the k-th neighbour
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![k-nearest-neighbour weights (k = 2) for points x = [0, 1, 3](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-knn-weights-map)
+
+*k-nearest-neighbour weights (k = 2) for points x = [0, 1, 3.5, 6, 10], y = [0, 0, 0, 0, 0.5]: an arrow from each point to every neighbour the package's matrix gives it. The relation is not mutual (returned symmetric: False) — the far point 5 points to 3 and 4, but only 4 points back. S0 = 10.*
 
 ```python
 geospatial_analytics_ai999x.solve('geo_knn_weights', x=[0, 1, 3.5, 6, 10], y=[0, 0, 0, 0, 0.5], k=2)
@@ -2890,6 +3150,10 @@ $$
 - **Assumes:** threshold > 0
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![Points at x = [0, 1, 3, 6, 10], y = [0, 0, 0, 0, 0] with a distance band of 2](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-distance-band-weights-map)
+
+*Points at x = [0, 1, 3, 6, 10], y = [0, 0, 0, 0, 0] with a distance band of 2.5 (dashed circles of that radius around each point): the links are the pairs the package's weights matrix joins; labels give each point's number of neighbours as returned. Returned: 2 islands without neighbours, S0 = 4.*
+
 ```python
 geospatial_analytics_ai999x.solve('geo_distance_band_weights', x=[0, 1, 3, 6, 10], y=[0, 0, 0, 0, 0], threshold=2.5)
 # -> W = [[0.0, 1.0, 0.0, 0.0, 0.0], [1.0, 0.0, 1.0, 0.0, 0.0], [0.0, 1.0, 0.0, 0.0, 0.0], [0.0, 0.0, 0.0, 0.0, 0.0], [0.0, 0.0, 0.0, 0.0, 0.0]], neighbours = [1.0, 2.0, 1.0, 0.0, 0.0], s0 = 4, islands = 2   (SOLVED)
@@ -2936,6 +3200,14 @@ $$
 - **Method:** mean of each point's distance to its nearest neighbour; Clark-Evans expectation $0.5/sqrt$(density) and standard error $0.26136/sqrt$(n^2/A)
 - **Assumes:** distinct points; no edge correction
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![The 5 points x = [1, 2, 8, 9, 5], y = [1, 2, 8, 9, 5] with an arrow to each one's nearest neighbour (found here from the inputs)](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-nearest-neighbour-index-map)
+
+*The 5 points x = [1, 2, 8, 9, 5], y = [1, 2, 8, 9, 5] with an arrow to each one's nearest neighbour (found here from the inputs). The package returns the mean nearest-neighbour distance 1.9799 against 2.23607 expected for a random pattern in area 100: R = 0.885438 (below 1 leans to clustering), z = -0.490069, p = 0.624085.*
+
+![R (nearest-neighbour index d_obs/d_exp) against area (area of the study region (square coordinate units)) from 50 to 150](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-nearest-neighbour-index-curve)
+
+*R (nearest-neighbour index d_obs/d_exp) against area (area of the study region (square coordinate units)) from 50 to 150. Other inputs as in the worked example: x = [1, 2, 8, 9, 5], y = [1, 2, 8, 9, 5]. 31 points computed by geospatial-analytics-ai999x; marked: the worked example, area = 100, R = 0.885438.*
 
 ```python
 geospatial_analytics_ai999x.solve('geo_nearest_neighbour_index', x=[1, 2, 8, 9, 5], y=[1, 2, 8, 9, 5], area=100)
@@ -2985,6 +3257,10 @@ $$
 - **Assumes:** the window is the bounding rectangle of the points; cells include their west and south edges; the last column and row include the east and north edges
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![The 10 points of the worked example in a 2 × 2 grid of quadrats over their extent, each quadrat labelled with the count the package returns (counts listed row by row from the bottom left: 3, 3, 2, 2)](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-quadrat-test-map)
+
+*The 10 points of the worked example in a 2 × 2 grid of quadrats over their extent, each quadrat labelled with the count the package returns (counts listed row by row from the bottom left: 3, 3, 2, 2). χ² = 0.4 on 3 degrees of freedom, p = 0.940242; variance-to-mean ratio 0.133333 (below 1: more even than random).*
+
 ```python
 geospatial_analytics_ai999x.solve('geo_quadrat_test', x=[1, 2, 3, 8, 9, 2, 1, 7, 8, 9], y=[1, 1, 2, 8, 9, 8, 9, 1, 2, 1], nx=2, ny=2)
 # -> chi2 = 0.4, df = 3, p_value = 0.940242, vmr = 0.133333, counts = [3.0, 3.0, 2.0, 2.0]   (SOLVED)
@@ -3029,6 +3305,10 @@ $$
 - **Method:** K(d) = A * (number of ordered pairs closer than d) / n^2 with A the bounding-rectangle area (as pointpats)
 - **Assumes:** window = bounding rectangle of the points; pairs closer than d (strictly) are counted; no edge correction
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![Ripley's L function of the six points x = [0, 1, 2, 8, 9, 10], y = [0, 1, 0, 9, 10, 9] (study area 100), returned by the package at distances up to 12; above the diagonal L = d the points are closer together than random (two tight groups)](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-ripley-k-curve)
+
+*Ripley's L function of the six points x = [0, 1, 2, 8, 9, 10], y = [0, 1, 0, 9, 10, 9] (study area 100), returned by the package at distances up to 12; above the diagonal L = d the points are closer together than random (two tight groups). Dots: the worked example's distances L(1.5) = 2.65962, L(3) = 3.25735, L(12) = 3.76126.*
 
 ```python
 geospatial_analytics_ai999x.solve('geo_ripley_k', x=[0, 1, 2, 8, 9, 10], y=[0, 1, 0, 9, 10, 9], d=[1.5, 3, 12])
@@ -3078,6 +3358,10 @@ $$
 
 *A pattern of 11 points with the mean centre and standard distance computed by the package: marked: x = 52.4, y = 49.5982; the circle has radius 40.2158, the standard distance (root-mean-square distance of the points from the centre).*
 
+![The worked example's points x = [0, 4, 4, 0], y = [0, 0, 3, 3], their mean centre (2, 1](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-mean-center-standard-distance-map-2)
+
+*The worked example's points x = [0, 4, 4, 0], y = [0, 0, 3, 3], their mean centre (2, 1.5) and a circle of the returned standard distance 2.5 — here every corner of the rectangle lies on it, since all four are equally far from the centre.*
+
 ```python
 geospatial_analytics_ai999x.solve('geo_mean_center_standard_distance', x=[0, 4, 4, 0], y=[0, 0, 3, 3])
 # -> mean_x = 2, mean_y = 1.5, std_distance = 2.5   (SOLVED)
@@ -3123,6 +3407,10 @@ $$
 - **Assumes:** non-negative weights, not all zero
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![Points ([0, 10, 20]; [0, 0, 10]) with weights [100, 50, 50] (dot area grows with weight) and the weighted mean centre the package returns, (7](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-weighted-mean-center-map)
+
+*Points ([0, 10, 20]; [0, 0, 10]) with weights [100, 50, 50] (dot area grows with weight) and the weighted mean centre the package returns, (7.5, 2.5), pulled toward the heavy point; the circle has the returned weighted standard distance 9.35414 as radius.*
+
 ```python
 geospatial_analytics_ai999x.solve('geo_weighted_mean_center', x=[0, 10, 20], y=[0, 0, 10], w=[100, 50, 50])
 # -> wmean_x = 7.5, wmean_y = 2.5, weighted_std_distance = 9.35414   (SOLVED)
@@ -3166,6 +3454,10 @@ $$
 - **Method:** eigenvalues of the $(1/n)$ covariance of the coordinates give the variances along the principal axes; axes = sqrt(2 $n/(n-2)$ lambda) (CrimeStat); orientation from the major eigenvector
 - **Assumes:** $n  \geq  3$, points neither collinear nor circularly symmetric
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![The standard deviational ellipse of 11 points, centred on their mean centre (52](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-standard-deviational-ellipse-map)
+
+*The standard deviational ellipse of 11 points, centred on their mean centre (52.4, 49.5982) from the package's mean-centre capability, with the returned semi-axes sx = 50.1303 (along the dashed axis, at 70.1437° clockwise from north) and sy = 37.9522.*
 
 ```python
 geospatial_analytics_ai999x.solve('geo_standard_deviational_ellipse', x=[66.22, 22.52, 31.01, 9.47, 30.78, 75.21, 79.26, 8.23, 98.73, 89.78, 65.19], y=[32.54, 22.39, 81.21, 31.02, 60.1, 58.93, 7.68, 39.93, 77.17, 42.53, 92.08])
@@ -3214,6 +3506,14 @@ $$
 - **Assumes:** bandwidth > 0
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![Kernel density of four events (x = [0, 1, 2, 5], y = [0, 1, 0, 5]) with a gaussian kernel of bandwidth 2: each of 576 cells is shaded by the density the package returns at its centre](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-kernel-density-map)
+
+*Kernel density of four events (x = [0, 1, 2, 5], y = [0, 1, 0, 5]) with a gaussian kernel of bandwidth 2: each of 576 cells is shaded by the density the package returns at its centre. Marked: the worked example at (1, 0.5), density 0.0267648 (intensity 0.107059 events per unit area).*
+
+![density (density (per square coordinate unit, integrates to 1)) against bandwidth (bandwidth h (coordinate units)) from 0](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-kernel-density-curve)
+
+*density (density (per square coordinate unit, integrates to 1)) against bandwidth (bandwidth h (coordinate units)) from 0.2 to 20 on a logarithmic axis. One curve for each value of px (x of the location): 1, 0.5, 2. Other inputs as in the worked example: x = [0, 1, 2, 5], y = [0, 1, 0, 5], py = 0.5, kernel = gaussian. 41 points per curve computed by geospatial-analytics-ai999x; marked: the worked example, bandwidth = 2, density = 0.0267648.*
+
 ```python
 geospatial_analytics_ai999x.solve('geo_kernel_density', x=[0, 1, 2, 5], y=[0, 1, 0, 5], px=1, py=0.5, bandwidth=2, kernel='gaussian')
 # -> density = 0.0267648, intensity = 0.107059   (SOLVED)
@@ -3260,6 +3560,14 @@ $$
 - **Assumes:** power > 0 (at most 10); a location on a sample returns that sample's value
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![Inverse-distance-weighted surface (power 2) from four samples z = [1, 2, 3, 4] at the corners (x = [0, 10, 0, 10], y = [0, 0, 10, 10]): each of the 576 cells is shaded by the estimate the package returns at its centre](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-idw-interpolation-map)
+
+*Inverse-distance-weighted surface (power 2) from four samples z = [1, 2, 3, 4] at the corners (x = [0, 10, 0, 10], y = [0, 0, 10, 10]): each of the 576 cells is shaded by the estimate the package returns at its centre. Marked: the worked example at (2, 3), estimate 1.65898.*
+
+![estimate (interpolated value) against py (y of the location) from 0](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-idw-interpolation-curve)
+
+*estimate (interpolated value) against py (y of the location) from 0.3 to 30 on a logarithmic axis. One curve for each value of power (distance power p (> 0)): 2, 1, 4. Other inputs as in the worked example: x = [0, 10, 0, 10], y = [0, 0, 10, 10], z = [1, 2, 3, 4], px = 2. 41 points per curve computed by geospatial-analytics-ai999x; marked: the worked example, py = 3, estimate = 1.65898.*
+
 ```python
 geospatial_analytics_ai999x.solve('geo_idw_interpolation', x=[0, 10, 0, 10], y=[0, 0, 10, 10], z=[1, 2, 3, 4], px=2, py=3, power=2)
 # -> estimate = 1.65898   (SOLVED)
@@ -3304,6 +3612,10 @@ $$
 - **Method:** gamma($h_k) = 1/(2$ N_k) sum over pairs in bin k of $(z_i - z_j)^{2}$
 - **Assumes:** every bin contains at least one pair; bins [e_k, e_k+1)
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![Top: the samples z = [1, 3, 2, 5, 4] at x = [0, 1, 2, 3, 4] (y = [0, 0, 0, 0, 0])](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-empirical-semivariogram-variogram)
+
+*Top: the samples z = [1, 3, 2, 5, 4] at x = [0, 1, 2, 3, 4] (y = [0, 0, 0, 0, 0]). Bottom: the empirical semivariogram the package returns for lag bins [0, 1.5, 2.5, 4.5] — each bar spans its bin and has the returned semivariance as height, labelled with the number of pairs.*
 
 ```python
 geospatial_analytics_ai999x.solve('geo_empirical_semivariogram', x=[0, 1, 2, 3, 4], y=[0, 0, 0, 0, 0], z=[1, 3, 2, 5, 4], bin_edges=[0, 1.5, 2.5, 4.5])
@@ -3350,6 +3662,10 @@ $$
 - **Method:** variable projection: for each range the nugget and partial sill are linear least squares; the range solves d(SSE)/da = 0 (grid search, then bisection, polished in 30-digit arithmetic with mpmath)
 - **Assumes:** the least-squares range has an interior minimum (between min(h)/20 and 20 max(h))
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![The empirical semivariances γ = [1](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-variogram-model-fit-variogram)
+
+*The empirical semivariances γ = [1.6, 2.9, 4.6, 5.6, 6.3, 6.8, 7.0, 7.05] at lags h = [1, 2, 4, 6, 8, 12, 16, 20] and the exponential model with the parameters the package fits: nugget -0.0628821, partial sill 7.16435, sill 7.10147, practical range 11.3285 (where the model reaches 95 % of its partial sill); the curve γ(h) = nugget + partial sill·(1 − e^(−3h/range)) is evaluated here from those returned values.*
 
 ```python
 geospatial_analytics_ai999x.solve('geo_variogram_model_fit', h=[1, 2, 4, 6, 8, 12, 16, 20], gamma=[1.6, 2.9, 4.6, 5.6, 6.3, 6.8, 7.0, 7.05], model='exponential')
@@ -3401,6 +3717,10 @@ $$
 - **Assumes:** distinct sample locations; sill > nugget >= 0, range > 0; the variogram is 0 at zero distance (exact interpolation)
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![Ordinary kriging from four samples z = [1, 2, 3, 4] at the corners of a 10 × 10 square (spherical variogram, nugget 0, sill 2, range 20): top, the estimate the package returns at each of 400 cell centres; bottom, the kriging variance, zero at the samples and largest away from them](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-ordinary-kriging-map)
+
+*Ordinary kriging from four samples z = [1, 2, 3, 4] at the corners of a 10 × 10 square (spherical variogram, nugget 0, sill 2, range 20): top, the estimate the package returns at each of 400 cell centres; bottom, the kriging variance, zero at the samples and largest away from them. Marked: the worked example at (4, 6), estimate 2.6048, variance 0.877115.*
+
 ```python
 geospatial_analytics_ai999x.solve('geo_ordinary_kriging', x=[0, 10, 0, 10], y=[0, 0, 10, 10], z=[1, 2, 3, 4], px=4, py=6, model='spherical', nugget=0, sill=2, range=20)
 # -> estimate = 2.6048, variance = 0.877115   (SOLVED)
@@ -3446,6 +3766,10 @@ $$
 - **Assumes:** more samples than coefficients; values not all equal
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![A first-order trend surface fitted to six samples (z = [1, 3, 5](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-trend-surface-map)
+
+*A first-order trend surface fitted to six samples (z = [1, 3, 5.2, 2, 4.1, 6] at the drawn points): the shading is the plane z = 1.01667 + 2.05·x + 0.966667·y with the coefficients the package returns (evaluated here on a grid); R² = 0.99872.*
+
 ```python
 geospatial_analytics_ai999x.solve('geo_trend_surface', x=[0, 1, 2, 0, 1, 2], y=[0, 0, 0, 1, 1, 1], z=[1, 3, 5.2, 2, 4.1, 6], order=1)
 # -> coefficients = [1.01666666667, 2.05, 0.966666666667], r_squared = 0.99872   (SOLVED)
@@ -3489,6 +3813,10 @@ $$
 - **Method:** sort descending; least squares of ln P on ln rank
 - **Assumes:** positive populations
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![Settlement populations ranked from largest to smallest on logarithmic axes, with the rank–size line of the returned exponent q = 0](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-rank-size-rule-fit)
+
+*Settlement populations ranked from largest to smallest on logarithmic axes, with the rank–size line of the returned exponent q = 0.903102 and fitted largest size 7.73565e+06 (R² = 0.985307; the line is evaluated here from them). Marked: the largest city, primacy (largest over second) 2.15385.*
 
 ```python
 geospatial_analytics_ai999x.solve('geo_rank_size_rule', populations=[8400000, 3900000, 2700000, 2300000, 1600000, 1500000, 1400000, 1300000])
@@ -3534,6 +3862,10 @@ $$
 - **Method:** least squares of ln D on r
 - **Assumes:** positive densities; distances not all equal
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![Population densities D = [9000, 7600, 5300, 3900, 2800, 2000] at distances r = [1, 2, 4, 6, 8, 10] on a logarithmic density axis, and the negative-exponential gradient with the parameters the package returns (D0 = 10546](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-density-gradient-fit)
+
+*Population densities D = [9000, 7600, 5300, 3900, 2800, 2000] at distances r = [1, 2, 4, 6, 8, 10] on a logarithmic density axis, and the negative-exponential gradient with the parameters the package returns (D0 = 10546.4, b = 0.166383, R² = 0.999624; the line is evaluated here from them). Marked: the returned half distance 4.16598, where density falls to D0/2.*
 
 ```python
 geospatial_analytics_ai999x.solve('geo_density_gradient', r=[1, 2, 4, 6, 8, 10], D=[9000, 7600, 5300, 3900, 2800, 2000])
@@ -3581,6 +3913,10 @@ $$
 - **Method:** Poisson GLM with log link, ln $mu = ln$ k + alpha ln O + beta ln D - gamma ln d, by iteratively reweighted least squares
 - **Assumes:** non-negative flows, positive masses and distances that vary
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![Observed flows T = [120, 45, 300, 80, 15, 60, 200, 33] against the flows of the gravity model fitted by the package, T̂ = k·O^α·D^β·d^(−γ) with k = 0](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-gravity-model-poisson-fit-fit)
+
+*Observed flows T = [120, 45, 300, 80, 15, 60, 200, 33] against the flows of the gravity model fitted by the package, T̂ = k·O^α·D^β·d^(−γ) with k = 0.000370957, α = 0.802892, β = 0.33475, γ = 0.509079 (the fitted values are evaluated here from these returned parameters and the inputs O, D, d); points near the diagonal are well explained.*
 
 ```python
 geospatial_analytics_ai999x.solve('geo_gravity_model_poisson_fit', T=[120, 45, 300, 80, 15, 60, 200, 33], O=[500000.0, 200000.0, 900000.0, 300000.0, 100000.0, 400000.0, 800000.0, 250000.0], D=[300000.0, 400000.0, 600000.0, 200000.0, 300000.0, 100000.0, 500000.0, 200000.0], d=[50, 120, 40, 90, 200, 70, 60, 110])
@@ -3631,6 +3967,14 @@ $$
 - **Assumes:** reflectances between 0 and 1; positive denominators
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![All 6 vegetation indices the package returns for the worked example's reflectances (red = 0](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-vegetation-indices-bars)
+
+*All 6 vegetation indices the package returns for the worked example's reflectances (red = 0.08, nir = 0.45, blue = 0.04, L = 0.5): NDVI = 0.698113, EVI = 0.567485, SAVI = 0.538835, OSAVI = 0.536232, MSAVI = 0.546887, EVI2 = 0.563337.*
+
+![NDVI returned by the package over red reflectance 0–0](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-vegetation-indices-field)
+
+*NDVI returned by the package over red reflectance 0–0.5 and near-infrared 0–0.6 (750 runs, blue 0.04): vegetation (bright near-infrared, dark red) is high, bare soil and water low. Marked: the worked example, red 0.08, near-infrared 0.45, NDVI 0.698113.*
+
 ```python
 geospatial_analytics_ai999x.solve('geo_vegetation_indices', red=0.08, nir=0.45, blue=0.04, L=0.5)
 # -> NDVI = 0.698113, EVI = 0.567485, SAVI = 0.538835, OSAVI = 0.536232, MSAVI = 0.546887, EVI2 = 0.563337   (SOLVED)
@@ -3679,6 +4023,14 @@ $$
 - **Assumes:** reflectances between 0 and 1, band sums non-zero
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![All 5 normalised-difference indices the package returns for the worked example's reflectances (green = 0](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-water-burn-built-indices-bars)
+
+*All 5 normalised-difference indices the package returns for the worked example's reflectances (green = 0.08, nir = 0.03, swir1 = 0.02, swir2 = 0.01): NDWI = 0.454545, MNDWI = 0.6, NDMI = 0.2, NBR = 0.5, NDBI = -0.2.*
+
+![NDWI ((G - NIR)/(G + NIR)) against green (green reflectance (0-1)) from 0](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-water-burn-built-indices-curve)
+
+*NDWI ((G - NIR)/(G + NIR)) against green (green reflectance (0-1)) from 0.008 to 0.8 on a logarithmic axis. One curve for each value of nir (near-infrared reflectance (0-1)): 0.03, 0.015, 0.06. Other inputs as in the worked example: swir1 = 0.02, swir2 = 0.01. 41 points per curve computed by geospatial-analytics-ai999x; marked: the worked example, green = 0.08, NDWI = 0.454545.*
+
 ```python
 geospatial_analytics_ai999x.solve('geo_water_burn_built_indices', green=0.08, nir=0.03, swir1=0.02, swir2=0.01)
 # -> NDWI = 0.454545, MNDWI = 0.6, NDMI = 0.2, NBR = 0.5, NDBI = -0.2   (SOLVED)
@@ -3724,6 +4076,10 @@ $$
 - **Assumes:** sun above the horizon
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![Top-of-atmosphere reflectance returned by the package for radiance 85](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-toa-reflectance-curve)
+
+*Top-of-atmosphere reflectance returned by the package for radiance 85.0 W/(m² sr µm) and solar irradiance 1536: top, against the sun's elevation (day 172); bottom, the Earth–Sun distance it uses through the year (farthest in early July). Marked: the worked example, elevation 60°, day 172 → reflectance 0.207502, distance 1.01669 AU.*
+
 ```python
 geospatial_analytics_ai999x.solve('geo_toa_reflectance', radiance=85.0, esun=1536, doy=172, sun_elevation=60)
 # -> earth_sun_distance = 1.01669, reflectance = 0.207502   (SOLVED)
@@ -3766,6 +4122,10 @@ $$
 - **Method:** inverted Planck relation $T = K_{2} / ln$(K1/L + 1)
 - **Assumes:** positive radiance and constants
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![Brightness temperature returned by the package for thermal radiances 0](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-brightness-temperature-curve)
+
+*Brightness temperature returned by the package for thermal radiances 0.5 to 16 W/(m² sr µm) with the band constants K1 = 774.8853, K2 = 1321.0789 (63 runs). Marked: the worked example, radiance 10.5 → T = 306.174 K (33.0239 °C).*
 
 ```python
 geospatial_analytics_ai999x.solve('geo_brightness_temperature', radiance=10.5, K1=774.8853, K2=1321.0789)
@@ -3812,6 +4172,10 @@ $$
 - **Assumes:** flat ground, nadir view
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![Ground sample distance (top, in cm) and swath width (bottom) returned by the package for a camera with pixel pitch 2](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-ground-sample-distance-curve)
+
+*Ground sample distance (top, in cm) and swath width (bottom) returned by the package for a camera with pixel pitch 2.4e-06 m, focal length 0.0088 m and 5472 pixels across, at altitudes 10–400 m: both grow in proportion to altitude. Marked: the worked example at 120.0 m, GSD 0.0327273 m, swath 179.084 m.*
+
 ```python
 geospatial_analytics_ai999x.solve('geo_ground_sample_distance', pixel_pitch=2.4e-06, focal_length=0.0088, altitude=120.0, pixels=5472)
 # -> gsd = 0.0327273 m, swath = 179.084 m   (SOLVED)
@@ -3856,6 +4220,14 @@ $$
 - **Assumes:** square matrix of whole counts; every class sampled in the map and the reference
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![Per-class accuracies the package returns for the worked example's 4 × 4 error matrix (rows: classified, columns: reference): producer's accuracy 0](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-classification-accuracy-bars)
+
+*Per-class accuracies the package returns for the worked example's 4 × 4 error matrix (rows: classified, columns: reference): producer's accuracy 0.866667, 0.786408, 0.73913, 0.638298; user's accuracy 0.565217, 0.81, 0.73913, 0.865385; overall 0.739631, κ = 0.653516.*
+
+![The matrices of the worked example as heatmaps (rows and columns numbered; each cell shaded by its magnitude, negative values in the second colour; each panel shaded by its own largest magnitude): matrix (input); producers (returned)](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-classification-accuracy-matrix)
+
+*The matrices of the worked example as heatmaps (rows and columns numbered; each cell shaded by its magnitude, negative values in the second colour; each panel shaded by its own largest magnitude): matrix (input); producers (returned). Returned with them by geospatial-analytics-ai999x: overall = 0.739631, kappa = 0.653516.*
+
 ```python
 geospatial_analytics_ai999x.solve('geo_classification_accuracy', matrix=[[65, 4, 22, 24], [6, 81, 5, 8], [0, 11, 85, 19], [4, 7, 3, 90]])
 # -> overall = 0.739631, kappa = 0.653516, producers = [0.866666666667, 0.78640776699, 0.739130434783, 0.63829787234], users = [0.565217391304, 0.81, 0.739130434783, 0.865384615385]   (SOLVED)
@@ -3899,6 +4271,14 @@ $$
 - **Method:** Horn (1981): dz/dx = ($(c + 2f + i) - (a + 2d + g)$)/(8 dx), dz/dy = ($(a + 2b + c) - (g + 2h + i)$)/(8 dy) with y north; slope = atan(|grad|), aspect = atan2(-dz/dx, -dz/dy)
 - **Assumes:** square cells; row 0 is the northern row
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![The 3 × 3 elevation window of the worked example (cell size 10](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-slope-aspect-horn-window)
+
+*The 3 × 3 elevation window of the worked example (cell size 10.0 m, north at the top; values in m) and the slope and aspect the package returns for its centre: slope 43.3317° (94.3398 %), aspect 327.995° clockwise from north, drawn as an arrow pointing downslope toward the low corner.*
+
+![slope_deg (slope (degrees)) against cell_size (cell size (square cells)) from 1 m to 100 m on a logarithmic axis](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-slope-aspect-horn-curve)
+
+*slope_deg (slope (degrees)) against cell_size (cell size (square cells)) from 1 m to 100 m on a logarithmic axis. Other inputs as in the worked example: window = [[37.2, 42, 47.2], [45.2, 50, 55.2], [53.2, 5…. 41 points computed by geospatial-analytics-ai999x; marked: the worked example, cell_size = 10 m, slope_deg = 43.3317.*
 
 ```python
 geospatial_analytics_ai999x.solve('geo_slope_aspect_horn', window=[[37.2, 42, 47.2], [45.2, 50, 55.2], [53.2, 58, 63.2]], cell_size=10.0)
@@ -3945,6 +4325,10 @@ $$
 - **Assumes:** row 0 is the northern row; no cast shadows
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![Hillshade of the worked example's 3 × 3 window (cell size 5](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-hillshade-compass)
+
+*Hillshade of the worked example's 3 × 3 window (cell size 5.0 m) as the sun goes round: distance from the centre is the hillshade value (0–255) the package returns for a sun at that azimuth (clockwise from north, every 10°), at altitudes 45° and 20°; the slope faces roughly west, so it is brightest under a western sun. Marked: the worked example, sun at 315°, hillshade 167.305 (illumination 0.656099).*
+
 ```python
 geospatial_analytics_ai999x.solve('geo_hillshade', window=[[2452.25, 2463, 2473.75], [2450, 2461, 2472], [2447.75, 2459, 2470.25]], cell_size=5.0, sun_azimuth=315, sun_altitude=45)
 # -> illumination = 0.656099, hillshade = 167.305   (SOLVED)
@@ -3989,6 +4373,14 @@ $$
 - **Assumes:** non-zero gradient at the centre for profile and plan curvature
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![The matrices of the worked example as heatmaps (rows and columns numbered; each cell shaded by its magnitude, negative values in the second colour; each panel shaded by its own largest magnitude): window (input)](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-terrain-curvature-matrix)
+
+*The matrices of the worked example as heatmaps (rows and columns numbered; each cell shaded by its magnitude, negative values in the second colour; each panel shaded by its own largest magnitude): window (input). Returned with them by geospatial-analytics-ai999x: curvature = -3, profile = -1.64, plan = 1.36. Other inputs: cell_size = 1.0 m.*
+
+![curvature (total curvature -2(D + E) (1/m; positive upwardly convex)) against cell_size (cell size) from 0](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-terrain-curvature-curve)
+
+*curvature (total curvature -2(D + E) (1/m; positive upwardly convex)) against cell_size (cell size) from 0.1 m to 10 m on a logarithmic axis. Other inputs as in the worked example: window = [[10, 12, 14], [9, 10, 13], [7, 9, 11]]. 41 points computed by geospatial-analytics-ai999x; marked: the worked example, cell_size = 1 m, curvature = -3.*
+
 ```python
 geospatial_analytics_ai999x.solve('geo_terrain_curvature', window=[[10, 12, 14], [9, 10, 13], [7, 9, 11]], cell_size=1.0)
 # -> curvature = -3, profile = -1.64, plan = 1.36   (SOLVED)
@@ -4032,6 +4424,10 @@ $$
 - **Assumes:** Riley et al. (1999) form of the TRI
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![The matrices of the worked example as heatmaps (rows and columns numbered; each cell shaded by its magnitude, negative values in the second colour; each panel shaded by its own largest magnitude): window (input)](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-terrain-ruggedness-matrix)
+
+*The matrices of the worked example as heatmaps (rows and columns numbered; each cell shaded by its magnitude, negative values in the second colour; each panel shaded by its own largest magnitude): window (input). Returned with them by geospatial-analytics-ai999x: TRI = 6.40312, TPI = -0.625, relief = 7.*
+
 ```python
 geospatial_analytics_ai999x.solve('geo_terrain_ruggedness', window=[[10, 12, 14], [9, 10, 13], [7, 9, 11]])
 # -> TRI = 6.40312, TPI = -0.625, relief = 7   (SOLVED)
@@ -4073,6 +4469,10 @@ $$
 - **Method:** for each cell the neighbour with the largest drop per unit distance (positive drops only)
 - **Assumes:** square cells; diagonal distance sqrt(2) cells; ties go to the first direction in the order E, SE, S, SW, W, NW, N, NE
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![The worked example's 4 × 4 elevation grid (cell size 10](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-d8-flow-direction-flow)
+
+*The worked example's 4 × 4 elevation grid (cell size 10.0 m; shading and printed values: elevation in m, north at the top) with an arrow in each cell for the D8 direction the package returns (codes 1 = east, 2 = south-east, 4 = south, 8 = south-west, 16 = west, 32 = north-west, 64 = north, 128 = north-east): 2 2 2 4; 2 2 2 4; 1 1 2 4; 128 128 1 0. Every path drains to the lowest corner, the outlet (code 0).*
 
 ```python
 geospatial_analytics_ai999x.solve('geo_d8_flow_direction', dem=[[78, 72, 69, 71], [74, 67, 56, 49], [69, 53, 44, 37], [64, 58, 55, 22]], cell_size=10.0)
@@ -4121,6 +4521,10 @@ $$
 
 *A 4 × 4 elevation grid (left, metres, cell size 10 m) and the D8 flow accumulation the package computes from it (right): each cell shows how many cells drain through it, itself included; the maximum, 16, is the outlet in the lowest corner. Each panel is shaded by its own maximum.*
 
+![Flow accumulation on the worked example's elevation grid: each cell shows the number of cells draining through it (itself included) returned by the package, and a stream line to its downstream neighbour (direction from the package's D8 capability) whose width grows with that number; the outlet collects all 16 cells](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-d8-flow-accumulation-flow)
+
+*Flow accumulation on the worked example's elevation grid: each cell shows the number of cells draining through it (itself included) returned by the package, and a stream line to its downstream neighbour (direction from the package's D8 capability) whose width grows with that number; the outlet collects all 16 cells.*
+
 ```python
 geospatial_analytics_ai999x.solve('geo_d8_flow_accumulation', dem=[[78, 72, 69, 71], [74, 67, 56, 49], [69, 53, 44, 37], [64, 58, 55, 22]], cell_size=10.0)
 # -> accumulation = [[1.0, 1.0, 1.0, 1.0], [1.0, 2.0, 2.0, 3.0], [1.0, 4.0, 8.0, 6.0], [1.0, 1.0, 1.0, 16.0]], max_accumulation = 16   (SOLVED)
@@ -4166,6 +4570,10 @@ $$
 - **Method:** D8 directions, then a search upstream from the outlet through the cells that flow into it
 - **Assumes:** D8 directions as in geo_d8_flow_direction
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![Watersheds on the worked example's elevation grid (cell size 10](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-watershed-delineation-mask)
+
+*Watersheds on the worked example's elevation grid (cell size 10.0 m) for three outlets (dot): the cells of the mask the package returns are shaded, the arrows are the D8 directions from its flow-direction capability. Rows and columns count from 0 at the top left. row 3, column 3: 16 cells, 1600 m²; row 2, column 2: 8 cells, 800 m²; row 1, column 2: 2 cells, 200 m² — the first is the worked example, the grid's outlet, which drains everything.*
 
 ```python
 geospatial_analytics_ai999x.solve('geo_watershed_delineation', dem=[[78, 72, 69, 71], [74, 67, 56, 49], [69, 53, 44, 37], [64, 58, 55, 22]], cell_size=10.0, row=3, col=3)
@@ -4213,6 +4621,10 @@ $$
 - **Assumes:** distances increase from 0; positive observer and target heights
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![A terrain profile (elevations [100, 104, 112, 103, 101, 109] m at [0, 100, 200, 300, 400, 500] m) seen by an observer 2 m above the first point, looking at targets 2 m above each point (curvature: none): sight lines are drawn solid where the package returns the point as visible and dashed where hidden — 2 of the 5 other points are visible; the ridge at 200 m hides those beyond](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-line-of-sight-profile-profile)
+
+*A terrain profile (elevations [100, 104, 112, 103, 101, 109] m at [0, 100, 200, 300, 400, 500] m) seen by an observer 2 m above the first point, looking at targets 2 m above each point (curvature: none): sight lines are drawn solid where the package returns the point as visible and dashed where hidden — 2 of the 5 other points are visible; the ridge at 200 m hides those beyond.*
+
 ```python
 geospatial_analytics_ai999x.solve('geo_line_of_sight_profile', d=[0, 100, 200, 300, 400, 500], z=[100, 104, 112, 103, 101, 109], observer_height=2.0, target_height=2.0, curvature='none')
 # -> visible = [1.0, 1.0, 1.0, 0.0, 0.0, 0.0], n_visible = 2   (SOLVED)
@@ -4256,6 +4668,10 @@ $$
 - **Method:** Dijkstra shortest paths from every node; A_i = sum_{$j  \neq  i$} O_j f(d_ij)
 - **Assumes:** positive edge lengths; a node's own opportunities are excluded; unreachable nodes contribute 0
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![The worked example's network (edge lengths printed; layout without meaning) with each node labelled by the gravity accessibility the package returns: node 0 44](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-gravity-accessibility-network)
+
+*The worked example's network (edge lengths printed; layout without meaning) with each node labelled by the gravity accessibility the package returns: node 0 44.3333, node 1 81.6667, node 2 56.6667, node 3 109.167.*
 
 ```python
 geospatial_analytics_ai999x.solve('geo_gravity_accessibility', edges='0-1 2; 1-2 3; 0-2 6; 2-3 1', opportunities=[100, 50, 80, 20], beta=1, impedance='power')
@@ -4304,6 +4720,10 @@ $$
 - **Assumes:** every store reachable and not at the origin
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![Huff model on the worked example's network (edge lengths printed; layout without meaning): a shopper at node 0 chooses among stores 1, 2, 3 with attractiveness [5000, 12000, 8000] (α = 1, distance decay β = 2)](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-huff-model-network)
+
+*Huff model on the worked example's network (edge lengths printed; layout without meaning): a shopper at node 0 chooses among stores 1, 2, 3 with attractiveness [5000, 12000, 8000] (α = 1, distance decay β = 2). The package returns shortest-path distances 2, 5, 6 and patronage probabilities 0.640296, 0.245874, 0.11383: the nearest store wins despite being the least attractive.*
+
 ```python
 geospatial_analytics_ai999x.solve('geo_huff_model', edges='0-1 2; 1-2 3; 0-2 6; 2-3 1; 1-3 5', origin=0, stores=[1, 2, 3], attractiveness=[5000, 12000, 8000], alpha=1, beta=2)
 # -> probabilities = [0.640295959021, 0.245873648264, 0.113830392715], distances = [2.0, 5.0, 6.0]   (SOLVED)
@@ -4350,6 +4770,10 @@ $$
 - **Assumes:** a catchment includes nodes at network distance <= threshold; a site with no population in reach has ratio 0
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![The worked example's network (edge lengths printed; layout without meaning) with each node labelled by the accessibility (supply per person) the package returns: node 0 0](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-two-step-floating-catchment-network)
+
+*The worked example's network (edge lengths printed; layout without meaning) with each node labelled by the accessibility (supply per person) the package returns: node 0 0.00217391, node 1 0.00217391, node 2 0.00417391, node 3 0.002.*
+
 ```python
 geospatial_analytics_ai999x.solve('geo_two_step_floating_catchment', edges='0-1 2; 1-2 3; 0-2 6; 2-3 1', population=[1000, 500, 800, 200], supply_nodes=[1, 3], capacity=[5, 2], threshold=3)
 # -> accessibility = [0.00217391304348, 0.00217391304348, 0.00417391304348, 0.002], ratios = [0.00217391304348, 0.002]   (SOLVED)
@@ -4395,6 +4819,10 @@ $$
 - **Assumes:** positive edge costs; distance <= cutoff counts as reached
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![Service area from node 0 with cutoff 6 on the worked example's network (edge lengths printed; layout without meaning): the nodes the package returns as reachable (0, 1, 2, 3; 4 nodes, farthest at 6) are highlighted](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-service-area-network)
+
+*Service area from node 0 with cutoff 6 on the worked example's network (edge lengths printed; layout without meaning): the nodes the package returns as reachable (0, 1, 2, 3; 4 nodes, farthest at 6) are highlighted.*
+
 ```python
 geospatial_analytics_ai999x.solve('geo_service_area', edges='0-1 2; 1-2 3; 0-2 6; 2-3 1; 3-4 4', source=0, cutoff=6)
 # -> reachable = [0.0, 1.0, 2.0, 3.0], count = 4, farthest = 6   (SOLVED)
@@ -4438,6 +4866,10 @@ $$
 - **Method:** Dijkstra from every facility; each node takes the minimum
 - **Assumes:** every node reaches a facility; no node equally near two facilities
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![The worked example's network (edge lengths printed; layout without meaning) with facilities at nodes 0, 3: each node is coloured by the nearest facility the package returns and labelled with it and the shortest-path distance; mean distance 1](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-closest-facility-network)
+
+*The worked example's network (edge lengths printed; layout without meaning) with facilities at nodes 0, 3: each node is coloured by the nearest facility the package returns and labelled with it and the shortest-path distance; mean distance 1.4.*
 
 ```python
 geospatial_analytics_ai999x.solve('geo_closest_facility', edges='0-1 2; 1-2 3; 0-2 6; 2-3 1; 3-4 4', facilities=[0, 3])
@@ -4485,6 +4917,10 @@ $$
 - **Assumes:** connected network; at most 20000 candidate combinations; a unique optimal set
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![The p-median solution (p = 2) on the worked example's network (edge lengths printed; layout without meaning; demand at each node): the package places facilities at nodes 2, 5, with total demand-weighted distance 150 (mean 1](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-p-median-network)
+
+*The p-median solution (p = 2) on the worked example's network (edge lengths printed; layout without meaning; demand at each node): the package places facilities at nodes 2, 5, with total demand-weighted distance 150 (mean 1.42857).*
+
 ```python
 geospatial_analytics_ai999x.solve('geo_p_median', edges='0-1 2; 1-2 3; 0-2 6; 2-3 1; 3-4 4; 4-5 2; 1-5 7', demand=[10, 20, 15, 30, 5, 25], candidates=[0, 1, 2, 3, 4, 5], p=2)
 # -> objective = 150, facilities = [2.0, 5.0], mean_distance = 1.42857   (SOLVED)
@@ -4531,6 +4967,14 @@ $$
 - **Assumes:** at most 20000 candidate combinations
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![The data demand (demand at nodes 0 ](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-maximal-covering-location-xy)
+
+*The data demand (demand at nodes 0 .. n-1) against candidates (candidate facility nodes) as given in the worked example (6 points). Also returned: covered = 95, fraction = 0.904762. Other inputs: edges = 0-1 2; 1-2 3; 0-2 6; 2-3 1; 3-4 4; 4-5 2; 1-5 7, p = 2, coverage = 3.*
+
+![The network edges (undirected network as weighted edges between nodes numbered 0 ](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-maximal-covering-location-graph)
+
+*The network edges (undirected network as weighted edges between nodes numbered 0 .. n-1) of the worked example (6 nodes, 7 edges, laid out on a circle); on each edge its stated weight. Returned: covered = 95, fraction = 0.904762. Other inputs: demand = [10, 20, 15, 30, 5, 25], candidates = [0, 1, 2, 3, 4, 5], p = 2, coverage = 3.*
+
 ```python
 geospatial_analytics_ai999x.solve('geo_maximal_covering_location', edges='0-1 2; 1-2 3; 0-2 6; 2-3 1; 3-4 4; 4-5 2; 1-5 7', demand=[10, 20, 15, 30, 5, 25], candidates=[0, 1, 2, 3, 4, 5], p=2, coverage=3)
 # -> covered = 95, fraction = 0.904762   (SOLVED)
@@ -4576,6 +5020,10 @@ $$
 - **Method:** Euclidean edge lengths, Dijkstra, ratio to the straight-line distance
 - **Assumes:** straight edges between the node coordinates; destination reachable
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![Nodes at the stated coordinates joined by the edges 0-1; 1-2; 2-3: from node 0 to node 2 the package returns a network distance 7 against a straight-line distance 5, a detour index of 1](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-detour-index-map)
+
+*Nodes at the stated coordinates joined by the edges 0-1; 1-2; 2-3: from node 0 to node 2 the package returns a network distance 7 against a straight-line distance 5, a detour index of 1.4.*
 
 ```python
 geospatial_analytics_ai999x.solve('geo_detour_index', coords=[[0, 0], [3, 0], [3, 4], [0, 4]], edges='0-1; 1-2; 2-3', origin=0, destination=2)
@@ -4624,6 +5072,10 @@ $$
 - **Assumes:** at least 3 vertices; planar formulas for alpha and gamma
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![The network edges (network edges between nodes numbered from 0 (lengths, if given, are ignored)) of the worked example (4 nodes, 5 edges, laid out on a circle)](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-network-connectivity-indices-graph)
+
+*The network edges (network edges between nodes numbered from 0 (lengths, if given, are ignored)) of the worked example (4 nodes, 5 edges, laid out on a circle). Returned: vertices = 4, edges = 5, components = 1, cyclomatic = 2, alpha = 0.666667, beta = 1.25, gamma = 0.833333.*
+
 ```python
 geospatial_analytics_ai999x.solve('geo_network_connectivity_indices', edges='0-1; 1-2; 2-3; 3-0; 0-2')
 # -> vertices = 4, edges = 5, components = 1, cyclomatic = 2, alpha = 0.666667, beta = 1.25, gamma = 0.833333   (SOLVED)
@@ -4666,6 +5118,10 @@ $$
 - **Method:** all-pairs Dijkstra; row sums of the distance matrix
 - **Assumes:** connected network with nodes 0 .. $n-1$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![The Shimbel index of each node of the worked example's network (edge lengths printed; layout without meaning): the sum of shortest-path distances to all other nodes, as returned: node 0 13, node 1 9, node 2 9, node 3 11 (total 42); the smallest sum, node 1, is the most accessible](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-shimbel-index-network)
+
+*The Shimbel index of each node of the worked example's network (edge lengths printed; layout without meaning): the sum of shortest-path distances to all other nodes, as returned: node 0 13, node 1 9, node 2 9, node 3 11 (total 42); the smallest sum, node 1, is the most accessible.*
 
 ```python
 geospatial_analytics_ai999x.solve('geo_shimbel_index', edges='0-1 2; 1-2 3; 0-2 6; 2-3 1')
@@ -4711,6 +5167,10 @@ $$
 - **Assumes:** $0  \leq  x  \leq  t$ in each unit; the group present but not the whole population
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![Group count x = [100, 200, 50, 800] within totals t = [1000, 1000, 1000, 1000] in each areal unit (share printed above each bar, computed here from the inputs)](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-segregation-evenness-bars)
+
+*Group count x = [100, 200, 50, 800] within totals t = [1000, 1000, 1000, 1000] in each areal unit (share printed above each bar, computed here from the inputs). The package returns dissimilarity = 0.625477, gini = 0.71701, theil_h = 0.364724.*
+
 ```python
 geospatial_analytics_ai999x.solve('geo_segregation_evenness', x=[100, 200, 50, 800], t=[1000, 1000, 1000, 1000])
 # -> dissimilarity = 0.625477, gini = 0.71701, theil_h = 0.364724   (SOLVED)
@@ -4754,6 +5214,10 @@ $$
 - **Method:** xPx = sum (x_i/X)(x_i/t_i); xPy = sum (x_i/X)(y_i/t_i) with $y = t - x$; eta^2 = (xPx - P)/(1 - P)
 - **Assumes:** $0  \leq  x  \leq  t$ in each unit; the group present but not the whole population
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![Group count x = [100, 200, 50, 800] within totals t = [1000, 1000, 1000, 1000] in each areal unit (share printed above each bar, computed here from the inputs)](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-segregation-exposure-bars)
+
+*Group count x = [100, 200, 50, 800] within totals t = [1000, 1000, 1000, 1000] in each areal unit (share printed above each bar, computed here from the inputs). The package returns isolation = 0.602174, exposure = 0.397826, correlation_ratio = 0.441648.*
 
 ```python
 geospatial_analytics_ai999x.solve('geo_segregation_exposure', x=[100, 200, 50, 800], t=[1000, 1000, 1000, 1000])
