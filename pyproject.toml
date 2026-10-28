@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "geospatial-analytics-ai999x"
-version = "1.0.0"
+version = "1.0.1"
 description = "Offline geospatial analytics solver: ellipsoidal geodesy, coordinate conversions and map projections, spatial statistics and geostatistics, remote-sensing indices, terrain analysis, and urban and network analysis, with steps, LaTeX and honest refusals"
 readme = "README.md"
 requires-python = ">=3.10"

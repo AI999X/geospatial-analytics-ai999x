@@ -199,6 +199,10 @@ $$
 - **Assumes:** start latitude strictly between -90 and 90; 0 < distance <= 15000 km
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![London to New York on a Mercator map (WGS84): the geodesic leaves at azimuth 288](https://huggingface.co/AI999X/geospatial-analytics-ai999x/resolve/main/figures/geo-geodesic-destination-map.svg)
+
+*London to New York on a Mercator map (WGS84): the geodesic leaves at azimuth 288.373° and is 5585.81 km long; the rhumb line keeps bearing 258.088° and is 5810.37 km. Each path is 40 destination points computed by the package and projected by it; the rhumb line is straight on this map. Marked: the geodesic midpoint, latitude 52.385°, longitude -41.2786°.*
+
 ```python
 geospatial_analytics_ai999x.solve('geo_geodesic_destination', lat1=52.2, lon1=0.12, azimuth=45, distance=100000.0, ellipsoid='WGS84')
 # -> lat2 = 52.8308, lon2 = 1.16915, azimuth2 = 45.8325   (SOLVED)
@@ -1639,6 +1643,10 @@ $$
 - **Assumes:** point distinct from the centre and at most 150 degrees from it; centre within 89 degrees of the equator
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![Eight cities seen from London as the package computes them on the WGS84 ellipsoid — each arrow points along the initial azimuth, clockwise from north, with length the geodesic distance (an azimuthal equidistant view): New York 5585](https://huggingface.co/AI999X/geospatial-analytics-ai999x/resolve/main/figures/geo-azimuthal-equidistant-forward-compass.svg)
+
+*Eight cities seen from London as the package computes them on the WGS84 ellipsoid — each arrow points along the initial azimuth, clockwise from north, with length the geodesic distance (an azimuthal equidistant view): New York 5585.81 km at 288.373°; Tokyo 9583.99 km at 31.6564°; Cape Town 9635.07 km at 164.613°; Rio de Janeiro 9251.66 km at 219.388°; Moscow 2509.19 km at 64.2336°; Mumbai 7199.57 km at 90.6929°; Reykjavík 1895.1 km at 326.304°; Nairobi 6805.98 km at 136.642°.*
+
 ```python
 geospatial_analytics_ai999x.solve('geo_azimuthal_equidistant_forward', lat=40.71, lon=-74.01, lat0=51.5, lon0=-0.13, ellipsoid='WGS84')
 # -> x = -5.30106e+06 m, y = 1.76067e+06 m, distance = 5.58581e+06 m, azimuth = 288.373   (SOLVED)
@@ -1728,6 +1736,10 @@ $$
 - **Method:** auxiliary angle theta from 2 theta + sin 2 $\theta = pi$ sin(phi) by Newton's method; x = (2 sqrt2/pi) R dlambda cos(theta), $y = sqrt2$ R sin(theta)
 - **Assumes:** sphere of radius $R > 0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![The world graticule in the Mollweide equal-area projection (sphere of radius 6371 km): every parallel and meridian is a chain of points projected by the package (576 points); marked: latitude 45°, longitude 90° → x = 7261](https://huggingface.co/AI999X/geospatial-analytics-ai999x/resolve/main/figures/geo-mollweide-forward-projection.svg)
+
+*The world graticule in the Mollweide equal-area projection (sphere of radius 6371 km): every parallel and meridian is a chain of points projected by the package (576 points); marked: latitude 45°, longitude 90° → x = 7261.19 km, y = 5334.27 km.*
 
 ```python
 geospatial_analytics_ai999x.solve('geo_mollweide_forward', lat=45.0, lon=90.0, lon0=0, R=6371000.0)
@@ -2330,6 +2342,10 @@ $$
 - **Method:** recursive: keep the vertex farthest from the segment joining the ends of a run if its distance exceeds the tolerance, then split there
 - **Assumes:** distinct vertices; tolerance > 0
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![A 12-vertex line simplified by the Douglas–Peucker algorithm at two tolerances, the kept vertices as returned by the package: tolerance 0](https://huggingface.co/AI999X/geospatial-analytics-ai999x/resolve/main/figures/geo-douglas-peucker-simplification-shape.svg)
+
+*A 12-vertex line simplified by the Douglas–Peucker algorithm at two tolerances, the kept vertices as returned by the package: tolerance 0.4 keeps 8 vertices (0, 2, 4, 6, 7, 9, 10, 11); tolerance 1 keeps 4 vertices (0, 2, 4, 11).*
 
 ```python
 geospatial_analytics_ai999x.solve('geo_douglas_peucker_simplification', x=[0, 1, 2, 3, 4, 5, 6, 7], y=[0, 0.1, -0.1, 5, 6, 7, 8.1, 9], tolerance=1.0)
@@ -3057,6 +3073,10 @@ $$
 - **Method:** mean of the coordinates; standard distance sqrt(sum ((x - xbar)^2 + (y - ybar)^2)/n)
 - **Assumes:** population form (divide by n)
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![A pattern of 11 points with the mean centre and standard distance computed by the package: marked: x = 52](https://huggingface.co/AI999X/geospatial-analytics-ai999x/resolve/main/figures/geo-mean-center-standard-distance-map.svg)
+
+*A pattern of 11 points with the mean centre and standard distance computed by the package: marked: x = 52.4, y = 49.5982; the circle has radius 40.2158, the standard distance (root-mean-square distance of the points from the centre).*
 
 ```python
 geospatial_analytics_ai999x.solve('geo_mean_center_standard_distance', x=[0, 4, 4, 0], y=[0, 0, 3, 3])
@@ -4096,6 +4116,10 @@ $$
 - **Method:** D8 directions, then accumulation in topological order of the flow graph (Kahn's algorithm)
 - **Assumes:** D8 directions as in geo_d8_flow_direction
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![A 4 × 4 elevation grid (left, metres, cell size 10 m) and the D8 flow accumulation the package computes from it (right): each cell shows how many cells drain through it, itself included; the maximum, 16, is the outlet in the lowest corner](https://huggingface.co/AI999X/geospatial-analytics-ai999x/resolve/main/figures/geo-d8-flow-accumulation-heatmap.svg)
+
+*A 4 × 4 elevation grid (left, metres, cell size 10 m) and the D8 flow accumulation the package computes from it (right): each cell shows how many cells drain through it, itself included; the maximum, 16, is the outlet in the lowest corner. Each panel is shaded by its own maximum.*
 
 ```python
 geospatial_analytics_ai999x.solve('geo_d8_flow_accumulation', dem=[[78, 72, 69, 71], [74, 67, 56, 49], [69, 53, 44, 37], [64, 58, 55, 22]], cell_size=10.0)
