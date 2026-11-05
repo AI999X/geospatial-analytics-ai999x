@@ -1,16 +1,16 @@
-# geospatial-analytics-ai999x — offline, verified geospatial analytics solver with step-by-step answers
+# geospatial-analytics-ai999x: offline, verified geospatial analytics solver with step-by-step answers
 
 [![tests](https://github.com/AI999X/geospatial-analytics-ai999x/actions/workflows/ci.yml/badge.svg)](https://github.com/AI999X/geospatial-analytics-ai999x/actions/workflows/ci.yml) [![PyPI](https://img.shields.io/pypi/v/geospatial-analytics-ai999x)](https://pypi.org/project/geospatial-analytics-ai999x/) [![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97-Hugging%20Face-yellow)](https://huggingface.co/AI999X/geospatial-analytics-ai999x)
 
 **[Desktop app & command line](https://www.ai999x.com/desktop-cli/)** · **[Compute in your browser](https://www.ai999x.com/models/geospatial-analytics-ai999x/#try)** · **[Install (Python)](https://pypi.org/project/geospatial-analytics-ai999x/)** · **[Guides](https://huggingface.co/AI999X/geospatial-analytics-ai999x/tree/main/docs)** · **[Evaluation](https://huggingface.co/AI999X/geospatial-analytics-ai999x/tree/main/evaluation)** · **[AI999X on Hugging Face](https://huggingface.co/AI999X)** · **[Website](https://ai999x.com)** · **[Support: Buy Me a Coffee](https://buymeacoffee.com/ibnuljaiffarabi)**
 
-License: Apache-2.0 · Author: Ibnul Jaif Farabi (creator and engineer) · Organization: AI999X · Version 1.1.0
+License: Apache-2.0 · Author: Ibnul Jaif Farabi (creator and engineer) · Organization: AI999X · Version 1.5.0
 
-Field: **Geospatial** · Tasks: Question Answering, Token Classification, Text Classification, Sentence Similarity, Feature Extraction
+Field: **Geospatial** · Tasks: Question Answering
 
-geospatial-analytics-ai999x is an offline, deterministic Python solver that answers geospatial analytics questions with verified results from 99 certified capabilities, gives 615 documented answers identically on Windows and Linux, and refuses rather than guesses when an answer cannot be verified.
+geospatial-analytics-ai999x is an offline, deterministic geospatial analytics solver written in Rust: a desktop app, a command-line program, a browser module and a Python package. It answers geospatial analytics questions with verified results from 99 certified capabilities, gives 615 documented answers identically on Windows and Linux, and refuses rather than guesses when an answer cannot be verified.
 
-**geospatial-analytics-ai999x** is a compact, deterministic geospatial analytics engine for Python. It reads a question in plain English (or a typed call), picks a certified geospatial analytics capability, computes the answer exactly, checks it, and returns the result with its steps, units, LaTeX and assumptions — or an honest refusal that says what is missing. It runs fully offline on any CPU, needs no GPU, no API key and no internet, and is built to give **zero wrong answers**: when it is not sure, it refuses instead of guessing.
+**geospatial-analytics-ai999x** reads a question in plain English (or a typed call), picks a certified geospatial analytics capability, computes the answer exactly, checks it, and returns the result with its steps, units, LaTeX and assumptions, or a refusal that says what is missing. It runs fully offline on any CPU, needs no GPU, no API key and no internet, and is built to give **zero wrong answers**: when it is not sure, it refuses instead of guessing.
 
 [![Buy me a coffee](https://img.shields.io/badge/Buy%20me%20a%20coffee-support%20development-FFDD00?logo=buymeacoffee&logoColor=black)](https://buymeacoffee.com/ibnuljaiffarabi) ![License](https://img.shields.io/badge/license-Apache--2.0-blue) ![Python](https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12%20%7C%203.13%20%7C%203.14-blue) ![Offline](https://img.shields.io/badge/runs-offline%20on%20CPU-green) ![Rust](https://img.shields.io/badge/Rust-Windows%20%7C%20Linux%20%7C%20WebAssembly-orange)
 
@@ -20,13 +20,13 @@ geospatial-analytics-ai999x is an offline, deterministic Python solver that answ
 
 | Way to run it | For | Get it |
 |---|---|---|
-| **AI999X Geospatial Analytics desktop app** 1.4.0 | Windows, Linux — this model in its own app: search, ask in words, forms, live figures, explanations, offline | [Windows (x86-64)](https://downloads.ai999x.com/desktop/1.4.0/ai999x-geospatial-analytics-1.4.0-windows-x86_64.zip) · [Linux (x86-64)](https://downloads.ai999x.com/desktop/1.4.0/ai999x-geospatial-analytics-1.4.0-linux-x86_64.tar.gz) |
-| **AI999X desktop app** 1.4.0 | Windows, Linux — every AI999X model in one app: search, ask in words, forms, live figures, explanations, offline | [Windows (x86-64)](https://downloads.ai999x.com/desktop/1.4.0/ai999x-1.4.0-windows-x86_64.zip) · [Linux (x86-64)](https://downloads.ai999x.com/desktop/1.4.0/ai999x-1.4.0-linux-x86_64.tar.gz) |
-| **Command line** (`geospatial-analytics`) | Windows, Linux — one program per model, offline, no Python | [Windows (x86-64)](https://downloads.ai999x.com/desktop/1.4.0/ai999x-cli-1.4.0-windows-x86_64.zip) · [Linux (x86-64)](https://downloads.ai999x.com/desktop/1.4.0/ai999x-cli-1.4.0-linux-x86_64.tar.gz) |
-| **In your browser** | any device — nothing to install | [Compute on the model page](https://www.ai999x.com/models/geospatial-analytics-ai999x/#try) |
+| **AI999X Geospatial Analytics desktop app** 1.5.0 | Windows, Linux. This model in its own app: search, ask in words, forms, live figures, explanations, offline | [Windows (x86-64)](https://downloads.ai999x.com/desktop/1.5.0/ai999x-geospatial-analytics-1.5.0-windows-x86_64.zip) · [Linux (x86-64)](https://downloads.ai999x.com/desktop/1.5.0/ai999x-geospatial-analytics-1.5.0-linux-x86_64.tar.gz) |
+| **AI999X desktop app** 1.5.0 | Windows, Linux. Every AI999X model in one app: search, ask in words, forms, live figures, explanations, offline | [Windows (x86-64)](https://downloads.ai999x.com/desktop/1.5.0/ai999x-1.5.0-windows-x86_64.zip) · [Linux (x86-64)](https://downloads.ai999x.com/desktop/1.5.0/ai999x-1.5.0-linux-x86_64.tar.gz) |
+| **Command line** (`geospatial-analytics`) | Windows, Linux. One program per model, offline, no Python | [Windows (x86-64)](https://downloads.ai999x.com/desktop/1.5.0/ai999x-cli-1.5.0-windows-x86_64.zip) · [Linux (x86-64)](https://downloads.ai999x.com/desktop/1.5.0/ai999x-cli-1.5.0-linux-x86_64.tar.gz) |
+| **In your browser** | any device. Nothing to install | [Compute on the model page](https://www.ai999x.com/models/geospatial-analytics-ai999x/#try) |
 | **Python** | Python 3.10+ | `pip install geospatial-analytics-ai999x` |
 
-Checksums: [SHA256SUMS](https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS) · every version: [https://downloads.ai999x.com/desktop/latest/](https://downloads.ai999x.com/desktop/latest/) · install guide: [desktop & command line](https://www.ai999x.com/desktop-cli/)
+Checksums: [SHA256SUMS](https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS) · every version: [https://downloads.ai999x.com/desktop/latest/](https://downloads.ai999x.com/desktop/latest/) · install guide: [desktop & command line](https://www.ai999x.com/desktop-cli/)
 
 ## Quick start
 
@@ -37,11 +37,11 @@ Download **AI999X Geospatial Analytics** for your system (above), unpack it and 
 Linux, from a terminal:
 
 ```bash
-curl -LO https://downloads.ai999x.com/desktop/1.4.0/ai999x-geospatial-analytics-1.4.0-linux-x86_64.tar.gz
-curl -LO https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS
+curl -LO https://downloads.ai999x.com/desktop/1.5.0/ai999x-geospatial-analytics-1.5.0-linux-x86_64.tar.gz
+curl -LO https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS
 sha256sum -c --ignore-missing SHA256SUMS
-tar xzf ai999x-geospatial-analytics-1.4.0-linux-x86_64.tar.gz
-./ai999x-geospatial-analytics-1.4.0-linux-x86_64/ai999x-geospatial-analytics
+tar xzf ai999x-geospatial-analytics-1.5.0-linux-x86_64.tar.gz
+./ai999x-geospatial-analytics-1.5.0-linux-x86_64/ai999x-geospatial-analytics
 ```
 
 ### Command line
@@ -49,30 +49,30 @@ tar xzf ai999x-geospatial-analytics-1.4.0-linux-x86_64.tar.gz
 Linux:
 
 ```bash
-curl -LO https://downloads.ai999x.com/desktop/1.4.0/ai999x-cli-1.4.0-linux-x86_64.tar.gz
-curl -LO https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS
+curl -LO https://downloads.ai999x.com/desktop/1.5.0/ai999x-cli-1.5.0-linux-x86_64.tar.gz
+curl -LO https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS
 sha256sum -c --ignore-missing SHA256SUMS
-mkdir -p ~/.local/share && tar xzf ai999x-cli-1.4.0-linux-x86_64.tar.gz -C ~/.local/share
-echo 'export PATH="$HOME/.local/share/ai999x-cli-1.4.0-linux-x86_64:$PATH"' >> ~/.bashrc && source ~/.bashrc
+mkdir -p ~/.local/share && tar xzf ai999x-cli-1.5.0-linux-x86_64.tar.gz -C ~/.local/share
+echo 'export PATH="$HOME/.local/share/ai999x-cli-1.5.0-linux-x86_64:$PATH"' >> ~/.bashrc && source ~/.bashrc
 geospatial-analytics --version
 ```
 
 Windows (PowerShell):
 
 ```powershell
-$F = "ai999x-cli-1.4.0-windows-x86_64.zip"
-Invoke-WebRequest "https://downloads.ai999x.com/desktop/1.4.0/$F" -OutFile $F
-Invoke-WebRequest "https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS" -OutFile SHA256SUMS
+$F = "ai999x-cli-1.5.0-windows-x86_64.zip"
+Invoke-WebRequest "https://downloads.ai999x.com/desktop/1.5.0/$F" -OutFile $F
+Invoke-WebRequest "https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS" -OutFile SHA256SUMS
 (Get-FileHash $F -Algorithm SHA256).Hash.ToLower() -eq ((Select-String -SimpleMatch $F SHA256SUMS).Line -split ' ')[0]
 Expand-Archive $F -DestinationPath "$env:LOCALAPPDATA\AI999X" -Force
-$D = "$env:LOCALAPPDATA\AI999X\ai999x-cli-1.4.0-windows-x86_64"; $env:Path += ";$D"
+$D = "$env:LOCALAPPDATA\AI999X\ai999x-cli-1.5.0-windows-x86_64"; $env:Path += ";$D"
 [Environment]::SetEnvironmentVariable("Path", [Environment]::GetEnvironmentVariable("Path", "User") + ";$D", "User")
 geospatial-analytics --version
 ```
 
 Every command below was run as shown; the text under it is what the program printed.
 
-**Ask in words** — Write the question as you would say it: the program reads the quantities and their units, picks the capability and answers.
+**Ask in words**: Write the question as you would say it: the program reads the quantities and their units, picks the capability and answers.
 
 ```console
 $ geospatial-analytics ask "Geodesic destination: lat1 = 52.2, lon1 = 0.12, azimuth = 45, distance = 100 km, ellipsoid = WGS84"
@@ -89,7 +89,7 @@ azimuth2 = 45.83253655
   assumes: start latitude strictly between -90 and 90; 0 < distance <= 15000 km
 ```
 
-**What a capability needs** — The equation or method, every input and output with its SI unit. Read this before solve: it tells you the input names.
+**What a capability needs**: The equation or method, every input and output with its SI unit. Read this before solve: it tells you the input names.
 
 ```console
 $ geospatial-analytics info geo_geodesic_destination
@@ -105,7 +105,7 @@ Geodesic destination point on the ellipsoid (direct problem)
   out  azimuth2 forward azimuth at the destination (degrees clockwise from north) []
 ```
 
-**Solve** — Inputs as name=value, each with any unit of the right kind. The answer lists every output, the method used, each input converted to SI, and the conditions the answer assumes.
+**Solve**: Inputs as name=value, each with any unit of the right kind. The answer lists every output, the method used, each input converted to SI, and the conditions the answer assumes.
 
 ```console
 $ geospatial-analytics solve geo_geodesic_destination lat1=52.2 lon1=0.12 azimuth=45.0 "distance=100 km" ellipsoid=WGS84
@@ -121,7 +121,7 @@ azimuth2 = 45.83253655
   assumes: start latitude strictly between -90 and 90; 0 < distance <= 15000 km
 ```
 
-**Many questions at once** — One JSON request per line in, one JSON answer per line out, in order: for scripts, notebooks and agents (the program starts once). In PowerShell: Get-Content cases.jsonl | geospatial-analytics batch
+**Many questions at once**: One JSON request per line in, one JSON answer per line out, in order: for scripts, notebooks and agents (the program starts once). In PowerShell: Get-Content cases.jsonl | geospatial-analytics batch
 
 `cases.jsonl`:
 
@@ -273,18 +273,18 @@ _What this means:_ This process decodes the provided geohash string to determine
 
 ## Documentation
 
-- **Rust user guide** — the command line, every capability with a command and what it printed: [PDF](https://huggingface.co/AI999X/geospatial-analytics-ai999x/blob/main/docs/geospatial_analytics_ai999x_rust_guide.pdf) · [Markdown](https://huggingface.co/AI999X/geospatial-analytics-ai999x/blob/main/docs/geospatial_analytics_ai999x_rust_guide.md)
-- **Python guide** — every capability with a Python example: [PDF](https://huggingface.co/AI999X/geospatial-analytics-ai999x/blob/main/docs/geospatial_analytics_ai999x_capabilities.pdf) · [Markdown](https://huggingface.co/AI999X/geospatial-analytics-ai999x/blob/main/docs/geospatial_analytics_ai999x_capabilities.md)
-- **Desktop app & command line** — downloads, install, ask and search, figures, offline use, checksums: https://www.ai999x.com/desktop-cli/
-- **Model page** — compute in your browser, every capability explained: https://www.ai999x.com/models/geospatial-analytics-ai999x/
+- **Rust user guide**: the command line, every capability with a command and what it printed: [PDF](https://huggingface.co/AI999X/geospatial-analytics-ai999x/blob/main/docs/geospatial_analytics_ai999x_rust_guide.pdf) · [Markdown](https://huggingface.co/AI999X/geospatial-analytics-ai999x/blob/main/docs/geospatial_analytics_ai999x_rust_guide.md)
+- **Python guide**: every capability with a Python example: [PDF](https://huggingface.co/AI999X/geospatial-analytics-ai999x/blob/main/docs/geospatial_analytics_ai999x_capabilities.pdf) · [Markdown](https://huggingface.co/AI999X/geospatial-analytics-ai999x/blob/main/docs/geospatial_analytics_ai999x_capabilities.md)
+- **Desktop app & command line**: downloads, install, ask and search, figures, offline use, checksums: https://www.ai999x.com/desktop-cli/
+- **Model page**: compute in your browser, every capability explained: https://www.ai999x.com/models/geospatial-analytics-ai999x/
 
 ## Highlights
 
 - **Verified, not generated.** Every answer is computed by a certified geospatial analytics capability and checked (substituted back, dimension-checked or compared with an independent computation) before it is returned.
-- **Zero wrong answers by design.** Seven explicit outcomes — SOLVED, NEEDS_INPUT, AMBIGUOUS, INVALID_INPUT, OUT_OF_SCOPE, UNRECOGNIZED_FORMAT, INTERNAL_ERROR — never a silent guess. Every one of its 615 documented answers is reproduced exactly on every tested platform.
+- **Zero wrong answers by design.** Seven explicit outcomes (SOLVED, NEEDS_INPUT, AMBIGUOUS, INVALID_INPUT, OUT_OF_SCOPE, UNRECOGNIZED_FORMAT, INTERNAL_ERROR), never a silent guess. Every one of its 615 documented answers is reproduced exactly on every tested platform.
 - **Plain-English questions and a guaranteed typed interface.** `ask()` reads documented question forms; `solve(capability_id, **inputs)` always solves a supported task with valid inputs.
 - **Explains itself.** Steps, formulas in LaTeX, units, assumptions and the model used, ready for notebooks, tutoring apps and homework checkers.
-- **Native and in the browser.** Every capability also computes natively in Rust: the desktop app and the `geospatial-analytics` command line for Windows and Linux, and WebAssembly on the model page — no Python, no network.
+- **Native and in the browser.** Every capability also computes natively in Rust: the desktop app and the `geospatial-analytics` command line for Windows and Linux, and WebAssembly on the model page, no Python, no network.
 - **Small and portable.** Pure Python (sympy, mpmath); identical answers on Windows and Linux (Python 3.10, 3.11, 3.12, 3.13, 3.14).
 - **Coverage:** ellipsoidal geodesy, coordinates and map projections, spatial statistics and geostatistics, remote sensing, terrain analysis, and urban and network analysis.
 
@@ -292,7 +292,7 @@ _What this means:_ This process decodes the provided geohash string to determine
 
 | Property | Value |
 |---|---|
-| Package | `geospatial-analytics-ai999x` 1.1.0 (import `geospatial_analytics_ai999x`) |
+| Package | `geospatial-analytics-ai999x` 1.5.0 (import `geospatial_analytics_ai999x`) |
 | Type | Deterministic neuro-symbolic geospatial analytics engine (rule-based reading + certified symbolic capabilities) |
 | Capabilities | 99 certified procedures |
 | Knowledge pack | version 1.0.0 |
@@ -326,25 +326,14 @@ geospatial_analytics.ask("Who created you?").message
 # -> geospatial-analytics-ai999x was created and engineered by Ibnul Jaif Farabi at AI999X.
 ```
 
-The Python package also installs a Python command, `geospatial-analytics-ai999x "<question>"`; for the native program use `geospatial-analytics` (above). The outputs above were produced by running this exact code on geospatial-analytics-ai999x 1.1.0.
-
-## Find the right capability, and draw it
-
-`geospatial_analytics.search()` finds which certified capability a question is about — across **every** AI999X model, so a question for another model points you to it. It runs **[ai999x-encoder](https://huggingface.co/AI999X/ai999x-encoder)**, AI999X's own capability encoder (4.7M parameters, a 4.9 MB ONNX model, offline; the root `model.safetensors` of this repository): `pip install "geospatial-analytics-ai999x[search]"`. `ask(question, suggest=True)` adds the same pointers to a question it does not answer; an answer itself never changes.
-
-```python
-import geospatial_analytics_ai999x as geospatial_analytics
-
-geospatial_analytics.search("Solve x^2 - 5x + 6 = 0", k=2)
-# -> Roots of a quadratic equation (math-foundations-ai999x, 0.63); Roots of a cubic equation (math-foundations-ai999x, 0.59)
-```
+The Python package also installs a Python command, `geospatial-analytics-ai999x "<question>"`; for the native program use `geospatial-analytics` (above). The outputs above were produced by running this exact code on geospatial-analytics-ai999x 1.5.0.
 
 ## How every answer is verified
 
-1. **Reading** — the question is turned into typed quantities (value, unit, kind, role) and one asked quantity; every stated number must be used or the question is refused.
-2. **Planning** — only certified capabilities may answer; a capability applies only under the conditions the wording states (for example a pendulum, a liquid at rest, boiling).
-3. **Computing** — exact symbolic or high-precision numeric evaluation.
-4. **Checking** — dimensions, substitution back into the defining equation, and agreement between independent readings; any disagreement becomes a refusal, never a number.
+1. **Reading**: the question is turned into typed quantities (value, unit, kind, role) and one asked quantity; every stated number must be used or the question is refused.
+2. **Planning**: only certified capabilities may answer; a capability applies only under the conditions the wording states (for example a pendulum, a liquid at rest, boiling).
+3. **Computing**: exact symbolic or high-precision numeric evaluation.
+4. **Checking**: dimensions, substitution back into the defining equation, and agreement between independent readings; any disagreement becomes a refusal, never a number.
 
 Capabilities are certified before they ship: each must reproduce hand-worked reference cases, reject a deliberately wrong variant (a control), and leave every benchmark answer unchanged.
 
@@ -430,37 +419,37 @@ Every point was computed by `geospatial-analytics-ai999x`.
 
 **Great circle against rhumb line, London to New York**
 
-![Great circle against rhumb line, London to New York — computed by geospatial-analytics-ai999x](https://huggingface.co/AI999X/geospatial-analytics-ai999x/resolve/main/figures/geo-geodesic-destination-map.svg)
+![Great circle against rhumb line, London to New York, computed by geospatial-analytics-ai999x](https://huggingface.co/AI999X/geospatial-analytics-ai999x/resolve/main/figures/geo-geodesic-destination-map.svg)
 
 _London to New York on a Mercator map (WGS84): the geodesic leaves at azimuth 288.373° and is 5585.81 km long; the rhumb line keeps bearing 258.088° and is 5810.37 km. Each path is 40 destination points computed by the package and projected by it; the rhumb line is straight on this map. Marked: the geodesic midpoint, latitude 52.385°, longitude -41.2786°._
 
 **World graticule in the Mollweide equal-area projection**
 
-![World graticule in the Mollweide equal-area projection — computed by geospatial-analytics-ai999x](https://huggingface.co/AI999X/geospatial-analytics-ai999x/resolve/main/figures/geo-mollweide-forward-projection.svg)
+![World graticule in the Mollweide equal-area projection, computed by geospatial-analytics-ai999x](https://huggingface.co/AI999X/geospatial-analytics-ai999x/resolve/main/figures/geo-mollweide-forward-projection.svg)
 
 _The world graticule in the Mollweide equal-area projection (sphere of radius 6371 km): every parallel and meridian is a chain of points projected by the package (576 points); marked: latitude 45°, longitude 90° → x = 7261.19 km, y = 5334.27 km._
 
 **The world from London: azimuth and distance**
 
-![The world from London: azimuth and distance — computed by geospatial-analytics-ai999x](https://huggingface.co/AI999X/geospatial-analytics-ai999x/resolve/main/figures/geo-azimuthal-equidistant-forward-compass.svg)
+![The world from London: azimuth and distance, computed by geospatial-analytics-ai999x](https://huggingface.co/AI999X/geospatial-analytics-ai999x/resolve/main/figures/geo-azimuthal-equidistant-forward-compass.svg)
 
-_Eight cities seen from London as the package computes them on the WGS84 ellipsoid — each arrow points along the initial azimuth, clockwise from north, with length the geodesic distance (an azimuthal equidistant view): New York 5585.81 km at 288.373°; Tokyo 9583.99 km at 31.6564°; Cape Town 9635.07 km at 164.613°; Rio de Janeiro 9251.66 km at 219.388°; Moscow 2509.19 km at 64.2336°; Mumbai 7199.57 km at 90.6929°; Reykjavík 1895.1 km at 326.304°; Nairobi 6805.98 km at 136.642°._
+_Eight cities seen from London as the package computes them on the WGS84 ellipsoid, each arrow points along the initial azimuth, clockwise from north, with length the geodesic distance (an azimuthal equidistant view): New York 5585.81 km at 288.373°; Tokyo 9583.99 km at 31.6564°; Cape Town 9635.07 km at 164.613°; Rio de Janeiro 9251.66 km at 219.388°; Moscow 2509.19 km at 64.2336°; Mumbai 7199.57 km at 90.6929°; Reykjavík 1895.1 km at 326.304°; Nairobi 6805.98 km at 136.642°._
 
 **Mean centre and standard distance of a point pattern**
 
-![Mean centre and standard distance of a point pattern — computed by geospatial-analytics-ai999x](https://huggingface.co/AI999X/geospatial-analytics-ai999x/resolve/main/figures/geo-mean-center-standard-distance-map.svg)
+![Mean centre and standard distance of a point pattern, computed by geospatial-analytics-ai999x](https://huggingface.co/AI999X/geospatial-analytics-ai999x/resolve/main/figures/geo-mean-center-standard-distance-map.svg)
 
 _A pattern of 11 points with the mean centre and standard distance computed by the package: marked: x = 52.4, y = 49.5982; the circle has radius 40.2158, the standard distance (root-mean-square distance of the points from the centre)._
 
 **Line simplification at two tolerances**
 
-![Line simplification at two tolerances — computed by geospatial-analytics-ai999x](https://huggingface.co/AI999X/geospatial-analytics-ai999x/resolve/main/figures/geo-douglas-peucker-simplification-shape.svg)
+![Line simplification at two tolerances, computed by geospatial-analytics-ai999x](https://huggingface.co/AI999X/geospatial-analytics-ai999x/resolve/main/figures/geo-douglas-peucker-simplification-shape.svg)
 
 _A 12-vertex line simplified by the Douglas–Peucker algorithm at two tolerances, the kept vertices as returned by the package: tolerance 0.4 keeps 8 vertices (0, 2, 4, 6, 7, 9, 10, 11); tolerance 1 keeps 4 vertices (0, 2, 4, 11)._
 
 **Elevation grid and its flow accumulation**
 
-![Elevation grid and its flow accumulation — computed by geospatial-analytics-ai999x](https://huggingface.co/AI999X/geospatial-analytics-ai999x/resolve/main/figures/geo-d8-flow-accumulation-heatmap.svg)
+![Elevation grid and its flow accumulation, computed by geospatial-analytics-ai999x](https://huggingface.co/AI999X/geospatial-analytics-ai999x/resolve/main/figures/geo-d8-flow-accumulation-heatmap.svg)
 
 _A 4 × 4 elevation grid (left, metres, cell size 10 m) and the D8 flow accumulation the package computes from it (right): each cell shows how many cells drain through it, itself included; the maximum, 16, is the outlet in the lowest corner. Each panel is shaded by its own maximum._
 
@@ -475,22 +464,22 @@ _A 4 × 4 elevation grid (left, metres, cell size 10 m) and the D8 flow accumula
 ## Out of scope
 
 - Open-ended explanation, essay writing or tutoring dialogue: it is a solver, not a chatbot.
-- Questions outside its certified geospatial analytics capabilities, and any question whose stated numbers it cannot all use — it refuses with the reason instead.
+- Questions outside its certified geospatial analytics capabilities, and any question whose stated numbers it cannot all use: it refuses with the reason instead.
 - High-stakes engineering, medical or legal decisions without independent review.
 
 ## Limitations
 
 - It answers what its certified capabilities cover (ellipsoidal geodesy, coordinates and map projections, spatial statistics and geostatistics, remote sensing, terrain analysis, and urban and network analysis); anything else is refused with a reason.
-- `ask()` reads documented question forms and common phrasings; unusual wording may be refused — use `solve()` for guaranteed results.
+- `ask()` reads documented question forms and common phrasings; unusual wording may be refused; use `solve()` for guaranteed results.
 - Results are as correct as the certified relations and their stated conditions; a certified relation is a checked model, not a claim about every physical situation.
 
 ## Citation
 
 ```bibtex
-@software{geospatial_analytics_ai999x_1_1_0,
+@software{geospatial_analytics_ai999x_1_5_0,
   title  = {geospatial-analytics-ai999x: an offline, verified geospatial analytics solver},
   author = {Farabi, Ibnul Jaif}, organization = {AI999X},
-  year   = {2026}, version = {1.1.0},
+  year   = {2026}, version = {1.5.0},
   url    = {https://huggingface.co/AI999X/geospatial-analytics-ai999x}
 }
 ```
@@ -507,4 +496,15 @@ Created and engineered by **Ibnul Jaif Farabi** · **[AI999X](https://huggingfac
 
 ## Source and releases
 
-This repository holds the installable source of each release, exactly as published on [PyPI](https://pypi.org/project/geospatial-analytics-ai999x/) (`pip install .` builds it). Releases are tagged `v<version>`; the wheel is attached to each [GitHub release](https://github.com/AI999X/geospatial-analytics-ai999x/releases). The optional ONNX models (formula graphs and, where measured, a decision model) are on [Hugging Face](https://huggingface.co/AI999X/geospatial-analytics-ai999x/tree/main/onnx).
+This repository holds the installable source of each release, exactly as published on [PyPI](https://pypi.org/project/geospatial-analytics-ai999x/) (`pip install .` builds it). Releases are tagged `v1.5.0`; the [GitHub release](https://github.com/AI999X/geospatial-analytics-ai999x/releases/tag/v1.5.0) carries the wheel, the desktop app and the command-line program for Windows and Linux, and their checksums.
+
+## Build the program from source
+
+`rust/` holds the Rust source of the `geospatial-analytics` command-line program and browser module: the AI999X engine (`rust/ax-engine`), this model (`rust/geospatial-analytics`) and its data (`rust/models/geospatial_analytics/pack.json`). With Rust 1.80 or later:
+
+```bash
+cd rust
+cargo build --release -p geospatial-analytics-ai999x
+./target/release/geospatial-analytics --help
+cargo test -p geospatial-analytics-ai999x
+```

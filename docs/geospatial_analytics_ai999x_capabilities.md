@@ -173,7 +173,7 @@ Call `solve("<id>", **inputs)` with plain numbers; the result's `values` holds e
 
 <a id="geo_geodesic_destination"></a>
 
-### Geodesic destination point on the ellipsoid (direct problem) — `geo_geodesic_destination`
+### Geodesic destination point on the ellipsoid (direct problem), `geo_geodesic_destination`
 
 The point reached by travelling a given distance along a geodesic from a start point at a given initial azimuth on the WGS84 or GRS80 ellipsoid, and the azimuth of the geodesic on arrival.
 
@@ -231,7 +231,7 @@ geospatial_analytics_ai999x.solve('geo_geodesic_destination', lat1=-33.87, lon1=
 
 <a id="geo_geodesic_midpoint"></a>
 
-### Midpoint of a geodesic on the ellipsoid — `geo_geodesic_midpoint`
+### Midpoint of a geodesic on the ellipsoid: `geo_geodesic_midpoint`
 
 The point halfway along the shortest path (geodesic) between two points on the WGS84 or GRS80 ellipsoid, with the geodesic length.
 
@@ -284,7 +284,7 @@ geospatial_analytics_ai999x.solve('geo_geodesic_midpoint', lat1=35.68, lon1=139.
 
 <a id="geo_geodesic_polygon_area"></a>
 
-### Area and perimeter of a geodesic polygon on the ellipsoid — `geo_geodesic_polygon_area`
+### Area and perimeter of a geodesic polygon on the ellipsoid, `geo_geodesic_polygon_area`
 
 The area enclosed by a polygon whose edges are geodesics on the WGS84 or GRS80 ellipsoid, and its perimeter (vertices given as latitude and longitude lists, in either orientation).
 
@@ -333,7 +333,7 @@ geospatial_analytics_ai999x.solve('geo_geodesic_polygon_area', lats=[48.0, 49.5,
 
 <a id="geo_meridian_arc"></a>
 
-### Meridian arc length between two latitudes — `geo_meridian_arc`
+### Meridian arc length between two latitudes: `geo_meridian_arc`
 
 The distance along a meridian of the WGS84 or GRS80 ellipsoid between two latitudes, and the meridian distance of each latitude from the equator.
 
@@ -386,7 +386,7 @@ geospatial_analytics_ai999x.solve('geo_meridian_arc', lat1=40, lat2=41, ellipsoi
 
 <a id="geo_parallel_arc"></a>
 
-### Arc length along a parallel of latitude — `geo_parallel_arc`
+### Arc length along a parallel of latitude: `geo_parallel_arc`
 
 The distance along a parallel of latitude between two longitudes (the shorter way round) on the WGS84 or GRS80 ellipsoid, and the radius of the parallel.
 
@@ -435,7 +435,7 @@ geospatial_analytics_ai999x.solve('geo_parallel_arc', lat=-23.5, lon1=170, lon2=
 
 <a id="geo_graticule_cell_area"></a>
 
-### Area of a latitude-longitude cell on the ellipsoid — `geo_graticule_cell_area`
+### Area of a latitude-longitude cell on the ellipsoid, `geo_graticule_cell_area`
 
 The area of the region between two parallels and two meridians (a graticule cell or grid square) on the WGS84 or GRS80 ellipsoid, and its share of the whole ellipsoid's surface.
 
@@ -485,7 +485,7 @@ geospatial_analytics_ai999x.solve('geo_graticule_cell_area', lat1=50, lat2=51, l
 
 <a id="geo_radii_of_curvature"></a>
 
-### Radii of curvature of the ellipsoid at a latitude — `geo_radii_of_curvature`
+### Radii of curvature of the ellipsoid at a latitude, `geo_radii_of_curvature`
 
 The meridional radius of curvature M, the prime-vertical radius of curvature N and the Gaussian mean radius sqrt(MN) of the WGS84 or GRS80 ellipsoid at a latitude.
 
@@ -533,7 +533,7 @@ geospatial_analytics_ai999x.solve('geo_radii_of_curvature', lat=0, ellipsoid='GR
 
 <a id="geo_rhumb_line_inverse"></a>
 
-### Rhumb-line (loxodrome) distance and bearing on the ellipsoid — `geo_rhumb_line_inverse`
+### Rhumb-line (loxodrome) distance and bearing on the ellipsoid, `geo_rhumb_line_inverse`
 
 The constant bearing and the length of the rhumb line (loxodrome) between two points on the WGS84 or GRS80 ellipsoid, the shorter way round in longitude.
 
@@ -583,7 +583,7 @@ geospatial_analytics_ai999x.solve('geo_rhumb_line_inverse', lat1=-34.0, lon1=18.
 
 <a id="geo_rhumb_line_destination"></a>
 
-### Destination along a rhumb line (loxodrome) on the ellipsoid — `geo_rhumb_line_destination`
+### Destination along a rhumb line (loxodrome) on the ellipsoid, `geo_rhumb_line_destination`
 
 The point reached by travelling a given distance on a constant bearing (rhumb line) from a start point on the WGS84 or GRS80 ellipsoid.
 
@@ -633,7 +633,7 @@ geospatial_analytics_ai999x.solve('geo_rhumb_line_destination', lat1=-10.0, lon1
 
 <a id="geo_geodetic_to_ecef"></a>
 
-### Geodetic to geocentric (ECEF) coordinates — `geo_geodetic_to_ecef`
+### Geodetic to geocentric (ECEF) coordinates: `geo_geodetic_to_ecef`
 
 Earth-centred, Earth-fixed Cartesian coordinates X, Y, Z of a point given by geodetic latitude, longitude and ellipsoidal height on the WGS84 or GRS80 ellipsoid.
 
@@ -683,7 +683,7 @@ geospatial_analytics_ai999x.solve('geo_geodetic_to_ecef', lat=-33.8568, lon=151.
 
 <a id="geo_ecef_to_geodetic"></a>
 
-### Geocentric (ECEF) to geodetic coordinates — `geo_ecef_to_geodetic`
+### Geocentric (ECEF) to geodetic coordinates: `geo_ecef_to_geodetic`
 
 Geodetic latitude, longitude and ellipsoidal height of a point given by its Earth-centred, Earth-fixed coordinates X, Y, Z on the WGS84 or GRS80 ellipsoid.
 
@@ -733,7 +733,7 @@ geospatial_analytics_ai999x.solve('geo_ecef_to_geodetic', X=-4646678.4, Y=255300
 
 <a id="geo_geodetic_to_enu"></a>
 
-### Geodetic to local east-north-up (ENU) coordinates — `geo_geodetic_to_enu`
+### Geodetic to local east-north-up (ENU) coordinates, `geo_geodetic_to_enu`
 
 Local tangent-plane coordinates east, north and up of a point relative to an origin (both given by latitude, longitude and ellipsoidal height), and the straight-line (slant) range.
 
@@ -787,7 +787,7 @@ geospatial_analytics_ai999x.solve('geo_geodetic_to_enu', lat0=0, lon0=0, h0=0.0,
 
 <a id="geo_enu_to_geodetic"></a>
 
-### Local east-north-up (ENU) to geodetic coordinates — `geo_enu_to_geodetic`
+### Local east-north-up (ENU) to geodetic coordinates, `geo_enu_to_geodetic`
 
 Latitude, longitude and ellipsoidal height of a point given by its local east, north and up coordinates relative to an origin on the WGS84 or GRS80 ellipsoid.
 
@@ -840,7 +840,7 @@ geospatial_analytics_ai999x.solve('geo_enu_to_geodetic', lat0=0, lon0=0, h0=0.0,
 
 <a id="geo_look_angles"></a>
 
-### Look angles: azimuth, elevation and range from an observer to a target — `geo_look_angles`
+### Look angles: azimuth, elevation and range from an observer to a target, `geo_look_angles`
 
 The azimuth (clockwise from true north), elevation angle above the local horizontal plane and slant range from an observer to a target, both given by latitude, longitude and ellipsoidal height (a satellite, aircraft or summit).
 
@@ -870,7 +870,7 @@ $$
 
 ![A sky plot seen from 40](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-look-angles-sky)
 
-*A sky plot seen from 40.0°, -105.0°, 1600.0 m (zenith at the centre, horizon at the edge, azimuth clockwise from north): the look angles the package returns for targets at latitude 0.0°, height 35786 km and longitudes 170° W to 35° W, every 5° (those above the horizon) — the geostationary arc. Marked: the worked example at longitude -100.0°, azimuth 172.243°, elevation 43.4643°, slant range 37513.7 km.*
+*A sky plot seen from 40.0°, -105.0°, 1600.0 m (zenith at the centre, horizon at the edge, azimuth clockwise from north): the look angles the package returns for targets at latitude 0.0°, height 35786 km and longitudes 170° W to 35° W, every 5° (those above the horizon), the geostationary arc. Marked: the worked example at longitude -100.0°, azimuth 172.243°, elevation 43.4643°, slant range 37513.7 km.*
 
 ```python
 geospatial_analytics_ai999x.solve('geo_look_angles', lat0=40.0, lon0=-105.0, h0=1600.0, lat=0.0, lon=-100.0, h=35786000.0, ellipsoid='WGS84')
@@ -893,7 +893,7 @@ geospatial_analytics_ai999x.solve('geo_look_angles', lat0=46.017, lon0=7.75, h0=
 
 <a id="geo_auxiliary_latitudes"></a>
 
-### Auxiliary latitudes: geocentric, reduced, conformal, authalic and rectifying — `geo_auxiliary_latitudes`
+### Auxiliary latitudes: geocentric, reduced, conformal, authalic and rectifying, `geo_auxiliary_latitudes`
 
 The five auxiliary latitudes of a geodetic latitude on the WGS84 or GRS80 ellipsoid (used by the sphere-based forms of map projections and geodesics).
 
@@ -943,7 +943,7 @@ geospatial_analytics_ai999x.solve('geo_auxiliary_latitudes', lat=-30, ellipsoid=
 
 <a id="geo_utm_zone"></a>
 
-### UTM zone, latitude band and central meridian — `geo_utm_zone`
+### UTM zone, latitude band and central meridian, `geo_utm_zone`
 
 The Universal Transverse Mercator zone number (with the Norway and Svalbard exceptions), the MGRS latitude band letter, the hemisphere and the zone's central meridian for a latitude and longitude.
 
@@ -1005,7 +1005,7 @@ geospatial_analytics_ai999x.solve('geo_utm_zone', lat=-33.9, lon=18.4)
 
 <a id="geo_transverse_mercator_forward"></a>
 
-### Transverse Mercator projection: coordinates, scale factor and grid convergence — `geo_transverse_mercator_forward`
+### Transverse Mercator projection: coordinates, scale factor and grid convergence, `geo_transverse_mercator_forward`
 
 Easting and northing of a point in a transverse Mercator projection with a given origin, central-meridian scale factor and false origin on the WGS84 or GRS80 ellipsoid, with the point scale factor and the grid convergence.
 
@@ -1060,7 +1060,7 @@ geospatial_analytics_ai999x.solve('geo_transverse_mercator_forward', lat=51.5, l
 
 <a id="geo_utm_forward"></a>
 
-### Latitude and longitude to UTM coordinates (with scale factor and convergence) — `geo_utm_forward`
+### Latitude and longitude to UTM coordinates (with scale factor and convergence), `geo_utm_forward`
 
 UTM zone, hemisphere, easting and northing of a point on the WGS84 or GRS80 ellipsoid, with the point scale factor and grid convergence.
 
@@ -1118,7 +1118,7 @@ geospatial_analytics_ai999x.solve('geo_utm_forward', lat=60.4, lon=5.3, ellipsoi
 
 <a id="geo_utm_inverse"></a>
 
-### UTM coordinates to latitude and longitude — `geo_utm_inverse`
+### UTM coordinates to latitude and longitude: `geo_utm_inverse`
 
 Latitude and longitude on the WGS84 or GRS80 ellipsoid of a point given by its UTM easting, northing, zone and hemisphere.
 
@@ -1168,7 +1168,7 @@ geospatial_analytics_ai999x.solve('geo_utm_inverse', easting=261878.0, northing=
 
 <a id="geo_web_mercator_forward"></a>
 
-### Latitude and longitude to Web Mercator (EPSG:3857) — `geo_web_mercator_forward`
+### Latitude and longitude to Web Mercator (EPSG:3857), `geo_web_mercator_forward`
 
 Web Mercator (pseudo-Mercator, EPSG:3857) x and y of a WGS84 latitude and longitude, as used by web maps.
 
@@ -1215,7 +1215,7 @@ geospatial_analytics_ai999x.solve('geo_web_mercator_forward', lat=-33.87, lon=15
 
 <a id="geo_web_mercator_inverse"></a>
 
-### Web Mercator (EPSG:3857) to latitude and longitude — `geo_web_mercator_inverse`
+### Web Mercator (EPSG:3857) to latitude and longitude, `geo_web_mercator_inverse`
 
 WGS84 latitude and longitude of a point given by its Web Mercator (pseudo-Mercator) x and y.
 
@@ -1262,7 +1262,7 @@ geospatial_analytics_ai999x.solve('geo_web_mercator_inverse', x=16832556.0, y=-4
 
 <a id="geo_web_map_tile"></a>
 
-### Web-map tile (slippy map / XYZ) and quadkey containing a point — `geo_web_map_tile`
+### Web-map tile (slippy map / XYZ) and quadkey containing a point, `geo_web_map_tile`
 
 The x and y indices of the web-map (XYZ / slippy map) tile containing a WGS84 point at a zoom level, and the tile's quadkey.
 
@@ -1311,7 +1311,7 @@ geospatial_analytics_ai999x.solve('geo_web_map_tile', lat=-33.87, lon=151.21, zo
 
 <a id="geo_mercator_forward"></a>
 
-### Mercator projection (ellipsoidal): coordinates and scale factor — `geo_mercator_forward`
+### Mercator projection (ellipsoidal): coordinates and scale factor, `geo_mercator_forward`
 
 x and y of a point in the ellipsoidal Mercator projection with a central meridian and standard parallel (lat_ts = 0 is World Mercator, EPSG:3395), with the point scale factor.
 
@@ -1366,7 +1366,7 @@ geospatial_analytics_ai999x.solve('geo_mercator_forward', lat=-20.0, lon=120.0, 
 
 <a id="geo_mercator_inverse"></a>
 
-### Inverse Mercator projection (ellipsoidal) — `geo_mercator_inverse`
+### Inverse Mercator projection (ellipsoidal): `geo_mercator_inverse`
 
 Latitude and longitude of a point given by its x and y in the ellipsoidal Mercator projection with a central meridian and standard parallel.
 
@@ -1416,7 +1416,7 @@ geospatial_analytics_ai999x.solve('geo_mercator_inverse', x=1000000.0, y=-200000
 
 <a id="geo_lambert_conformal_conic_forward"></a>
 
-### Lambert conformal conic projection (two standard parallels): coordinates, scale factor and convergence — `geo_lambert_conformal_conic_forward`
+### Lambert conformal conic projection (two standard parallels): coordinates, scale factor and convergence, `geo_lambert_conformal_conic_forward`
 
 Easting and northing of a point in the ellipsoidal Lambert conformal conic projection with two standard parallels (EPSG method 9802), with the point scale factor and the grid convergence.
 
@@ -1476,7 +1476,7 @@ geospatial_analytics_ai999x.solve('geo_lambert_conformal_conic_forward', lat=46.
 
 <a id="geo_lambert_conformal_conic_inverse"></a>
 
-### Inverse Lambert conformal conic projection (two standard parallels) — `geo_lambert_conformal_conic_inverse`
+### Inverse Lambert conformal conic projection (two standard parallels), `geo_lambert_conformal_conic_inverse`
 
 Latitude and longitude of a point given by its easting and northing in the ellipsoidal Lambert conformal conic projection with two standard parallels.
 
@@ -1530,7 +1530,7 @@ geospatial_analytics_ai999x.solve('geo_lambert_conformal_conic_inverse', x=65200
 
 <a id="geo_albers_equal_area_forward"></a>
 
-### Albers equal-area conic projection: coordinates and scale factors — `geo_albers_equal_area_forward`
+### Albers equal-area conic projection: coordinates and scale factors, `geo_albers_equal_area_forward`
 
 Easting and northing of a point in the ellipsoidal Albers equal-area conic projection with two standard parallels, with the scale factors along the parallel (k) and the meridian $(h = 1/k)$.
 
@@ -1590,7 +1590,7 @@ geospatial_analytics_ai999x.solve('geo_albers_equal_area_forward', lat=-25.0, lo
 
 <a id="geo_albers_equal_area_inverse"></a>
 
-### Inverse Albers equal-area conic projection — `geo_albers_equal_area_inverse`
+### Inverse Albers equal-area conic projection, `geo_albers_equal_area_inverse`
 
 Latitude and longitude of a point given by its easting and northing in the ellipsoidal Albers equal-area conic projection with two standard parallels.
 
@@ -1644,7 +1644,7 @@ geospatial_analytics_ai999x.solve('geo_albers_equal_area_inverse', x=300000.0, y
 
 <a id="geo_polar_stereographic_forward"></a>
 
-### Polar stereographic projection (standard parallel): coordinates and scale factor — `geo_polar_stereographic_forward`
+### Polar stereographic projection (standard parallel): coordinates and scale factor, `geo_polar_stereographic_forward`
 
 Easting and northing of a point in the ellipsoidal polar stereographic projection defined by a latitude of true scale (EPSG variant B, as in EPSG:3413 and EPSG:3031), with the point scale factor.
 
@@ -1698,7 +1698,7 @@ geospatial_analytics_ai999x.solve('geo_polar_stereographic_forward', lat=-77.85,
 
 <a id="geo_lambert_azimuthal_equal_area_forward"></a>
 
-### Lambert azimuthal equal-area projection (ellipsoidal) — `geo_lambert_azimuthal_equal_area_forward`
+### Lambert azimuthal equal-area projection (ellipsoidal), `geo_lambert_azimuthal_equal_area_forward`
 
 Easting and northing of a point in the ellipsoidal oblique Lambert azimuthal equal-area projection about a centre (as in ETRS89-LAEA, EPSG:3035).
 
@@ -1750,7 +1750,7 @@ geospatial_analytics_ai999x.solve('geo_lambert_azimuthal_equal_area_forward', la
 
 <a id="geo_azimuthal_equidistant_forward"></a>
 
-### Azimuthal equidistant projection (ellipsoidal, geodesic) — `geo_azimuthal_equidistant_forward`
+### Azimuthal equidistant projection (ellipsoidal, geodesic), `geo_azimuthal_equidistant_forward`
 
 Easting and northing of a point in the ellipsoidal azimuthal equidistant projection about a centre: the geodesic distance from the centre plotted at the geodesic azimuth (used for range rings and airline maps).
 
@@ -1779,9 +1779,9 @@ $$
 - **Assumes:** point distinct from the centre and at most 150 degrees from it; centre within 89 degrees of the equator
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Eight cities seen from London as the package computes them on the WGS84 ellipsoid — each arrow points along the initial azimuth, clockwise from north, with length the geodesic distance (an azimuthal equidistant view): New York 5585](https://huggingface.co/AI999X/geospatial-analytics-ai999x/resolve/main/figures/geo-azimuthal-equidistant-forward-compass.svg)
+![Eight cities seen from London as the package computes them on the WGS84 ellipsoid, each arrow points along the initial azimuth, clockwise from north, with length the geodesic distance (an azimuthal equidistant view): New York 5585](https://huggingface.co/AI999X/geospatial-analytics-ai999x/resolve/main/figures/geo-azimuthal-equidistant-forward-compass.svg)
 
-*Eight cities seen from London as the package computes them on the WGS84 ellipsoid — each arrow points along the initial azimuth, clockwise from north, with length the geodesic distance (an azimuthal equidistant view): New York 5585.81 km at 288.373°; Tokyo 9583.99 km at 31.6564°; Cape Town 9635.07 km at 164.613°; Rio de Janeiro 9251.66 km at 219.388°; Moscow 2509.19 km at 64.2336°; Mumbai 7199.57 km at 90.6929°; Reykjavík 1895.1 km at 326.304°; Nairobi 6805.98 km at 136.642°.*
+*Eight cities seen from London as the package computes them on the WGS84 ellipsoid, each arrow points along the initial azimuth, clockwise from north, with length the geodesic distance (an azimuthal equidistant view): New York 5585.81 km at 288.373°; Tokyo 9583.99 km at 31.6564°; Cape Town 9635.07 km at 164.613°; Rio de Janeiro 9251.66 km at 219.388°; Moscow 2509.19 km at 64.2336°; Mumbai 7199.57 km at 90.6929°; Reykjavík 1895.1 km at 326.304°; Nairobi 6805.98 km at 136.642°.*
 
 ![Azimuthal equidistant map centred on London: the graticule (parallels every 20°, meridians every 30°) traced through the package's forward projection with lat0 = 51](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-azimuthal-equidistant-forward-graticule)
 
@@ -1808,7 +1808,7 @@ geospatial_analytics_ai999x.solve('geo_azimuthal_equidistant_forward', lat=-33.8
 
 <a id="geo_sinusoidal_forward"></a>
 
-### Sinusoidal equal-area projection (ellipsoidal) — `geo_sinusoidal_forward`
+### Sinusoidal equal-area projection (ellipsoidal), `geo_sinusoidal_forward`
 
 x and y of a point in the ellipsoidal sinusoidal (Sanson-Flamsteed) equal-area projection, as used for MODIS land grids.
 
@@ -1857,7 +1857,7 @@ geospatial_analytics_ai999x.solve('geo_sinusoidal_forward', lat=-12.5, lon=-60.0
 
 <a id="geo_mollweide_forward"></a>
 
-### Mollweide equal-area projection (sphere) — `geo_mollweide_forward`
+### Mollweide equal-area projection (sphere): `geo_mollweide_forward`
 
 x and y of a point in the Mollweide (homalographic) equal-area projection of a sphere of radius R.
 
@@ -1910,7 +1910,7 @@ geospatial_analytics_ai999x.solve('geo_mollweide_forward', lat=-30.0, lon=-60.0,
 
 <a id="geo_orthographic_forward"></a>
 
-### Orthographic projection (sphere) — `geo_orthographic_forward`
+### Orthographic projection (sphere): `geo_orthographic_forward`
 
 x and y of a point in the orthographic projection (the view of a globe from infinitely far away) of a sphere of radius R centred on a point.
 
@@ -1961,7 +1961,7 @@ geospatial_analytics_ai999x.solve('geo_orthographic_forward', lat=-10.0, lon=100
 
 <a id="geo_gnomonic_forward"></a>
 
-### Gnomonic projection (sphere) — `geo_gnomonic_forward`
+### Gnomonic projection (sphere): `geo_gnomonic_forward`
 
 x and y of a point in the gnomonic projection (great circles become straight lines) of a sphere of radius R centred on a point.
 
@@ -2011,7 +2011,7 @@ geospatial_analytics_ai999x.solve('geo_gnomonic_forward', lat=60.0, lon=-30.0, l
 
 <a id="geo_equirectangular_forward"></a>
 
-### Equirectangular (equidistant cylindrical / plate carree) projection — `geo_equirectangular_forward`
+### Equirectangular (equidistant cylindrical / plate carree) projection, `geo_equirectangular_forward`
 
 x and y of a point in the equirectangular (equidistant cylindrical) projection of a sphere of radius R with a standard parallel (lat_ts = 0 is the plate carree).
 
@@ -2062,7 +2062,7 @@ geospatial_analytics_ai999x.solve('geo_equirectangular_forward', lat=-20.0, lon=
 
 <a id="geo_cylindrical_equal_area_forward"></a>
 
-### Lambert cylindrical equal-area projection (sphere) — `geo_cylindrical_equal_area_forward`
+### Lambert cylindrical equal-area projection (sphere), `geo_cylindrical_equal_area_forward`
 
 x and y of a point in the cylindrical equal-area projection of a sphere of radius R with a standard parallel (0 Lambert, 30 Behrmann, 45 Gall-Peters).
 
@@ -2112,7 +2112,7 @@ geospatial_analytics_ai999x.solve('geo_cylindrical_equal_area_forward', lat=-30.
 
 <a id="geo_tissot_indicatrix"></a>
 
-### Tissot's indicatrix: scale factors and distortion of a projection at a point — `geo_tissot_indicatrix`
+### Tissot's indicatrix: scale factors and distortion of a projection at a point, `geo_tissot_indicatrix`
 
 The meridian and parallel scale factors h and k, the angle between meridian and parallel, the semi-axes a and b of Tissot's indicatrix, the maximum angular distortion and the areal scale of a world projection of the sphere at a point.
 
@@ -2140,9 +2140,9 @@ $$
 - **Assumes:** |latitude| <= 80
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Tissot's indicatrix along the central meridian (longitude 0) at latitudes 0° to 75° for five world projections: each ellipse has the returned parallel scale k as its horizontal semi-axis and the meridian scale h as its vertical one (on the central meridian the two directions are perpendicular); the dashed circle is scale 1, all drawn at one scale](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-tissot-indicatrix-ellipses)
+![Tissot's indicatrix along the central meridian (longitude 0) at latitudes 0°, 15°, 30°, 45°, 60°, 75° for 5 world projections: each ellipse has the returned parallel scale k as its horizontal semi-axis and the meridian scale h as its vertical one (on the central meridian the two directions are perpendicular); the dashed circle is scale 1, all drawn at one scale](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-tissot-indicatrix-ellipses)
 
-*Tissot's indicatrix along the central meridian (longitude 0) at latitudes 0° to 75° for five world projections: each ellipse has the returned parallel scale k as its horizontal semi-axis and the meridian scale h as its vertical one (on the central meridian the two directions are perpendicular); the dashed circle is scale 1, all drawn at one scale. Marked by size: Mercator at 60° is h = k = 2 (the worked example, areal scale 4); the equal-area projections keep h·k = 1 while their shape distorts.*
+*Tissot's indicatrix along the central meridian (longitude 0) at latitudes 0°, 15°, 30°, 45°, 60°, 75° for 5 world projections: each ellipse has the returned parallel scale k as its horizontal semi-axis and the meridian scale h as its vertical one (on the central meridian the two directions are perpendicular); the dashed circle is scale 1, all drawn at one scale. Highlighted (ringed): the worked example, mercator at latitude 60°: h = 2, k = 2, areal scale 4. The equal-area projections keep h·k = 1 while their shape distorts.*
 
 ![h (scale factor along the meridian) against lat (latitude (decimal degrees)) from 0 to 90](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-tissot-indicatrix-curve)
 
@@ -2175,7 +2175,7 @@ geospatial_analytics_ai999x.solve('geo_tissot_indicatrix', projection='mollweide
 
 <a id="geo_dms_to_decimal"></a>
 
-### Degrees, minutes and seconds to decimal degrees — `geo_dms_to_decimal`
+### Degrees, minutes and seconds to decimal degrees, `geo_dms_to_decimal`
 
 A latitude or longitude written in degrees, minutes and seconds with a hemisphere letter, converted to signed decimal degrees and radians.
 
@@ -2201,7 +2201,7 @@ $$
 
 ![The angle 51° 28′ 38](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-dms-to-decimal-scale)
 
-*The angle 51° 28′ 38.0″ N (inputs) on nested scales — seconds within the minute (bottom), the position within the degree (top) — and the returned decimal value 51.4772° (0.898447 rad).*
+*The angle 51° 28′ 38.0″ N (inputs) on nested scales (seconds within the minute (bottom), the position within the degree (top)), and the returned decimal value 51.4772° (0.898447 rad).*
 
 ```python
 geospatial_analytics_ai999x.solve('geo_dms_to_decimal', degrees=51, minutes=28, seconds=38.0, hemisphere='N')
@@ -2225,7 +2225,7 @@ geospatial_analytics_ai999x.solve('geo_dms_to_decimal', degrees=0, minutes=7, se
 
 <a id="geo_decimal_to_dms"></a>
 
-### Decimal degrees to degrees, minutes and seconds — `geo_decimal_to_dms`
+### Decimal degrees to degrees, minutes and seconds, `geo_decimal_to_dms`
 
 A signed latitude or longitude in decimal degrees written as whole degrees, whole minutes, seconds and a hemisphere letter.
 
@@ -2274,7 +2274,7 @@ geospatial_analytics_ai999x.solve('geo_decimal_to_dms', decimal=-0.1275, axis='l
 
 <a id="geo_map_scale_ground_distance"></a>
 
-### Ground distance from a map distance and a representative fraction — `geo_map_scale_ground_distance`
+### Ground distance from a map distance and a representative fraction, `geo_map_scale_ground_distance`
 
 The real-world distance represented by a distance measured on a map of scale 1 : scale.
 
@@ -2325,7 +2325,7 @@ geospatial_analytics_ai999x.solve('geo_map_scale_ground_distance', map_distance=
 
 <a id="geo_map_scale_from_distances"></a>
 
-### Map scale (representative fraction) from a map and a ground distance — `geo_map_scale_from_distances`
+### Map scale (representative fraction) from a map and a ground distance, `geo_map_scale_from_distances`
 
 The scale denominator and representative fraction of a map on which a known ground distance measures a given map distance.
 
@@ -2376,7 +2376,7 @@ geospatial_analytics_ai999x.solve('geo_map_scale_from_distances', map_distance=0
 
 <a id="geo_geohash_encode"></a>
 
-### Geohash of a point and its cell — `geo_geohash_encode`
+### Geohash of a point and its cell: `geo_geohash_encode`
 
 The geohash of a latitude and longitude at a given number of characters, with the centre and half-sizes of the geohash cell.
 
@@ -2427,7 +2427,7 @@ geospatial_analytics_ai999x.solve('geo_geohash_encode', lat=-33.8688, lon=151.20
 
 <a id="geo_geohash_decode"></a>
 
-### Decode a geohash: cell centre and size — `geo_geohash_decode`
+### Decode a geohash: cell centre and size, `geo_geohash_decode`
 
 The centre latitude and longitude of a geohash cell and its half-height and half-width in degrees.
 
@@ -2476,7 +2476,7 @@ geospatial_analytics_ai999x.solve('geo_geohash_decode', geohash='9q8yy')
 
 <a id="geo_mgrs_encode"></a>
 
-### MGRS grid reference of a point (1 m) — `geo_mgrs_encode`
+### MGRS grid reference of a point (1 m): `geo_mgrs_encode`
 
 The Military Grid Reference System (MGRS / USNG) reference of a WGS84 latitude and longitude to 1 m: zone, latitude band, 100 km square letters and 5-digit easting and northing.
 
@@ -2528,7 +2528,7 @@ geospatial_analytics_ai999x.solve('geo_mgrs_encode', lat=-33.8568, lon=151.2153)
 
 <a id="geo_douglas_peucker_simplification"></a>
 
-### Douglas-Peucker line simplification — `geo_douglas_peucker_simplification`
+### Douglas-Peucker line simplification: `geo_douglas_peucker_simplification`
 
 The vertices of a polyline kept by the Ramer-Douglas-Peucker simplification at a distance tolerance (indices from 0).
 
@@ -2580,7 +2580,7 @@ geospatial_analytics_ai999x.solve('geo_douglas_peucker_simplification', x=[0, 2,
 
 <a id="geo_discrete_frechet_distance"></a>
 
-### Discrete Frechet distance between two polylines — `geo_discrete_frechet_distance`
+### Discrete Frechet distance between two polylines, `geo_discrete_frechet_distance`
 
 The discrete Frechet ('dog-walking') distance between two polylines (GPS tracks, routes) measured over their vertices.
 
@@ -2632,7 +2632,7 @@ geospatial_analytics_ai999x.solve('geo_discrete_frechet_distance', x1=[0, 2, 4, 
 
 <a id="geo_polygon_compactness"></a>
 
-### Shape compactness indices of a polygon (Polsby-Popper, Schwartzberg, convex hull, Reock) — `geo_polygon_compactness`
+### Shape compactness indices of a polygon (Polsby-Popper, Schwartzberg, convex hull, Reock), `geo_polygon_compactness`
 
 Area, perimeter and the standard compactness measures of a polygon in projected coordinates (used for districts and land parcels): Polsby-Popper, Schwartzberg, convex-hull ratio and Reock.
 
@@ -2684,7 +2684,7 @@ geospatial_analytics_ai999x.solve('geo_polygon_compactness', x=[0, 10, 10, 5, 0]
 
 <a id="geo_morans_i"></a>
 
-### Global Moran's I spatial autocorrelation with normal and randomization inference — `geo_morans_i`
+### Global Moran's I spatial autocorrelation with normal and randomization inference, `geo_morans_i`
 
 Global Moran's I of a variable observed at n locations with a given spatial weights matrix, its expectation and variance under normality and under randomization, z-scores and two-sided p-values.
 
@@ -2738,7 +2738,7 @@ geospatial_analytics_ai999x.solve('geo_morans_i', y=[1, 2, 1, 2, 1, 2], W=[[0, 1
 
 <a id="geo_gearys_c"></a>
 
-### Geary's C spatial autocorrelation with normal and randomization inference — `geo_gearys_c`
+### Geary's C spatial autocorrelation with normal and randomization inference, `geo_gearys_c`
 
 Geary's contiguity ratio C of a variable with a given spatial weights matrix, its variance under normality and randomization, and the z-scores (C < 1 positive, $C > 1$ negative autocorrelation).
 
@@ -2789,7 +2789,7 @@ geospatial_analytics_ai999x.solve('geo_gearys_c', y=[1, 2, 1, 2, 1, 2], W=[[0, 1
 
 <a id="geo_getis_ord_general_g"></a>
 
-### Getis-Ord general G (global high/low clustering) — `geo_getis_ord_general_g`
+### Getis-Ord general G (global high/low clustering), `geo_getis_ord_general_g`
 
 The Getis-Ord general G statistic of a positive variable with binary spatial weights, its expectation and variance under randomization and the z-score (G above its expectation: high values cluster).
 
@@ -2838,7 +2838,7 @@ geospatial_analytics_ai999x.solve('geo_getis_ord_general_g', y=[4, 8, 2, 6, 5, 7
 
 <a id="geo_local_getis_ord_gi"></a>
 
-### Local Getis-Ord Gi and Gi* hot-spot statistics — `geo_local_getis_ord_gi`
+### Local Getis-Ord Gi and Gi* hot-spot statistics, `geo_local_getis_ord_gi`
 
 The local Getis-Ord statistic of every location (Gi* includes the location itself, Gi excludes it) with binary weights, and its z-score for hot-spot (positive) and cold-spot (negative) mapping.
 
@@ -2886,7 +2886,7 @@ geospatial_analytics_ai999x.solve('geo_local_getis_ord_gi', y=[10, 12, 11, 2, 3,
 
 <a id="geo_local_morans_i"></a>
 
-### Local Moran's I (LISA) and Moran scatterplot quadrants — `geo_local_morans_i`
+### Local Moran's I (LISA) and Moran scatterplot quadrants, `geo_local_morans_i`
 
 The local Moran statistic of every location with row-standardized weights, and its Moran scatterplot quadrant: 1 high-high, 2 low-high, 3 low-low, 4 high-low.
 
@@ -2933,7 +2933,7 @@ geospatial_analytics_ai999x.solve('geo_local_morans_i', y=[10, 12, 11, 2, 3, 1],
 
 <a id="geo_bivariate_morans_i"></a>
 
-### Bivariate Moran's I (spatial cross-correlation) — `geo_bivariate_morans_i`
+### Bivariate Moran's I (spatial cross-correlation), `geo_bivariate_morans_i`
 
 The bivariate Moran's I between a variable x and the spatial lag of a second variable y with row-standardized weights (how x at a location relates to y around it).
 
@@ -2980,7 +2980,7 @@ geospatial_analytics_ai999x.solve('geo_bivariate_morans_i', x=[1, 2, 3, 4, 5, 6]
 
 <a id="geo_join_counts"></a>
 
-### Join count statistics of a binary map (BB, BW, WW) — `geo_join_counts`
+### Join count statistics of a binary map (BB, BW, WW), `geo_join_counts`
 
 The numbers of black-black, black-white and white-white joins between neighbouring areas of a binary (presence/absence) map, and the total number of joins.
 
@@ -3029,7 +3029,7 @@ geospatial_analytics_ai999x.solve('geo_join_counts', y=[1, 0, 1, 0], W=[[0, 1, 0
 
 <a id="geo_spatial_lag"></a>
 
-### Spatial lag of a variable — `geo_spatial_lag`
+### Spatial lag of a variable: `geo_spatial_lag`
 
 The spatial lag W y of a variable: for row-standardized weights, the average of each location's neighbours; otherwise the weighted sum.
 
@@ -3076,7 +3076,7 @@ geospatial_analytics_ai999x.solve('geo_spatial_lag', y=[1, 2, 3], W=[[0, 1, 1], 
 
 <a id="geo_knn_weights"></a>
 
-### k-nearest-neighbour spatial weights — `geo_knn_weights`
+### k-nearest-neighbour spatial weights, `geo_knn_weights`
 
 The binary k-nearest-neighbour weights matrix of a set of points (row i marks the k nearest points to point i), its total weight and whether it is symmetric.
 
@@ -3102,7 +3102,7 @@ $$
 
 ![k-nearest-neighbour weights (k = 2) for points x = [0, 1, 3](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-knn-weights-map)
 
-*k-nearest-neighbour weights (k = 2) for points x = [0, 1, 3.5, 6, 10], y = [0, 0, 0, 0, 0.5]: an arrow from each point to every neighbour the package's matrix gives it. The relation is not mutual (returned symmetric: False) — the far point 5 points to 3 and 4, but only 4 points back. S0 = 10.*
+*k-nearest-neighbour weights (k = 2) for points x = [0, 1, 3.5, 6, 10], y = [0, 0, 0, 0, 0.5]: an arrow from each point to every neighbour the package's matrix gives it. The relation is not mutual (returned symmetric: False), the far point 5 points to 3 and 4, but only 4 points back. S0 = 10.*
 
 ```python
 geospatial_analytics_ai999x.solve('geo_knn_weights', x=[0, 1, 3.5, 6, 10], y=[0, 0, 0, 0, 0.5], k=2)
@@ -3125,7 +3125,7 @@ geospatial_analytics_ai999x.solve('geo_knn_weights', x=[0, 2, 0, 2, 5], y=[0, 0,
 
 <a id="geo_distance_band_weights"></a>
 
-### Distance-band spatial weights — `geo_distance_band_weights`
+### Distance-band spatial weights: `geo_distance_band_weights`
 
 The binary distance-band weights matrix of a set of points (neighbours within a threshold distance), the number of neighbours of each point, the total weight and the number of islands.
 
@@ -3175,7 +3175,7 @@ geospatial_analytics_ai999x.solve('geo_distance_band_weights', x=[0, 2, 0, 2, 5]
 
 <a id="geo_nearest_neighbour_index"></a>
 
-### Nearest-neighbour index (Clark-Evans ratio) of a point pattern — `geo_nearest_neighbour_index`
+### Nearest-neighbour index (Clark-Evans ratio) of a point pattern, `geo_nearest_neighbour_index`
 
 The mean observed nearest-neighbour distance of a point pattern, the mean expected under complete spatial randomness in a study area, their ratio R (R < 1 clustered, $R > 1$ dispersed), the z-score and two-sided p-value.
 
@@ -3230,7 +3230,7 @@ geospatial_analytics_ai999x.solve('geo_nearest_neighbour_index', x=[0, 10, 0, 10
 
 <a id="geo_quadrat_test"></a>
 
-### Quadrat analysis: chi-square test of complete spatial randomness — `geo_quadrat_test`
+### Quadrat analysis: chi-square test of complete spatial randomness, `geo_quadrat_test`
 
 Counts of points in an nx x ny grid of quadrats over the bounding rectangle of a point pattern, the chi-square statistic against complete spatial randomness, its p-value and the variance-to-mean ratio.
 
@@ -3282,7 +3282,7 @@ geospatial_analytics_ai999x.solve('geo_quadrat_test', x=[0, 1, 2, 3, 4, 5, 6, 7,
 
 <a id="geo_ripley_k"></a>
 
-### Ripley's K and L functions of a point pattern — `geo_ripley_k`
+### Ripley's K and L functions of a point pattern, `geo_ripley_k`
 
 Ripley's K function and its variance-stabilized L function at given distances for a point pattern, without edge correction, in the bounding rectangle of the points.
 
@@ -3331,7 +3331,7 @@ geospatial_analytics_ai999x.solve('geo_ripley_k', x=[0, 10, 0, 10, 5], y=[0, 0, 
 
 <a id="geo_mean_center_standard_distance"></a>
 
-### Mean centre and standard distance of a point pattern — `geo_mean_center_standard_distance`
+### Mean centre and standard distance of a point pattern, `geo_mean_center_standard_distance`
 
 The mean centre of a set of points and the standard distance (root-mean-square distance from the mean centre).
 
@@ -3360,7 +3360,7 @@ $$
 
 ![The worked example's points x = [0, 4, 4, 0], y = [0, 0, 3, 3], their mean centre (2, 1](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-mean-center-standard-distance-map-2)
 
-*The worked example's points x = [0, 4, 4, 0], y = [0, 0, 3, 3], their mean centre (2, 1.5) and a circle of the returned standard distance 2.5 — here every corner of the rectangle lies on it, since all four are equally far from the centre.*
+*The worked example's points x = [0, 4, 4, 0], y = [0, 0, 3, 3], their mean centre (2, 1.5) and a circle of the returned standard distance 2.5, here every corner of the rectangle lies on it, since all four are equally far from the centre.*
 
 ```python
 geospatial_analytics_ai999x.solve('geo_mean_center_standard_distance', x=[0, 4, 4, 0], y=[0, 0, 3, 3])
@@ -3383,7 +3383,7 @@ geospatial_analytics_ai999x.solve('geo_mean_center_standard_distance', x=[66.22,
 
 <a id="geo_weighted_mean_center"></a>
 
-### Weighted mean centre and weighted standard distance — `geo_weighted_mean_center`
+### Weighted mean centre and weighted standard distance, `geo_weighted_mean_center`
 
 The weighted mean centre of a set of points (e.g. population-weighted centroid) and the weighted standard distance about it.
 
@@ -3432,7 +3432,7 @@ geospatial_analytics_ai999x.solve('geo_weighted_mean_center', x=[1, 2, 3, 4], y=
 
 <a id="geo_standard_deviational_ellipse"></a>
 
-### Standard deviational ellipse of a point pattern — `geo_standard_deviational_ellipse`
+### Standard deviational ellipse of a point pattern, `geo_standard_deviational_ellipse`
 
 The semi-axes of the standard deviational ellipse of a point pattern (CrimeStat correction sqrt(2) sqrt($n/(n-2)$)) and the orientation of its major axis.
 
@@ -3480,7 +3480,7 @@ geospatial_analytics_ai999x.solve('geo_standard_deviational_ellipse', x=[0, 1, 2
 
 <a id="geo_kernel_density"></a>
 
-### Kernel density estimate of a point pattern at a location — `geo_kernel_density`
+### Kernel density estimate of a point pattern at a location, `geo_kernel_density`
 
 The two-dimensional kernel density (per unit area, integrating to 1) and the intensity (events per unit area) of a point pattern at a location, with a stated kernel and bandwidth.
 
@@ -3535,7 +3535,7 @@ geospatial_analytics_ai999x.solve('geo_kernel_density', x=[0, 1, 2, 5], y=[0, 1,
 
 <a id="geo_idw_interpolation"></a>
 
-### Inverse distance weighted (IDW) interpolation at a point — `geo_idw_interpolation`
+### Inverse distance weighted (IDW) interpolation at a point, `geo_idw_interpolation`
 
 The inverse-distance-weighted (Shepard) estimate of a variable at a location from sample points, with a stated power (2 is the usual choice).
 
@@ -3589,7 +3589,7 @@ geospatial_analytics_ai999x.solve('geo_idw_interpolation', x=[0, 4, 8], y=[0, 3,
 
 <a id="geo_empirical_semivariogram"></a>
 
-### Empirical (Matheron) semivariogram in distance bins — `geo_empirical_semivariogram`
+### Empirical (Matheron) semivariogram in distance bins, `geo_empirical_semivariogram`
 
 The classical (Matheron) empirical semivariogram of sampled values: half the mean squared difference of all pairs whose separation falls in each distance bin, and the pair counts.
 
@@ -3615,7 +3615,7 @@ $$
 
 ![Top: the samples z = [1, 3, 2, 5, 4] at x = [0, 1, 2, 3, 4] (y = [0, 0, 0, 0, 0])](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-empirical-semivariogram-variogram)
 
-*Top: the samples z = [1, 3, 2, 5, 4] at x = [0, 1, 2, 3, 4] (y = [0, 0, 0, 0, 0]). Bottom: the empirical semivariogram the package returns for lag bins [0, 1.5, 2.5, 4.5] — each bar spans its bin and has the returned semivariance as height, labelled with the number of pairs.*
+*Top: the samples z = [1, 3, 2, 5, 4] at x = [0, 1, 2, 3, 4] (y = [0, 0, 0, 0, 0]). Bottom: the empirical semivariogram the package returns for lag bins [0, 1.5, 2.5, 4.5], each bar spans its bin and has the returned semivariance as height, labelled with the number of pairs.*
 
 ```python
 geospatial_analytics_ai999x.solve('geo_empirical_semivariogram', x=[0, 1, 2, 3, 4], y=[0, 0, 0, 0, 0], z=[1, 3, 2, 5, 4], bin_edges=[0, 1.5, 2.5, 4.5])
@@ -3638,7 +3638,7 @@ geospatial_analytics_ai999x.solve('geo_empirical_semivariogram', x=[0, 10, 0, 10
 
 <a id="geo_variogram_model_fit"></a>
 
-### Fit an exponential or Gaussian variogram model (nugget, partial sill, range) — `geo_variogram_model_fit`
+### Fit an exponential or Gaussian variogram model (nugget, partial sill, range), `geo_variogram_model_fit`
 
 The nugget, partial sill, range and sill of an exponential or Gaussian variogram model fitted by ordinary least squares to an empirical semivariogram (lags and semivariances).
 
@@ -3688,7 +3688,7 @@ geospatial_analytics_ai999x.solve('geo_variogram_model_fit', h=[1, 2, 4, 6, 8, 1
 
 <a id="geo_ordinary_kriging"></a>
 
-### Ordinary kriging estimate and kriging variance at a point — `geo_ordinary_kriging`
+### Ordinary kriging estimate and kriging variance at a point, `geo_ordinary_kriging`
 
 The ordinary kriging estimate of a variable at a location from samples, with a given variogram model (nugget, sill, range), and the kriging variance.
 
@@ -3742,7 +3742,7 @@ geospatial_analytics_ai999x.solve('geo_ordinary_kriging', x=[0, 50, 20, 80, 60],
 
 <a id="geo_trend_surface"></a>
 
-### Polynomial trend surface (first or second order) by least squares — `geo_trend_surface`
+### Polynomial trend surface (first or second order) by least squares, `geo_trend_surface`
 
 The coefficients and $R^{2}$ of a first-order (plane) or second-order (quadratic) trend surface fitted to sampled values by least squares.
 
@@ -3791,7 +3791,7 @@ geospatial_analytics_ai999x.solve('geo_trend_surface', x=[0, 1, 2, 0, 1, 2, 0, 1
 
 <a id="geo_rank_size_rule"></a>
 
-### Rank-size rule (Zipf) fit of a settlement system — `geo_rank_size_rule`
+### Rank-size rule (Zipf) fit of a settlement system, `geo_rank_size_rule`
 
 The Zipf exponent q and fitted size of the largest city from a log-log regression of population on rank (P_r = P_1 r^-q), the $R^{2}$ of the fit and the two-city primacy ratio.
 
@@ -3839,7 +3839,7 @@ geospatial_analytics_ai999x.solve('geo_rank_size_rule', populations=[1000, 480, 
 
 <a id="geo_density_gradient"></a>
 
-### Urban population density gradient (Clark's negative exponential model) — `geo_density_gradient`
+### Urban population density gradient (Clark's negative exponential model), `geo_density_gradient`
 
 The central density D0, density gradient b and half-distance of Clark's model D(r) = D0 exp(-b r) fitted by log-linear least squares to densities at distances from the centre, with the $R^{2.}$
 
@@ -3888,7 +3888,7 @@ geospatial_analytics_ai999x.solve('geo_density_gradient', r=[0.5, 1.5, 2.5, 3.5]
 
 <a id="geo_gravity_model_poisson_fit"></a>
 
-### Spatial interaction (gravity) model fitted by Poisson regression — `geo_gravity_model_poisson_fit`
+### Spatial interaction (gravity) model fitted by Poisson regression, `geo_gravity_model_poisson_fit`
 
 The constant k, the origin and destination mass exponents and the distance-decay exponent of the unconstrained gravity model $T = k$ $O^{\alpha}$ $D^{\beta}$ $d^{-\gamma}$, fitted to observed flows by Poisson maximum likelihood.
 
@@ -3939,7 +3939,7 @@ geospatial_analytics_ai999x.solve('geo_gravity_model_poisson_fit', T=[10, 25, 5,
 
 <a id="geo_vegetation_indices"></a>
 
-### Vegetation indices: NDVI, EVI, SAVI, OSAVI, MSAVI and EVI2 from band reflectances — `geo_vegetation_indices`
+### Vegetation indices: NDVI, EVI, SAVI, OSAVI, MSAVI and EVI2 from band reflectances, `geo_vegetation_indices`
 
 The common spectral vegetation indices of a pixel from its red, near-infrared and blue surface reflectances, with a stated soil adjustment factor L for SAVI (EVI uses its standard coefficients $G = 2.5$, $C_{1} = 6$, $C_{2} = 7.5$, L = 1).
 
@@ -3996,7 +3996,7 @@ geospatial_analytics_ai999x.solve('geo_vegetation_indices', red=0.2, nir=0.25, b
 
 <a id="geo_water_burn_built_indices"></a>
 
-### Water, moisture, burn and built-up indices: NDWI, MNDWI, NDMI, NBR and NDBI — `geo_water_burn_built_indices`
+### Water, moisture, burn and built-up indices: NDWI, MNDWI, NDMI, NBR and NDBI, `geo_water_burn_built_indices`
 
 Normalized-difference indices for open water (NDWI, MNDWI), vegetation moisture (NDMI), burn severity (NBR) and built-up land (NDBI) from green, near-infrared and two shortwave-infrared reflectances.
 
@@ -4052,7 +4052,7 @@ geospatial_analytics_ai999x.solve('geo_water_burn_built_indices', green=0.07, ni
 
 <a id="geo_toa_reflectance"></a>
 
-### Top-of-atmosphere reflectance from at-sensor radiance — `geo_toa_reflectance`
+### Top-of-atmosphere reflectance from at-sensor radiance, `geo_toa_reflectance`
 
 The top-of-atmosphere (planetary) reflectance of a pixel from its at-sensor spectral radiance, the band's mean exoatmospheric solar irradiance ESUN, the day of year and the sun elevation, with the Earth-Sun distance.
 
@@ -4101,7 +4101,7 @@ geospatial_analytics_ai999x.solve('geo_toa_reflectance', radiance=40.5, esun=103
 
 <a id="geo_brightness_temperature"></a>
 
-### At-sensor brightness temperature from thermal radiance — `geo_brightness_temperature`
+### At-sensor brightness temperature from thermal radiance, `geo_brightness_temperature`
 
 The at-sensor brightness temperature of a thermal-infrared band from its spectral radiance and the band's calibration constants K1 and K2 (as in Landsat metadata).
 
@@ -4148,7 +4148,7 @@ geospatial_analytics_ai999x.solve('geo_brightness_temperature', radiance=8.2, K1
 
 <a id="geo_ground_sample_distance"></a>
 
-### Ground sample distance and swath of a nadir-looking camera — `geo_ground_sample_distance`
+### Ground sample distance and swath of a nadir-looking camera, `geo_ground_sample_distance`
 
 The ground sample distance (pixel footprint) and swath width of a nadir-looking frame camera or scanner from its pixel pitch, focal length, flying height above ground and number of pixels across track.
 
@@ -4197,7 +4197,7 @@ geospatial_analytics_ai999x.solve('geo_ground_sample_distance', pixel_pitch=1.2e
 
 <a id="geo_classification_accuracy"></a>
 
-### Thematic map accuracy: overall accuracy, kappa, producer's and user's accuracy — `geo_classification_accuracy`
+### Thematic map accuracy: overall accuracy, kappa, producer's and user's accuracy, `geo_classification_accuracy`
 
 The accuracy assessment of a classified map from its error (confusion) matrix: overall accuracy, Cohen's kappa, and the producer's and user's accuracy of each class.
 
@@ -4249,7 +4249,7 @@ geospatial_analytics_ai999x.solve('geo_classification_accuracy', matrix=[[45, 5]
 
 <a id="geo_slope_aspect_horn"></a>
 
-### Slope and aspect of a 3x3 elevation window (Horn's method) — `geo_slope_aspect_horn`
+### Slope and aspect of a 3x3 elevation window (Horn's method), `geo_slope_aspect_horn`
 
 The slope (degrees and per cent) and aspect (downslope direction, degrees clockwise from north) at the centre cell of a 3 x 3 window of a digital elevation model, by Horn's third-order finite differences.
 
@@ -4301,7 +4301,7 @@ geospatial_analytics_ai999x.solve('geo_slope_aspect_horn', window=[[100, 101, 10
 
 <a id="geo_hillshade"></a>
 
-### Hillshade (analytical relief shading) of a 3x3 elevation window — `geo_hillshade`
+### Hillshade (analytical relief shading) of a 3x3 elevation window, `geo_hillshade`
 
 The illumination (cosine of the solar incidence angle on the terrain) and the $0-255$ hillshade value at the centre of a 3 x 3 elevation window for a sun azimuth and altitude.
 
@@ -4350,7 +4350,7 @@ geospatial_analytics_ai999x.solve('geo_hillshade', window=[[100, 101, 102], [100
 
 <a id="geo_terrain_curvature"></a>
 
-### Terrain curvature: total, profile and plan curvature (Zevenbergen-Thorne) — `geo_terrain_curvature`
+### Terrain curvature: total, profile and plan curvature (Zevenbergen-Thorne), `geo_terrain_curvature`
 
 The total, profile (along the slope) and plan (across the slope) curvature at the centre of a 3 x 3 elevation window from the Zevenbergen-Thorne partial quartic surface.
 
@@ -4402,7 +4402,7 @@ geospatial_analytics_ai999x.solve('geo_terrain_curvature', window=[[105, 100, 98
 
 <a id="geo_terrain_ruggedness"></a>
 
-### Terrain ruggedness index (Riley), topographic position index and local relief — `geo_terrain_ruggedness`
+### Terrain ruggedness index (Riley), topographic position index and local relief, `geo_terrain_ruggedness`
 
 Riley's terrain ruggedness index (root of the summed squared elevation differences to the 8 neighbours), the topographic position index (centre minus neighbour mean) and the local relief of a 3 x 3 window.
 
@@ -4449,7 +4449,7 @@ geospatial_analytics_ai999x.solve('geo_terrain_ruggedness', window=[[105, 100, 9
 
 <a id="geo_d8_flow_direction"></a>
 
-### D8 flow direction of every cell of a small DEM — `geo_d8_flow_direction`
+### D8 flow direction of every cell of a small DEM, `geo_d8_flow_direction`
 
 The D8 (steepest-descent) flow direction of every cell of a digital elevation model, as ESRI codes (1 E, 2 SE, 4 S, 8 SW, 16 W, 32 NW, 64 N, 128 NE; 0 where no neighbour inside the raster is lower).
 
@@ -4495,7 +4495,7 @@ geospatial_analytics_ai999x.solve('geo_d8_flow_direction', dem=[[10, 9, 8], [9, 
 
 <a id="geo_d8_flow_accumulation"></a>
 
-### D8 flow accumulation of a small DEM — `geo_d8_flow_accumulation`
+### D8 flow accumulation of a small DEM: `geo_d8_flow_accumulation`
 
 The number of cells draining through each cell (the cell itself included) under D8 flow directions, and the largest accumulation (the main outlet).
 
@@ -4546,7 +4546,7 @@ geospatial_analytics_ai999x.solve('geo_d8_flow_accumulation', dem=[[10, 9, 8], [
 
 <a id="geo_watershed_delineation"></a>
 
-### Watershed (catchment) of an outlet cell on a small DEM — `geo_watershed_delineation`
+### Watershed (catchment) of an outlet cell on a small DEM, `geo_watershed_delineation`
 
 The cells that drain to a chosen outlet cell under D8 flow directions: their number, the catchment area and the catchment mask.
 
@@ -4573,7 +4573,7 @@ $$
 
 ![Watersheds on the worked example's elevation grid (cell size 10](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-watershed-delineation-mask)
 
-*Watersheds on the worked example's elevation grid (cell size 10.0 m) for three outlets (dot): the cells of the mask the package returns are shaded, the arrows are the D8 directions from its flow-direction capability. Rows and columns count from 0 at the top left. row 3, column 3: 16 cells, 1600 m²; row 2, column 2: 8 cells, 800 m²; row 1, column 2: 2 cells, 200 m² — the first is the worked example, the grid's outlet, which drains everything.*
+*Watersheds on the worked example's elevation grid (cell size 10.0 m) for three outlets (dot): the cells of the mask the package returns are shaded, the arrows are the D8 directions from its flow-direction capability. Rows and columns count from 0 at the top left. row 3, column 3: 16 cells, 1600 m²; row 2, column 2: 8 cells, 800 m²; row 1, column 2: 2 cells, 200 m², the first is the worked example, the grid's outlet, which drains everything.*
 
 ```python
 geospatial_analytics_ai999x.solve('geo_watershed_delineation', dem=[[78, 72, 69, 71], [74, 67, 56, 49], [69, 53, 44, 37], [64, 58, 55, 22]], cell_size=10.0, row=3, col=3)
@@ -4596,7 +4596,7 @@ geospatial_analytics_ai999x.solve('geo_watershed_delineation', dem=[[10, 9, 8], 
 
 <a id="geo_line_of_sight_profile"></a>
 
-### Line-of-sight visibility along a terrain profile (with Earth curvature and refraction) — `geo_line_of_sight_profile`
+### Line-of-sight visibility along a terrain profile (with Earth curvature and refraction), `geo_line_of_sight_profile`
 
 Which points along a terrain profile are visible from an observer at its start, for given observer and target heights above the ground, optionally with the Earth-curvature and refraction correction.
 
@@ -4621,9 +4621,9 @@ $$
 - **Assumes:** distances increase from 0; positive observer and target heights
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![A terrain profile (elevations [100, 104, 112, 103, 101, 109] m at [0, 100, 200, 300, 400, 500] m) seen by an observer 2 m above the first point, looking at targets 2 m above each point (curvature: none): sight lines are drawn solid where the package returns the point as visible and dashed where hidden — 2 of the 5 other points are visible; the ridge at 200 m hides those beyond](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-line-of-sight-profile-profile)
+![A terrain profile (elevations [100, 104, 112, 103, 101, 109] m at [0, 100, 200, 300, 400, 500] m) seen by an observer 2 m above the first point, looking at targets 2 m above each point (curvature: none): sight lines are drawn solid where the package returns the point as visible and dashed where hidden, 2 of the 5 other points are visible; the ridge at 200 m hides those beyond](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-line-of-sight-profile-profile)
 
-*A terrain profile (elevations [100, 104, 112, 103, 101, 109] m at [0, 100, 200, 300, 400, 500] m) seen by an observer 2 m above the first point, looking at targets 2 m above each point (curvature: none): sight lines are drawn solid where the package returns the point as visible and dashed where hidden — 2 of the 5 other points are visible; the ridge at 200 m hides those beyond.*
+*A terrain profile (elevations [100, 104, 112, 103, 101, 109] m at [0, 100, 200, 300, 400, 500] m) seen by an observer 2 m above the first point, looking at targets 2 m above each point (curvature: none): sight lines are drawn solid where the package returns the point as visible and dashed where hidden, 2 of the 5 other points are visible; the ridge at 200 m hides those beyond.*
 
 ```python
 geospatial_analytics_ai999x.solve('geo_line_of_sight_profile', d=[0, 100, 200, 300, 400, 500], z=[100, 104, 112, 103, 101, 109], observer_height=2.0, target_height=2.0, curvature='none')
@@ -4646,7 +4646,7 @@ geospatial_analytics_ai999x.solve('geo_line_of_sight_profile', d=[0, 5000, 10000
 
 <a id="geo_gravity_accessibility"></a>
 
-### Gravity-based (Hansen) accessibility on a road network — `geo_gravity_accessibility`
+### Gravity-based (Hansen) accessibility on a road network, `geo_gravity_accessibility`
 
 The Hansen gravity accessibility of every node of a network: the sum of the opportunities (jobs, services) at the other nodes discounted by a power or negative-exponential function of the shortest-path distance.
 
@@ -4694,7 +4694,7 @@ geospatial_analytics_ai999x.solve('geo_gravity_accessibility', edges='0-1 5; 1-2
 
 <a id="geo_huff_model"></a>
 
-### Huff model: probabilities of shopping at each store from an origin (network distances) — `geo_huff_model`
+### Huff model: probabilities of shopping at each store from an origin (network distances), `geo_huff_model`
 
 The Huff probabilities that a consumer at an origin node patronizes each store, from store attractiveness (floor space) and shortest-path distances on a road network.
 
@@ -4745,7 +4745,7 @@ geospatial_analytics_ai999x.solve('geo_huff_model', edges='0-1 1; 1-2 1; 2-3 1; 
 
 <a id="geo_two_step_floating_catchment"></a>
 
-### Two-step floating catchment area (2SFCA) accessibility — `geo_two_step_floating_catchment`
+### Two-step floating catchment area (2SFCA) accessibility, `geo_two_step_floating_catchment`
 
 The 2SFCA spatial accessibility of every node to services (doctors, schools): supply-to-population ratios within each site's catchment, summed over the sites within reach of each node.
 
@@ -4795,7 +4795,7 @@ geospatial_analytics_ai999x.solve('geo_two_step_floating_catchment', edges='0-1 
 
 <a id="geo_service_area"></a>
 
-### Network service area (isochrone) of a facility — `geo_service_area`
+### Network service area (isochrone) of a facility, `geo_service_area`
 
 The nodes of a road network within a travel-cost cutoff of a facility (the service area or isochrone), their number and the largest distance reached.
 
@@ -4844,7 +4844,7 @@ geospatial_analytics_ai999x.solve('geo_service_area', edges='0-1 1; 1-2 1; 2-3 1
 
 <a id="geo_closest_facility"></a>
 
-### Closest facility for every node of a network — `geo_closest_facility`
+### Closest facility for every node of a network, `geo_closest_facility`
 
 For every node of a road network, the nearest facility by shortest-path distance and that distance, with the mean distance to the nearest facility.
 
@@ -4892,7 +4892,7 @@ geospatial_analytics_ai999x.solve('geo_closest_facility', edges='0-1 1; 1-2 1.5;
 
 <a id="geo_p_median"></a>
 
-### p-median facility location on a network — `geo_p_median`
+### p-median facility location on a network, `geo_p_median`
 
 The p facility sites, chosen from candidate nodes, that minimize the total demand-weighted shortest-path distance from every node to its nearest open facility.
 
@@ -4942,7 +4942,7 @@ geospatial_analytics_ai999x.solve('geo_p_median', edges='0-1 1; 1-2 1; 2-3 1; 3-
 
 <a id="geo_maximal_covering_location"></a>
 
-### Maximal covering location problem (MCLP) on a network — `geo_maximal_covering_location`
+### Maximal covering location problem (MCLP) on a network, `geo_maximal_covering_location`
 
 The largest demand that p facilities, chosen from candidate nodes, can cover within a coverage distance on a road network, and the covered share.
 
@@ -4996,7 +4996,7 @@ geospatial_analytics_ai999x.solve('geo_maximal_covering_location', edges='0-1 1;
 
 <a id="geo_detour_index"></a>
 
-### Network detour index (circuity) between two nodes — `geo_detour_index`
+### Network detour index (circuity) between two nodes, `geo_detour_index`
 
 The shortest network distance between two nodes of a street network (edge lengths from the node coordinates), the straight-line distance and their ratio, the detour index or circuity.
 
@@ -5046,7 +5046,7 @@ geospatial_analytics_ai999x.solve('geo_detour_index', coords=[[0, 0], [1, 1], [2
 
 <a id="geo_network_connectivity_indices"></a>
 
-### Network connectivity indices: cyclomatic number, alpha, beta and gamma — `geo_network_connectivity_indices`
+### Network connectivity indices: cyclomatic number, alpha, beta and gamma, `geo_network_connectivity_indices`
 
 The graph-theoretic connectivity measures of a (planar) transport network: vertices, edges, components, cyclomatic number and Kansky's alpha, beta and gamma indices.
 
@@ -5097,7 +5097,7 @@ geospatial_analytics_ai999x.solve('geo_network_connectivity_indices', edges='0-1
 
 <a id="geo_shimbel_index"></a>
 
-### Shimbel accessibility index of every node — `geo_shimbel_index`
+### Shimbel accessibility index of every node: `geo_shimbel_index`
 
 The Shimbel (total shortest-path distance) index of every node of a connected network, the network total (dispersion) and the most accessible node (smallest index).
 
@@ -5144,7 +5144,7 @@ geospatial_analytics_ai999x.solve('geo_shimbel_index', edges='0-1 1; 1-2 1; 2-3 
 
 <a id="geo_segregation_evenness"></a>
 
-### Residential segregation (evenness): dissimilarity, Gini and Theil entropy indices — `geo_segregation_evenness`
+### Residential segregation (evenness): dissimilarity, Gini and Theil entropy indices, `geo_segregation_evenness`
 
 The evenness dimension of residential segregation of a group across areal units (census tracts): Duncan's index of dissimilarity, the segregation Gini index and Theil's entropy index H.
 
@@ -5192,7 +5192,7 @@ geospatial_analytics_ai999x.solve('geo_segregation_evenness', x=[0, 10, 990], t=
 
 <a id="geo_segregation_exposure"></a>
 
-### Residential segregation (exposure): isolation, interaction and correlation ratio — `geo_segregation_exposure`
+### Residential segregation (exposure): isolation, interaction and correlation ratio, `geo_segregation_exposure`
 
 The exposure dimension of residential segregation: the isolation index xPx (probability that a group member meets a member of the same group in their unit), the interaction (exposure) index xPy and the correlation ratio $\eta^{2.}$
 

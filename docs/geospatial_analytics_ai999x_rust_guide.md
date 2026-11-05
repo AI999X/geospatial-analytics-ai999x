@@ -1,4 +1,4 @@
-# geospatial-analytics: the Geospatial Analytics program — user guide
+# geospatial-analytics: the Geospatial Analytics program, user guide
 
 **geospatial-analytics-ai999x 1.1.0**, Rust build: command line, desktop app and browser. **Creator / engineer:** Ibnul Jaif Farabi · **Company:** AI999X · support@ai999x.com
 
@@ -17,63 +17,63 @@ Geospatial Analytics covers map projections and coordinates, geodesic distance a
 
 ## 1. Get it
 
-Version 1.4.0 of the AI999X desktop app and of the command-line bundle. Checksums for every file: https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS; the newest version is always under https://downloads.ai999x.com/desktop/latest/. Full instructions: https://www.ai999x.com/desktop-cli/
+Version 1.5.0 of the AI999X desktop app and of the command-line bundle. Checksums for every file: https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS; the newest version is always under https://downloads.ai999x.com/desktop/latest/. Full instructions: https://www.ai999x.com/desktop-cli/
 
 | what | system | download |
 |---|---|---|
-| Desktop app: Geospatial Analytics | Windows x86-64 | https://downloads.ai999x.com/desktop/1.4.0/ai999x-geospatial-analytics-1.4.0-windows-x86_64.zip |
-| Desktop app: Geospatial Analytics | Linux x86-64 | https://downloads.ai999x.com/desktop/1.4.0/ai999x-geospatial-analytics-1.4.0-linux-x86_64.tar.gz |
-| Desktop app: all models | Windows x86-64 | https://downloads.ai999x.com/desktop/1.4.0/ai999x-1.4.0-windows-x86_64.zip |
-| Desktop app: all models | Linux x86-64 | https://downloads.ai999x.com/desktop/1.4.0/ai999x-1.4.0-linux-x86_64.tar.gz |
-| Command line | Windows x86-64 | https://downloads.ai999x.com/desktop/1.4.0/ai999x-cli-1.4.0-windows-x86_64.zip |
-| Command line | Linux x86-64 | https://downloads.ai999x.com/desktop/1.4.0/ai999x-cli-1.4.0-linux-x86_64.tar.gz |
+| Desktop app: Geospatial Analytics | Windows x86-64 | https://downloads.ai999x.com/desktop/1.5.0/ai999x-geospatial-analytics-1.5.0-windows-x86_64.zip |
+| Desktop app: Geospatial Analytics | Linux x86-64 | https://downloads.ai999x.com/desktop/1.5.0/ai999x-geospatial-analytics-1.5.0-linux-x86_64.tar.gz |
+| Desktop app: all models | Windows x86-64 | https://downloads.ai999x.com/desktop/1.5.0/ai999x-1.5.0-windows-x86_64.zip |
+| Desktop app: all models | Linux x86-64 | https://downloads.ai999x.com/desktop/1.5.0/ai999x-1.5.0-linux-x86_64.tar.gz |
+| Command line | Windows x86-64 | https://downloads.ai999x.com/desktop/1.5.0/ai999x-cli-1.5.0-windows-x86_64.zip |
+| Command line | Linux x86-64 | https://downloads.ai999x.com/desktop/1.5.0/ai999x-cli-1.5.0-linux-x86_64.tar.gz |
 
 ### Desktop app
 
-Geospatial Analytics in its own app: search, questions in words, input forms, live figures and explanations. Windows: Download ai999x-geospatial-analytics-1.4.0-windows-x86_64.zip, right-click it → Extract All, then open the folder and start ai999x-geospatial-analytics.exe. If Windows SmartScreen asks, choose More info → Run anyway. Linux:
+Geospatial Analytics in its own app: search, questions in words, input forms, live figures and explanations. Windows: Download ai999x-geospatial-analytics-1.5.0-windows-x86_64.zip, right-click it → Extract All, then open the folder and start ai999x-geospatial-analytics.exe. If Windows SmartScreen asks, choose More info → Run anyway. Linux:
 
 ```shell
-curl -LO https://downloads.ai999x.com/desktop/1.4.0/ai999x-geospatial-analytics-1.4.0-linux-x86_64.tar.gz
-curl -LO https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS
+curl -LO https://downloads.ai999x.com/desktop/1.5.0/ai999x-geospatial-analytics-1.5.0-linux-x86_64.tar.gz
+curl -LO https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS
 sha256sum -c --ignore-missing SHA256SUMS
-tar xzf ai999x-geospatial-analytics-1.4.0-linux-x86_64.tar.gz
-./ai999x-geospatial-analytics-1.4.0-linux-x86_64/ai999x-geospatial-analytics
+tar xzf ai999x-geospatial-analytics-1.5.0-linux-x86_64.tar.gz
+./ai999x-geospatial-analytics-1.5.0-linux-x86_64/ai999x-geospatial-analytics
 ```
 
-It opens on this model: type a question or pick a capability, fill in the form and press Compute. The AI999X desktop app with every model works the same way (choose the model first). Windows: Download ai999x-1.4.0-windows-x86_64.zip, right-click it → Extract All, then open the folder and start ai999x.exe. If Windows SmartScreen asks, choose More info → Run anyway. Linux:
+It opens on this model: type a question or pick a capability, fill in the form and press Compute. The AI999X desktop app with every model works the same way (choose the model first). Windows: Download ai999x-1.5.0-windows-x86_64.zip, right-click it → Extract All, then open the folder and start ai999x.exe. If Windows SmartScreen asks, choose More info → Run anyway. Linux:
 
 ```shell
-curl -LO https://downloads.ai999x.com/desktop/1.4.0/ai999x-1.4.0-linux-x86_64.tar.gz
-curl -LO https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS
+curl -LO https://downloads.ai999x.com/desktop/1.5.0/ai999x-1.5.0-linux-x86_64.tar.gz
+curl -LO https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS
 sha256sum -c --ignore-missing SHA256SUMS
-tar xzf ai999x-1.4.0-linux-x86_64.tar.gz
-./ai999x-1.4.0-linux-x86_64/ai999x
+tar xzf ai999x-1.5.0-linux-x86_64.tar.gz
+./ai999x-1.5.0-linux-x86_64/ai999x
 ```
 
-### Command line — Linux
+### Command line: Linux
 
 The bundle holds one program per model; `geospatial-analytics` is this one. The checksum line should print OK.
 
 ```shell
-curl -LO https://downloads.ai999x.com/desktop/1.4.0/ai999x-cli-1.4.0-linux-x86_64.tar.gz
-curl -LO https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS
+curl -LO https://downloads.ai999x.com/desktop/1.5.0/ai999x-cli-1.5.0-linux-x86_64.tar.gz
+curl -LO https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS
 sha256sum -c --ignore-missing SHA256SUMS
-mkdir -p ~/.local/share && tar xzf ai999x-cli-1.4.0-linux-x86_64.tar.gz -C ~/.local/share
-echo 'export PATH="$HOME/.local/share/ai999x-cli-1.4.0-linux-x86_64:$PATH"' >> ~/.bashrc && source ~/.bashrc
+mkdir -p ~/.local/share && tar xzf ai999x-cli-1.5.0-linux-x86_64.tar.gz -C ~/.local/share
+echo 'export PATH="$HOME/.local/share/ai999x-cli-1.5.0-linux-x86_64:$PATH"' >> ~/.bashrc && source ~/.bashrc
 geospatial-analytics --version
 ```
 
-### Command line — Windows (PowerShell)
+### Command line: Windows (PowerShell)
 
 The fourth line should print True.
 
 ```powershell
-$F = "ai999x-cli-1.4.0-windows-x86_64.zip"
-Invoke-WebRequest "https://downloads.ai999x.com/desktop/1.4.0/$F" -OutFile $F
-Invoke-WebRequest "https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS" -OutFile SHA256SUMS
+$F = "ai999x-cli-1.5.0-windows-x86_64.zip"
+Invoke-WebRequest "https://downloads.ai999x.com/desktop/1.5.0/$F" -OutFile $F
+Invoke-WebRequest "https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS" -OutFile SHA256SUMS
 (Get-FileHash $F -Algorithm SHA256).Hash.ToLower() -eq ((Select-String -SimpleMatch $F SHA256SUMS).Line -split ' ')[0]
 Expand-Archive $F -DestinationPath "$env:LOCALAPPDATA\AI999X" -Force
-$D = "$env:LOCALAPPDATA\AI999X\ai999x-cli-1.4.0-windows-x86_64"; $env:Path += ";$D"
+$D = "$env:LOCALAPPDATA\AI999X\ai999x-cli-1.5.0-windows-x86_64"; $env:Path += ";$D"
 [Environment]::SetEnvironmentVariable("Path", [Environment]::GetEnvironmentVariable("Path", "User") + ";$D", "User")
 geospatial-analytics --version
 ```
@@ -96,10 +96,46 @@ Prints the model, its version and that this is the Rust build.
 
 ```shell
 $ geospatial-analytics --version
-geospatial-analytics-ai999x 1.0.3 (Rust build, ax-engine 0.1.0)
+geospatial-analytics-ai999x 1.5.0 (Rust build, ax-engine 1.5.0)
 ```
 
-### 2.2 List the capabilities
+### 2.2 Ask in words
+
+Write the question as you would say it: the program reads the quantities and their units, picks the capability and answers.
+
+```shell
+$ geospatial-analytics ask "Geodesic destination: lat1 = 52.2, lon1 = 0.12, azimuth = 45, distance = 100 km, ellipsoid = WGS84"
+Read as: Geodesic destination point on the ellipsoid (direct problem)
+lat2 = 52.83083647
+lon2 = 1.169145951
+azimuth2 = 45.83253655
+  by: Geodesic destination point on the ellipsoid (direct problem)  (Bessel's auxiliary sphere: solve b*I1(sigma) = s by Newton steps with the arc-length integral by Gauss-Legendre quadrature, then the longitude integral)
+  azimuth = 45
+  distance = 100000 m
+  lat1 = 52.2
+  lon1 = 0.12
+  ellipsoid = WGS84
+  assumes: start latitude strictly between -90 and 90; 0 < distance <= 15000 km
+```
+
+### 2.3 Find a capability
+
+Search the capabilities by what you want to know; the first column is the id to pass to info and solve.
+
+```shell
+$ geospatial-analytics search "geodesic destination point on the ellipsoid (direct problem)"
+geo_geodesic_destination             Geodesic destination point on the ellipsoid (direct problem)  (ellipsoidal geodesy)
+geo_geodesic_midpoint                Midpoint of a geodesic on the ellipsoid  (ellipsoidal geodesy)
+geo_rhumb_line_destination           Destination along a rhumb line (loxodrome) on the ellipsoid  (ellipsoidal geodesy)
+geo_azimuthal_equidistant_forward    Azimuthal equidistant projection (ellipsoidal, geodesic)  (map projections)
+geo_geodesic_polygon_area            Area and perimeter of a geodesic polygon on the ellipsoid  (ellipsoidal geodesy)
+geo_maximal_covering_location        Maximal covering location problem (MCLP) on a network  (facility location)
+geo_geodetic_to_enu                  Geodetic to local east-north-up (ENU) coordinates  (coordinate systems and conversions)
+geo_rhumb_line_inverse               Rhumb-line (loxodrome) distance and bearing on the ellipsoid  (ellipsoidal geodesy)
+… 12 more
+```
+
+### 2.4 List the capabilities
 
 Every capability the program answers: its id (what you pass to solve) and its name.
 
@@ -108,24 +144,69 @@ $ geospatial-analytics list
 geo_albers_equal_area_forward            Albers equal-area conic projection: coordinates and scale factors
 geo_albers_equal_area_inverse            Inverse Albers equal-area conic projection
 geo_auxiliary_latitudes                  Auxiliary latitudes: geocentric, reduced, conformal, authalic and rectifying
+geo_azimuthal_equidistant_forward        Azimuthal equidistant projection (ellipsoidal, geodesic)
 geo_bivariate_morans_i                   Bivariate Moran's I (spatial cross-correlation)
 geo_brightness_temperature               At-sensor brightness temperature from thermal radiance
 geo_classification_accuracy              Thematic map accuracy: overall accuracy, kappa, producer's and user's accuracy
-geo_cylindrical_equal_area_forward       Lambert cylindrical equal-area projection (sphere)
-geo_d8_flow_accumulation                 D8 flow accumulation of a small DEM
-… 67 more
+geo_closest_facility                     Closest facility for every node of a network
+… 91 more
 ```
 
-### 2.3 When an input is missing
+### 2.5 What a capability needs
+
+The equation or method, every input and output with its SI unit. Read this before solve: it tells you the input names.
+
+```shell
+$ geospatial-analytics info geo_geodesic_destination
+Geodesic destination point on the ellipsoid (direct problem)
+  Bessel's auxiliary sphere: solve b*I1(sigma) = s by Newton steps with the arc-length integral by Gauss-Legendre quadrature, then the longitude integral
+  in   lat1     latitude of the start point (decimal degrees) []
+  in   lon1     longitude of the start point (decimal degrees) []
+  in   azimuth  initial azimuth, clockwise from north (decimal degrees) []
+  in   distance geodesic distance travelled [m]
+  in   ellipsoid reference ellipsoid (choice) []
+  out  lat2     latitude of the destination (degrees) []
+  out  lon2     longitude of the destination (degrees) []
+  out  azimuth2 forward azimuth at the destination (degrees clockwise from north) []
+```
+
+### 2.6 Solve
+
+Inputs as name=value, each with any unit of the right kind. The answer lists every output, the method used, each input converted to SI, and the conditions the answer assumes.
+
+```shell
+$ geospatial-analytics solve geo_geodesic_destination lat1=52.2 lon1=0.12 azimuth=45.0 "distance=100 km" ellipsoid=WGS84
+lat2 = 52.83083647
+lon2 = 1.169145951
+azimuth2 = 45.83253655
+  by: Geodesic destination point on the ellipsoid (direct problem)  (Bessel's auxiliary sphere: solve b*I1(sigma) = s by Newton steps with the arc-length integral by Gauss-Legendre quadrature, then the longitude integral)
+  lat1 = 52.2
+  lon1 = 0.12
+  azimuth = 45
+  distance = 100000 m
+  ellipsoid = WGS84
+  assumes: start latitude strictly between -90 and 90; 0 < distance <= 15000 km
+```
+
+### 2.7 Machine-readable answer
+
+--json prints the same answer as one line of JSON (values in SI): for scripts and other programs.
+
+```shell
+$ geospatial-analytics solve geo_geodesic_destination lat1=52.2 lon1=0.12 azimuth=45.0 "distance=100 km" ellipsoid=WGS84 --json
+{"outcome":"SOLVED","message":"","value":52.8308364668,"unit":"","solved_for":"lat2","si":[["lat1",52.2],["lon1",0.12],["azimuth",45.0],["distance",100000.0]],"values":[["lat2",52.8308364668,""],["lon2",1.16914595053,""],["azimuth2",45.832536554,""]],"target":"lat2","phrase":"latitude of the destination (degrees)","assumptions":["start latitude strictly between -90 and 90","0 < distance <= 15000 km"],"name":"Geodesic destination point on the ellipsoid (direct problem)","equation":"Bessel's auxiliary sphere: solve b*I1(sigma) = s by Newton steps with the arc-length integral by Gauss-Legendre quadrature, then the longitude integral"}
+```
+
+### 2.8 When an input is missing
 
 No number is guessed: the answer names what is missing, shows a complete call, and the program exits with status 1.
 
 ```shell
 $ geospatial-analytics solve geo_geodesic_destination lat1=52.2 lon1=0.12 azimuth=45.0 "distance=100 km"
-INVALID_INPUT: unknown capability 'geo_geodesic_destination'
+NEEDS_INPUT: geo_geodesic_destination needs ellipsoid (reference ellipsoid). Example: solve('geo_geodesic_destination', lat1=52.2, lon1=0.12, azimuth=45, distance='100000 m', ellipsoid='WGS84').
 ```
 
-### 2.4 Many questions at once
+### 2.9 Many questions at once
 
 One JSON request per line in, one JSON answer per line out, in order: for scripts, notebooks and agents (the program starts once). In PowerShell: Get-Content cases.jsonl | geospatial-analytics batch
 
@@ -138,7 +219,7 @@ One JSON request per line in, one JSON answer per line out, in order: for script
 
 ```shell
 $ geospatial-analytics batch < cases.jsonl
-{"outcome":"INVALID_INPUT","message":"unknown capability 'geo_geodesic_destination'","value":null,"unit":null}
+{"outcome":"SOLVED","message":"","value":52.8308364668,"unit":"","solved_for":"lat2","si":[["lat1",52.2],["lon1",0.12],["azimuth",45.0],["distance",100000.0]],"values":[["lat2",52.8308364668,""],["lon2",1.16914595053,""],["azimuth2",45.832536554,""]],"target":"lat2","phrase":"latitude of the destination (degrees)","assumptions":["start latitude strictly between -90 and 90","0 < distance <= 15000 km"],"name":"Geodesic destination point on the ellipsoid (direct problem)","equation":"Bessel's auxiliary sphere: solve b*I1(sigma) = s by Newton steps with the arc-length integral by Gauss-Legendre quadrature, then the longitude integral"}
 {"outcome":"SOLVED","message":"","value":699195.875854,"unit":"m","solved_for":"easting","si":[["lat",51.5],["lon",-0.13]],"values":[["easting",699195.875854,"m"],["northing",5709335.01926,"m"],["k",1.00008718886,""],["gamma",2.24681916539,""],["zone",30,""],["hemisphere","N",""]],"target":"easting","phrase":"UTM easting","assumptions":["80 S <= latitude <= 84 N"],"name":"Latitude and longitude to UTM coordinates (with scale factor and convergence)","equation":"zone from the longitude (Norway and Svalbard exceptions), then transverse Mercator by Krueger's series with k0 = 0.9996, false easting 500 km, false northing 10000 km in the south"}
 ```
 
@@ -221,7 +302,7 @@ By topic. For each: what it does, what it needs and gives, when it applies, and 
 
 <a id="geo_map_scale_ground_distance"></a>
 
-#### Ground distance from a map distance and a representative fraction — `geo_map_scale_ground_distance`
+#### Ground distance from a map distance and a representative fraction, `geo_map_scale_ground_distance`
 
 The real-world distance represented by a distance measured on a map of scale 1 : scale.
 
@@ -232,9 +313,9 @@ $$
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
 | `map_distance` | in | distance measured on the map | m |
-| `scale` | in | scale denominator (1 : scale) | — |
+| `scale` | in | scale denominator (1 : scale) | - |
 | `ground_distance` | out | ground distance | m |
-| `ground_km` | out | ground distance in kilometres | — |
+| `ground_km` | out | ground distance in kilometres | - |
 
 **Applies when:** positive map distance and scale.
 
@@ -243,8 +324,8 @@ $ geospatial-analytics solve geo_map_scale_ground_distance "map_distance=4.2 cm"
 ground_distance = 2100 m
 ground_km = 2.1
   by: Ground distance from a map distance and a representative fraction  (ground distance = map distance x scale denominator)
-  map_distance = 0.042 m   []
-  scale = 50000   []
+  map_distance = 0.042 m
+  scale = 50000
   assumes: positive map distance and scale
 ```
 
@@ -252,7 +333,7 @@ ground_km = 2.1
 
 <a id="geo_map_scale_from_distances"></a>
 
-#### Map scale (representative fraction) from a map and a ground distance — `geo_map_scale_from_distances`
+#### Map scale (representative fraction) from a map and a ground distance, `geo_map_scale_from_distances`
 
 The scale denominator and representative fraction of a map on which a known ground distance measures a given map distance.
 
@@ -264,8 +345,8 @@ $$
 |---|---|---|---|
 | `map_distance` | in | distance on the map | m |
 | `ground_distance` | in | corresponding ground distance | m |
-| `scale` | out | scale denominator S (scale 1 : S) | — |
-| `rf` | out | representative fraction 1/S | — |
+| `scale` | out | scale denominator S (scale 1 : S) | - |
+| `rf` | out | representative fraction 1/S | - |
 
 **Applies when:** ground distance > map distance > 0.
 
@@ -274,8 +355,8 @@ $ geospatial-analytics solve geo_map_scale_from_distances "map_distance=5 cm" "g
 scale = 50000
 rf = 2e-05
   by: Map scale (representative fraction) from a map and a ground distance  (S = ground distance / map distance in the same unit)
-  map_distance = 0.05 m   []
-  ground_distance = 2500 m   []
+  map_distance = 0.05 m
+  ground_distance = 2500 m
   assumes: ground distance > map distance > 0
 ```
 
@@ -285,7 +366,7 @@ rf = 2e-05
 
 <a id="geo_decimal_to_dms"></a>
 
-#### Decimal degrees to degrees, minutes and seconds — `geo_decimal_to_dms`
+#### Decimal degrees to degrees, minutes and seconds, `geo_decimal_to_dms`
 
 A signed latitude or longitude in decimal degrees written as whole degrees, whole minutes, seconds and a hemisphere letter.
 
@@ -295,12 +376,12 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `decimal` | in | signed angle (decimal degrees) | — |
-| `axis` | in | whether the angle is a latitude (N/S) or a longitude (E/W) | — |
-| `degrees` | out | whole degrees | — |
-| `minutes` | out | whole minutes | — |
-| `seconds` | out | seconds | — |
-| `hemisphere` | out | N, S, E or W | — |
+| `decimal` | in | signed angle (decimal degrees) | - |
+| `axis` | in | whether the angle is a latitude (N/S) or a longitude (E/W) | - |
+| `degrees` | out | whole degrees | - |
+| `minutes` | out | whole minutes | - |
+| `seconds` | out | seconds | - |
+| `hemisphere` | out | N, S, E or W | - |
 
 **Applies when:** |latitude| <= 90, |longitude| <= 180.
 
@@ -311,7 +392,7 @@ minutes = 28
 seconds = 37.9992
 hemisphere = N
   by: Decimal degrees to degrees, minutes and seconds  (exact decimal arithmetic: degrees = floor(|x|), minutes = floor(60 frac), seconds = the remainder times 3600)
-  decimal = 51.477222   []
+  decimal = 51.477222
   axis = latitude
   assumes: |latitude| <= 90, |longitude| <= 180
 ```
@@ -320,7 +401,7 @@ hemisphere = N
 
 <a id="geo_geohash_decode"></a>
 
-#### Decode a geohash: cell centre and size — `geo_geohash_decode`
+#### Decode a geohash: cell centre and size, `geo_geohash_decode`
 
 The centre latitude and longitude of a geohash cell and its half-height and half-width in degrees.
 
@@ -330,11 +411,11 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `geohash` | in | geohash string (characters 0-9, b-z without a, i, l, o) | — |
-| `lat_center` | out | latitude of the cell centre | — |
-| `lon_center` | out | longitude of the cell centre | — |
-| `lat_error` | out | half the cell height (degrees) | — |
-| `lon_error` | out | half the cell width (degrees) | — |
+| `geohash` | in | geohash string (characters 0-9, b-z without a, i, l, o) | - |
+| `lat_center` | out | latitude of the cell centre | - |
+| `lon_center` | out | longitude of the cell centre | - |
+| `lat_error` | out | half the cell height (degrees) | - |
+| `lon_error` | out | half the cell width (degrees) | - |
 
 **Applies when:** 1 to 12 valid characters.
 
@@ -353,7 +434,7 @@ lon_error = 6.705522537e-07
 
 <a id="geo_dms_to_decimal"></a>
 
-#### Degrees, minutes and seconds to decimal degrees — `geo_dms_to_decimal`
+#### Degrees, minutes and seconds to decimal degrees, `geo_dms_to_decimal`
 
 A latitude or longitude written in degrees, minutes and seconds with a hemisphere letter, converted to signed decimal degrees and radians.
 
@@ -363,12 +444,12 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `degrees` | in | whole degrees (>= 0) | — |
-| `minutes` | in | whole minutes (0-59) | — |
-| `seconds` | in | seconds (0 <= s < 60) | — |
-| `hemisphere` | in | hemisphere letter (S and W are negative) | — |
-| `decimal` | out | signed decimal degrees | — |
-| `radians` | out | signed angle in radians | — |
+| `degrees` | in | whole degrees (>= 0) | - |
+| `minutes` | in | whole minutes (0-59) | - |
+| `seconds` | in | seconds (0 <= s < 60) | - |
+| `hemisphere` | in | hemisphere letter (S and W are negative) | - |
+| `decimal` | out | signed decimal degrees | - |
+| `radians` | out | signed angle in radians | - |
 
 **Applies when:** 0 <= minutes <= 59; 0 <= seconds < 60; at most 90 (N/S) or 180 (E/W) degrees.
 
@@ -377,7 +458,7 @@ $ geospatial-analytics solve geo_dms_to_decimal degrees=51 minutes=28 seconds=38
 decimal = 51.47722222
 radians = 0.8984470176
   by: Degrees, minutes and seconds to decimal degrees  (decimal = sign (degrees + minutes/60 + seconds/3600), exact rational arithmetic)
-  seconds = 38   []
+  seconds = 38
   hemisphere = N
   assumes: 0 <= minutes <= 59; 0 <= seconds < 60; at most 90 (N/S) or 180 (E/W) degrees
 ```
@@ -386,7 +467,7 @@ radians = 0.8984470176
 
 <a id="geo_geohash_encode"></a>
 
-#### Geohash of a point and its cell — `geo_geohash_encode`
+#### Geohash of a point and its cell: `geo_geohash_encode`
 
 The geohash of a latitude and longitude at a given number of characters, with the centre and half-sizes of the geohash cell.
 
@@ -396,14 +477,14 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `lat` | in | latitude (decimal degrees) | — |
-| `lon` | in | longitude (decimal degrees) | — |
-| `precision` | in | number of geohash characters (1-12) | — |
-| `geohash` | out | geohash | — |
-| `lat_center` | out | latitude of the cell centre | — |
-| `lon_center` | out | longitude of the cell centre | — |
-| `lat_error` | out | half the cell height (degrees) | — |
-| `lon_error` | out | half the cell width (degrees) | — |
+| `lat` | in | latitude (decimal degrees) | - |
+| `lon` | in | longitude (decimal degrees) | - |
+| `precision` | in | number of geohash characters (1-12) | - |
+| `geohash` | out | geohash | - |
+| `lat_center` | out | latitude of the cell centre | - |
+| `lon_center` | out | longitude of the cell centre | - |
+| `lat_error` | out | half the cell height (degrees) | - |
+| `lon_error` | out | half the cell width (degrees) | - |
 
 **Applies when:** 1 to 12 characters.
 
@@ -415,8 +496,8 @@ lon_center = 10.40743969
 lat_error = 6.705522537e-07
 lon_error = 6.705522537e-07
   by: Geohash of a point and its cell  (interleaved binary bisection of longitude and latitude (longitude first), five bits per base-32 character)
-  lat = 57.64911   []
-  lon = 10.40744   []
+  lat = 57.64911
+  lon = 10.40744
   assumes: 1 to 12 characters
 ```
 
@@ -424,7 +505,7 @@ lon_error = 6.705522537e-07
 
 <a id="geo_mgrs_encode"></a>
 
-#### MGRS grid reference of a point (1 m) — `geo_mgrs_encode`
+#### MGRS grid reference of a point (1 m): `geo_mgrs_encode`
 
 The Military Grid Reference System (MGRS / USNG) reference of a WGS84 latitude and longitude to 1 m: zone, latitude band, 100 km square letters and 5-digit easting and northing.
 
@@ -434,13 +515,20 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `lat` | in | latitude (WGS84) (decimal degrees) | — |
-| `lon` | in | longitude (WGS84) (decimal degrees) | — |
-| `mgrs` | out | MGRS reference (no spaces) | — |
+| `lat` | in | latitude (WGS84) (decimal degrees) | - |
+| `lon` | in | longitude (WGS84) (decimal degrees) | - |
+| `mgrs` | out | MGRS reference (no spaces) | - |
 
 **Applies when:** 80 S <= latitude <= 84 N (polar regions use UPS).
 
-*Not in `geospatial-analytics` 1.1.0 yet:* use the Python package or the model's page in the browser.
+```shell
+$ geospatial-analytics solve geo_mgrs_encode lat=50 lon=10
+mgrs = 32UNA7166639109
+  by: MGRS grid reference of a point (1 m)  (UTM coordinates (Krueger series), 100 km column letter from the zone's set (A-H, J-R, S-Z), row letter cycling A-V (offset by 5 in even zones), digits truncated to 1 m; the zone is written with two digits)
+  lat = 50
+  lon = 10
+  assumes: 80 S <= latitude <= 84 N (polar regions use UPS)
+```
 
 **What the worked example means:** This calculation converts the input geographic coordinates, specifically latitude 50 and longitude 10, into a Military Grid Reference System string. The resulting value, 32UNA7166639109, represents a precise location on the Earth's surface to a resolution of one meter. It combines the zone number, latitude band letter, 100 km square identifiers, and truncated easting and northing digits into a single alphanumeric code that is easier to communicate than raw decimal degrees.
 
@@ -448,7 +536,7 @@ $$
 
 <a id="geo_auxiliary_latitudes"></a>
 
-#### Auxiliary latitudes: geocentric, reduced, conformal, authalic and rectifying — `geo_auxiliary_latitudes`
+#### Auxiliary latitudes: geocentric, reduced, conformal, authalic and rectifying, `geo_auxiliary_latitudes`
 
 The five auxiliary latitudes of a geodetic latitude on the WGS84 or GRS80 ellipsoid (used by the sphere-based forms of map projections and geodesics).
 
@@ -458,13 +546,13 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `lat` | in | geodetic latitude (decimal degrees) | — |
-| `ellipsoid` | in | reference ellipsoid | — |
-| `geocentric` | out | geocentric latitude (degrees) | — |
-| `reduced` | out | reduced (parametric) latitude (degrees) | — |
-| `conformal` | out | conformal latitude (degrees) | — |
-| `authalic` | out | authalic latitude (degrees) | — |
-| `rectifying` | out | rectifying latitude (degrees) | — |
+| `lat` | in | geodetic latitude (decimal degrees) | - |
+| `ellipsoid` | in | reference ellipsoid | - |
+| `geocentric` | out | geocentric latitude (degrees) | - |
+| `reduced` | out | reduced (parametric) latitude (degrees) | - |
+| `conformal` | out | conformal latitude (degrees) | - |
+| `authalic` | out | authalic latitude (degrees) | - |
+| `rectifying` | out | rectifying latitude (degrees) | - |
 
 **Applies when:** latitude strictly between -90 and 90.
 
@@ -476,7 +564,7 @@ conformal = 44.80768406
 authalic = 44.87170287
 rectifying = 44.85568199
   by: Auxiliary latitudes: geocentric, reduced, conformal, authalic and rectifying  (tan(psi) = (1-e^2) tan(phi); tan(beta) = (1-f) tan(phi); chi = atan(sinh(isometric latitude)); xi = asin(q/q_p); mu = (pi/2) m(phi)/m(pi/2))
-  lat = 45   []
+  lat = 45
   ellipsoid = WGS84
   assumes: latitude strictly between -90 and 90
 ```
@@ -485,7 +573,7 @@ rectifying = 44.85568199
 
 <a id="geo_ecef_to_geodetic"></a>
 
-#### Geocentric (ECEF) to geodetic coordinates — `geo_ecef_to_geodetic`
+#### Geocentric (ECEF) to geodetic coordinates: `geo_ecef_to_geodetic`
 
 Geodetic latitude, longitude and ellipsoidal height of a point given by its Earth-centred, Earth-fixed coordinates X, Y, Z on the WGS84 or GRS80 ellipsoid.
 
@@ -498,9 +586,9 @@ $$
 | `X` | in | geocentric X | m |
 | `Y` | in | geocentric Y | m |
 | `Z` | in | geocentric Z | m |
-| `ellipsoid` | in | reference ellipsoid | — |
-| `lat` | out | geodetic latitude (degrees) | — |
-| `lon` | out | longitude (degrees) | — |
+| `ellipsoid` | in | reference ellipsoid | - |
+| `lat` | out | geodetic latitude (degrees) | - |
+| `lon` | out | longitude (degrees) | - |
 | `h` | out | ellipsoidal height | m |
 
 **Applies when:** 6200 km <= distance from the centre <= 100000 km; not on the polar axis.
@@ -511,9 +599,9 @@ lat = 44.55996486
 lon = 10.000037
 h = 49468.66699 m
   by: Geocentric (ECEF) to geodetic coordinates  (fixed-point iteration phi = atan2(Z + e^2 N sin(phi), p) to convergence; h = p cos(phi) + Z sin(phi) - a^2/N)
-  X = 4517590.879 m   []
-  Y = 796576.168 m   []
-  Z = 4487348.409 m   []
+  X = 4517590.879 m
+  Y = 796576.168 m
+  Z = 4487348.409 m
   ellipsoid = WGS84
   assumes: 6200 km <= distance from the centre <= 100000 km; not on the polar axis
 ```
@@ -522,7 +610,7 @@ h = 49468.66699 m
 
 <a id="geo_geodetic_to_ecef"></a>
 
-#### Geodetic to geocentric (ECEF) coordinates — `geo_geodetic_to_ecef`
+#### Geodetic to geocentric (ECEF) coordinates: `geo_geodetic_to_ecef`
 
 Earth-centred, Earth-fixed Cartesian coordinates X, Y, Z of a point given by geodetic latitude, longitude and ellipsoidal height on the WGS84 or GRS80 ellipsoid.
 
@@ -532,23 +620,34 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `lat` | in | geodetic latitude (decimal degrees) | — |
-| `lon` | in | longitude (decimal degrees) | — |
+| `lat` | in | geodetic latitude (decimal degrees) | - |
+| `lon` | in | longitude (decimal degrees) | - |
 | `h` | in | ellipsoidal height | m |
-| `ellipsoid` | in | reference ellipsoid | — |
+| `ellipsoid` | in | reference ellipsoid | - |
 | `X` | out | X (towards latitude 0, longitude 0) | m |
 | `Y` | out | Y (towards longitude 90 E) | m |
 | `Z` | out | Z (towards the north pole) | m |
 
 **Applies when:** latitude between -90 and 90; height between -100 km and 100000 km.
 
-*Not in `geospatial-analytics` 1.1.0 yet:* use the Python package or the model's page in the browser.
+```shell
+$ geospatial-analytics solve geo_geodetic_to_ecef lat=45 lon=10 "h=100 m" ellipsoid=WGS84
+X = 4449028.159 m
+Y = 784483.7023 m
+Z = 4487419.12 m
+  by: Geodetic to geocentric (ECEF) coordinates  (X = (N + h) cos(phi) cos(lambda), Y = (N + h) cos(phi) sin(lambda), Z = (N(1 - e^2) + h) sin(phi))
+  lat = 45
+  lon = 10
+  h = 100 m
+  ellipsoid = WGS84
+  assumes: latitude between -90 and 90; height between -100 km and 100000 km
+```
 
 **What the worked example means:** This calculation converts the geodetic position defined by latitude 45, longitude 10, and ellipsoidal height 100 m into Earth-Centered, Earth-Fixed coordinates. The resulting values 4.44903e+06 m, 784484 m, and 4.48742e+06 m represent the point's location in a three-dimensional Cartesian system relative to the center of mass of the reference ellipsoid, enabling precise spatial analysis and satellite navigation applications.
 
 <a id="geo_geodetic_to_enu"></a>
 
-#### Geodetic to local east-north-up (ENU) coordinates — `geo_geodetic_to_enu`
+#### Geodetic to local east-north-up (ENU) coordinates, `geo_geodetic_to_enu`
 
 Local tangent-plane coordinates east, north and up of a point relative to an origin (both given by latitude, longitude and ellipsoidal height), and the straight-line (slant) range.
 
@@ -558,13 +657,13 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `lat0` | in | latitude of the local origin (decimal degrees) | — |
-| `lon0` | in | longitude of the local origin (decimal degrees) | — |
+| `lat0` | in | latitude of the local origin (decimal degrees) | - |
+| `lon0` | in | longitude of the local origin (decimal degrees) | - |
 | `h0` | in | ellipsoidal height of the origin | m |
-| `lat` | in | latitude of the point (decimal degrees) | — |
-| `lon` | in | longitude of the point (decimal degrees) | — |
+| `lat` | in | latitude of the point (decimal degrees) | - |
+| `lon` | in | longitude of the point (decimal degrees) | - |
 | `h` | in | ellipsoidal height of the point | m |
-| `ellipsoid` | in | reference ellipsoid | — |
+| `ellipsoid` | in | reference ellipsoid | - |
 | `e` | out | east coordinate | m |
 | `n` | out | north coordinate | m |
 | `u` | out | up coordinate | m |
@@ -572,13 +671,28 @@ $$
 
 **Applies when:** origin not at a pole.
 
-*Not in `geospatial-analytics` 1.1.0 yet:* use the Python package or the model's page in the browser.
+```shell
+$ geospatial-analytics solve geo_geodetic_to_enu lat0=46.017 lon0=7.75 "h0=1673 m" lat=45.976 lon=7.658 "h=4531 m" ellipsoid=WGS84
+e = -7134.757196 m
+n = -4556.321514 m
+u = 2852.390424 m
+slant_range = 8933.138145 m
+  by: Geodetic to local east-north-up (ENU) coordinates  (ECEF difference rotated into the local frame: [e n u] = R(lat0, lon0) (X - X0))
+  lat0 = 46.017
+  lon0 = 7.75
+  h0 = 1673 m
+  lat = 45.976
+  lon = 7.658
+  h = 4531 m
+  ellipsoid = WGS84
+  assumes: origin not at a pole
+```
 
 **What the worked example means:** This calculation converts geodetic positions into a local tangent plane frame centered at the origin. Using the reference ellipsoid WGS84, the system computes the straight-line vector from the origin at latitude 46.017, longitude 7.75 and height 1673 m to the target at latitude 45.976, longitude 7.658 and height 4531 m. The resulting east coordinate is -7134.76 m, the north coordinate is -4556.32 m, and the vertical up component is 2852.39 m. These values represent the displacement in meters relative to the local horizontal plane, while the total straight-line distance between the two points is given as the slant range 8933.14 m.
 
 <a id="geo_enu_to_geodetic"></a>
 
-#### Local east-north-up (ENU) to geodetic coordinates — `geo_enu_to_geodetic`
+#### Local east-north-up (ENU) to geodetic coordinates, `geo_enu_to_geodetic`
 
 Latitude, longitude and ellipsoidal height of a point given by its local east, north and up coordinates relative to an origin on the WGS84 or GRS80 ellipsoid.
 
@@ -588,26 +702,40 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `lat0` | in | latitude of the local origin (decimal degrees) | — |
-| `lon0` | in | longitude of the local origin (decimal degrees) | — |
+| `lat0` | in | latitude of the local origin (decimal degrees) | - |
+| `lon0` | in | longitude of the local origin (decimal degrees) | - |
 | `h0` | in | ellipsoidal height of the origin | m |
 | `e` | in | east coordinate | m |
 | `n` | in | north coordinate | m |
 | `u` | in | up coordinate | m |
-| `ellipsoid` | in | reference ellipsoid | — |
-| `lat` | out | latitude (degrees) | — |
-| `lon` | out | longitude (degrees) | — |
+| `ellipsoid` | in | reference ellipsoid | - |
+| `lat` | out | latitude (degrees) | - |
+| `lon` | out | longitude (degrees) | - |
 | `h` | out | ellipsoidal height | m |
 
 **Applies when:** origin not at a pole; the point not deep inside the Earth.
 
-*Not in `geospatial-analytics` 1.1.0 yet:* use the Python package or the model's page in the browser.
+```shell
+$ geospatial-analytics solve geo_enu_to_geodetic lat0=46.017 lon0=7.75 "h0=1673 m" "e=-7123.1 m" "n=-4557.3 m" "u=2848.2 m" ellipsoid=WGS84
+lat = 45.9759913
+lon = 7.658150269
+h = 4526.797282 m
+  by: Local east-north-up (ENU) to geodetic coordinates  (rotate [e n u] back to an ECEF offset, add the origin's ECEF position, then convert ECEF to geodetic by iteration)
+  lat0 = 46.017
+  lon0 = 7.75
+  h0 = 1673 m
+  e = -7123.1 m
+  n = -4557.3 m
+  u = 2848.2 m
+  ellipsoid = WGS84
+  assumes: origin not at a pole; the point not deep inside the Earth
+```
 
 **What the worked example means:** This calculation determines the global geographic coordinates of a target point by transforming its local east, north, and up distances relative to a specified origin. Using the origin's latitude 46.017, longitude 7.75, and height 1673 m, along with the input offsets of -7123.1 m meters east, -4557.3 m meters north, and 2848.2 m meters up, the method rotates these local vectors into an Earth-centered frame and converts them back to geodetic form. The resulting output provides the absolute latitude 45.976, longitude 7.65815, and ellipsoidal height 4526.8 m, allowing local survey data to be integrated into global mapping systems.
 
 <a id="geo_look_angles"></a>
 
-#### Look angles: azimuth, elevation and range from an observer to a target — `geo_look_angles`
+#### Look angles: azimuth, elevation and range from an observer to a target, `geo_look_angles`
 
 The azimuth (clockwise from true north), elevation angle above the local horizontal plane and slant range from an observer to a target, both given by latitude, longitude and ellipsoidal height (a satellite, aircraft or summit).
 
@@ -617,26 +745,40 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `lat0` | in | observer latitude (decimal degrees) | — |
-| `lon0` | in | observer longitude (decimal degrees) | — |
+| `lat0` | in | observer latitude (decimal degrees) | - |
+| `lon0` | in | observer longitude (decimal degrees) | - |
 | `h0` | in | observer ellipsoidal height | m |
-| `lat` | in | target latitude (decimal degrees) | — |
-| `lon` | in | target longitude (decimal degrees) | — |
+| `lat` | in | target latitude (decimal degrees) | - |
+| `lon` | in | target longitude (decimal degrees) | - |
 | `h` | in | target ellipsoidal height | m |
-| `ellipsoid` | in | reference ellipsoid | — |
-| `azimuth` | out | azimuth (degrees clockwise from north) | — |
-| `elevation` | out | elevation angle (degrees, negative below the horizon) | — |
+| `ellipsoid` | in | reference ellipsoid | - |
+| `azimuth` | out | azimuth (degrees clockwise from north) | - |
+| `elevation` | out | elevation angle (degrees, negative below the horizon) | - |
 | `slant_range` | out | straight-line distance | m |
 
 **Applies when:** observer not at a pole; target distinct from the observer.
 
-*Not in `geospatial-analytics` 1.1.0 yet:* use the Python package or the model's page in the browser.
+```shell
+$ geospatial-analytics solve geo_look_angles lat0=40 lon0=-105 "h0=1600 m" lat=0 lon=-100 "h=35786000 m" ellipsoid=WGS84
+azimuth = 172.2432278
+elevation = 43.4643493
+slant_range = 37513689.21 m
+  by: Look angles: azimuth, elevation and range from an observer to a target  (ENU vector of the target; azimuth = atan2(e, n), elevation = atan2(u, sqrt(e^2 + n^2)))
+  lat0 = 40
+  lon0 = -105
+  h0 = 1600 m
+  lat = 0
+  lon = -100
+  h = 35786000 m
+  ellipsoid = WGS84
+  assumes: observer not at a pole; target distinct from the observer
+```
 
 **What the worked example means:** This calculation determines the look angles from an observer to a target using their respective global coordinates. Converting both positions into a local East-North-Up coordinate system relative to the observer gives the vector pointing to the target. The resulting azimuth of 172.243 indicates the direction clockwise from true north, while the elevation of 43.4643 shows the angle above or below the local horizon. The straight-line distance between the two points is found to be 3.75137e+07 m. These values are essential for orienting antennas, cameras, or tracking systems toward the object.
 
 <a id="geo_utm_zone"></a>
 
-#### UTM zone, latitude band and central meridian — `geo_utm_zone`
+#### UTM zone, latitude band and central meridian, `geo_utm_zone`
 
 The Universal Transverse Mercator zone number (with the Norway and Svalbard exceptions), the MGRS latitude band letter, the hemisphere and the zone's central meridian for a latitude and longitude.
 
@@ -646,12 +788,12 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `lat` | in | latitude (decimal degrees) | — |
-| `lon` | in | longitude (decimal degrees) | — |
-| `zone` | out | UTM zone number (1-60) | — |
-| `band` | out | latitude band letter (C-X) | — |
-| `hemisphere` | out | N or S | — |
-| `central_meridian` | out | central meridian of the zone (degrees) | — |
+| `lat` | in | latitude (decimal degrees) | - |
+| `lon` | in | longitude (decimal degrees) | - |
+| `zone` | out | UTM zone number (1-60) | - |
+| `band` | out | latitude band letter (C-X) | - |
+| `hemisphere` | out | N or S | - |
+| `central_meridian` | out | central meridian of the zone (degrees) | - |
 
 **Applies when:** 80 S <= latitude <= 84 N.
 
@@ -662,8 +804,8 @@ band = U
 hemisphere = N
 central_meridian = -3
   by: UTM zone, latitude band and central meridian  (zone = floor((lon + 180)/6) + 1 with zone 32 widened over south-west Norway and zones 31/33/35/37 over Svalbard; band = 8-degree letter from 80 S (X spans 72-84 N))
-  lat = 51.5   []
-  lon = -0.13   []
+  lat = 51.5
+  lon = -0.13
   assumes: 80 S <= latitude <= 84 N
 ```
 
@@ -673,7 +815,7 @@ central_meridian = -3
 
 <a id="geo_parallel_arc"></a>
 
-#### Arc length along a parallel of latitude — `geo_parallel_arc`
+#### Arc length along a parallel of latitude: `geo_parallel_arc`
 
 The distance along a parallel of latitude between two longitudes (the shorter way round) on the WGS84 or GRS80 ellipsoid, and the radius of the parallel.
 
@@ -683,10 +825,10 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `lat` | in | latitude of the parallel (decimal degrees) | — |
-| `lon1` | in | first longitude (decimal degrees) | — |
-| `lon2` | in | second longitude (decimal degrees) | — |
-| `ellipsoid` | in | reference ellipsoid | — |
+| `lat` | in | latitude of the parallel (decimal degrees) | - |
+| `lon1` | in | first longitude (decimal degrees) | - |
+| `lon2` | in | second longitude (decimal degrees) | - |
+| `ellipsoid` | in | reference ellipsoid | - |
 | `distance` | out | arc length along the parallel | m |
 | `radius` | out | radius of the parallel N cos(phi) | m |
 
@@ -697,9 +839,9 @@ $ geospatial-analytics solve geo_parallel_arc lat=60 lon1=0 lon2=1 ellipsoid=WGS
 distance = 55800.00157 m
 radius = 3197104.587 m
   by: Arc length along a parallel of latitude  (radius of the parallel N(phi) cos(phi) times the longitude difference in radians)
-  lat = 60   []
-  lon1 = 0   []
-  lon2 = 1   []
+  lat = 60
+  lon1 = 0
+  lon2 = 1
   ellipsoid = WGS84
   assumes: latitude strictly between -90 and 90; different longitudes
 ```
@@ -708,7 +850,7 @@ radius = 3197104.587 m
 
 <a id="geo_geodesic_polygon_area"></a>
 
-#### Area and perimeter of a geodesic polygon on the ellipsoid — `geo_geodesic_polygon_area`
+#### Area and perimeter of a geodesic polygon on the ellipsoid, `geo_geodesic_polygon_area`
 
 The area enclosed by a polygon whose edges are geodesics on the WGS84 or GRS80 ellipsoid, and its perimeter (vertices given as latitude and longitude lists, in either orientation).
 
@@ -718,21 +860,28 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `lats` | in | latitudes of the vertices in order (decimal degrees) | — |
-| `lons` | in | longitudes of the vertices in the same order (decimal degrees) | — |
-| `ellipsoid` | in | reference ellipsoid | — |
+| `lats` | in | latitudes of the vertices in order (decimal degrees) | - |
+| `lons` | in | longitudes of the vertices in the same order (decimal degrees) | - |
+| `ellipsoid` | in | reference ellipsoid | - |
 | `area` | out | enclosed area on the ellipsoid | m^2 |
 | `perimeter` | out | perimeter (sum of the geodesic edge lengths) | m |
 
 **Applies when:** a simple polygon not enclosing a pole; vertices within 88 degrees of the equator; edges at most 90 degrees long.
 
-*Not in `geospatial-analytics` 1.1.0 yet:* use the Python package or the model's page in the browser.
+```shell
+$ geospatial-analytics solve geo_geodesic_polygon_area "lats=[0, 0, 1, 1]" "lons=[0, 1, 1, 0]" ellipsoid=WGS84
+area = 1.230877836e+10 m^2
+perimeter = 443770.9172 m
+  by: Area and perimeter of a geodesic polygon on the ellipsoid  (Green's theorem on the ellipsoid: the authalic strip area a^2 q(phi)/2 integrated against the longitude along each geodesic edge (Gauss-Legendre in the auxiliary-sphere arc), summed over the edges)
+  ellipsoid = WGS84
+  assumes: a simple polygon not enclosing a pole; vertices within 88 degrees of the equator; edges at most 90 degrees long
+```
 
 **What the worked example means:** This calculation determines the true surface area and perimeter of a geodesic polygon defined by its vertices. The area, reported as 1.23088e+10 m^2 square meters, represents the enclosed region on the reference ellipsoid, while the perimeter, given as 443771 m meters, is the sum of the shortest paths along the curved surface connecting each vertex. These values are derived using Green's theorem adapted for the ellipsoidal geometry, ensuring accuracy for land management or boundary analysis where flat-earth approximations fail.
 
 <a id="geo_graticule_cell_area"></a>
 
-#### Area of a latitude-longitude cell on the ellipsoid — `geo_graticule_cell_area`
+#### Area of a latitude-longitude cell on the ellipsoid, `geo_graticule_cell_area`
 
 The area of the region between two parallels and two meridians (a graticule cell or grid square) on the WGS84 or GRS80 ellipsoid, and its share of the whole ellipsoid's surface.
 
@@ -742,13 +891,13 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `lat1` | in | southern latitude (decimal degrees) | — |
-| `lat2` | in | northern latitude (decimal degrees) | — |
-| `lon1` | in | western longitude (decimal degrees) | — |
-| `lon2` | in | eastern longitude (east of lon1) (decimal degrees) | — |
-| `ellipsoid` | in | reference ellipsoid | — |
+| `lat1` | in | southern latitude (decimal degrees) | - |
+| `lat2` | in | northern latitude (decimal degrees) | - |
+| `lon1` | in | western longitude (decimal degrees) | - |
+| `lon2` | in | eastern longitude (east of lon1) (decimal degrees) | - |
+| `ellipsoid` | in | reference ellipsoid | - |
 | `area` | out | area of the cell | m^2 |
-| `fraction_of_ellipsoid` | out | area as a fraction of the ellipsoid's total surface | — |
+| `fraction_of_ellipsoid` | out | area as a fraction of the ellipsoid's total surface | - |
 
 **Applies when:** lat1 < lat2; 0 < lon2 - lon1 <= 360.
 
@@ -757,10 +906,10 @@ $ geospatial-analytics solve geo_graticule_cell_area lat1=0 lat2=1 lon1=0 lon2=1
 area = 1.230846389e+10 m^2
 fraction_of_ellipsoid = 2.413113797e-05
   by: Area of a latitude-longitude cell on the ellipsoid  (authalic function: area = (a^2/2) [q(phi2) - q(phi1)] (lambda2 - lambda1))
-  lat1 = 0   []
-  lat2 = 1   []
-  lon1 = 0   []
-  lon2 = 1   []
+  lat1 = 0
+  lat2 = 1
+  lon1 = 0
+  lon2 = 1
   ellipsoid = WGS84
   assumes: lat1 < lat2; 0 < lon2 - lon1 <= 360
 ```
@@ -769,7 +918,7 @@ fraction_of_ellipsoid = 2.413113797e-05
 
 <a id="geo_rhumb_line_destination"></a>
 
-#### Destination along a rhumb line (loxodrome) on the ellipsoid — `geo_rhumb_line_destination`
+#### Destination along a rhumb line (loxodrome) on the ellipsoid, `geo_rhumb_line_destination`
 
 The point reached by travelling a given distance on a constant bearing (rhumb line) from a start point on the WGS84 or GRS80 ellipsoid.
 
@@ -779,13 +928,13 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `lat1` | in | latitude of the start point (decimal degrees) | — |
-| `lon1` | in | longitude of the start point (decimal degrees) | — |
-| `bearing` | in | constant bearing, clockwise from north (decimal degrees) | — |
+| `lat1` | in | latitude of the start point (decimal degrees) | - |
+| `lon1` | in | longitude of the start point (decimal degrees) | - |
+| `bearing` | in | constant bearing, clockwise from north (decimal degrees) | - |
 | `distance` | in | distance travelled | m |
-| `ellipsoid` | in | reference ellipsoid | — |
-| `lat2` | out | latitude of the destination (degrees) | — |
-| `lon2` | out | longitude of the destination (degrees) | — |
+| `ellipsoid` | in | reference ellipsoid | - |
+| `lat2` | out | latitude of the destination (degrees) | - |
+| `lon2` | out | longitude of the destination (degrees) | - |
 
 **Applies when:** the line stays more than 1 degree from the poles; distance > 0.
 
@@ -794,10 +943,10 @@ $ geospatial-analytics solve geo_rhumb_line_destination lat1=50 lon1=-5 bearing=
 lat2 = 53.89168147
 lon2 = -1.361213633
   by: Destination along a rhumb line (loxodrome) on the ellipsoid  (meridian distance advances by s cos(bearing) (Helmert's series, inverted by Newton steps); the longitude by tan(bearing) times the change of isometric latitude)
-  lat1 = 50   []
-  lon1 = -5   []
-  bearing = 30   []
-  distance = 500000 m   []
+  lat1 = 50
+  lon1 = -5
+  bearing = 30
+  distance = 500000 m
   ellipsoid = WGS84
   assumes: the line stays more than 1 degree from the poles; distance > 0
 ```
@@ -806,7 +955,7 @@ lon2 = -1.361213633
 
 <a id="geo_geodesic_destination"></a>
 
-#### Geodesic destination point on the ellipsoid (direct problem) — `geo_geodesic_destination`
+#### Geodesic destination point on the ellipsoid (direct problem), `geo_geodesic_destination`
 
 The point reached by travelling a given distance along a geodesic from a start point at a given initial azimuth on the WGS84 or GRS80 ellipsoid, and the azimuth of the geodesic on arrival.
 
@@ -816,24 +965,36 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `lat1` | in | latitude of the start point (decimal degrees) | — |
-| `lon1` | in | longitude of the start point (decimal degrees) | — |
-| `azimuth` | in | initial azimuth, clockwise from north (decimal degrees) | — |
+| `lat1` | in | latitude of the start point (decimal degrees) | - |
+| `lon1` | in | longitude of the start point (decimal degrees) | - |
+| `azimuth` | in | initial azimuth, clockwise from north (decimal degrees) | - |
 | `distance` | in | geodesic distance travelled | m |
-| `ellipsoid` | in | reference ellipsoid | — |
-| `lat2` | out | latitude of the destination (degrees) | — |
-| `lon2` | out | longitude of the destination (degrees) | — |
-| `azimuth2` | out | forward azimuth at the destination (degrees clockwise from north) | — |
+| `ellipsoid` | in | reference ellipsoid | - |
+| `lat2` | out | latitude of the destination (degrees) | - |
+| `lon2` | out | longitude of the destination (degrees) | - |
+| `azimuth2` | out | forward azimuth at the destination (degrees clockwise from north) | - |
 
 **Applies when:** start latitude strictly between -90 and 90; 0 < distance <= 15000 km.
 
-*Not in `geospatial-analytics` 1.1.0 yet:* use the Python package or the model's page in the browser.
+```shell
+$ geospatial-analytics solve geo_geodesic_destination lat1=52.2 lon1=0.12 azimuth=45 "distance=100 km" ellipsoid=WGS84
+lat2 = 52.83083647
+lon2 = 1.169145951
+azimuth2 = 45.83253655
+  by: Geodesic destination point on the ellipsoid (direct problem)  (Bessel's auxiliary sphere: solve b*I1(sigma) = s by Newton steps with the arc-length integral by Gauss-Legendre quadrature, then the longitude integral)
+  lat1 = 52.2
+  lon1 = 0.12
+  azimuth = 45
+  distance = 100000 m
+  ellipsoid = WGS84
+  assumes: start latitude strictly between -90 and 90; 0 < distance <= 15000 km
+```
 
 **What the worked example means:** This calculation determines the precise location reached after traveling a geodesic distance of 100 km from a starting point at 52.2 latitude and 0.12 longitude. The path follows an initial bearing of 45 on the specified ellipsoid. The resulting destination coordinates are 52.8308 and 1.16915, and the forward azimuth at that point is 45.8325. This method accounts for the Earth's flattening, providing higher accuracy than spherical models for long-distance navigation.
 
 <a id="geo_meridian_arc"></a>
 
-#### Meridian arc length between two latitudes — `geo_meridian_arc`
+#### Meridian arc length between two latitudes: `geo_meridian_arc`
 
 The distance along a meridian of the WGS84 or GRS80 ellipsoid between two latitudes, and the meridian distance of each latitude from the equator.
 
@@ -843,9 +1004,9 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `lat1` | in | first latitude (decimal degrees) | — |
-| `lat2` | in | second latitude (decimal degrees) | — |
-| `ellipsoid` | in | reference ellipsoid | — |
+| `lat1` | in | first latitude (decimal degrees) | - |
+| `lat2` | in | second latitude (decimal degrees) | - |
+| `ellipsoid` | in | reference ellipsoid | - |
 | `distance` | out | meridian arc length between the latitudes | m |
 | `m1` | out | meridian distance from the equator to lat1 (negative south) | m |
 | `m2` | out | meridian distance from the equator to lat2 (negative south) | m |
@@ -858,8 +1019,8 @@ distance = 10001965.73 m
 m1 = 0 m
 m2 = 10001965.73 m
   by: Meridian arc length between two latitudes  (Helmert's series for the meridian distance in the third flattening n (to n^4))
-  lat1 = 0   []
-  lat2 = 90   []
+  lat1 = 0
+  lat2 = 90
   ellipsoid = WGS84
   assumes: latitudes between -90 and 90 and different
 ```
@@ -868,7 +1029,7 @@ m2 = 10001965.73 m
 
 <a id="geo_geodesic_midpoint"></a>
 
-#### Midpoint of a geodesic on the ellipsoid — `geo_geodesic_midpoint`
+#### Midpoint of a geodesic on the ellipsoid: `geo_geodesic_midpoint`
 
 The point halfway along the shortest path (geodesic) between two points on the WGS84 or GRS80 ellipsoid, with the geodesic length.
 
@@ -878,24 +1039,36 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `lat1` | in | latitude of the first point (decimal degrees) | — |
-| `lon1` | in | longitude of the first point (decimal degrees) | — |
-| `lat2` | in | latitude of the second point (decimal degrees) | — |
-| `lon2` | in | longitude of the second point (decimal degrees) | — |
-| `ellipsoid` | in | reference ellipsoid | — |
-| `lat_mid` | out | latitude of the midpoint (degrees) | — |
-| `lon_mid` | out | longitude of the midpoint (degrees) | — |
+| `lat1` | in | latitude of the first point (decimal degrees) | - |
+| `lon1` | in | longitude of the first point (decimal degrees) | - |
+| `lat2` | in | latitude of the second point (decimal degrees) | - |
+| `lon2` | in | longitude of the second point (decimal degrees) | - |
+| `ellipsoid` | in | reference ellipsoid | - |
+| `lat_mid` | out | latitude of the midpoint (degrees) | - |
+| `lon_mid` | out | longitude of the midpoint (degrees) | - |
 | `distance` | out | length of the geodesic between the two points | m |
 
 **Applies when:** distinct points at most 150 degrees apart; latitudes strictly between -90 and 90.
 
-*Not in `geospatial-analytics` 1.1.0 yet:* use the Python package or the model's page in the browser.
+```shell
+$ geospatial-analytics solve geo_geodesic_midpoint lat1=51.5 lon1=-0.13 lat2=40.71 lon2=-74.01 ellipsoid=WGS84
+lat_mid = 52.38495524
+lon_mid = -41.27859047
+distance = 5585806.318 m
+  by: Midpoint of a geodesic on the ellipsoid  (inverse problem (iteration on the auxiliary-sphere longitude, exact integrals) for the azimuth and length, then the direct problem over half the length)
+  lat1 = 51.5
+  lon1 = -0.13
+  lat2 = 40.71
+  lon2 = -74.01
+  ellipsoid = WGS84
+  assumes: distinct points at most 150 degrees apart; latitudes strictly between -90 and 90
+```
 
 **What the worked example means:** This calculation determines the geographic center of the shortest path connecting two points on an ellipsoid. Using the specified reference ellipsoid, it computes the azimuth and distance from the first point to the second, then advances halfway along that path to find the midpoint. The resulting coordinates are 52.385 degrees north and -41.2786 degrees east, while the full geodesic length is 5.58581e+06 m meters.
 
 <a id="geo_radii_of_curvature"></a>
 
-#### Radii of curvature of the ellipsoid at a latitude — `geo_radii_of_curvature`
+#### Radii of curvature of the ellipsoid at a latitude, `geo_radii_of_curvature`
 
 The meridional radius of curvature M, the prime-vertical radius of curvature N and the Gaussian mean radius sqrt(MN) of the WGS84 or GRS80 ellipsoid at a latitude.
 
@@ -905,8 +1078,8 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `lat` | in | latitude (decimal degrees) | — |
-| `ellipsoid` | in | reference ellipsoid | — |
+| `lat` | in | latitude (decimal degrees) | - |
+| `ellipsoid` | in | reference ellipsoid | - |
 | `M` | out | meridional radius of curvature | m |
 | `N` | out | prime-vertical radius of curvature | m |
 | `R_gauss` | out | Gaussian mean radius sqrt(M N) | m |
@@ -919,7 +1092,7 @@ M = 6367381.816 m
 N = 6388838.29 m
 R_gauss = 6378101.03 m
   by: Radii of curvature of the ellipsoid at a latitude  (M = a(1-e^2)/(1-e^2 sin^2 phi)^(3/2), N = a/sqrt(1-e^2 sin^2 phi))
-  lat = 45   []
+  lat = 45
   ellipsoid = WGS84
   assumes: latitude between -90 and 90
 ```
@@ -928,7 +1101,7 @@ R_gauss = 6378101.03 m
 
 <a id="geo_rhumb_line_inverse"></a>
 
-#### Rhumb-line (loxodrome) distance and bearing on the ellipsoid — `geo_rhumb_line_inverse`
+#### Rhumb-line (loxodrome) distance and bearing on the ellipsoid, `geo_rhumb_line_inverse`
 
 The constant bearing and the length of the rhumb line (loxodrome) between two points on the WGS84 or GRS80 ellipsoid, the shorter way round in longitude.
 
@@ -938,13 +1111,13 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `lat1` | in | latitude of the start point (decimal degrees) | — |
-| `lon1` | in | longitude of the start point (decimal degrees) | — |
-| `lat2` | in | latitude of the end point (decimal degrees) | — |
-| `lon2` | in | longitude of the end point (decimal degrees) | — |
-| `ellipsoid` | in | reference ellipsoid | — |
+| `lat1` | in | latitude of the start point (decimal degrees) | - |
+| `lon1` | in | longitude of the start point (decimal degrees) | - |
+| `lat2` | in | latitude of the end point (decimal degrees) | - |
+| `lon2` | in | longitude of the end point (decimal degrees) | - |
+| `ellipsoid` | in | reference ellipsoid | - |
 | `distance` | out | rhumb-line length | m |
-| `bearing` | out | constant bearing (degrees clockwise from north) | — |
+| `bearing` | out | constant bearing (degrees clockwise from north) | - |
 
 **Applies when:** latitudes within 89 degrees of the equator; distinct points.
 
@@ -953,10 +1126,10 @@ $ geospatial-analytics solve geo_rhumb_line_inverse lat1=50 lon1=-5 lat2=58 lon2
 distance = 1032440.869 m
 bearing = 30.40644034
   by: Rhumb-line (loxodrome) distance and bearing on the ellipsoid  (bearing = atan2(dlambda, dpsi) with the isometric latitude psi; length = dm / cos(bearing) with Helmert's meridian distance (N cos(phi) |dlambda| along a parallel))
-  lat1 = 50   []
-  lon1 = -5   []
-  lat2 = 58   []
-  lon2 = 3   []
+  lat1 = 50
+  lon1 = -5
+  lat2 = 58
+  lon2 = 3
   ellipsoid = WGS84
   assumes: latitudes within 89 degrees of the equator; distinct points
 ```
@@ -967,7 +1140,7 @@ bearing = 30.40644034
 
 <a id="geo_closest_facility"></a>
 
-#### Closest facility for every node of a network — `geo_closest_facility`
+#### Closest facility for every node of a network, `geo_closest_facility`
 
 For every node of a road network, the nearest facility by shortest-path distance and that distance, with the mean distance to the nearest facility.
 
@@ -977,21 +1150,28 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `edges` | in | undirected network as weighted edges between nodes numbered 0 .. n-1 | — |
-| `facilities` | in | facility nodes | — |
-| `nearest` | out | nearest facility of each node | — |
-| `distance` | out | distance to it | — |
-| `mean_distance` | out | mean distance to the nearest facility | — |
+| `edges` | in | undirected network as weighted edges between nodes numbered 0 .. n-1 | - |
+| `facilities` | in | facility nodes | - |
+| `nearest` | out | nearest facility of each node | - |
+| `distance` | out | distance to it | - |
+| `mean_distance` | out | mean distance to the nearest facility | - |
 
 **Applies when:** every node reaches a facility; no node equally near two facilities.
 
-*Not in `geospatial-analytics` 1.1.0 yet:* use the Python package or the model's page in the browser.
+```shell
+$ geospatial-analytics solve geo_closest_facility "edges=0-1 2; 1-2 3; 0-2 6; 2-3 1; 3-4 4" "facilities=0, 3"
+nearest = [0.0,0.0,3.0,3.0,3.0]
+distance = [0.0,2.0,1.0,0.0,4.0]
+mean_distance = 1.4
+  by: Closest facility for every node of a network  (Dijkstra from every facility; each node takes the minimum)
+  assumes: every node reaches a facility; no node equally near two facilities
+```
 
 **What the worked example means:** This calculation determines the nearest service point for every location in the network by measuring shortest path distances. For each node, it identifies the specific facility that minimizes travel cost and records that minimum distance. The resulting mean distance of 1.4 provides a single metric for overall accessibility across the entire network, indicating how far an average user must travel to reach the closest available option among the defined facilities.
 
 <a id="geo_maximal_covering_location"></a>
 
-#### Maximal covering location problem (MCLP) on a network — `geo_maximal_covering_location`
+#### Maximal covering location problem (MCLP) on a network, `geo_maximal_covering_location`
 
 The largest demand that p facilities, chosen from candidate nodes, can cover within a coverage distance on a road network, and the covered share.
 
@@ -1001,23 +1181,30 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `edges` | in | undirected network as weighted edges between nodes numbered 0 .. n-1 | — |
-| `demand` | in | demand at nodes 0 .. n-1 | — |
-| `candidates` | in | candidate facility nodes | — |
-| `p` | in | number of facilities | — |
-| `coverage` | in | coverage distance (network distance <= coverage counts) | — |
-| `covered` | out | maximum covered demand | — |
-| `fraction` | out | covered share of the total demand | — |
+| `edges` | in | undirected network as weighted edges between nodes numbered 0 .. n-1 | - |
+| `demand` | in | demand at nodes 0 .. n-1 | - |
+| `candidates` | in | candidate facility nodes | - |
+| `p` | in | number of facilities | - |
+| `coverage` | in | coverage distance (network distance <= coverage counts) | - |
+| `covered` | out | maximum covered demand | - |
+| `fraction` | out | covered share of the total demand | - |
 
 **Applies when:** at most 20000 candidate combinations.
 
-*Not in `geospatial-analytics` 1.1.0 yet:* use the Python package or the model's page in the browser.
+```shell
+$ geospatial-analytics solve geo_maximal_covering_location "edges=0-1 2; 1-2 3; 0-2 6; 2-3 1; 3-4 4; 4-5 2; 1-5 7" "demand=10, 20, 15, 30, 5, 25" "candidates=0, 1, 2, 3, 4, 5" p=2 coverage=3
+covered = 95
+fraction = 0.9047619048
+  by: Maximal covering location problem (MCLP) on a network  (exact enumeration of the candidate combinations (Church and ReVelle 1974 objective))
+  coverage = 3
+  assumes: at most 20000 candidate combinations
+```
 
 **What the worked example means:** This analysis identifies the best locations for 2 facilities from the candidate set to maximize service coverage within a distance of 3. By evaluating all feasible combinations, the model determines that these specific placements can serve 95 units of demand. This result indicates that 0.904762 of the total demand is accessible within the specified threshold, highlighting the efficiency of the chosen network locations.
 
 <a id="geo_p_median"></a>
 
-#### p-median facility location on a network — `geo_p_median`
+#### p-median facility location on a network, `geo_p_median`
 
 The p facility sites, chosen from candidate nodes, that minimize the total demand-weighted shortest-path distance from every node to its nearest open facility.
 
@@ -1027,17 +1214,24 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `edges` | in | undirected network as weighted edges between nodes numbered 0 .. n-1 | — |
-| `demand` | in | demand at nodes 0 .. n-1 | — |
-| `candidates` | in | candidate facility nodes | — |
-| `p` | in | number of facilities to open | — |
-| `objective` | out | minimum total weighted distance | — |
-| `facilities` | out | chosen facility nodes (ascending) | — |
-| `mean_distance` | out | demand-weighted mean distance | — |
+| `edges` | in | undirected network as weighted edges between nodes numbered 0 .. n-1 | - |
+| `demand` | in | demand at nodes 0 .. n-1 | - |
+| `candidates` | in | candidate facility nodes | - |
+| `p` | in | number of facilities to open | - |
+| `objective` | out | minimum total weighted distance | - |
+| `facilities` | out | chosen facility nodes (ascending) | - |
+| `mean_distance` | out | demand-weighted mean distance | - |
 
 **Applies when:** connected network; at most 20000 candidate combinations; a unique optimal set.
 
-*Not in `geospatial-analytics` 1.1.0 yet:* use the Python package or the model's page in the browser.
+```shell
+$ geospatial-analytics solve geo_p_median "edges=0-1 2; 1-2 3; 0-2 6; 2-3 1; 3-4 4; 4-5 2; 1-5 7" "demand=10, 20, 15, 30, 5, 25" "candidates=0, 1, 2, 3, 4, 5" p=2
+objective = 150
+facilities = [2.0,5.0]
+mean_distance = 1.428571429
+  by: p-median facility location on a network  (exact enumeration of the candidate combinations with all-pairs Dijkstra distances)
+  assumes: connected network; at most 20000 candidate combinations; a unique optimal set
+```
 
 **What the worked example means:** This analysis determines the best locations for a fixed number of facilities by evaluating all possible combinations from the candidate nodes. Using shortest-path distances on the connected network, it minimizes the sum of demand-weighted distances from every node to its nearest open facility. The result identifies the specific sites [2, 5] that yield the lowest total cost of 150, with an average demand-weighted distance of 1.42857.
 
@@ -1045,7 +1239,7 @@ $$
 
 <a id="geo_empirical_semivariogram"></a>
 
-#### Empirical (Matheron) semivariogram in distance bins — `geo_empirical_semivariogram`
+#### Empirical (Matheron) semivariogram in distance bins, `geo_empirical_semivariogram`
 
 The classical (Matheron) empirical semivariogram of sampled values: half the mean squared difference of all pairs whose separation falls in each distance bin, and the pair counts.
 
@@ -1055,12 +1249,12 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `x` | in | x coordinates of the samples | — |
-| `y` | in | y coordinates of the samples | — |
-| `z` | in | sample values | — |
-| `bin_edges` | in | increasing distance bin edges (a bin includes its lower edge) | — |
-| `gamma` | out | semivariance of each bin | — |
-| `counts` | out | number of pairs in each bin | — |
+| `x` | in | x coordinates of the samples | - |
+| `y` | in | y coordinates of the samples | - |
+| `z` | in | sample values | - |
+| `bin_edges` | in | increasing distance bin edges (a bin includes its lower edge) | - |
+| `gamma` | out | semivariance of each bin | - |
+| `counts` | out | number of pairs in each bin | - |
 
 **Applies when:** every bin contains at least one pair; bins [e_k, e_k+1).
 
@@ -1076,7 +1270,7 @@ counts = [4.0,3.0,3.0]
 
 <a id="geo_variogram_model_fit"></a>
 
-#### Fit an exponential or Gaussian variogram model (nugget, partial sill, range) — `geo_variogram_model_fit`
+#### Fit an exponential or Gaussian variogram model (nugget, partial sill, range), `geo_variogram_model_fit`
 
 The nugget, partial sill, range and sill of an exponential or Gaussian variogram model fitted by ordinary least squares to an empirical semivariogram (lags and semivariances).
 
@@ -1086,23 +1280,32 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `h` | in | lag distances | — |
-| `gamma` | in | semivariances at the lags | — |
-| `model` | in | variogram model (pykrige parameterization, practical range) | — |
-| `nugget` | out | nugget c0 | — |
-| `psill` | out | partial sill c | — |
-| `range` | out | practical range a | — |
-| `sill` | out | sill c0 + c | — |
+| `h` | in | lag distances | - |
+| `gamma` | in | semivariances at the lags | - |
+| `model` | in | variogram model (pykrige parameterization, practical range) | - |
+| `nugget` | out | nugget c0 | - |
+| `psill` | out | partial sill c | - |
+| `range` | out | practical range a | - |
+| `sill` | out | sill c0 + c | - |
 
 **Applies when:** the least-squares range has an interior minimum (between min(h)/20 and 20 max(h)).
 
-*Not in `geospatial-analytics` 1.1.0 yet:* use the Python package or the model's page in the browser.
+```shell
+$ geospatial-analytics solve geo_variogram_model_fit "h=[1, 2, 4, 6, 8, 12, 16, 20]" "gamma=[1.6, 2.9, 4.6, 5.6, 6.3, 6.8, 7, 7.05]" model=exponential
+nugget = -0.06288210256
+psill = 7.164348334
+range = 11.32850067
+sill = 7.101466232
+  by: Fit an exponential or Gaussian variogram model (nugget, partial sill, range)  (variable projection: for each range the nugget and partial sill are linear least squares; the range solves d(SSE)/da = 0 (grid search, then bisection, polished in 30-digit arithmetic with mpmath))
+  model = exponential
+  assumes: the least-squares range has an interior minimum (between min(h)/20 and 20 max(h))
+```
 
 **What the worked example means:** This calculation determines the optimal parameters for an exponential or Gaussian variogram model by minimizing the difference between the theoretical curve and the empirical semivariogram data. The result provides the nugget effect -0.0628821, which represents micro-scale variation or measurement error, and the partial sill 7.16435, indicating the variance of spatially correlated data. The practical range 11.3285 defines the distance beyond which spatial correlation becomes negligible, while the total sill 7.10147 marks the plateau value of the semivariance.
 
 <a id="geo_idw_interpolation"></a>
 
-#### Inverse distance weighted (IDW) interpolation at a point — `geo_idw_interpolation`
+#### Inverse distance weighted (IDW) interpolation at a point, `geo_idw_interpolation`
 
 The inverse-distance-weighted (Shepard) estimate of a variable at a location from sample points, with a stated power (2 is the usual choice).
 
@@ -1112,13 +1315,13 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `x` | in | x coordinates of the samples | — |
-| `y` | in | y coordinates of the samples | — |
-| `z` | in | sample values | — |
-| `px` | in | x of the location | — |
-| `py` | in | y of the location | — |
-| `power` | in | distance power p (> 0) | — |
-| `estimate` | out | interpolated value | — |
+| `x` | in | x coordinates of the samples | - |
+| `y` | in | y coordinates of the samples | - |
+| `z` | in | sample values | - |
+| `px` | in | x of the location | - |
+| `py` | in | y of the location | - |
+| `power` | in | distance power p (> 0) | - |
+| `estimate` | out | interpolated value | - |
 
 **Applies when:** power > 0 (at most 10); a location on a sample returns that sample's value.
 
@@ -1126,9 +1329,9 @@ $$
 $ geospatial-analytics solve geo_idw_interpolation "x=[0, 10, 0, 10]" "y=[0, 0, 10, 10]" "z=[1, 2, 3, 4]" px=2 py=3 power=2
 estimate = 1.65897994
   by: Inverse distance weighted (IDW) interpolation at a point  (z = sum d_i^-p z_i / sum d_i^-p over all samples)
-  px = 2   []
-  py = 3   []
-  power = 2   []
+  px = 2
+  py = 3
+  power = 2
   assumes: power > 0 (at most 10); a location on a sample returns that sample's value
 ```
 
@@ -1136,7 +1339,7 @@ estimate = 1.65897994
 
 <a id="geo_ordinary_kriging"></a>
 
-#### Ordinary kriging estimate and kriging variance at a point — `geo_ordinary_kriging`
+#### Ordinary kriging estimate and kriging variance at a point, `geo_ordinary_kriging`
 
 The ordinary kriging estimate of a variable at a location from samples, with a given variogram model (nugget, sill, range), and the kriging variance.
 
@@ -1146,27 +1349,39 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `x` | in | x coordinates of the samples | — |
-| `y` | in | y coordinates of the samples | — |
-| `z` | in | sample values | — |
-| `px` | in | x of the location | — |
-| `py` | in | y of the location | — |
-| `model` | in | variogram model (pykrige parameterization) | — |
-| `nugget` | in | nugget | — |
-| `sill` | in | sill (nugget + partial sill) | — |
-| `range` | in | range (practical range for exponential and gaussian) | — |
-| `estimate` | out | kriging estimate | — |
-| `variance` | out | kriging variance | — |
+| `x` | in | x coordinates of the samples | - |
+| `y` | in | y coordinates of the samples | - |
+| `z` | in | sample values | - |
+| `px` | in | x of the location | - |
+| `py` | in | y of the location | - |
+| `model` | in | variogram model (pykrige parameterization) | - |
+| `nugget` | in | nugget | - |
+| `sill` | in | sill (nugget + partial sill) | - |
+| `range` | in | range (practical range for exponential and gaussian) | - |
+| `estimate` | out | kriging estimate | - |
+| `variance` | out | kriging variance | - |
 
 **Applies when:** distinct sample locations; sill > nugget >= 0, range > 0; the variogram is 0 at zero distance (exact interpolation).
 
-*Not in `geospatial-analytics` 1.1.0 yet:* use the Python package or the model's page in the browser.
+```shell
+$ geospatial-analytics solve geo_ordinary_kriging "x=[0, 10, 0, 10]" "y=[0, 0, 10, 10]" "z=[1, 2, 3, 4]" px=4 py=6 model=spherical nugget=0 sill=2 range=20
+estimate = 2.6048
+variance = 0.8771147626
+  by: Ordinary kriging estimate and kriging variance at a point  (solve the ordinary kriging system [Gamma 1; 1' 0][lambda; mu] = [gamma0; 1]; estimate = lambda'z, variance = lambda'gamma0 + mu)
+  px = 4
+  py = 6
+  nugget = 0
+  sill = 2
+  range = 20
+  model = spherical
+  assumes: distinct sample locations; sill > nugget >= 0, range > 0; the variogram is 0 at zero distance (exact interpolation)
+```
 
 **What the worked example means:** This calculation determines the best linear unbiased prediction for a spatial variable at an unsampled location using ordinary kriging. By solving the kriging system with the provided sample coordinates, values, and variogram parameters including nugget, sill, and range, the method computes weights that minimize estimation variance while ensuring unbiasedness. The resulting estimate of 2.6048 represents the predicted value at the target location defined by its x and y coordinates, while the variance of 0.877115 quantifies the uncertainty associated with this prediction based on the spatial structure defined by the model.
 
 <a id="geo_trend_surface"></a>
 
-#### Polynomial trend surface (first or second order) by least squares — `geo_trend_surface`
+#### Polynomial trend surface (first or second order) by least squares, `geo_trend_surface`
 
 The coefficients and R^2 of a first-order (plane) or second-order (quadratic) trend surface fitted to sampled values by least squares.
 
@@ -1176,12 +1391,12 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `x` | in | x coordinates | — |
-| `y` | in | y coordinates | — |
-| `z` | in | values | — |
-| `order` | in | order of the surface (1 or 2) | — |
-| `coefficients` | out | b0, b1 (x), b2 (y)[, b3 (x^2), b4 (xy), b5 (y^2)] | — |
-| `r_squared` | out | coefficient of determination | — |
+| `x` | in | x coordinates | - |
+| `y` | in | y coordinates | - |
+| `z` | in | values | - |
+| `order` | in | order of the surface (1 or 2) | - |
+| `coefficients` | out | b0, b1 (x), b2 (y)[, b3 (x^2), b4 (xy), b5 (y^2)] | - |
+| `r_squared` | out | coefficient of determination | - |
 
 **Applies when:** more samples than coefficients; values not all equal.
 
@@ -1199,7 +1414,7 @@ r_squared = 0.9987204095
 
 <a id="geo_albers_equal_area_forward"></a>
 
-#### Albers equal-area conic projection: coordinates and scale factors — `geo_albers_equal_area_forward`
+#### Albers equal-area conic projection: coordinates and scale factors, `geo_albers_equal_area_forward`
 
 Easting and northing of a point in the ellipsoidal Albers equal-area conic projection with two standard parallels, with the scale factors along the parallel (k) and the meridian (h = 1/k).
 
@@ -1209,19 +1424,19 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `lat` | in | latitude (decimal degrees) | — |
-| `lon` | in | longitude (decimal degrees) | — |
-| `lat1` | in | first standard parallel (decimal degrees) | — |
-| `lat2` | in | second standard parallel (decimal degrees) | — |
-| `lat0` | in | latitude of origin (decimal degrees) | — |
-| `lon0` | in | central meridian (decimal degrees) | — |
-| `ellipsoid` | in | reference ellipsoid | — |
+| `lat` | in | latitude (decimal degrees) | - |
+| `lon` | in | longitude (decimal degrees) | - |
+| `lat1` | in | first standard parallel (decimal degrees) | - |
+| `lat2` | in | second standard parallel (decimal degrees) | - |
+| `lat0` | in | latitude of origin (decimal degrees) | - |
+| `lon0` | in | central meridian (decimal degrees) | - |
+| `ellipsoid` | in | reference ellipsoid | - |
 | `FE` | in | false easting (default 0) (optional) | m |
 | `FN` | in | false northing (default 0) (optional) | m |
 | `x` | out | easting | m |
 | `y` | out | northing | m |
-| `k` | out | scale factor along the parallel | — |
-| `h` | out | scale factor along the meridian | — |
+| `k` | out | scale factor along the parallel | - |
+| `h` | out | scale factor along the meridian | - |
 
 **Applies when:** parallels within 89 degrees of the equator and not symmetric about it.
 
@@ -1232,12 +1447,12 @@ y = 1894100.14 m
 k = 0.9909686029
 h = 1.009113707
   by: Albers equal-area conic projection: coordinates and scale factors  (n = (m1^2 - m2^2)/(q2 - q1), C = m1^2 + n q1, rho = a sqrt(C - n q)/n with the authalic function q; x = FE + rho sin(theta), y = FN + rho0 - rho cos(theta))
-  lat = 40   []
-  lon = -100   []
-  lat1 = 29.5   []
-  lat2 = 45.5   []
-  lat0 = 23   []
-  lon0 = -96   []
+  lat = 40
+  lon = -100
+  lat1 = 29.5
+  lat2 = 45.5
+  lat0 = 23
+  lon0 = -96
   ellipsoid = GRS80
   assumes: parallels within 89 degrees of the equator and not symmetric about it
 ```
@@ -1246,7 +1461,7 @@ h = 1.009113707
 
 <a id="geo_azimuthal_equidistant_forward"></a>
 
-#### Azimuthal equidistant projection (ellipsoidal, geodesic) — `geo_azimuthal_equidistant_forward`
+#### Azimuthal equidistant projection (ellipsoidal, geodesic), `geo_azimuthal_equidistant_forward`
 
 Easting and northing of a point in the ellipsoidal azimuthal equidistant projection about a centre: the geodesic distance from the centre plotted at the geodesic azimuth (used for range rings and airline maps).
 
@@ -1256,27 +1471,40 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `lat` | in | latitude (decimal degrees) | — |
-| `lon` | in | longitude (decimal degrees) | — |
-| `lat0` | in | latitude of the centre (decimal degrees) | — |
-| `lon0` | in | longitude of the centre (decimal degrees) | — |
-| `ellipsoid` | in | reference ellipsoid | — |
+| `lat` | in | latitude (decimal degrees) | - |
+| `lon` | in | longitude (decimal degrees) | - |
+| `lat0` | in | latitude of the centre (decimal degrees) | - |
+| `lon0` | in | longitude of the centre (decimal degrees) | - |
+| `ellipsoid` | in | reference ellipsoid | - |
 | `FE` | in | false easting (default 0) (optional) | m |
 | `FN` | in | false northing (default 0) (optional) | m |
 | `x` | out | easting | m |
 | `y` | out | northing | m |
 | `distance` | out | geodesic distance from the centre | m |
-| `azimuth` | out | geodesic azimuth from the centre (degrees) | — |
+| `azimuth` | out | geodesic azimuth from the centre (degrees) | - |
 
 **Applies when:** point distinct from the centre and at most 150 degrees from it; centre within 89 degrees of the equator.
 
-*Not in `geospatial-analytics` 1.1.0 yet:* use the Python package or the model's page in the browser.
+```shell
+$ geospatial-analytics solve geo_azimuthal_equidistant_forward lat=40.71 lon=-74.01 lat0=51.5 lon0=-0.13 ellipsoid=WGS84
+x = -5301063.81 m
+y = 1760668.823 m
+distance = 5585806.318 m
+azimuth = 288.3731331
+  by: Azimuthal equidistant projection (ellipsoidal, geodesic)  (inverse geodesic problem from the centre (exact integrals), then x = s sin(alpha), y = s cos(alpha))
+  lat = 40.71
+  lon = -74.01
+  lat0 = 51.5
+  lon0 = -0.13
+  ellipsoid = WGS84
+  assumes: point distinct from the centre and at most 150 degrees from it; centre within 89 degrees of the equator
+```
 
 **What the worked example means:** This calculation determines the planar coordinates for an ellipsoidal azimuthal equidistant projection centered at latitude 51.5 and longitude -0.13. The target point, located at latitude 40.71 and longitude -74.01, is plotted such that its map distance from the center equals the true geodesic distance on the Earth's surface. The resulting easting is -5.30106e+06 m and the northing is 1.76067e+06 m, derived from a radial distance of 5.58581e+06 m measured along the initial bearing of 288.373 degrees.
 
 <a id="geo_equirectangular_forward"></a>
 
-#### Equirectangular (equidistant cylindrical / plate carree) projection — `geo_equirectangular_forward`
+#### Equirectangular (equidistant cylindrical / plate carree) projection, `geo_equirectangular_forward`
 
 x and y of a point in the equirectangular (equidistant cylindrical) projection of a sphere of radius R with a standard parallel (lat_ts = 0 is the plate carree).
 
@@ -1286,11 +1514,11 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `lat` | in | latitude (decimal degrees) | — |
-| `lon` | in | longitude (decimal degrees) | — |
-| `lat_ts` | in | standard parallel (true scale) (decimal degrees) | — |
-| `lat0` | in | latitude of origin (decimal degrees) | — |
-| `lon0` | in | central meridian (decimal degrees) | — |
+| `lat` | in | latitude (decimal degrees) | - |
+| `lon` | in | longitude (decimal degrees) | - |
+| `lat_ts` | in | standard parallel (true scale) (decimal degrees) | - |
+| `lat0` | in | latitude of origin (decimal degrees) | - |
+| `lon0` | in | central meridian (decimal degrees) | - |
 | `R` | in | radius of the sphere | m |
 | `x` | out | x | m |
 | `y` | out | y | m |
@@ -1302,12 +1530,12 @@ $ geospatial-analytics solve geo_equirectangular_forward lat=45 lon=10 lat_ts=0 
 x = 1111949.266 m
 y = 5003771.699 m
   by: Equirectangular (equidistant cylindrical / plate carree) projection  (x = R (lambda - lambda0) cos(lat_ts), y = R (phi - phi0))
-  lat = 45   []
-  lon = 10   []
-  lat_ts = 0   []
-  lat0 = 0   []
-  lon0 = 0   []
-  R = 6371000 m   []
+  lat = 45
+  lon = 10
+  lat_ts = 0
+  lat0 = 0
+  lon0 = 0
+  R = 6371000 m
   assumes: sphere of radius R > 0
 ```
 
@@ -1315,7 +1543,7 @@ y = 5003771.699 m
 
 <a id="geo_gnomonic_forward"></a>
 
-#### Gnomonic projection (sphere) — `geo_gnomonic_forward`
+#### Gnomonic projection (sphere): `geo_gnomonic_forward`
 
 x and y of a point in the gnomonic projection (great circles become straight lines) of a sphere of radius R centred on a point.
 
@@ -1325,10 +1553,10 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `lat` | in | latitude (decimal degrees) | — |
-| `lon` | in | longitude (decimal degrees) | — |
-| `lat0` | in | latitude of the centre (decimal degrees) | — |
-| `lon0` | in | longitude of the centre (decimal degrees) | — |
+| `lat` | in | latitude (decimal degrees) | - |
+| `lon` | in | longitude (decimal degrees) | - |
+| `lat0` | in | latitude of the centre (decimal degrees) | - |
+| `lon0` | in | longitude of the centre (decimal degrees) | - |
 | `R` | in | radius of the sphere | m |
 | `x` | out | x | m |
 | `y` | out | y | m |
@@ -1340,11 +1568,11 @@ $ geospatial-analytics solve geo_gnomonic_forward lat=40 lon=10 lat0=45 lon0=0 "
 x = 857807.9193 m
 y = -508965.7799 m
   by: Gnomonic projection (sphere)  (the orthographic numerators divided by cos c, the cosine of the angular distance from the centre)
-  lat = 40   []
-  lon = 10   []
-  lat0 = 45   []
-  lon0 = 0   []
-  R = 6371000 m   []
+  lat = 40
+  lon = 10
+  lat0 = 45
+  lon0 = 0
+  R = 6371000 m
   assumes: the point within about 84 degrees of the centre (cos c >= 0.1)
 ```
 
@@ -1352,7 +1580,7 @@ y = -508965.7799 m
 
 <a id="geo_albers_equal_area_inverse"></a>
 
-#### Inverse Albers equal-area conic projection — `geo_albers_equal_area_inverse`
+#### Inverse Albers equal-area conic projection, `geo_albers_equal_area_inverse`
 
 Latitude and longitude of a point given by its easting and northing in the ellipsoidal Albers equal-area conic projection with two standard parallels.
 
@@ -1364,15 +1592,15 @@ $$
 |---|---|---|---|
 | `x` | in | easting | m |
 | `y` | in | northing | m |
-| `lat1` | in | first standard parallel (decimal degrees) | — |
-| `lat2` | in | second standard parallel (decimal degrees) | — |
-| `lat0` | in | latitude of origin (decimal degrees) | — |
-| `lon0` | in | central meridian (decimal degrees) | — |
-| `ellipsoid` | in | reference ellipsoid | — |
+| `lat1` | in | first standard parallel (decimal degrees) | - |
+| `lat2` | in | second standard parallel (decimal degrees) | - |
+| `lat0` | in | latitude of origin (decimal degrees) | - |
+| `lon0` | in | central meridian (decimal degrees) | - |
+| `ellipsoid` | in | reference ellipsoid | - |
 | `FE` | in | false easting (default 0) (optional) | m |
 | `FN` | in | false northing (default 0) (optional) | m |
-| `lat` | out | latitude (degrees) | — |
-| `lon` | out | longitude (degrees) | — |
+| `lat` | out | latitude (degrees) | - |
+| `lon` | out | longitude (degrees) | - |
 
 **Applies when:** parallels within 89 degrees of the equator and not symmetric about it; the point inside the projected area.
 
@@ -1381,12 +1609,12 @@ $ geospatial-analytics solve geo_albers_equal_area_inverse "x=-338796 m" "y=1952
 lat = 40.51852456
 lon = -100.0339515
   by: Inverse Albers equal-area conic projection  (rho and theta from the offsets, q = (C - (rho n/a)^2)/n, latitude from q by Newton iteration; lambda = lambda0 + theta/n)
-  x = -338796 m   []
-  y = 1952260 m   []
-  lat1 = 29.5   []
-  lat2 = 45.5   []
-  lat0 = 23   []
-  lon0 = -96   []
+  x = -338796 m
+  y = 1952260 m
+  lat1 = 29.5
+  lat2 = 45.5
+  lat0 = 23
+  lon0 = -96
   ellipsoid = GRS80
   assumes: parallels within 89 degrees of the equator and not symmetric about it; the point inside the projected area
 ```
@@ -1395,7 +1623,7 @@ lon = -100.0339515
 
 <a id="geo_lambert_conformal_conic_inverse"></a>
 
-#### Inverse Lambert conformal conic projection (two standard parallels) — `geo_lambert_conformal_conic_inverse`
+#### Inverse Lambert conformal conic projection (two standard parallels), `geo_lambert_conformal_conic_inverse`
 
 Latitude and longitude of a point given by its easting and northing in the ellipsoidal Lambert conformal conic projection with two standard parallels.
 
@@ -1407,15 +1635,15 @@ $$
 |---|---|---|---|
 | `x` | in | easting | m |
 | `y` | in | northing | m |
-| `lat1` | in | first standard parallel (decimal degrees) | — |
-| `lat2` | in | second standard parallel (decimal degrees) | — |
-| `lat0` | in | latitude of origin (decimal degrees) | — |
-| `lon0` | in | central meridian (decimal degrees) | — |
-| `ellipsoid` | in | reference ellipsoid | — |
+| `lat1` | in | first standard parallel (decimal degrees) | - |
+| `lat2` | in | second standard parallel (decimal degrees) | - |
+| `lat0` | in | latitude of origin (decimal degrees) | - |
+| `lon0` | in | central meridian (decimal degrees) | - |
+| `ellipsoid` | in | reference ellipsoid | - |
 | `FE` | in | false easting (default 0) (optional) | m |
 | `FN` | in | false northing (default 0) (optional) | m |
-| `lat` | out | latitude (degrees) | — |
-| `lon` | out | longitude (degrees) | — |
+| `lat` | out | latitude (degrees) | - |
+| `lon` | out | longitude (degrees) | - |
 
 **Applies when:** parallels within 89 degrees of the equator and not symmetric about it.
 
@@ -1424,12 +1652,12 @@ $ geospatial-analytics solve geo_lambert_conformal_conic_inverse "x=-339545 m" "
 lat = 40.29658075
 lon = -100.01589
   by: Inverse Lambert conformal conic projection (two standard parallels)  (rho and theta from the offsets, t = (rho/(aF))^(1/n), isometric latitude -ln t, geodetic latitude by Newton iteration; lambda = lambda0 + theta/n)
-  x = -339545 m   []
-  y = 1937380 m   []
-  lat1 = 33   []
-  lat2 = 45   []
-  lat0 = 23   []
-  lon0 = -96   []
+  x = -339545 m
+  y = 1937380 m
+  lat1 = 33
+  lat2 = 45
+  lat0 = 23
+  lon0 = -96
   ellipsoid = GRS80
   assumes: parallels within 89 degrees of the equator and not symmetric about it
 ```
@@ -1438,7 +1666,7 @@ lon = -100.01589
 
 <a id="geo_mercator_inverse"></a>
 
-#### Inverse Mercator projection (ellipsoidal) — `geo_mercator_inverse`
+#### Inverse Mercator projection (ellipsoidal): `geo_mercator_inverse`
 
 Latitude and longitude of a point given by its x and y in the ellipsoidal Mercator projection with a central meridian and standard parallel.
 
@@ -1450,11 +1678,11 @@ $$
 |---|---|---|---|
 | `x` | in | easting | m |
 | `y` | in | northing | m |
-| `lon0` | in | central meridian (decimal degrees) | — |
-| `lat_ts` | in | latitude of true scale (decimal degrees) | — |
-| `ellipsoid` | in | reference ellipsoid | — |
-| `lat` | out | latitude (degrees) | — |
-| `lon` | out | longitude (degrees) | — |
+| `lon0` | in | central meridian (decimal degrees) | - |
+| `lat_ts` | in | latitude of true scale (decimal degrees) | - |
+| `ellipsoid` | in | reference ellipsoid | - |
+| `lat` | out | latitude (degrees) | - |
+| `lon` | out | longitude (degrees) | - |
 
 **Applies when:** |lat_ts| <= 85.
 
@@ -1463,10 +1691,10 @@ $ geospatial-analytics solve geo_mercator_inverse "x=-14471.5 m" "y=6680752 m" l
 lat = 51.5223892
 lon = -0.1299996963
   by: Inverse Mercator projection (ellipsoidal)  (isometric latitude psi = y/(k0 a); conformal tangent sinh(psi); geodetic latitude by Newton iteration (Karney's tau method))
-  x = -14471.5 m   []
-  y = 6680752 m   []
-  lon0 = 0   []
-  lat_ts = 0   []
+  x = -14471.5 m
+  y = 6680752 m
+  lon0 = 0
+  lat_ts = 0
   ellipsoid = WGS84
   assumes: |lat_ts| <= 85
 ```
@@ -1475,7 +1703,7 @@ lon = -0.1299996963
 
 <a id="geo_lambert_azimuthal_equal_area_forward"></a>
 
-#### Lambert azimuthal equal-area projection (ellipsoidal) — `geo_lambert_azimuthal_equal_area_forward`
+#### Lambert azimuthal equal-area projection (ellipsoidal), `geo_lambert_azimuthal_equal_area_forward`
 
 Easting and northing of a point in the ellipsoidal oblique Lambert azimuthal equal-area projection about a centre (as in ETRS89-LAEA, EPSG:3035).
 
@@ -1485,11 +1713,11 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `lat` | in | latitude (decimal degrees) | — |
-| `lon` | in | longitude (decimal degrees) | — |
-| `lat0` | in | latitude of the centre (decimal degrees) | — |
-| `lon0` | in | longitude of the centre (decimal degrees) | — |
-| `ellipsoid` | in | reference ellipsoid | — |
+| `lat` | in | latitude (decimal degrees) | - |
+| `lon` | in | longitude (decimal degrees) | - |
+| `lat0` | in | latitude of the centre (decimal degrees) | - |
+| `lon0` | in | longitude of the centre (decimal degrees) | - |
+| `ellipsoid` | in | reference ellipsoid | - |
 | `FE` | in | false easting (default 0) (optional) | m |
 | `FN` | in | false northing (default 0) (optional) | m |
 | `x` | out | easting | m |
@@ -1502,12 +1730,12 @@ $ geospatial-analytics solve geo_lambert_azimuthal_equal_area_forward lat=50 lon
 x = 3962799.451 m
 y = 2999718.853 m
   by: Lambert azimuthal equal-area projection (ellipsoidal)  (authalic latitudes beta = asin(q/q_p) on the authalic sphere R_q, then the spherical azimuthal equal-area formulas with Snyder's D factor)
-  lat = 50   []
-  lon = 5   []
-  lat0 = 52   []
-  lon0 = 10   []
-  FE = 4321000 m   []
-  FN = 3210000 m   []
+  lat = 50
+  lon = 5
+  lat0 = 52
+  lon0 = 10
+  FE = 4321000 m
+  FN = 3210000 m
   ellipsoid = GRS80
   assumes: centre within 89 degrees of the equator; point within 120 degrees of the centre
 ```
@@ -1516,7 +1744,7 @@ y = 2999718.853 m
 
 <a id="geo_lambert_conformal_conic_forward"></a>
 
-#### Lambert conformal conic projection (two standard parallels): coordinates, scale factor and convergence — `geo_lambert_conformal_conic_forward`
+#### Lambert conformal conic projection (two standard parallels): coordinates, scale factor and convergence, `geo_lambert_conformal_conic_forward`
 
 Easting and northing of a point in the ellipsoidal Lambert conformal conic projection with two standard parallels (EPSG method 9802), with the point scale factor and the grid convergence.
 
@@ -1526,19 +1754,19 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `lat` | in | latitude (decimal degrees) | — |
-| `lon` | in | longitude (decimal degrees) | — |
-| `lat1` | in | first standard parallel (decimal degrees) | — |
-| `lat2` | in | second standard parallel (decimal degrees) | — |
-| `lat0` | in | latitude of origin (decimal degrees) | — |
-| `lon0` | in | central meridian (decimal degrees) | — |
-| `ellipsoid` | in | reference ellipsoid | — |
+| `lat` | in | latitude (decimal degrees) | - |
+| `lon` | in | longitude (decimal degrees) | - |
+| `lat1` | in | first standard parallel (decimal degrees) | - |
+| `lat2` | in | second standard parallel (decimal degrees) | - |
+| `lat0` | in | latitude of origin (decimal degrees) | - |
+| `lon0` | in | central meridian (decimal degrees) | - |
+| `ellipsoid` | in | reference ellipsoid | - |
 | `FE` | in | false easting (default 0) (optional) | m |
 | `FN` | in | false northing (default 0) (optional) | m |
 | `x` | out | easting | m |
 | `y` | out | northing | m |
-| `k` | out | point scale factor | — |
-| `gamma` | out | grid convergence (degrees) | — |
+| `k` | out | point scale factor | - |
+| `gamma` | out | grid convergence (degrees) | - |
 
 **Applies when:** parallels within 89 degrees of the equator and not symmetric about it.
 
@@ -1549,12 +1777,12 @@ y = 1904595.046 m
 k = 0.9946660436
 gamma = -2.521985006
   by: Lambert conformal conic projection (two standard parallels): coordinates, scale factor and convergence  (n = (ln m1 - ln m2)/(ln t1 - ln t2), F = m1/(n t1^n), rho = a F t^n with t = exp(-psi); x = FE + rho sin(theta), y = FN + rho0 - rho cos(theta), theta = n (lambda - lambda0); k = rho n/(a m); convergence = theta)
-  lat = 40   []
-  lon = -100   []
-  lat1 = 33   []
-  lat2 = 45   []
-  lat0 = 23   []
-  lon0 = -96   []
+  lat = 40
+  lon = -100
+  lat1 = 33
+  lat2 = 45
+  lat0 = 23
+  lon0 = -96
   ellipsoid = GRS80
   assumes: parallels within 89 degrees of the equator and not symmetric about it
 ```
@@ -1563,7 +1791,7 @@ gamma = -2.521985006
 
 <a id="geo_cylindrical_equal_area_forward"></a>
 
-#### Lambert cylindrical equal-area projection (sphere) — `geo_cylindrical_equal_area_forward`
+#### Lambert cylindrical equal-area projection (sphere), `geo_cylindrical_equal_area_forward`
 
 x and y of a point in the cylindrical equal-area projection of a sphere of radius R with a standard parallel (0 Lambert, 30 Behrmann, 45 Gall-Peters).
 
@@ -1573,10 +1801,10 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `lat` | in | latitude (decimal degrees) | — |
-| `lon` | in | longitude (decimal degrees) | — |
-| `lat_ts` | in | standard parallel (decimal degrees) | — |
-| `lon0` | in | central meridian (decimal degrees) | — |
+| `lat` | in | latitude (decimal degrees) | - |
+| `lon` | in | longitude (decimal degrees) | - |
+| `lat_ts` | in | standard parallel (decimal degrees) | - |
+| `lon0` | in | central meridian (decimal degrees) | - |
 | `R` | in | radius of the sphere | m |
 | `x` | out | x | m |
 | `y` | out | y | m |
@@ -1588,11 +1816,11 @@ $ geospatial-analytics solve geo_cylindrical_equal_area_forward lat=45 lon=10 la
 x = 786266.8666 m
 y = 6371000 m
   by: Lambert cylindrical equal-area projection (sphere)  (x = R (lambda - lambda0) cos(lat_ts), y = R sin(phi)/cos(lat_ts))
-  lat = 45   []
-  lon = 10   []
-  lat_ts = 45   []
-  lon0 = 0   []
-  R = 6371000 m   []
+  lat = 45
+  lon = 10
+  lat_ts = 45
+  lon0 = 0
+  R = 6371000 m
   assumes: standard parallel strictly between -90 and 90
 ```
 
@@ -1600,7 +1828,7 @@ y = 6371000 m
 
 <a id="geo_utm_forward"></a>
 
-#### Latitude and longitude to UTM coordinates (with scale factor and convergence) — `geo_utm_forward`
+#### Latitude and longitude to UTM coordinates (with scale factor and convergence), `geo_utm_forward`
 
 UTM zone, hemisphere, easting and northing of a point on the WGS84 or GRS80 ellipsoid, with the point scale factor and grid convergence.
 
@@ -1610,15 +1838,15 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `lat` | in | latitude (decimal degrees) | — |
-| `lon` | in | longitude (decimal degrees) | — |
-| `ellipsoid` | in | reference ellipsoid | — |
+| `lat` | in | latitude (decimal degrees) | - |
+| `lon` | in | longitude (decimal degrees) | - |
+| `ellipsoid` | in | reference ellipsoid | - |
 | `easting` | out | UTM easting | m |
 | `northing` | out | UTM northing | m |
-| `zone` | out | UTM zone number | — |
-| `hemisphere` | out | N or S | — |
-| `k` | out | point scale factor | — |
-| `gamma` | out | grid convergence (degrees) | — |
+| `zone` | out | UTM zone number | - |
+| `hemisphere` | out | N or S | - |
+| `k` | out | point scale factor | - |
+| `gamma` | out | grid convergence (degrees) | - |
 
 **Applies when:** 80 S <= latitude <= 84 N.
 
@@ -1631,8 +1859,8 @@ gamma = 2.246819165
 zone = 30
 hemisphere = N
   by: Latitude and longitude to UTM coordinates (with scale factor and convergence)  (zone from the longitude (Norway and Svalbard exceptions), then transverse Mercator by Krueger's series with k0 = 0.9996, false easting 500 km, false northing 10000 km in the south)
-  lat = 51.5   []
-  lon = -0.13   []
+  lat = 51.5
+  lon = -0.13
   ellipsoid = WGS84
   assumes: 80 S <= latitude <= 84 N
 ```
@@ -1641,7 +1869,7 @@ hemisphere = N
 
 <a id="geo_web_mercator_forward"></a>
 
-#### Latitude and longitude to Web Mercator (EPSG:3857) — `geo_web_mercator_forward`
+#### Latitude and longitude to Web Mercator (EPSG:3857), `geo_web_mercator_forward`
 
 Web Mercator (pseudo-Mercator, EPSG:3857) x and y of a WGS84 latitude and longitude, as used by web maps.
 
@@ -1651,8 +1879,8 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `lat` | in | latitude (WGS84) (decimal degrees) | — |
-| `lon` | in | longitude (WGS84) (decimal degrees) | — |
+| `lat` | in | latitude (WGS84) (decimal degrees) | - |
+| `lon` | in | longitude (WGS84) (decimal degrees) | - |
 | `x` | out | Web Mercator x | m |
 | `y` | out | Web Mercator y | m |
 
@@ -1663,8 +1891,8 @@ $ geospatial-analytics solve geo_web_mercator_forward lat=51.5 lon=-0.13
 x = -14471.5338 m
 y = 6710219.083 m
   by: Latitude and longitude to Web Mercator (EPSG:3857)  (spherical Mercator formulas on a sphere of radius 6378137 m applied to WGS84 coordinates)
-  lat = 51.5   []
-  lon = -0.13   []
+  lat = 51.5
+  lon = -0.13
   assumes: |latitude| <= 85.06 degrees (the square web-map extent)
 ```
 
@@ -1672,7 +1900,7 @@ y = 6710219.083 m
 
 <a id="geo_mercator_forward"></a>
 
-#### Mercator projection (ellipsoidal): coordinates and scale factor — `geo_mercator_forward`
+#### Mercator projection (ellipsoidal): coordinates and scale factor, `geo_mercator_forward`
 
 x and y of a point in the ellipsoidal Mercator projection with a central meridian and standard parallel (lat_ts = 0 is World Mercator, EPSG:3395), with the point scale factor.
 
@@ -1682,14 +1910,14 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `lat` | in | latitude (decimal degrees) | — |
-| `lon` | in | longitude (decimal degrees) | — |
-| `lon0` | in | central meridian (decimal degrees) | — |
-| `lat_ts` | in | latitude of true scale (standard parallel) (decimal degrees) | — |
-| `ellipsoid` | in | reference ellipsoid | — |
+| `lat` | in | latitude (decimal degrees) | - |
+| `lon` | in | longitude (decimal degrees) | - |
+| `lon0` | in | central meridian (decimal degrees) | - |
+| `lat_ts` | in | latitude of true scale (standard parallel) (decimal degrees) | - |
+| `ellipsoid` | in | reference ellipsoid | - |
 | `x` | out | easting | m |
 | `y` | out | northing | m |
-| `k` | out | point scale factor | — |
+| `k` | out | point scale factor | - |
 
 **Applies when:** |latitude| <= 89.5; |lat_ts| <= 85.
 
@@ -1699,10 +1927,10 @@ x = -14471.5338 m
 y = 6676757.754 m
 k = 1.603091339
   by: Mercator projection (ellipsoidal): coordinates and scale factor  (x = k0 a (lambda - lambda0), y = k0 a psi with the isometric latitude psi; k0 = cos(lat_ts)/sqrt(1 - e^2 sin^2 lat_ts))
-  lat = 51.5   []
-  lon = -0.13   []
-  lon0 = 0   []
-  lat_ts = 0   []
+  lat = 51.5
+  lon = -0.13
+  lon0 = 0
+  lat_ts = 0
   ellipsoid = WGS84
   assumes: |latitude| <= 89.5; |lat_ts| <= 85
 ```
@@ -1711,7 +1939,7 @@ k = 1.603091339
 
 <a id="geo_mollweide_forward"></a>
 
-#### Mollweide equal-area projection (sphere) — `geo_mollweide_forward`
+#### Mollweide equal-area projection (sphere): `geo_mollweide_forward`
 
 x and y of a point in the Mollweide (homalographic) equal-area projection of a sphere of radius R.
 
@@ -1721,9 +1949,9 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `lat` | in | latitude (decimal degrees) | — |
-| `lon` | in | longitude (decimal degrees) | — |
-| `lon0` | in | central meridian (decimal degrees) | — |
+| `lat` | in | latitude (decimal degrees) | - |
+| `lon` | in | longitude (decimal degrees) | - |
+| `lon0` | in | central meridian (decimal degrees) | - |
 | `R` | in | radius of the sphere | m |
 | `x` | out | x | m |
 | `y` | out | y | m |
@@ -1735,10 +1963,10 @@ $ geospatial-analytics solve geo_mollweide_forward lat=45 lon=90 lon0=0 "R=63710
 x = 7261188.135 m
 y = 5334269.291 m
   by: Mollweide equal-area projection (sphere)  (auxiliary angle theta from 2 theta + sin 2 theta = pi sin(phi) by Newton's method; x = (2 sqrt2/pi) R dlambda cos(theta), y = sqrt2 R sin(theta))
-  lat = 45   []
-  lon = 90   []
-  lon0 = 0   []
-  R = 6371000 m   []
+  lat = 45
+  lon = 90
+  lon0 = 0
+  R = 6371000 m
   assumes: sphere of radius R > 0
 ```
 
@@ -1746,7 +1974,7 @@ y = 5334269.291 m
 
 <a id="geo_orthographic_forward"></a>
 
-#### Orthographic projection (sphere) — `geo_orthographic_forward`
+#### Orthographic projection (sphere): `geo_orthographic_forward`
 
 x and y of a point in the orthographic projection (the view of a globe from infinitely far away) of a sphere of radius R centred on a point.
 
@@ -1756,10 +1984,10 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `lat` | in | latitude (decimal degrees) | — |
-| `lon` | in | longitude (decimal degrees) | — |
-| `lat0` | in | latitude of the centre (decimal degrees) | — |
-| `lon0` | in | longitude of the centre (decimal degrees) | — |
+| `lat` | in | latitude (decimal degrees) | - |
+| `lon` | in | longitude (decimal degrees) | - |
+| `lat0` | in | latitude of the centre (decimal degrees) | - |
+| `lon0` | in | longitude of the centre (decimal degrees) | - |
 | `R` | in | radius of the sphere | m |
 | `x` | out | x | m |
 | `y` | out | y | m |
@@ -1771,11 +1999,11 @@ $ geospatial-analytics solve geo_orthographic_forward lat=40 lon=10 lat0=45 lon0
 x = 847484.5736 m
 y = -502840.5978 m
   by: Orthographic projection (sphere)  (x = R cos(phi) sin(dlambda), y = R (cos(phi0) sin(phi) - sin(phi0) cos(phi) cos(dlambda)))
-  lat = 40   []
-  lon = 10   []
-  lat0 = 45   []
-  lon0 = 0   []
-  R = 6371000 m   []
+  lat = 40
+  lon = 10
+  lat0 = 45
+  lon0 = 0
+  R = 6371000 m
   assumes: the point on the visible hemisphere (cos c >= 0)
 ```
 
@@ -1783,7 +2011,7 @@ y = -502840.5978 m
 
 <a id="geo_polar_stereographic_forward"></a>
 
-#### Polar stereographic projection (standard parallel): coordinates and scale factor — `geo_polar_stereographic_forward`
+#### Polar stereographic projection (standard parallel): coordinates and scale factor, `geo_polar_stereographic_forward`
 
 Easting and northing of a point in the ellipsoidal polar stereographic projection defined by a latitude of true scale (EPSG variant B, as in EPSG:3413 and EPSG:3031), with the point scale factor.
 
@@ -1793,17 +2021,17 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `lat` | in | latitude (decimal degrees) | — |
-| `lon` | in | longitude (decimal degrees) | — |
-| `pole` | in | pole at the projection centre | — |
-| `lat_ts` | in | latitude of true scale (decimal degrees) | — |
-| `lon0` | in | longitude of the downward (north pole) or upward (south pole) y axis (decimal degrees) | — |
-| `ellipsoid` | in | reference ellipsoid | — |
+| `lat` | in | latitude (decimal degrees) | - |
+| `lon` | in | longitude (decimal degrees) | - |
+| `pole` | in | pole at the projection centre | - |
+| `lat_ts` | in | latitude of true scale (decimal degrees) | - |
+| `lon0` | in | longitude of the downward (north pole) or upward (south pole) y axis (decimal degrees) | - |
+| `ellipsoid` | in | reference ellipsoid | - |
 | `FE` | in | false easting (default 0) (optional) | m |
 | `FN` | in | false northing (default 0) (optional) | m |
 | `x` | out | easting | m |
 | `y` | out | northing | m |
-| `k` | out | point scale factor | — |
+| `k` | out | point scale factor | - |
 
 **Applies when:** the point in the pole's hemisphere (not at the pole); 30 <= |lat_ts| <= 89.99 in the same hemisphere.
 
@@ -1813,10 +2041,10 @@ x = 142401.9812 m
 y = -1627662.093 m
 k = 0.986664282
   by: Polar stereographic projection (standard parallel): coordinates and scale factor  (rho = a m_c t/t_c with t = exp(-psi); x = FE + rho sin(dlambda), y = FN -/+ rho cos(dlambda); k = rho/(a m))
-  lat = 75   []
-  lon = -40   []
-  lat_ts = 70   []
-  lon0 = -45   []
+  lat = 75
+  lon = -40
+  lat_ts = 70
+  lon0 = -45
   pole = north
   ellipsoid = WGS84
   assumes: the point in the pole's hemisphere (not at the pole); 30 <= |lat_ts| <= 89.99 in the same hemisphere
@@ -1826,7 +2054,7 @@ k = 0.986664282
 
 <a id="geo_sinusoidal_forward"></a>
 
-#### Sinusoidal equal-area projection (ellipsoidal) — `geo_sinusoidal_forward`
+#### Sinusoidal equal-area projection (ellipsoidal), `geo_sinusoidal_forward`
 
 x and y of a point in the ellipsoidal sinusoidal (Sanson-Flamsteed) equal-area projection, as used for MODIS land grids.
 
@@ -1836,10 +2064,10 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `lat` | in | latitude (decimal degrees) | — |
-| `lon` | in | longitude (decimal degrees) | — |
-| `lon0` | in | central meridian (decimal degrees) | — |
-| `ellipsoid` | in | reference ellipsoid | — |
+| `lat` | in | latitude (decimal degrees) | - |
+| `lon` | in | longitude (decimal degrees) | - |
+| `lon0` | in | central meridian (decimal degrees) | - |
+| `ellipsoid` | in | reference ellipsoid | - |
 | `x` | out | easting | m |
 | `y` | out | northing | m |
 
@@ -1850,9 +2078,9 @@ $ geospatial-analytics solve geo_sinusoidal_forward lat=45 lon=10 lon0=0 ellipso
 x = 788468.3509 m
 y = 4984944.378 m
   by: Sinusoidal equal-area projection (ellipsoidal)  (x = N cos(phi) (lambda - lambda0), y = meridian distance m(phi) (Helmert's series))
-  lat = 45   []
-  lon = 10   []
-  lon0 = 0   []
+  lat = 45
+  lon = 10
+  lon0 = 0
   ellipsoid = WGS84
   assumes: |latitude| <= 89.9
 ```
@@ -1861,7 +2089,7 @@ y = 4984944.378 m
 
 <a id="geo_tissot_indicatrix"></a>
 
-#### Tissot's indicatrix: scale factors and distortion of a projection at a point — `geo_tissot_indicatrix`
+#### Tissot's indicatrix: scale factors and distortion of a projection at a point, `geo_tissot_indicatrix`
 
 The meridian and parallel scale factors h and k, the angle between meridian and parallel, the semi-axes a and b of Tissot's indicatrix, the maximum angular distortion and the areal scale of a world projection of the sphere at a point.
 
@@ -1871,16 +2099,16 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `projection` | in | projection (spherical form, central meridian 0) | — |
-| `lat` | in | latitude (decimal degrees) | — |
-| `lon` | in | longitude measured from the central meridian (decimal degrees) | — |
-| `h` | out | scale factor along the meridian | — |
-| `k` | out | scale factor along the parallel | — |
-| `theta_prime` | out | angle between the projected meridian and parallel (degrees, at most 90) | — |
-| `a` | out | maximum scale factor (semi-major axis) | — |
-| `b` | out | minimum scale factor (semi-minor axis) | — |
-| `omega` | out | maximum angular distortion (degrees) | — |
-| `s` | out | areal scale factor | — |
+| `projection` | in | projection (spherical form, central meridian 0) | - |
+| `lat` | in | latitude (decimal degrees) | - |
+| `lon` | in | longitude measured from the central meridian (decimal degrees) | - |
+| `h` | out | scale factor along the meridian | - |
+| `k` | out | scale factor along the parallel | - |
+| `theta_prime` | out | angle between the projected meridian and parallel (degrees, at most 90) | - |
+| `a` | out | maximum scale factor (semi-major axis) | - |
+| `b` | out | minimum scale factor (semi-minor axis) | - |
+| `omega` | out | maximum angular distortion (degrees) | - |
+| `s` | out | areal scale factor | - |
 
 **Applies when:** |latitude| <= 80.
 
@@ -1894,8 +2122,8 @@ b = 2
 omega = 0
 s = 4
   by: Tissot's indicatrix: scale factors and distortion of a projection at a point  (partial derivatives of the projection: h = |d(x,y)/dphi|, k = |d(x,y)/dlambda|/cos(phi), sin(theta') from their cross product; a' = sqrt(h^2+k^2+2hk sin theta'), b' = sqrt(h^2+k^2-2hk sin theta'), a = (a'+b')/2, b = (a'-b')/2, omega = 2 asin((a-b)/(a+b)), s = hk sin theta')
-  lat = 60   []
-  lon = 0   []
+  lat = 60
+  lon = 0
   projection = mercator
   assumes: |latitude| <= 80
 ```
@@ -1904,7 +2132,7 @@ s = 4
 
 <a id="geo_transverse_mercator_forward"></a>
 
-#### Transverse Mercator projection: coordinates, scale factor and grid convergence — `geo_transverse_mercator_forward`
+#### Transverse Mercator projection: coordinates, scale factor and grid convergence, `geo_transverse_mercator_forward`
 
 Easting and northing of a point in a transverse Mercator projection with a given origin, central-meridian scale factor and false origin on the WGS84 or GRS80 ellipsoid, with the point scale factor and the grid convergence.
 
@@ -1914,18 +2142,18 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `lat` | in | latitude (decimal degrees) | — |
-| `lon` | in | longitude (decimal degrees) | — |
-| `lat0` | in | latitude of origin (decimal degrees) | — |
-| `lon0` | in | central meridian (decimal degrees) | — |
-| `k0` | in | scale factor on the central meridian | — |
-| `ellipsoid` | in | reference ellipsoid | — |
+| `lat` | in | latitude (decimal degrees) | - |
+| `lon` | in | longitude (decimal degrees) | - |
+| `lat0` | in | latitude of origin (decimal degrees) | - |
+| `lon0` | in | central meridian (decimal degrees) | - |
+| `k0` | in | scale factor on the central meridian | - |
+| `ellipsoid` | in | reference ellipsoid | - |
 | `FE` | in | false easting (default 0) (optional) | m |
 | `FN` | in | false northing (default 0) (optional) | m |
 | `x` | out | easting | m |
 | `y` | out | northing | m |
-| `k` | out | point scale factor | — |
-| `gamma` | out | grid convergence (degrees, positive east of the central meridian in the north) | — |
+| `k` | out | point scale factor | - |
+| `gamma` | out | grid convergence (degrees, positive east of the central meridian in the north) | - |
 
 **Applies when:** within 10 degrees of longitude of the central meridian; latitude within 89 degrees of the equator.
 
@@ -1936,13 +2164,13 @@ y = 5817855.241 m
 k = 0.9997447935
 gamma = -1.269488544
   by: Transverse Mercator projection: coordinates, scale factor and grid convergence  (Krueger's series to sixth order in the third flattening (conformal latitude, then the Gauss-Krueger sums); scale and convergence from the series' derivatives (Karney 2011))
-  lat = 52.5   []
-  lon = 13.4   []
-  lat0 = 0   []
-  lon0 = 15   []
-  k0 = 0.9996   []
-  FE = 500000 m   []
-  FN = 0 m   []
+  lat = 52.5
+  lon = 13.4
+  lat0 = 0
+  lon0 = 15
+  k0 = 0.9996
+  FE = 500000 m
+  FN = 0 m
   ellipsoid = GRS80
   assumes: within 10 degrees of longitude of the central meridian; latitude within 89 degrees of the equator
 ```
@@ -1951,7 +2179,7 @@ gamma = -1.269488544
 
 <a id="geo_utm_inverse"></a>
 
-#### UTM coordinates to latitude and longitude — `geo_utm_inverse`
+#### UTM coordinates to latitude and longitude: `geo_utm_inverse`
 
 Latitude and longitude on the WGS84 or GRS80 ellipsoid of a point given by its UTM easting, northing, zone and hemisphere.
 
@@ -1963,11 +2191,11 @@ $$
 |---|---|---|---|
 | `easting` | in | UTM easting | m |
 | `northing` | in | UTM northing | m |
-| `zone` | in | UTM zone number | — |
-| `hemisphere` | in | hemisphere of the zone (N: false northing 0; S: false northing 10000 km) | — |
-| `ellipsoid` | in | reference ellipsoid | — |
-| `lat` | out | latitude (degrees) | — |
-| `lon` | out | longitude (degrees) | — |
+| `zone` | in | UTM zone number | - |
+| `hemisphere` | in | hemisphere of the zone (N: false northing 0; S: false northing 10000 km) | - |
+| `ellipsoid` | in | reference ellipsoid | - |
+| `lat` | out | latitude (degrees) | - |
+| `lon` | out | longitude (degrees) | - |
 
 **Applies when:** 100 km <= easting <= 900 km; 0 <= northing <= 10000 km.
 
@@ -1976,10 +2204,10 @@ $ geospatial-analytics solve geo_utm_inverse "easting=699316 m" "northing=571016
 lat = 51.50740226
 lon = -0.1278032352
   by: UTM coordinates to latitude and longitude  (inverse Krueger series to the conformal latitude, then Newton iteration for the geodetic latitude)
-  easting = 699316 m   []
-  northing = 5710164 m   []
-  ellipsoid = WGS84
+  easting = 699316 m
+  northing = 5710164 m
   hemisphere = N
+  ellipsoid = WGS84
   assumes: 100 km <= easting <= 900 km; 0 <= northing <= 10000 km
 ```
 
@@ -1987,7 +2215,7 @@ lon = -0.1278032352
 
 <a id="geo_web_mercator_inverse"></a>
 
-#### Web Mercator (EPSG:3857) to latitude and longitude — `geo_web_mercator_inverse`
+#### Web Mercator (EPSG:3857) to latitude and longitude, `geo_web_mercator_inverse`
 
 WGS84 latitude and longitude of a point given by its Web Mercator (pseudo-Mercator) x and y.
 
@@ -1999,8 +2227,8 @@ $$
 |---|---|---|---|
 | `x` | in | Web Mercator x | m |
 | `y` | in | Web Mercator y | m |
-| `lat` | out | latitude (degrees) | — |
-| `lon` | out | longitude (degrees) | — |
+| `lat` | out | latitude (degrees) | - |
+| `lon` | out | longitude (degrees) | - |
 
 **Applies when:** inside the web-map square.
 
@@ -2009,8 +2237,8 @@ $ geospatial-analytics solve geo_web_mercator_inverse "x=-14471.5 m" "y=6710219.
 lat = 51.50000009
 lon = -0.1299996963
   by: Web Mercator (EPSG:3857) to latitude and longitude  (inverse spherical Mercator: lat = atan(sinh(y/R)), lon = x/R)
-  x = -14471.5 m   []
-  y = 6710219.1 m   []
+  x = -14471.5 m
+  y = 6710219.1 m
   assumes: inside the web-map square
 ```
 
@@ -2018,7 +2246,7 @@ lon = -0.1299996963
 
 <a id="geo_web_map_tile"></a>
 
-#### Web-map tile (slippy map / XYZ) and quadkey containing a point — `geo_web_map_tile`
+#### Web-map tile (slippy map / XYZ) and quadkey containing a point, `geo_web_map_tile`
 
 The x and y indices of the web-map (XYZ / slippy map) tile containing a WGS84 point at a zoom level, and the tile's quadkey.
 
@@ -2028,12 +2256,12 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `lat` | in | latitude (decimal degrees) | — |
-| `lon` | in | longitude (decimal degrees) | — |
-| `zoom` | in | zoom level (0-24) | — |
-| `tile_x` | out | tile column (from 180 W) | — |
-| `tile_y` | out | tile row (from the north edge) | — |
-| `quadkey` | out | quadkey of the tile | — |
+| `lat` | in | latitude (decimal degrees) | - |
+| `lon` | in | longitude (decimal degrees) | - |
+| `zoom` | in | zoom level (0-24) | - |
+| `tile_x` | out | tile column (from 180 W) | - |
+| `tile_y` | out | tile row (from the north edge) | - |
+| `quadkey` | out | quadkey of the tile | - |
 
 **Applies when:** |latitude| <= 85.0511; zoom 0-24.
 
@@ -2043,8 +2271,8 @@ tile_x = 2046
 tile_y = 1362
 quadkey = 031313131130
   by: Web-map tile (slippy map / XYZ) and quadkey containing a point  (Web Mercator fractions x = (lon + 180)/360, y = 1/2 - asinh(tan lat)/(2 pi), scaled by 2^zoom and floored; quadkey digits interleave the bits of x and y)
-  lat = 51.5   []
-  lon = -0.13   []
+  lat = 51.5
+  lon = -0.13
   assumes: |latitude| <= 85.0511; zoom 0-24
 ```
 
@@ -2054,7 +2282,7 @@ quadkey = 031313131130
 
 <a id="geo_gravity_accessibility"></a>
 
-#### Gravity-based (Hansen) accessibility on a road network — `geo_gravity_accessibility`
+#### Gravity-based (Hansen) accessibility on a road network, `geo_gravity_accessibility`
 
 The Hansen gravity accessibility of every node of a network: the sum of the opportunities (jobs, services) at the other nodes discounted by a power or negative-exponential function of the shortest-path distance.
 
@@ -2064,21 +2292,28 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `edges` | in | undirected network as weighted edges between nodes numbered 0 .. n-1 | — |
-| `opportunities` | in | opportunities at nodes 0 .. n-1 | — |
-| `beta` | in | distance-decay parameter | — |
-| `impedance` | in | impedance function d^-beta or exp(-beta d) | — |
-| `accessibility` | out | accessibility of each node | — |
+| `edges` | in | undirected network as weighted edges between nodes numbered 0 .. n-1 | - |
+| `opportunities` | in | opportunities at nodes 0 .. n-1 | - |
+| `beta` | in | distance-decay parameter | - |
+| `impedance` | in | impedance function d^-beta or exp(-beta d) | - |
+| `accessibility` | out | accessibility of each node | - |
 
 **Applies when:** positive edge lengths; a node's own opportunities are excluded; unreachable nodes contribute 0.
 
-*Not in `geospatial-analytics` 1.1.0 yet:* use the Python package or the model's page in the browser.
+```shell
+$ geospatial-analytics solve geo_gravity_accessibility "edges=0-1 2; 1-2 3; 0-2 6; 2-3 1" "opportunities=100, 50, 80, 20" beta=1 impedance=power
+accessibility = [44.3333333333,81.6666666667,56.6666666667,109.166666667]
+  by: Gravity-based (Hansen) accessibility on a road network  (Dijkstra shortest paths from every node; A_i = sum_{j != i} O_j f(d_ij))
+  beta = 1
+  impedance = power
+  assumes: positive edge lengths; a node's own opportunities are excluded; unreachable nodes contribute 0
+```
 
 **What the worked example means:** This calculation determines the Hansen gravity accessibility for each node in the road network. It computes the shortest path distance from every origin to all other nodes using Dijkstra's algorithm, then sums the opportunities at destination nodes discounted by an impedance function based on that distance and the decay parameter beta. The resulting value, [44.3333, 81.6667, 56.6667, 109.167], represents the total accessible potential from a given location, where closer destinations with higher opportunity counts contribute more significantly to the score than distant or sparse ones.
 
 <a id="geo_network_connectivity_indices"></a>
 
-#### Network connectivity indices: cyclomatic number, alpha, beta and gamma — `geo_network_connectivity_indices`
+#### Network connectivity indices: cyclomatic number, alpha, beta and gamma, `geo_network_connectivity_indices`
 
 The graph-theoretic connectivity measures of a (planar) transport network: vertices, edges, components, cyclomatic number and Kansky's alpha, beta and gamma indices.
 
@@ -2088,24 +2323,35 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `edges` | in | network edges between nodes numbered from 0 (lengths, if given, are ignored) | — |
-| `vertices` | out | number of vertices v | — |
-| `edges` | out | number of distinct edges e | — |
-| `components` | out | connected components p | — |
-| `cyclomatic` | out | cyclomatic number e - v + p | — |
-| `alpha` | out | (e - v + p)/(2v - 5) | — |
-| `beta` | out | e / v | — |
-| `gamma` | out | e / (3(v - 2)) | — |
+| `edges` | in | network edges between nodes numbered from 0 (lengths, if given, are ignored) | - |
+| `vertices` | out | number of vertices v | - |
+| `edges` | out | number of distinct edges e | - |
+| `components` | out | connected components p | - |
+| `cyclomatic` | out | cyclomatic number e - v + p | - |
+| `alpha` | out | (e - v + p)/(2v - 5) | - |
+| `beta` | out | e / v | - |
+| `gamma` | out | e / (3(v - 2)) | - |
 
 **Applies when:** at least 3 vertices; planar formulas for alpha and gamma.
 
-*Not in `geospatial-analytics` 1.1.0 yet:* use the Python package or the model's page in the browser.
+```shell
+$ geospatial-analytics solve geo_network_connectivity_indices "edges=0-1, 1-2, 2-3, 3-0, 0-2"
+vertices = 4
+edges = 5
+components = 1
+cyclomatic = 2
+alpha = 0.6666666667
+beta = 1.25
+gamma = 0.8333333333
+  by: Network connectivity indices: cyclomatic number, alpha, beta and gamma  (count vertices and distinct edges; components by union-find)
+  assumes: at least 3 vertices; planar formulas for alpha and gamma
+```
 
 **What the worked example means:** This calculation determines the structural connectivity of the transport network by counting distinct nodes and links. The result shows there are 4 vertices and 5 edges distributed across 1 connected components. These values allow for the computation of Kansky's indices, specifically an alpha index of 0.666667, a beta index of 1.25, and a gamma index of 0.833333, which together describe the network's complexity and loopiness.
 
 <a id="geo_detour_index"></a>
 
-#### Network detour index (circuity) between two nodes — `geo_detour_index`
+#### Network detour index (circuity) between two nodes, `geo_detour_index`
 
 The shortest network distance between two nodes of a street network (edge lengths from the node coordinates), the straight-line distance and their ratio, the detour index or circuity.
 
@@ -2115,23 +2361,32 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `coords` | in | x and y of nodes 0 .. n-1 (n x 2, projected coordinates) | — |
-| `edges` | in | street segments between nodes (lengths are computed from the coordinates) | — |
-| `origin` | in | origin node | — |
-| `destination` | in | destination node | — |
-| `network_distance` | out | shortest network distance | — |
-| `euclidean_distance` | out | straight-line distance | — |
-| `detour_index` | out | network / straight-line distance (>= 1) | — |
+| `coords` | in | x and y of nodes 0 .. n-1 (n x 2, projected coordinates) | - |
+| `edges` | in | street segments between nodes (lengths are computed from the coordinates) | - |
+| `origin` | in | origin node | - |
+| `destination` | in | destination node | - |
+| `network_distance` | out | shortest network distance | - |
+| `euclidean_distance` | out | straight-line distance | - |
+| `detour_index` | out | network / straight-line distance (>= 1) | - |
 
 **Applies when:** straight edges between the node coordinates; destination reachable.
 
-*Not in `geospatial-analytics` 1.1.0 yet:* use the Python package or the model's page in the browser.
+```shell
+$ geospatial-analytics solve geo_detour_index "coords=[[0, 0], [3, 0], [3, 4], [0, 4]]" "edges=0-1, 1-2, 2-3" origin=0 destination=2
+network_distance = 7
+euclidean_distance = 5
+detour_index = 1.4
+  by: Network detour index (circuity) between two nodes  (Euclidean edge lengths, Dijkstra, ratio to the straight-line distance)
+  origin = 0
+  destination = 2
+  assumes: straight edges between the node coordinates; destination reachable
+```
 
 **What the worked example means:** This calculation determines the circuity between two nodes by comparing the shortest path along the street network to the direct Euclidean distance. The resulting ratio, known as the detour index, indicates how much longer the actual travel route is compared to a theoretical straight line. A value of 1.4 suggests that traveling from the origin to the destination requires covering 7 instead of the direct 5.
 
 <a id="geo_service_area"></a>
 
-#### Network service area (isochrone) of a facility — `geo_service_area`
+#### Network service area (isochrone) of a facility, `geo_service_area`
 
 The nodes of a road network within a travel-cost cutoff of a facility (the service area or isochrone), their number and the largest distance reached.
 
@@ -2141,22 +2396,31 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `edges` | in | undirected network as weighted edges between nodes numbered 0 .. n-1 | — |
-| `source` | in | facility node | — |
-| `cutoff` | in | maximum network distance or travel time | — |
-| `reachable` | out | nodes within the cutoff (ascending) | — |
-| `count` | out | number of nodes reached (the facility included) | — |
-| `farthest` | out | largest network distance within the cutoff | — |
+| `edges` | in | undirected network as weighted edges between nodes numbered 0 .. n-1 | - |
+| `source` | in | facility node | - |
+| `cutoff` | in | maximum network distance or travel time | - |
+| `reachable` | out | nodes within the cutoff (ascending) | - |
+| `count` | out | number of nodes reached (the facility included) | - |
+| `farthest` | out | largest network distance within the cutoff | - |
 
 **Applies when:** positive edge costs; distance <= cutoff counts as reached.
 
-*Not in `geospatial-analytics` 1.1.0 yet:* use the Python package or the model's page in the browser.
+```shell
+$ geospatial-analytics solve geo_service_area "edges=0-1 2; 1-2 3; 0-2 6; 2-3 1; 3-4 4" source=0 cutoff=6
+reachable = [0.0,1.0,2.0,3.0]
+count = 4
+farthest = 6
+  by: Network service area (isochrone) of a facility  (Dijkstra from the facility, keeping the nodes with distance <= cutoff)
+  source = 0
+  cutoff = 6
+  assumes: positive edge costs; distance <= cutoff counts as reached
+```
 
 **What the worked example means:** This calculation determines the network service area by finding all nodes reachable from the facility within the specified cutoff. Starting from the source node, distances are computed along the edges until the limit is exceeded. The result shows that 4 distinct locations fall within this boundary, and the maximum distance covered by any reachable node is 6. This defines the operational reach of the facility based on current network conditions.
 
 <a id="geo_shimbel_index"></a>
 
-#### Shimbel accessibility index of every node — `geo_shimbel_index`
+#### Shimbel accessibility index of every node: `geo_shimbel_index`
 
 The Shimbel (total shortest-path distance) index of every node of a connected network, the network total (dispersion) and the most accessible node (smallest index).
 
@@ -2166,20 +2430,27 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `edges` | in | undirected network as weighted edges between nodes numbered 0 .. n-1 | — |
-| `shimbel` | out | sum of shortest-path distances from each node | — |
-| `total` | out | network dispersion (sum over all nodes) | — |
-| `most_accessible` | out | node with the smallest Shimbel index (lowest number on ties) | — |
+| `edges` | in | undirected network as weighted edges between nodes numbered 0 .. n-1 | - |
+| `shimbel` | out | sum of shortest-path distances from each node | - |
+| `total` | out | network dispersion (sum over all nodes) | - |
+| `most_accessible` | out | node with the smallest Shimbel index (lowest number on ties) | - |
 
 **Applies when:** connected network with nodes 0 .. n-1.
 
-*Not in `geospatial-analytics` 1.1.0 yet:* use the Python package or the model's page in the browser.
+```shell
+$ geospatial-analytics solve geo_shimbel_index "edges=0-1 2; 1-2 3; 0-2 6; 2-3 1"
+shimbel = [13.0,9.0,9.0,11.0]
+total = 42
+most_accessible = 1
+  by: Shimbel accessibility index of every node  (all-pairs Dijkstra; row sums of the distance matrix)
+  assumes: connected network with nodes 0 .. n-1
+```
 
 **What the worked example means:** This calculation determines the Shimbel accessibility index, which represents the sum of the shortest path distances from every node to all other nodes in the connected network. The resulting indices are [13, 9, 9, 11], indicating how far each location is from the rest of the system. The node with the lowest value, identified as 1, is considered the most central or accessible point. Additionally, the sum of these individual indices yields the total network dispersion, calculated here as 42, which reflects the overall spread and efficiency of connections within the graph.
 
 <a id="geo_two_step_floating_catchment"></a>
 
-#### Two-step floating catchment area (2SFCA) accessibility — `geo_two_step_floating_catchment`
+#### Two-step floating catchment area (2SFCA) accessibility, `geo_two_step_floating_catchment`
 
 The 2SFCA spatial accessibility of every node to services (doctors, schools): supply-to-population ratios within each site's catchment, summed over the sites within reach of each node.
 
@@ -2189,17 +2460,24 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `edges` | in | undirected network as weighted edges between nodes numbered 0 .. n-1 | — |
-| `population` | in | population at nodes 0 .. n-1 | — |
-| `supply_nodes` | in | nodes with a service site | — |
-| `capacity` | in | capacity of each site (e.g. physicians) | — |
-| `threshold` | in | catchment threshold (network distance) | — |
-| `accessibility` | out | accessibility of each node (supply per person) | — |
-| `ratios` | out | supply-to-population ratio of each site | — |
+| `edges` | in | undirected network as weighted edges between nodes numbered 0 .. n-1 | - |
+| `population` | in | population at nodes 0 .. n-1 | - |
+| `supply_nodes` | in | nodes with a service site | - |
+| `capacity` | in | capacity of each site (e.g. physicians) | - |
+| `threshold` | in | catchment threshold (network distance) | - |
+| `accessibility` | out | accessibility of each node (supply per person) | - |
+| `ratios` | out | supply-to-population ratio of each site | - |
 
 **Applies when:** a catchment includes nodes at network distance <= threshold; a site with no population in reach has ratio 0.
 
-*Not in `geospatial-analytics` 1.1.0 yet:* use the Python package or the model's page in the browser.
+```shell
+$ geospatial-analytics solve geo_two_step_floating_catchment "edges=0-1 2; 1-2 3; 0-2 6; 2-3 1" "population=1000, 500, 800, 200" "supply_nodes=1, 3" "capacity=5, 2" threshold=3
+accessibility = [0.00217391304348,0.00217391304348,0.00417391304348,0.002]
+ratios = [0.00217391304348,0.002]
+  by: Two-step floating catchment area (2SFCA) accessibility  (step 1: R_j = S_j / sum of population within d0 of j; step 2: A_i = sum of R_j over sites within d0 of i (Luo and Wang 2003))
+  threshold = 3
+  assumes: a catchment includes nodes at network distance <= threshold; a site with no population in reach has ratio 0
+```
 
 **What the worked example means:** This method computes spatial accessibility by first determining the supply-to-population ratio for each service site, shown here as [0.00217391, 0.002], based on the capacity of [5, 2] and the surrounding population. It then sums these ratios for all sites within the threshold distance of 3 to produce the final accessibility value of [0.00217391, 0.00217391, 0.00417391, 0.002] for each node. This result indicates how many units of service are available per person at that location, considering both local demand and nearby supply.
 
@@ -2207,7 +2485,7 @@ $$
 
 <a id="geo_discrete_frechet_distance"></a>
 
-#### Discrete Frechet distance between two polylines — `geo_discrete_frechet_distance`
+#### Discrete Frechet distance between two polylines, `geo_discrete_frechet_distance`
 
 The discrete Frechet ('dog-walking') distance between two polylines (GPS tracks, routes) measured over their vertices.
 
@@ -2217,11 +2495,11 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `x1` | in | x coordinates of the first line | — |
-| `y1` | in | y coordinates of the first line | — |
-| `x2` | in | x coordinates of the second line | — |
-| `y2` | in | y coordinates of the second line | — |
-| `distance` | out | discrete Frechet distance (coordinate units) | — |
+| `x1` | in | x coordinates of the first line | - |
+| `y1` | in | y coordinates of the first line | - |
+| `x2` | in | x coordinates of the second line | - |
+| `y2` | in | y coordinates of the second line | - |
+| `distance` | out | discrete Frechet distance (coordinate units) | - |
 
 **Applies when:** at least 2 vertices per line.
 
@@ -2236,7 +2514,7 @@ distance = 1.414213562
 
 <a id="geo_douglas_peucker_simplification"></a>
 
-#### Douglas-Peucker line simplification — `geo_douglas_peucker_simplification`
+#### Douglas-Peucker line simplification: `geo_douglas_peucker_simplification`
 
 The vertices of a polyline kept by the Ramer-Douglas-Peucker simplification at a distance tolerance (indices from 0).
 
@@ -2246,11 +2524,11 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `x` | in | x coordinates of the vertices in order | — |
-| `y` | in | y coordinates of the vertices | — |
-| `tolerance` | in | distance tolerance (same unit as the coordinates) | — |
-| `kept` | out | indices of the kept vertices (from 0, in order) | — |
-| `n_kept` | out | number of kept vertices | — |
+| `x` | in | x coordinates of the vertices in order | - |
+| `y` | in | y coordinates of the vertices | - |
+| `tolerance` | in | distance tolerance (same unit as the coordinates) | - |
+| `kept` | out | indices of the kept vertices (from 0, in order) | - |
+| `n_kept` | out | number of kept vertices | - |
 
 **Applies when:** distinct vertices; tolerance > 0.
 
@@ -2259,7 +2537,7 @@ $ geospatial-analytics solve geo_douglas_peucker_simplification "x=[0, 1, 2, 3, 
 kept = [0.0,2.0,3.0,7.0]
 n_kept = 4
   by: Douglas-Peucker line simplification  (recursive: keep the vertex farthest from the segment joining the ends of a run if its distance exceeds the tolerance, then split there)
-  tolerance = 1   []
+  tolerance = 1
   assumes: distinct vertices; tolerance > 0
 ```
 
@@ -2267,7 +2545,7 @@ n_kept = 4
 
 <a id="geo_polygon_compactness"></a>
 
-#### Shape compactness indices of a polygon (Polsby-Popper, Schwartzberg, convex hull, Reock) — `geo_polygon_compactness`
+#### Shape compactness indices of a polygon (Polsby-Popper, Schwartzberg, convex hull, Reock), `geo_polygon_compactness`
 
 Area, perimeter and the standard compactness measures of a polygon in projected coordinates (used for districts and land parcels): Polsby-Popper, Schwartzberg, convex-hull ratio and Reock.
 
@@ -2277,14 +2555,14 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `x` | in | x coordinates of the vertices in order (not repeating the first) | — |
-| `y` | in | y coordinates of the vertices | — |
-| `area` | out | area (square coordinate units) | — |
-| `perimeter` | out | perimeter (coordinate units) | — |
-| `polsby_popper` | out | 4 pi A / P^2 | — |
-| `schwartzberg` | out | P / (2 sqrt(pi A)) | — |
-| `convex_hull_ratio` | out | area / convex hull area | — |
-| `reock` | out | area / area of the minimum enclosing circle | — |
+| `x` | in | x coordinates of the vertices in order (not repeating the first) | - |
+| `y` | in | y coordinates of the vertices | - |
+| `area` | out | area (square coordinate units) | - |
+| `perimeter` | out | perimeter (coordinate units) | - |
+| `polsby_popper` | out | 4 pi A / P^2 | - |
+| `schwartzberg` | out | P / (2 sqrt(pi A)) | - |
+| `convex_hull_ratio` | out | area / convex hull area | - |
+| `reock` | out | area / area of the minimum enclosing circle | - |
 
 **Applies when:** a simple polygon with distinct vertices.
 
@@ -2306,7 +2584,7 @@ reock = 0.6111549815
 
 <a id="geo_kernel_density"></a>
 
-#### Kernel density estimate of a point pattern at a location — `geo_kernel_density`
+#### Kernel density estimate of a point pattern at a location, `geo_kernel_density`
 
 The two-dimensional kernel density (per unit area, integrating to 1) and the intensity (events per unit area) of a point pattern at a location, with a stated kernel and bandwidth.
 
@@ -2316,14 +2594,14 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `x` | in | x coordinates of the events | — |
-| `y` | in | y coordinates of the events | — |
-| `px` | in | x of the location | — |
-| `py` | in | y of the location | — |
-| `bandwidth` | in | bandwidth h (coordinate units) | — |
-| `kernel` | in | kernel (gaussian with sd h; epanechnikov and uniform with radius h) | — |
-| `density` | out | density (per square coordinate unit, integrates to 1) | — |
-| `intensity` | out | intensity = n x density (events per square unit) | — |
+| `x` | in | x coordinates of the events | - |
+| `y` | in | y coordinates of the events | - |
+| `px` | in | x of the location | - |
+| `py` | in | y of the location | - |
+| `bandwidth` | in | bandwidth h (coordinate units) | - |
+| `kernel` | in | kernel (gaussian with sd h; epanechnikov and uniform with radius h) | - |
+| `density` | out | density (per square coordinate unit, integrates to 1) | - |
+| `intensity` | out | intensity = n x density (events per square unit) | - |
 
 **Applies when:** bandwidth > 0.
 
@@ -2332,9 +2610,9 @@ $ geospatial-analytics solve geo_kernel_density "x=[0, 1, 2, 5]" "y=[0, 1, 0, 5]
 density = 0.02676479928
 intensity = 0.1070591971
   by: Kernel density estimate of a point pattern at a location  (f(p) = (1/n) sum K_h(|p - x_i|) with 2-D normalized kernels: gaussian exp(-u^2/2)/(2 pi h^2), epanechnikov 2(1 - u^2)/(pi h^2), uniform 1/(pi h^2) for u = d/h < 1)
-  px = 1   []
-  py = 0.5   []
-  bandwidth = 2   []
+  px = 1
+  py = 0.5
+  bandwidth = 2
   kernel = gaussian
   assumes: bandwidth > 0
 ```
@@ -2343,7 +2621,7 @@ intensity = 0.1070591971
 
 <a id="geo_mean_center_standard_distance"></a>
 
-#### Mean centre and standard distance of a point pattern — `geo_mean_center_standard_distance`
+#### Mean centre and standard distance of a point pattern, `geo_mean_center_standard_distance`
 
 The mean centre of a set of points and the standard distance (root-mean-square distance from the mean centre).
 
@@ -2353,11 +2631,11 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `x` | in | x coordinates | — |
-| `y` | in | y coordinates | — |
-| `mean_x` | out | x of the mean centre | — |
-| `mean_y` | out | y of the mean centre | — |
-| `std_distance` | out | standard distance | — |
+| `x` | in | x coordinates | - |
+| `y` | in | y coordinates | - |
+| `mean_x` | out | x of the mean centre | - |
+| `mean_y` | out | y of the mean centre | - |
+| `std_distance` | out | standard distance | - |
 
 **Applies when:** population form (divide by n).
 
@@ -2374,7 +2652,7 @@ std_distance = 2.5
 
 <a id="geo_nearest_neighbour_index"></a>
 
-#### Nearest-neighbour index (Clark-Evans ratio) of a point pattern — `geo_nearest_neighbour_index`
+#### Nearest-neighbour index (Clark-Evans ratio) of a point pattern, `geo_nearest_neighbour_index`
 
 The mean observed nearest-neighbour distance of a point pattern, the mean expected under complete spatial randomness in a study area, their ratio R (R < 1 clustered, R > 1 dispersed), the z-score and two-sided p-value.
 
@@ -2384,14 +2662,14 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `x` | in | x coordinates of the points | — |
-| `y` | in | y coordinates of the points | — |
-| `area` | in | area of the study region (square coordinate units) | — |
-| `d_obs` | out | mean observed nearest-neighbour distance | — |
-| `d_exp` | out | expected mean distance 0.5/sqrt(n/A) | — |
-| `R` | out | nearest-neighbour index d_obs/d_exp | — |
-| `z` | out | z-score | — |
-| `p_value` | out | two-sided p-value | — |
+| `x` | in | x coordinates of the points | - |
+| `y` | in | y coordinates of the points | - |
+| `area` | in | area of the study region (square coordinate units) | - |
+| `d_obs` | out | mean observed nearest-neighbour distance | - |
+| `d_exp` | out | expected mean distance 0.5/sqrt(n/A) | - |
+| `R` | out | nearest-neighbour index d_obs/d_exp | - |
+| `z` | out | z-score | - |
+| `p_value` | out | two-sided p-value | - |
 
 **Applies when:** distinct points; no edge correction.
 
@@ -2403,7 +2681,7 @@ R = 0.8854377448
 z = -0.4900692343
 p_value = 0.6240849077
   by: Nearest-neighbour index (Clark-Evans ratio) of a point pattern  (mean of each point's distance to its nearest neighbour; Clark-Evans expectation 0.5/sqrt(density) and standard error 0.26136/sqrt(n^2/A))
-  area = 100   []
+  area = 100
   assumes: distinct points; no edge correction
 ```
 
@@ -2411,7 +2689,7 @@ p_value = 0.6240849077
 
 <a id="geo_quadrat_test"></a>
 
-#### Quadrat analysis: chi-square test of complete spatial randomness — `geo_quadrat_test`
+#### Quadrat analysis: chi-square test of complete spatial randomness, `geo_quadrat_test`
 
 Counts of points in an nx x ny grid of quadrats over the bounding rectangle of a point pattern, the chi-square statistic against complete spatial randomness, its p-value and the variance-to-mean ratio.
 
@@ -2421,25 +2699,34 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `x` | in | x coordinates of the points | — |
-| `y` | in | y coordinates of the points | — |
-| `nx` | in | number of quadrat columns | — |
-| `ny` | in | number of quadrat rows | — |
-| `chi2` | out | chi-square statistic | — |
-| `df` | out | degrees of freedom (cells - 1) | — |
-| `p_value` | out | upper-tail p-value | — |
-| `vmr` | out | variance-to-mean ratio of the counts (chi2/df) | — |
-| `counts` | out | count of each quadrat, row by row from the south-west | — |
+| `x` | in | x coordinates of the points | - |
+| `y` | in | y coordinates of the points | - |
+| `nx` | in | number of quadrat columns | - |
+| `ny` | in | number of quadrat rows | - |
+| `chi2` | out | chi-square statistic | - |
+| `df` | out | degrees of freedom (cells - 1) | - |
+| `p_value` | out | upper-tail p-value | - |
+| `vmr` | out | variance-to-mean ratio of the counts (chi2/df) | - |
+| `counts` | out | count of each quadrat, row by row from the south-west | - |
 
 **Applies when:** the window is the bounding rectangle of the points; cells include their west and south edges; the last column and row include the east and north edges.
 
-*Not in `geospatial-analytics` 1.1.0 yet:* use the Python package or the model's page in the browser.
+```shell
+$ geospatial-analytics solve geo_quadrat_test "x=[1, 2, 3, 8, 9, 2, 1, 7, 8, 9]" "y=[1, 1, 2, 8, 9, 8, 9, 1, 2, 1]" nx=2 ny=2
+chi2 = 0.4
+df = 3
+p_value = 0.9402424948
+vmr = 0.1333333333
+counts = [3.0,3.0,2.0,2.0]
+  by: Quadrat analysis: chi-square test of complete spatial randomness  (equal-size cells over the bounding box; chi2 = sum (O - E)^2 / E with E = n/cells; p from the chi-square upper tail (regularized incomplete gamma))
+  assumes: the window is the bounding rectangle of the points; cells include their west and south edges; the last column and row include the east and north edges
+```
 
 **What the worked example means:** This analysis divides the bounding rectangle into a grid of equal-sized cells and counts the points in each quadrat. The expected count per cell is derived from the total number of points divided by the number of cells. By comparing observed counts to this uniform expectation, the method calculates a chi-square statistic of 0.4 based on 2 columns and 2 rows. A p-value of 0.940242 indicates the probability that such deviation would occur by chance if the points were randomly distributed. The variance-to-mean ratio of 0.133333 further characterizes the dispersion, where values near one suggest randomness, greater than one indicate clustering, and less than one suggest regularity.
 
 <a id="geo_ripley_k"></a>
 
-#### Ripley's K and L functions of a point pattern — `geo_ripley_k`
+#### Ripley's K and L functions of a point pattern, `geo_ripley_k`
 
 Ripley's K function and its variance-stabilized L function at given distances for a point pattern, without edge correction, in the bounding rectangle of the points.
 
@@ -2449,12 +2736,12 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `x` | in | x coordinates of the points | — |
-| `y` | in | y coordinates of the points | — |
-| `d` | in | distances at which to evaluate K | — |
-| `K` | out | K(d) at each distance | — |
-| `L` | out | L(d) = sqrt(K/pi) at each distance | — |
-| `area` | out | area of the bounding rectangle | — |
+| `x` | in | x coordinates of the points | - |
+| `y` | in | y coordinates of the points | - |
+| `d` | in | distances at which to evaluate K | - |
+| `K` | out | K(d) at each distance | - |
+| `L` | out | L(d) = sqrt(K/pi) at each distance | - |
+| `area` | out | area of the bounding rectangle | - |
 
 **Applies when:** window = bounding rectangle of the points; pairs closer than d (strictly) are counted; no edge correction.
 
@@ -2471,7 +2758,7 @@ area = 100
 
 <a id="geo_standard_deviational_ellipse"></a>
 
-#### Standard deviational ellipse of a point pattern — `geo_standard_deviational_ellipse`
+#### Standard deviational ellipse of a point pattern, `geo_standard_deviational_ellipse`
 
 The semi-axes of the standard deviational ellipse of a point pattern (CrimeStat correction sqrt(2) sqrt(n/(n-2))) and the orientation of its major axis.
 
@@ -2481,11 +2768,11 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `x` | in | x coordinates | — |
-| `y` | in | y coordinates | — |
-| `sx` | out | semi-major axis | — |
-| `sy` | out | semi-minor axis | — |
-| `orientation` | out | bearing of the major axis, degrees clockwise from north (y axis), in [0, 180) | — |
+| `x` | in | x coordinates | - |
+| `y` | in | y coordinates | - |
+| `sx` | out | semi-major axis | - |
+| `sy` | out | semi-minor axis | - |
+| `orientation` | out | bearing of the major axis, degrees clockwise from north (y axis), in [0, 180) | - |
 
 **Applies when:** n >= 3, points neither collinear nor circularly symmetric.
 
@@ -2502,7 +2789,7 @@ orientation = 70.14367724
 
 <a id="geo_weighted_mean_center"></a>
 
-#### Weighted mean centre and weighted standard distance — `geo_weighted_mean_center`
+#### Weighted mean centre and weighted standard distance, `geo_weighted_mean_center`
 
 The weighted mean centre of a set of points (e.g. population-weighted centroid) and the weighted standard distance about it.
 
@@ -2512,12 +2799,12 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `x` | in | x coordinates | — |
-| `y` | in | y coordinates | — |
-| `w` | in | non-negative weights | — |
-| `wmean_x` | out | x of the weighted mean centre | — |
-| `wmean_y` | out | y of the weighted mean centre | — |
-| `weighted_std_distance` | out | weighted standard distance | — |
+| `x` | in | x coordinates | - |
+| `y` | in | y coordinates | - |
+| `w` | in | non-negative weights | - |
+| `wmean_x` | out | x of the weighted mean centre | - |
+| `wmean_y` | out | y of the weighted mean centre | - |
+| `weighted_std_distance` | out | weighted standard distance | - |
 
 **Applies when:** non-negative weights, not all zero.
 
@@ -2536,7 +2823,7 @@ weighted_std_distance = 9.354143467
 
 <a id="geo_brightness_temperature"></a>
 
-#### At-sensor brightness temperature from thermal radiance — `geo_brightness_temperature`
+#### At-sensor brightness temperature from thermal radiance, `geo_brightness_temperature`
 
 The at-sensor brightness temperature of a thermal-infrared band from its spectral radiance and the band's calibration constants K1 and K2 (as in Landsat metadata).
 
@@ -2546,9 +2833,9 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `radiance` | in | spectral radiance (W/(m^2 sr um)) | — |
-| `K1` | in | band constant K1 (W/(m^2 sr um)) | — |
-| `K2` | in | band constant K2 (kelvin) | — |
+| `radiance` | in | spectral radiance (W/(m^2 sr um)) | - |
+| `K1` | in | band constant K1 (W/(m^2 sr um)) | - |
+| `K2` | in | band constant K2 (kelvin) | - |
 | `T` | out | brightness temperature | K |
 
 **Applies when:** positive radiance and constants.
@@ -2557,9 +2844,9 @@ $$
 $ geospatial-analytics solve geo_brightness_temperature radiance=10.5 K1=774.8853 K2=1321.0789
 T = 306.1739025 K
   by: At-sensor brightness temperature from thermal radiance  (inverted Planck relation T = K2 / ln(K1/L + 1))
-  radiance = 10.5   []
-  K1 = 774.8853   []
-  K2 = 1321.0789   []
+  radiance = 10.5
+  K1 = 774.8853
+  K2 = 1321.0789
   assumes: positive radiance and constants
 ```
 
@@ -2567,7 +2854,7 @@ T = 306.1739025 K
 
 <a id="geo_ground_sample_distance"></a>
 
-#### Ground sample distance and swath of a nadir-looking camera — `geo_ground_sample_distance`
+#### Ground sample distance and swath of a nadir-looking camera, `geo_ground_sample_distance`
 
 The ground sample distance (pixel footprint) and swath width of a nadir-looking frame camera or scanner from its pixel pitch, focal length, flying height above ground and number of pixels across track.
 
@@ -2580,7 +2867,7 @@ $$
 | `pixel_pitch` | in | detector pixel pitch | m |
 | `focal_length` | in | focal length | m |
 | `altitude` | in | height above the ground | m |
-| `pixels` | in | number of pixels across track | — |
+| `pixels` | in | number of pixels across track | - |
 | `gsd` | out | ground sample distance | m |
 | `swath` | out | swath width | m |
 
@@ -2591,9 +2878,9 @@ $ geospatial-analytics solve geo_ground_sample_distance "pixel_pitch=0.0024 mm" 
 gsd = 0.03272727273 m
 swath = 179.0836364 m
   by: Ground sample distance and swath of a nadir-looking camera  (similar triangles: GSD = pixel pitch x height / focal length; swath = GSD x pixels)
-  pixel_pitch = 2.4e-06 m   []
-  focal_length = 0.0088 m   []
-  altitude = 120 m   []
+  pixel_pitch = 2.4e-06 m
+  focal_length = 0.0088 m
+  altitude = 120 m
   assumes: flat ground, nadir view
 ```
 
@@ -2601,7 +2888,7 @@ swath = 179.0836364 m
 
 <a id="geo_classification_accuracy"></a>
 
-#### Thematic map accuracy: overall accuracy, kappa, producer's and user's accuracy — `geo_classification_accuracy`
+#### Thematic map accuracy: overall accuracy, kappa, producer's and user's accuracy, `geo_classification_accuracy`
 
 The accuracy assessment of a classified map from its error (confusion) matrix: overall accuracy, Cohen's kappa, and the producer's and user's accuracy of each class.
 
@@ -2611,11 +2898,11 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `matrix` | in | confusion matrix of sample counts: rows = map (classified) classes, columns = reference classes | — |
-| `overall` | out | overall accuracy | — |
-| `kappa` | out | Cohen's kappa | — |
-| `producers` | out | producer's accuracy of each class (1 - omission error) | — |
-| `users` | out | user's accuracy of each class (1 - commission error) | — |
+| `matrix` | in | confusion matrix of sample counts: rows = map (classified) classes, columns = reference classes | - |
+| `overall` | out | overall accuracy | - |
+| `kappa` | out | Cohen's kappa | - |
+| `producers` | out | producer's accuracy of each class (1 - omission error) | - |
+| `users` | out | user's accuracy of each class (1 - commission error) | - |
 
 **Applies when:** square matrix of whole counts; every class sampled in the map and the reference.
 
@@ -2633,7 +2920,7 @@ users = [0.565217391304,0.81,0.739130434783,0.865384615385]
 
 <a id="geo_toa_reflectance"></a>
 
-#### Top-of-atmosphere reflectance from at-sensor radiance — `geo_toa_reflectance`
+#### Top-of-atmosphere reflectance from at-sensor radiance, `geo_toa_reflectance`
 
 The top-of-atmosphere (planetary) reflectance of a pixel from its at-sensor spectral radiance, the band's mean exoatmospheric solar irradiance ESUN, the day of year and the sun elevation, with the Earth-Sun distance.
 
@@ -2643,12 +2930,12 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `radiance` | in | at-sensor spectral radiance (W/(m^2 sr um)) | — |
-| `esun` | in | band mean exoatmospheric solar irradiance ESUN (W/(m^2 um)) | — |
-| `doy` | in | day of year (1-366) | — |
-| `sun_elevation` | in | sun elevation angle (decimal degrees) | — |
-| `earth_sun_distance` | out | Earth-Sun distance (astronomical units) | — |
-| `reflectance` | out | top-of-atmosphere reflectance | — |
+| `radiance` | in | at-sensor spectral radiance (W/(m^2 sr um)) | - |
+| `esun` | in | band mean exoatmospheric solar irradiance ESUN (W/(m^2 um)) | - |
+| `doy` | in | day of year (1-366) | - |
+| `sun_elevation` | in | sun elevation angle (decimal degrees) | - |
+| `earth_sun_distance` | out | Earth-Sun distance (astronomical units) | - |
+| `reflectance` | out | top-of-atmosphere reflectance | - |
 
 **Applies when:** sun above the horizon.
 
@@ -2657,9 +2944,9 @@ $ geospatial-analytics solve geo_toa_reflectance radiance=85 esun=1536 doy=172 s
 earth_sun_distance = 1.016687196
 reflectance = 0.2075017002
   by: Top-of-atmosphere reflectance from at-sensor radiance  (rho = pi L d^2 / (ESUN sin(sun elevation)); d^2 from Spencer's (1971) Fourier series for (r0/r)^2)
-  radiance = 85   []
-  esun = 1536   []
-  sun_elevation = 60   []
+  radiance = 85
+  esun = 1536
+  sun_elevation = 60
   assumes: sun above the horizon
 ```
 
@@ -2667,7 +2954,7 @@ reflectance = 0.2075017002
 
 <a id="geo_vegetation_indices"></a>
 
-#### Vegetation indices: NDVI, EVI, SAVI, OSAVI, MSAVI and EVI2 from band reflectances — `geo_vegetation_indices`
+#### Vegetation indices: NDVI, EVI, SAVI, OSAVI, MSAVI and EVI2 from band reflectances, `geo_vegetation_indices`
 
 The common spectral vegetation indices of a pixel from its red, near-infrared and blue surface reflectances, with a stated soil adjustment factor L for SAVI (EVI uses its standard coefficients G = 2.5, C1 = 6, C2 = 7.5, L = 1).
 
@@ -2677,16 +2964,16 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `red` | in | red reflectance (0-1) | — |
-| `nir` | in | near-infrared reflectance (0-1) | — |
-| `blue` | in | blue reflectance (0-1) | — |
-| `L` | in | SAVI soil adjustment factor (0.5 is usual) | — |
-| `NDVI` | out | (NIR - R)/(NIR + R) | — |
-| `EVI` | out | 2.5 (NIR - R)/(NIR + 6R - 7.5B + 1) | — |
-| `SAVI` | out | (1 + L)(NIR - R)/(NIR + R + L) | — |
-| `OSAVI` | out | (NIR - R)/(NIR + R + 0.16) | — |
-| `MSAVI` | out | (2NIR + 1 - sqrt((2NIR + 1)^2 - 8(NIR - R)))/2 | — |
-| `EVI2` | out | 2.5 (NIR - R)/(NIR + 2.4R + 1) | — |
+| `red` | in | red reflectance (0-1) | - |
+| `nir` | in | near-infrared reflectance (0-1) | - |
+| `blue` | in | blue reflectance (0-1) | - |
+| `L` | in | SAVI soil adjustment factor (0.5 is usual) | - |
+| `NDVI` | out | (NIR - R)/(NIR + R) | - |
+| `EVI` | out | 2.5 (NIR - R)/(NIR + 6R - 7.5B + 1) | - |
+| `SAVI` | out | (1 + L)(NIR - R)/(NIR + R + L) | - |
+| `OSAVI` | out | (NIR - R)/(NIR + R + 0.16) | - |
+| `MSAVI` | out | (2NIR + 1 - sqrt((2NIR + 1)^2 - 8(NIR - R)))/2 | - |
+| `EVI2` | out | 2.5 (NIR - R)/(NIR + 2.4R + 1) | - |
 
 **Applies when:** reflectances between 0 and 1; positive denominators.
 
@@ -2699,10 +2986,10 @@ OSAVI = 0.5362318841
 MSAVI = 0.5468871126
 EVI2 = 0.5633373934
   by: Vegetation indices: NDVI, EVI, SAVI, OSAVI, MSAVI and EVI2 from band reflectances  (the published formulas (Rouse 1974; Huete 1988, 2002; Rondeaux 1996; Qi 1994; Jiang 2008))
-  red = 0.08   []
-  nir = 0.45   []
-  blue = 0.04   []
-  L = 0.5   []
+  red = 0.08
+  nir = 0.45
+  blue = 0.04
+  L = 0.5
   assumes: reflectances between 0 and 1; positive denominators
 ```
 
@@ -2710,7 +2997,7 @@ EVI2 = 0.5633373934
 
 <a id="geo_water_burn_built_indices"></a>
 
-#### Water, moisture, burn and built-up indices: NDWI, MNDWI, NDMI, NBR and NDBI — `geo_water_burn_built_indices`
+#### Water, moisture, burn and built-up indices: NDWI, MNDWI, NDMI, NBR and NDBI, `geo_water_burn_built_indices`
 
 Normalized-difference indices for open water (NDWI, MNDWI), vegetation moisture (NDMI), burn severity (NBR) and built-up land (NDBI) from green, near-infrared and two shortwave-infrared reflectances.
 
@@ -2720,15 +3007,15 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `green` | in | green reflectance (0-1) | — |
-| `nir` | in | near-infrared reflectance (0-1) | — |
-| `swir1` | in | shortwave infrared 1 (about 1.6 um) reflectance | — |
-| `swir2` | in | shortwave infrared 2 (about 2.2 um) reflectance | — |
-| `NDWI` | out | (G - NIR)/(G + NIR) | — |
-| `MNDWI` | out | (G - SWIR1)/(G + SWIR1) | — |
-| `NDMI` | out | (NIR - SWIR1)/(NIR + SWIR1) | — |
-| `NBR` | out | (NIR - SWIR2)/(NIR + SWIR2) | — |
-| `NDBI` | out | (SWIR1 - NIR)/(SWIR1 + NIR) | — |
+| `green` | in | green reflectance (0-1) | - |
+| `nir` | in | near-infrared reflectance (0-1) | - |
+| `swir1` | in | shortwave infrared 1 (about 1.6 um) reflectance | - |
+| `swir2` | in | shortwave infrared 2 (about 2.2 um) reflectance | - |
+| `NDWI` | out | (G - NIR)/(G + NIR) | - |
+| `MNDWI` | out | (G - SWIR1)/(G + SWIR1) | - |
+| `NDMI` | out | (NIR - SWIR1)/(NIR + SWIR1) | - |
+| `NBR` | out | (NIR - SWIR2)/(NIR + SWIR2) | - |
+| `NDBI` | out | (SWIR1 - NIR)/(SWIR1 + NIR) | - |
 
 **Applies when:** reflectances between 0 and 1, band sums non-zero.
 
@@ -2740,10 +3027,10 @@ NDMI = 0.2
 NBR = 0.5
 NDBI = -0.2
   by: Water, moisture, burn and built-up indices: NDWI, MNDWI, NDMI, NBR and NDBI  (normalized differences of the band pairs (McFeeters 1996; Xu 2006; Gao 1996; Key and Benson 2006; Zha 2003))
-  green = 0.08   []
-  nir = 0.03   []
-  swir1 = 0.02   []
-  swir2 = 0.01   []
+  green = 0.08
+  nir = 0.03
+  swir1 = 0.02
+  swir2 = 0.01
   assumes: reflectances between 0 and 1, band sums non-zero
 ```
 
@@ -2753,7 +3040,7 @@ NDBI = -0.2
 
 <a id="geo_bivariate_morans_i"></a>
 
-#### Bivariate Moran's I (spatial cross-correlation) — `geo_bivariate_morans_i`
+#### Bivariate Moran's I (spatial cross-correlation), `geo_bivariate_morans_i`
 
 The bivariate Moran's I between a variable x and the spatial lag of a second variable y with row-standardized weights (how x at a location relates to y around it).
 
@@ -2763,10 +3050,10 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `x` | in | first variable at the n locations | — |
-| `y` | in | second variable at the n locations | — |
-| `W` | in | spatial weights matrix (row-standardized internally) | — |
-| `I_xy` | out | bivariate Moran's I | — |
+| `x` | in | first variable at the n locations | - |
+| `y` | in | second variable at the n locations | - |
+| `W` | in | spatial weights matrix (row-standardized internally) | - |
+| `I_xy` | out | bivariate Moran's I | - |
 
 **Applies when:** n >= 4, neither variable constant; no observation without neighbours.
 
@@ -2781,7 +3068,7 @@ I_xy = 0.8917603446
 
 <a id="geo_distance_band_weights"></a>
 
-#### Distance-band spatial weights — `geo_distance_band_weights`
+#### Distance-band spatial weights: `geo_distance_band_weights`
 
 The binary distance-band weights matrix of a set of points (neighbours within a threshold distance), the number of neighbours of each point, the total weight and the number of islands.
 
@@ -2791,13 +3078,13 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `x` | in | x coordinates | — |
-| `y` | in | y coordinates | — |
-| `threshold` | in | distance threshold (coordinate units) | — |
-| `W` | out | weights matrix (n x n, 0/1) | — |
-| `neighbours` | out | number of neighbours of each point | — |
-| `s0` | out | sum of all weights | — |
-| `islands` | out | number of points without neighbours | — |
+| `x` | in | x coordinates | - |
+| `y` | in | y coordinates | - |
+| `threshold` | in | distance threshold (coordinate units) | - |
+| `W` | out | weights matrix (n x n, 0/1) | - |
+| `neighbours` | out | number of neighbours of each point | - |
+| `s0` | out | sum of all weights | - |
+| `islands` | out | number of points without neighbours | - |
 
 **Applies when:** threshold > 0.
 
@@ -2808,7 +3095,7 @@ neighbours = [1.0,2.0,1.0,0.0,0.0]
 s0 = 4
 islands = 2
   by: Distance-band spatial weights  (w_ij = 1 when 0 < d_ij <= threshold)
-  threshold = 2.5   []
+  threshold = 2.5
   assumes: threshold > 0
 ```
 
@@ -2816,7 +3103,7 @@ islands = 2
 
 <a id="geo_gearys_c"></a>
 
-#### Geary's C spatial autocorrelation with normal and randomization inference — `geo_gearys_c`
+#### Geary's C spatial autocorrelation with normal and randomization inference, `geo_gearys_c`
 
 Geary's contiguity ratio C of a variable with a given spatial weights matrix, its variance under normality and randomization, and the z-scores (C < 1 positive, C > 1 negative autocorrelation).
 
@@ -2826,14 +3113,14 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `y` | in | values at the n locations | — |
-| `W` | in | spatial weights matrix (n x n, zero diagonal, row i lists the weights of i's neighbours) | — |
-| `transform` | in | row-standardize the weights (row) or use them as given (none) | — |
-| `C` | out | Geary's C | — |
-| `VC_norm` | out | variance under normality | — |
-| `z_norm` | out | z-score under normality | — |
-| `VC_rand` | out | variance under randomization | — |
-| `z_rand` | out | z-score under randomization | — |
+| `y` | in | values at the n locations | - |
+| `W` | in | spatial weights matrix (n x n, zero diagonal, row i lists the weights of i's neighbours) | - |
+| `transform` | in | row-standardize the weights (row) or use them as given (none) | - |
+| `C` | out | Geary's C | - |
+| `VC_norm` | out | variance under normality | - |
+| `z_norm` | out | z-score under normality | - |
+| `VC_rand` | out | variance under randomization | - |
+| `z_rand` | out | z-score under randomization | - |
 
 **Applies when:** n >= 4, values not all equal; no observation without neighbours.
 
@@ -2853,7 +3140,7 @@ z_rand = -2.212892233
 
 <a id="geo_getis_ord_general_g"></a>
 
-#### Getis-Ord general G (global high/low clustering) — `geo_getis_ord_general_g`
+#### Getis-Ord general G (global high/low clustering), `geo_getis_ord_general_g`
 
 The Getis-Ord general G statistic of a positive variable with binary spatial weights, its expectation and variance under randomization and the z-score (G above its expectation: high values cluster).
 
@@ -2863,12 +3150,12 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `y` | in | positive values at the n locations | — |
-| `W` | in | binary spatial weights matrix (0/1, zero diagonal) | — |
-| `G` | out | general G | — |
-| `EG` | out | expected G = S0/(n(n-1)) | — |
-| `VG` | out | variance of G under randomization | — |
-| `z_norm` | out | z-score | — |
+| `y` | in | positive values at the n locations | - |
+| `W` | in | binary spatial weights matrix (0/1, zero diagonal) | - |
+| `G` | out | general G | - |
+| `EG` | out | expected G = S0/(n(n-1)) | - |
+| `VG` | out | variance of G under randomization | - |
+| `z_norm` | out | z-score | - |
 
 **Applies when:** positive values, n >= 4; binary weights, no observation without neighbours.
 
@@ -2886,7 +3173,7 @@ z_norm = 2.01316931
 
 <a id="geo_morans_i"></a>
 
-#### Global Moran's I spatial autocorrelation with normal and randomization inference — `geo_morans_i`
+#### Global Moran's I spatial autocorrelation with normal and randomization inference, `geo_morans_i`
 
 Global Moran's I of a variable observed at n locations with a given spatial weights matrix, its expectation and variance under normality and under randomization, z-scores and two-sided p-values.
 
@@ -2896,17 +3183,17 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `y` | in | values at the n locations | — |
-| `W` | in | spatial weights matrix (n x n, zero diagonal, row i lists the weights of i's neighbours) | — |
-| `transform` | in | row-standardize the weights (row) or use them as given (none) | — |
-| `I` | out | Moran's I | — |
-| `EI` | out | expected I = -1/(n-1) | — |
-| `VI_norm` | out | variance under normality | — |
-| `z_norm` | out | z-score under normality | — |
-| `p_norm` | out | two-sided p-value under normality | — |
-| `VI_rand` | out | variance under randomization | — |
-| `z_rand` | out | z-score under randomization | — |
-| `p_rand` | out | two-sided p-value under randomization | — |
+| `y` | in | values at the n locations | - |
+| `W` | in | spatial weights matrix (n x n, zero diagonal, row i lists the weights of i's neighbours) | - |
+| `transform` | in | row-standardize the weights (row) or use them as given (none) | - |
+| `I` | out | Moran's I | - |
+| `EI` | out | expected I = -1/(n-1) | - |
+| `VI_norm` | out | variance under normality | - |
+| `z_norm` | out | z-score under normality | - |
+| `p_norm` | out | two-sided p-value under normality | - |
+| `VI_rand` | out | variance under randomization | - |
+| `z_rand` | out | z-score under randomization | - |
+| `p_rand` | out | two-sided p-value under randomization | - |
 
 **Applies when:** n >= 4, values not all equal; no observation without neighbours.
 
@@ -2929,7 +3216,7 @@ p_rand = 0.04461934483
 
 <a id="geo_join_counts"></a>
 
-#### Join count statistics of a binary map (BB, BW, WW) — `geo_join_counts`
+#### Join count statistics of a binary map (BB, BW, WW), `geo_join_counts`
 
 The numbers of black-black, black-white and white-white joins between neighbouring areas of a binary (presence/absence) map, and the total number of joins.
 
@@ -2939,12 +3226,12 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `y` | in | binary variable at the n areas (1 black, 0 white) | — |
-| `W` | in | binary symmetric contiguity matrix (0/1, zero diagonal) | — |
-| `BB` | out | black-black joins | — |
-| `BW` | out | black-white joins | — |
-| `WW` | out | white-white joins | — |
-| `J` | out | total joins | — |
+| `y` | in | binary variable at the n areas (1 black, 0 white) | - |
+| `W` | in | binary symmetric contiguity matrix (0/1, zero diagonal) | - |
+| `BB` | out | black-black joins | - |
+| `BW` | out | black-white joins | - |
+| `WW` | out | white-white joins | - |
+| `J` | out | total joins | - |
 
 **Applies when:** binary symmetric weights.
 
@@ -2962,7 +3249,7 @@ J = 8
 
 <a id="geo_knn_weights"></a>
 
-#### k-nearest-neighbour spatial weights — `geo_knn_weights`
+#### k-nearest-neighbour spatial weights, `geo_knn_weights`
 
 The binary k-nearest-neighbour weights matrix of a set of points (row i marks the k nearest points to point i), its total weight and whether it is symmetric.
 
@@ -2972,12 +3259,12 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `x` | in | x coordinates | — |
-| `y` | in | y coordinates | — |
-| `k` | in | number of neighbours | — |
-| `W` | out | weights matrix (n x n, 0/1) | — |
-| `s0` | out | sum of all weights (n k) | — |
-| `symmetric` | out | whether W is symmetric | — |
+| `x` | in | x coordinates | - |
+| `y` | in | y coordinates | - |
+| `k` | in | number of neighbours | - |
+| `W` | out | weights matrix (n x n, 0/1) | - |
+| `s0` | out | sum of all weights (n k) | - |
+| `symmetric` | out | whether W is symmetric | - |
 
 **Applies when:** distinct points; 1 <= k < n, no tie at the k-th neighbour.
 
@@ -2994,7 +3281,7 @@ symmetric = false
 
 <a id="geo_local_getis_ord_gi"></a>
 
-#### Local Getis-Ord Gi and Gi* hot-spot statistics — `geo_local_getis_ord_gi`
+#### Local Getis-Ord Gi and Gi* hot-spot statistics, `geo_local_getis_ord_gi`
 
 The local Getis-Ord statistic of every location (Gi* includes the location itself, Gi excludes it) with binary weights, and its z-score for hot-spot (positive) and cold-spot (negative) mapping.
 
@@ -3004,11 +3291,11 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `y` | in | positive values at the n locations | — |
-| `W` | in | binary spatial weights matrix (0/1, zero diagonal) | — |
-| `statistic` | in | Gi* (the location counts as its own neighbour) or Gi | — |
-| `Gs` | out | local G of each location | — |
-| `Zs` | out | z-score of each location | — |
+| `y` | in | positive values at the n locations | - |
+| `W` | in | binary spatial weights matrix (0/1, zero diagonal) | - |
+| `statistic` | in | Gi* (the location counts as its own neighbour) or Gi | - |
+| `Gs` | out | local G of each location | - |
+| `Zs` | out | z-score of each location | - |
 
 **Applies when:** positive values, n >= 4; binary weights, no observation without neighbours.
 
@@ -3025,7 +3312,7 @@ Zs = [2.21006630298,2.21006630298,1.50264699011,-1.56275286971,-2.21006630298,-2
 
 <a id="geo_local_morans_i"></a>
 
-#### Local Moran's I (LISA) and Moran scatterplot quadrants — `geo_local_morans_i`
+#### Local Moran's I (LISA) and Moran scatterplot quadrants, `geo_local_morans_i`
 
 The local Moran statistic of every location with row-standardized weights, and its Moran scatterplot quadrant: 1 high-high, 2 low-high, 3 low-low, 4 high-low.
 
@@ -3035,10 +3322,10 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `y` | in | values at the n locations | — |
-| `W` | in | spatial weights matrix (row-standardized internally) | — |
-| `Is` | out | local Moran's I of each location | — |
-| `quadrant` | out | quadrant of each location (1 HH, 2 LH, 3 LL, 4 HL) | — |
+| `y` | in | values at the n locations | - |
+| `W` | in | spatial weights matrix (row-standardized internally) | - |
+| `Is` | out | local Moran's I of each location | - |
+| `quadrant` | out | quadrant of each location (1 HH, 2 LH, 3 LL, 4 HL) | - |
 
 **Applies when:** n >= 4, values not all equal; no observation without neighbours.
 
@@ -3054,7 +3341,7 @@ quadrant = [1.0,1.0,1.0,3.0,3.0,3.0]
 
 <a id="geo_spatial_lag"></a>
 
-#### Spatial lag of a variable — `geo_spatial_lag`
+#### Spatial lag of a variable: `geo_spatial_lag`
 
 The spatial lag W y of a variable: for row-standardized weights, the average of each location's neighbours; otherwise the weighted sum.
 
@@ -3064,10 +3351,10 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `y` | in | values at the n locations | — |
-| `W` | in | spatial weights matrix (n x n, zero diagonal, row i lists the weights of i's neighbours) | — |
-| `transform` | in | row-standardize the weights (row) or use them as given (none) | — |
-| `lag` | out | spatial lag at each location | — |
+| `y` | in | values at the n locations | - |
+| `W` | in | spatial weights matrix (n x n, zero diagonal, row i lists the weights of i's neighbours) | - |
+| `transform` | in | row-standardize the weights (row) or use them as given (none) | - |
+| `lag` | out | spatial lag at each location | - |
 
 **Applies when:** no observation without neighbours.
 
@@ -3085,7 +3372,7 @@ lag = [4.5,7.0,4.5,7.0]
 
 <a id="geo_d8_flow_accumulation"></a>
 
-#### D8 flow accumulation of a small DEM — `geo_d8_flow_accumulation`
+#### D8 flow accumulation of a small DEM: `geo_d8_flow_accumulation`
 
 The number of cells draining through each cell (the cell itself included) under D8 flow directions, and the largest accumulation (the main outlet).
 
@@ -3095,10 +3382,10 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `dem` | in | elevations (row 0 to the north), at most 900 cells | — |
+| `dem` | in | elevations (row 0 to the north), at most 900 cells | - |
 | `cell_size` | in | cell size | m |
-| `accumulation` | out | contributing cells of each cell, itself included (matrix) | — |
-| `max_accumulation` | out | largest accumulation | — |
+| `accumulation` | out | contributing cells of each cell, itself included (matrix) | - |
+| `max_accumulation` | out | largest accumulation | - |
 
 **Applies when:** D8 directions as in geo_d8_flow_direction.
 
@@ -3107,7 +3394,7 @@ $ geospatial-analytics solve geo_d8_flow_accumulation "dem=[[78, 72, 69, 71], [7
 accumulation = [[1.0,1.0,1.0,1.0],[1.0,2.0,2.0,3.0],[1.0,4.0,8.0,6.0],[1.0,1.0,1.0,16.0]]
 max_accumulation = 16
   by: D8 flow accumulation of a small DEM  (D8 directions, then accumulation in topological order of the flow graph (Kahn's algorithm))
-  cell_size = 10 m   []
+  cell_size = 10 m
   assumes: D8 directions as in geo_d8_flow_direction
 ```
 
@@ -3115,7 +3402,7 @@ max_accumulation = 16
 
 <a id="geo_d8_flow_direction"></a>
 
-#### D8 flow direction of every cell of a small DEM — `geo_d8_flow_direction`
+#### D8 flow direction of every cell of a small DEM, `geo_d8_flow_direction`
 
 The D8 (steepest-descent) flow direction of every cell of a digital elevation model, as ESRI codes (1 E, 2 SE, 4 S, 8 SW, 16 W, 32 NW, 64 N, 128 NE; 0 where no neighbour inside the raster is lower).
 
@@ -3125,9 +3412,9 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `dem` | in | elevations (row 0 to the north), at most 900 cells | — |
+| `dem` | in | elevations (row 0 to the north), at most 900 cells | - |
 | `cell_size` | in | cell size | m |
-| `direction` | out | D8 code of each cell (matrix) | — |
+| `direction` | out | D8 code of each cell (matrix) | - |
 
 **Applies when:** square cells; diagonal distance sqrt(2) cells; ties go to the first direction in the order E, SE, S, SW, W, NW, N, NE.
 
@@ -3135,7 +3422,7 @@ $$
 $ geospatial-analytics solve geo_d8_flow_direction "dem=[[78, 72, 69, 71], [74, 67, 56, 49], [69, 53, 44, 37], [64, 58, 55, 22]]" "cell_size=10 m"
 direction = [[2.0,2.0,2.0,4.0],[2.0,2.0,2.0,4.0],[1.0,1.0,2.0,4.0],[128.0,128.0,1.0,0.0]]
   by: D8 flow direction of every cell of a small DEM  (for each cell the neighbour with the largest drop per unit distance (positive drops only))
-  cell_size = 10 m   []
+  cell_size = 10 m
   assumes: square cells; diagonal distance sqrt(2) cells; ties go to the first direction in the order E, SE, S, SW, W, NW, N, NE
 ```
 
@@ -3143,7 +3430,7 @@ direction = [[2.0,2.0,2.0,4.0],[2.0,2.0,2.0,4.0],[1.0,1.0,2.0,4.0],[128.0,128.0,
 
 <a id="geo_hillshade"></a>
 
-#### Hillshade (analytical relief shading) of a 3x3 elevation window — `geo_hillshade`
+#### Hillshade (analytical relief shading) of a 3x3 elevation window, `geo_hillshade`
 
 The illumination (cosine of the solar incidence angle on the terrain) and the 0-255 hillshade value at the centre of a 3 x 3 elevation window for a sun azimuth and altitude.
 
@@ -3153,12 +3440,12 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `window` | in | 3 x 3 elevations in metres, row 0 to the north | — |
+| `window` | in | 3 x 3 elevations in metres, row 0 to the north | - |
 | `cell_size` | in | cell size | m |
-| `sun_azimuth` | in | sun azimuth, clockwise from north (decimal degrees) | — |
-| `sun_altitude` | in | sun altitude above the horizon (decimal degrees) | — |
-| `illumination` | out | cos(incidence angle) (negative in self-shadow) | — |
-| `hillshade` | out | 255 x max(0, illumination) | — |
+| `sun_azimuth` | in | sun azimuth, clockwise from north (decimal degrees) | - |
+| `sun_altitude` | in | sun altitude above the horizon (decimal degrees) | - |
+| `illumination` | out | cos(incidence angle) (negative in self-shadow) | - |
+| `hillshade` | out | 255 x max(0, illumination) | - |
 
 **Applies when:** row 0 is the northern row; no cast shadows.
 
@@ -3167,9 +3454,9 @@ $ geospatial-analytics solve geo_hillshade "window=[[2452.25, 2463, 2473.75], [2
 illumination = 0.656098596
 hillshade = 167.305142
   by: Hillshade (analytical relief shading) of a 3x3 elevation window  (Horn slope and aspect, then cos i = cos(Zenith) cos(Slope) + sin(Zenith) sin(Slope) cos(Azimuth - Aspect))
-  cell_size = 5 m   []
-  sun_azimuth = 315   []
-  sun_altitude = 45   []
+  cell_size = 5 m
+  sun_azimuth = 315
+  sun_altitude = 45
   assumes: row 0 is the northern row; no cast shadows
 ```
 
@@ -3177,7 +3464,7 @@ hillshade = 167.305142
 
 <a id="geo_line_of_sight_profile"></a>
 
-#### Line-of-sight visibility along a terrain profile (with Earth curvature and refraction) — `geo_line_of_sight_profile`
+#### Line-of-sight visibility along a terrain profile (with Earth curvature and refraction), `geo_line_of_sight_profile`
 
 Which points along a terrain profile are visible from an observer at its start, for given observer and target heights above the ground, optionally with the Earth-curvature and refraction correction.
 
@@ -3187,13 +3474,13 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `d` | in | distances along the profile in metres, starting at 0 (the observer) | — |
-| `z` | in | ground elevations in metres | — |
+| `d` | in | distances along the profile in metres, starting at 0 (the observer) | - |
+| `z` | in | ground elevations in metres | - |
 | `observer_height` | in | eye height above the ground | m |
 | `target_height` | in | target height above the ground | m |
-| `curvature` | in | none, or the drop d^2 (1 - k)/(2R) with R = 6371 km and k = 0.13 | — |
-| `visible` | out | 1 if the target over each point is visible, else 0 (the observer's own point is 1) | — |
-| `n_visible` | out | number of visible points beyond the observer | — |
+| `curvature` | in | none, or the drop d^2 (1 - k)/(2R) with R = 6371 km and k = 0.13 | - |
+| `visible` | out | 1 if the target over each point is visible, else 0 (the observer's own point is 1) | - |
+| `n_visible` | out | number of visible points beyond the observer | - |
 
 **Applies when:** distances increase from 0; positive observer and target heights.
 
@@ -3202,8 +3489,8 @@ $ geospatial-analytics solve geo_line_of_sight_profile "d=[0, 100, 200, 300, 400
 visible = [1.0,1.0,1.0,0.0,0.0,0.0]
 n_visible = 2
   by: Line-of-sight visibility along a terrain profile (with Earth curvature and refraction)  (a target is visible when every intermediate ground point lies strictly below the sight line from the eye to the target)
-  observer_height = 2 m   []
-  target_height = 2 m   []
+  observer_height = 2 m
+  target_height = 2 m
   curvature = none
   assumes: distances increase from 0; positive observer and target heights
 ```
@@ -3212,7 +3499,7 @@ n_visible = 2
 
 <a id="geo_slope_aspect_horn"></a>
 
-#### Slope and aspect of a 3x3 elevation window (Horn's method) — `geo_slope_aspect_horn`
+#### Slope and aspect of a 3x3 elevation window (Horn's method), `geo_slope_aspect_horn`
 
 The slope (degrees and per cent) and aspect (downslope direction, degrees clockwise from north) at the centre cell of a 3 x 3 window of a digital elevation model, by Horn's third-order finite differences.
 
@@ -3222,11 +3509,11 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `window` | in | 3 x 3 elevations in metres, row 0 to the north, column 0 to the west | — |
+| `window` | in | 3 x 3 elevations in metres, row 0 to the north, column 0 to the west | - |
 | `cell_size` | in | cell size (square cells) | m |
-| `slope_deg` | out | slope (degrees) | — |
-| `slope_percent` | out | slope (per cent) | — |
-| `aspect_deg` | out | aspect: downslope direction clockwise from north (none for a flat window) | — |
+| `slope_deg` | out | slope (degrees) | - |
+| `slope_percent` | out | slope (per cent) | - |
+| `aspect_deg` | out | aspect: downslope direction clockwise from north (none for a flat window) | - |
 
 **Applies when:** square cells; row 0 is the northern row.
 
@@ -3236,7 +3523,7 @@ slope_deg = 43.33171975
 slope_percent = 94.33981132
 aspect_deg = 327.9946168
   by: Slope and aspect of a 3x3 elevation window (Horn's method)  (Horn (1981): dz/dx = ((c + 2f + i) - (a + 2d + g))/(8 dx), dz/dy = ((a + 2b + c) - (g + 2h + i))/(8 dy) with y north; slope = atan(|grad|), aspect = atan2(-dz/dx, -dz/dy))
-  cell_size = 10 m   []
+  cell_size = 10 m
   assumes: square cells; row 0 is the northern row
 ```
 
@@ -3244,7 +3531,7 @@ aspect_deg = 327.9946168
 
 <a id="geo_terrain_curvature"></a>
 
-#### Terrain curvature: total, profile and plan curvature (Zevenbergen-Thorne) — `geo_terrain_curvature`
+#### Terrain curvature: total, profile and plan curvature (Zevenbergen-Thorne), `geo_terrain_curvature`
 
 The total, profile (along the slope) and plan (across the slope) curvature at the centre of a 3 x 3 elevation window from the Zevenbergen-Thorne partial quartic surface.
 
@@ -3254,11 +3541,11 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `window` | in | 3 x 3 elevations in metres, row 0 to the north | — |
+| `window` | in | 3 x 3 elevations in metres, row 0 to the north | - |
 | `cell_size` | in | cell size | m |
-| `curvature` | out | total curvature -2(D + E) (1/m; positive upwardly convex) | — |
-| `profile` | out | profile curvature (1/m) | — |
-| `plan` | out | plan curvature (1/m) | — |
+| `curvature` | out | total curvature -2(D + E) (1/m; positive upwardly convex) | - |
+| `profile` | out | profile curvature (1/m) | - |
+| `plan` | out | plan curvature (1/m) | - |
 
 **Applies when:** non-zero gradient at the centre for profile and plan curvature.
 
@@ -3268,7 +3555,7 @@ curvature = -3
 profile = -1.64
 plan = 1.36
   by: Terrain curvature: total, profile and plan curvature (Zevenbergen-Thorne)  (Zevenbergen and Thorne (1987): D, E, F, G, H from the window; profile = -2(DG^2 + EH^2 + FGH)/(G^2 + H^2), plan = 2(DH^2 + EG^2 - FGH)/(G^2 + H^2) (sign convention of Moore et al. 1991 and ArcGIS, without the factor 100))
-  cell_size = 1 m   []
+  cell_size = 1 m
   assumes: non-zero gradient at the centre for profile and plan curvature
 ```
 
@@ -3276,7 +3563,7 @@ plan = 1.36
 
 <a id="geo_terrain_ruggedness"></a>
 
-#### Terrain ruggedness index (Riley), topographic position index and local relief — `geo_terrain_ruggedness`
+#### Terrain ruggedness index (Riley), topographic position index and local relief, `geo_terrain_ruggedness`
 
 Riley's terrain ruggedness index (root of the summed squared elevation differences to the 8 neighbours), the topographic position index (centre minus neighbour mean) and the local relief of a 3 x 3 window.
 
@@ -3286,10 +3573,10 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `window` | in | 3 x 3 elevations in metres | — |
-| `TRI` | out | terrain ruggedness index (m) | — |
-| `TPI` | out | topographic position index (m) | — |
-| `relief` | out | maximum minus minimum elevation (m) | — |
+| `window` | in | 3 x 3 elevations in metres | - |
+| `TRI` | out | terrain ruggedness index (m) | - |
+| `TPI` | out | topographic position index (m) | - |
+| `relief` | out | maximum minus minimum elevation (m) | - |
 
 **Applies when:** Riley et al. (1999) form of the TRI.
 
@@ -3306,7 +3593,7 @@ relief = 7
 
 <a id="geo_watershed_delineation"></a>
 
-#### Watershed (catchment) of an outlet cell on a small DEM — `geo_watershed_delineation`
+#### Watershed (catchment) of an outlet cell on a small DEM, `geo_watershed_delineation`
 
 The cells that drain to a chosen outlet cell under D8 flow directions: their number, the catchment area and the catchment mask.
 
@@ -3316,17 +3603,25 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `dem` | in | elevations (row 0 to the north), at most 900 cells | — |
+| `dem` | in | elevations (row 0 to the north), at most 900 cells | - |
 | `cell_size` | in | cell size | m |
-| `row` | in | outlet row (from 0, north) | — |
-| `col` | in | outlet column (from 0, west) | — |
-| `cells` | out | number of cells in the catchment (outlet included) | — |
+| `row` | in | outlet row (from 0, north) | - |
+| `col` | in | outlet column (from 0, west) | - |
+| `cells` | out | number of cells in the catchment (outlet included) | - |
 | `area` | out | catchment area | m^2 |
-| `mask` | out | 1 for cells in the catchment, 0 elsewhere (matrix) | — |
+| `mask` | out | 1 for cells in the catchment, 0 elsewhere (matrix) | - |
 
 **Applies when:** D8 directions as in geo_d8_flow_direction.
 
-*Not in `geospatial-analytics` 1.1.0 yet:* use the Python package or the model's page in the browser.
+```shell
+$ geospatial-analytics solve geo_watershed_delineation "dem=[[78, 72, 69, 71], [74, 67, 56, 49], [69, 53, 44, 37], [64, 58, 55, 22]]" "cell_size=10 m" row=3 col=3
+cells = 16
+area = 1600 m^2
+mask = [[1.0,1.0,1.0,1.0],[1.0,1.0,1.0,1.0],[1.0,1.0,1.0,1.0],[1.0,1.0,1.0,1.0]]
+  by: Watershed (catchment) of an outlet cell on a small DEM  (D8 directions, then a search upstream from the outlet through the cells that flow into it)
+  cell_size = 10 m
+  assumes: D8 directions as in geo_d8_flow_direction
+```
 
 **What the worked example means:** This calculation identifies all land area that drains to the specified outlet cell. Using D8 flow directions, it traces upstream from the point defined by row 3 and column 3. The result includes the total count of contributing cells, which is 16, and the physical surface area of this region, calculated as 1600 m^2. This spatial extent represents the full watershed boundary for runoff accumulation at that specific location.
 
@@ -3334,7 +3629,7 @@ $$
 
 <a id="geo_huff_model"></a>
 
-#### Huff model: probabilities of shopping at each store from an origin (network distances) — `geo_huff_model`
+#### Huff model: probabilities of shopping at each store from an origin (network distances), `geo_huff_model`
 
 The Huff probabilities that a consumer at an origin node patronizes each store, from store attractiveness (floor space) and shortest-path distances on a road network.
 
@@ -3344,24 +3639,33 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `edges` | in | undirected network as weighted edges between nodes numbered 0 .. n-1 | — |
-| `origin` | in | origin node | — |
-| `stores` | in | store nodes | — |
-| `attractiveness` | in | attractiveness of each store (e.g. floor area) | — |
-| `alpha` | in | attractiveness exponent | — |
-| `beta` | in | distance-decay exponent | — |
-| `probabilities` | out | probability of each store | — |
-| `distances` | out | shortest-path distance to each store | — |
+| `edges` | in | undirected network as weighted edges between nodes numbered 0 .. n-1 | - |
+| `origin` | in | origin node | - |
+| `stores` | in | store nodes | - |
+| `attractiveness` | in | attractiveness of each store (e.g. floor area) | - |
+| `alpha` | in | attractiveness exponent | - |
+| `beta` | in | distance-decay exponent | - |
+| `probabilities` | out | probability of each store | - |
+| `distances` | out | shortest-path distance to each store | - |
 
 **Applies when:** every store reachable and not at the origin.
 
-*Not in `geospatial-analytics` 1.1.0 yet:* use the Python package or the model's page in the browser.
+```shell
+$ geospatial-analytics solve geo_huff_model "edges=0-1 2; 1-2 3; 0-2 6; 2-3 1; 1-3 5" origin=0 "stores=1, 2, 3" "attractiveness=5000, 12000, 8000" alpha=1 beta=2
+probabilities = [0.640295959021,0.245873648264,0.113830392715]
+distances = [2.0,5.0,6.0]
+  by: Huff model: probabilities of shopping at each store from an origin (network distances)  (Dijkstra distances from the origin; P_j = S_j^alpha d_j^-beta / sum_k S_k^alpha d_k^-beta)
+  origin = 0
+  alpha = 1
+  beta = 2
+  assumes: every store reachable and not at the origin
+```
 
 **What the worked example means:** This analysis determines the likelihood that a consumer at the specified origin will visit each available store. Applying the Huff model weighs each store's attractiveness against its shortest-path distance on the road network. The resulting probabilities indicate where customers are most likely to shop. For instance, the store with the highest calculated probability shows a value of [0.640296, 0.245874, 0.11383], reflecting its competitive position given its size and accessibility.
 
 <a id="geo_rank_size_rule"></a>
 
-#### Rank-size rule (Zipf) fit of a settlement system — `geo_rank_size_rule`
+#### Rank-size rule (Zipf) fit of a settlement system, `geo_rank_size_rule`
 
 The Zipf exponent q and fitted size of the largest city from a log-log regression of population on rank (P_r = P_1 r^-q), the R^2 of the fit and the two-city primacy ratio.
 
@@ -3371,11 +3675,11 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `populations` | in | populations of the settlements (any order) | — |
-| `q` | out | rank-size exponent (1 is Zipf's law) | — |
-| `P1_fit` | out | fitted population of rank 1 | — |
-| `r_squared` | out | R^2 of the log-log fit | — |
-| `primacy` | out | largest / second largest population | — |
+| `populations` | in | populations of the settlements (any order) | - |
+| `q` | out | rank-size exponent (1 is Zipf's law) | - |
+| `P1_fit` | out | fitted population of rank 1 | - |
+| `r_squared` | out | R^2 of the log-log fit | - |
+| `primacy` | out | largest / second largest population | - |
 
 **Applies when:** positive populations.
 
@@ -3393,7 +3697,7 @@ primacy = 2.153846154
 
 <a id="geo_segregation_evenness"></a>
 
-#### Residential segregation (evenness): dissimilarity, Gini and Theil entropy indices — `geo_segregation_evenness`
+#### Residential segregation (evenness): dissimilarity, Gini and Theil entropy indices, `geo_segregation_evenness`
 
 The evenness dimension of residential segregation of a group across areal units (census tracts): Duncan's index of dissimilarity, the segregation Gini index and Theil's entropy index H.
 
@@ -3403,11 +3707,11 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `x` | in | group count in each areal unit | — |
-| `t` | in | total population of each areal unit | — |
-| `dissimilarity` | out | index of dissimilarity D | — |
-| `gini` | out | Gini segregation index | — |
-| `theil_h` | out | Theil's information theory index H | — |
+| `x` | in | group count in each areal unit | - |
+| `t` | in | total population of each areal unit | - |
+| `dissimilarity` | out | index of dissimilarity D | - |
+| `gini` | out | Gini segregation index | - |
+| `theil_h` | out | Theil's information theory index H | - |
 
 **Applies when:** 0 <= x <= t in each unit; the group present but not the whole population.
 
@@ -3424,7 +3728,7 @@ In the worked example, x = [100, 200, 50, 800], t = [1000, 1000, 1000, 1000] go 
 
 <a id="geo_segregation_exposure"></a>
 
-#### Residential segregation (exposure): isolation, interaction and correlation ratio — `geo_segregation_exposure`
+#### Residential segregation (exposure): isolation, interaction and correlation ratio, `geo_segregation_exposure`
 
 The exposure dimension of residential segregation: the isolation index xPx (probability that a group member meets a member of the same group in their unit), the interaction (exposure) index xPy and the correlation ratio eta^2.
 
@@ -3434,11 +3738,11 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `x` | in | group count in each areal unit | — |
-| `t` | in | total population of each areal unit | — |
-| `isolation` | out | isolation index xPx | — |
-| `exposure` | out | interaction index xPy | — |
-| `correlation_ratio` | out | correlation ratio (xPx - P)/(1 - P) | — |
+| `x` | in | group count in each areal unit | - |
+| `t` | in | total population of each areal unit | - |
+| `isolation` | out | isolation index xPx | - |
+| `exposure` | out | interaction index xPy | - |
+| `correlation_ratio` | out | correlation ratio (xPx - P)/(1 - P) | - |
 
 **Applies when:** 0 <= x <= t in each unit; the group present but not the whole population.
 
@@ -3455,7 +3759,7 @@ correlation_ratio = 0.4416475973
 
 <a id="geo_gravity_model_poisson_fit"></a>
 
-#### Spatial interaction (gravity) model fitted by Poisson regression — `geo_gravity_model_poisson_fit`
+#### Spatial interaction (gravity) model fitted by Poisson regression, `geo_gravity_model_poisson_fit`
 
 The constant k, the origin and destination mass exponents and the distance-decay exponent of the unconstrained gravity model T = k O^alpha D^beta d^-gamma, fitted to observed flows by Poisson maximum likelihood.
 
@@ -3465,24 +3769,32 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `T` | in | observed flows between the pairs | — |
-| `O` | in | origin masses (e.g. populations) | — |
-| `D` | in | destination masses | — |
-| `d` | in | distances between the pairs | — |
-| `k` | out | constant | — |
-| `alpha` | out | origin mass exponent | — |
-| `beta` | out | destination mass exponent | — |
-| `gamma` | out | distance-decay exponent | — |
+| `T` | in | observed flows between the pairs | - |
+| `O` | in | origin masses (e.g. populations) | - |
+| `D` | in | destination masses | - |
+| `d` | in | distances between the pairs | - |
+| `k` | out | constant | - |
+| `alpha` | out | origin mass exponent | - |
+| `beta` | out | destination mass exponent | - |
+| `gamma` | out | distance-decay exponent | - |
 
 **Applies when:** non-negative flows, positive masses and distances that vary.
 
-*Not in `geospatial-analytics` 1.1.0 yet:* use the Python package or the model's page in the browser.
+```shell
+$ geospatial-analytics solve geo_gravity_model_poisson_fit "T=[120, 45, 300, 80, 15, 60, 200, 33]" "O=[500000, 200000, 900000, 300000, 100000, 400000, 800000, 250000]" "D=[300000, 400000, 600000, 200000, 300000, 100000, 500000, 200000]" "d=[50, 120, 40, 90, 200, 70, 60, 110]"
+k = 0.0003709570237
+alpha = 0.8028922547
+beta = 0.3347501827
+gamma = 0.5090785098
+  by: Spatial interaction (gravity) model fitted by Poisson regression  (Poisson GLM with log link, ln mu = ln k + alpha ln O + beta ln D - gamma ln d, by iteratively reweighted least squares)
+  assumes: non-negative flows, positive masses and distances that vary
+```
 
 **What the worked example means:** This analysis estimates the parameters of a spatial interaction model by treating observed flows as count data. The resulting constant 0.000370957 scales the overall magnitude of interactions, while the exponents 0.802892 and 0.33475 quantify how sensitive flows are to changes in origin and destination masses respectively. The parameter 0.509079 describes the rate at which interaction volume diminishes with increasing distance between locations.
 
 <a id="geo_density_gradient"></a>
 
-#### Urban population density gradient (Clark's negative exponential model) — `geo_density_gradient`
+#### Urban population density gradient (Clark's negative exponential model), `geo_density_gradient`
 
 The central density D0, density gradient b and half-distance of Clark's model D(r) = D0 exp(-b r) fitted by log-linear least squares to densities at distances from the centre, with the R^2.
 
@@ -3492,12 +3804,12 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `r` | in | distances from the centre (any unit) | — |
-| `D` | in | population densities at those distances | — |
-| `D0` | out | fitted central density | — |
-| `b` | out | density gradient (per distance unit) | — |
-| `r_squared` | out | R^2 of the log-linear fit | — |
-| `half_distance` | out | distance over which density halves (ln 2 / b), when b > 0 | — |
+| `r` | in | distances from the centre (any unit) | - |
+| `D` | in | population densities at those distances | - |
+| `D0` | out | fitted central density | - |
+| `b` | out | density gradient (per distance unit) | - |
+| `r_squared` | out | R^2 of the log-linear fit | - |
+| `half_distance` | out | distance over which density halves (ln 2 / b), when b > 0 | - |
 
 **Applies when:** positive densities; distances not all equal.
 
@@ -3513,4 +3825,4 @@ half_distance = 4.165980239
 
 **What the worked example means:** This analysis fits Clark's negative exponential model to urban population densities at varying distances from the city center. By applying least squares regression to the natural logarithm of density against distance, it estimates the central density as 10546.4 and the rate of decline as 0.166383. The half-distance, where density drops by fifty percent, is calculated as 4.16598. The goodness of fit is indicated by an R-squared value of 0.999624, showing how well the single-center assumption explains the observed data.
 
-Questions and reports: support@ai999x.com. AI999X — The Future Is Self-Improving.
+Questions and reports: support@ai999x.com. AI999X, The Future Is Self-Improving.
