@@ -1,6 +1,6 @@
 # geospatial-analytics: the Geospatial Analytics program — user guide
 
-**geospatial-analytics-ai999x 1.0.3**, Rust build: command line, desktop app and browser. **Creator / engineer:** Ibnul Jaif Farabi · **Company:** AI999X · support@ai999x.com
+**geospatial-analytics-ai999x 1.1.0**, Rust build: command line, desktop app and browser. **Creator / engineer:** Ibnul Jaif Farabi · **Company:** AI999X · support@ai999x.com
 
 Geospatial Analytics covers map projections and coordinates, geodesic distance and area, spatial statistics, remote-sensing indices, solar position and terrain, and urban and network analysis. This guide is about `geospatial-analytics`, the model as a self-contained program for Windows and Linux: 99 capabilities in 14 topics, answered on your own computer with no network, no Python and nothing else to install. The same compiled model runs in the AI999X desktop app and in the browser on the model's page (https://www.ai999x.com/models/geospatial-analytics-ai999x/); the Python package (`pip install geospatial-analytics-ai999x`) has its own guide. Every command output printed here is what the program printed.
 
@@ -17,24 +17,24 @@ Geospatial Analytics covers map projections and coordinates, geodesic distance a
 
 ## 1. Get it
 
-Version 1.4.0 of the AI999X desktop app and of the command-line bundle. Checksums for every file: https://www.ai999x.com/downloads/desktop/1.4.0/SHA256SUMS; the newest version is always under https://www.ai999x.com/downloads/desktop/latest/. Full instructions: https://www.ai999x.com/desktop-cli/
+Version 1.4.0 of the AI999X desktop app and of the command-line bundle. Checksums for every file: https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS; the newest version is always under https://downloads.ai999x.com/desktop/latest/. Full instructions: https://www.ai999x.com/desktop-cli/
 
 | what | system | download |
 |---|---|---|
-| Desktop app: Geospatial Analytics | Windows x86-64 | https://www.ai999x.com/downloads/desktop/1.4.0/ai999x-geospatial-analytics-1.4.0-windows-x86_64.zip |
-| Desktop app: Geospatial Analytics | Linux x86-64 | https://www.ai999x.com/downloads/desktop/1.4.0/ai999x-geospatial-analytics-1.4.0-linux-x86_64.tar.gz |
-| Desktop app: all models | Windows x86-64 | https://www.ai999x.com/downloads/desktop/1.4.0/ai999x-1.4.0-windows-x86_64.zip |
-| Desktop app: all models | Linux x86-64 | https://www.ai999x.com/downloads/desktop/1.4.0/ai999x-1.4.0-linux-x86_64.tar.gz |
-| Command line | Windows x86-64 | https://www.ai999x.com/downloads/desktop/1.4.0/ai999x-cli-1.4.0-windows-x86_64.zip |
-| Command line | Linux x86-64 | https://www.ai999x.com/downloads/desktop/1.4.0/ai999x-cli-1.4.0-linux-x86_64.tar.gz |
+| Desktop app: Geospatial Analytics | Windows x86-64 | https://downloads.ai999x.com/desktop/1.4.0/ai999x-geospatial-analytics-1.4.0-windows-x86_64.zip |
+| Desktop app: Geospatial Analytics | Linux x86-64 | https://downloads.ai999x.com/desktop/1.4.0/ai999x-geospatial-analytics-1.4.0-linux-x86_64.tar.gz |
+| Desktop app: all models | Windows x86-64 | https://downloads.ai999x.com/desktop/1.4.0/ai999x-1.4.0-windows-x86_64.zip |
+| Desktop app: all models | Linux x86-64 | https://downloads.ai999x.com/desktop/1.4.0/ai999x-1.4.0-linux-x86_64.tar.gz |
+| Command line | Windows x86-64 | https://downloads.ai999x.com/desktop/1.4.0/ai999x-cli-1.4.0-windows-x86_64.zip |
+| Command line | Linux x86-64 | https://downloads.ai999x.com/desktop/1.4.0/ai999x-cli-1.4.0-linux-x86_64.tar.gz |
 
 ### Desktop app
 
 Geospatial Analytics in its own app: search, questions in words, input forms, live figures and explanations. Windows: Download ai999x-geospatial-analytics-1.4.0-windows-x86_64.zip, right-click it → Extract All, then open the folder and start ai999x-geospatial-analytics.exe. If Windows SmartScreen asks, choose More info → Run anyway. Linux:
 
 ```shell
-curl -LO https://www.ai999x.com/downloads/desktop/1.4.0/ai999x-geospatial-analytics-1.4.0-linux-x86_64.tar.gz
-curl -LO https://www.ai999x.com/downloads/desktop/1.4.0/SHA256SUMS
+curl -LO https://downloads.ai999x.com/desktop/1.4.0/ai999x-geospatial-analytics-1.4.0-linux-x86_64.tar.gz
+curl -LO https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS
 sha256sum -c --ignore-missing SHA256SUMS
 tar xzf ai999x-geospatial-analytics-1.4.0-linux-x86_64.tar.gz
 ./ai999x-geospatial-analytics-1.4.0-linux-x86_64/ai999x-geospatial-analytics
@@ -43,8 +43,8 @@ tar xzf ai999x-geospatial-analytics-1.4.0-linux-x86_64.tar.gz
 It opens on this model: type a question or pick a capability, fill in the form and press Compute. The AI999X desktop app with every model works the same way (choose the model first). Windows: Download ai999x-1.4.0-windows-x86_64.zip, right-click it → Extract All, then open the folder and start ai999x.exe. If Windows SmartScreen asks, choose More info → Run anyway. Linux:
 
 ```shell
-curl -LO https://www.ai999x.com/downloads/desktop/1.4.0/ai999x-1.4.0-linux-x86_64.tar.gz
-curl -LO https://www.ai999x.com/downloads/desktop/1.4.0/SHA256SUMS
+curl -LO https://downloads.ai999x.com/desktop/1.4.0/ai999x-1.4.0-linux-x86_64.tar.gz
+curl -LO https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS
 sha256sum -c --ignore-missing SHA256SUMS
 tar xzf ai999x-1.4.0-linux-x86_64.tar.gz
 ./ai999x-1.4.0-linux-x86_64/ai999x
@@ -55,8 +55,8 @@ tar xzf ai999x-1.4.0-linux-x86_64.tar.gz
 The bundle holds one program per model; `geospatial-analytics` is this one. The checksum line should print OK.
 
 ```shell
-curl -LO https://www.ai999x.com/downloads/desktop/1.4.0/ai999x-cli-1.4.0-linux-x86_64.tar.gz
-curl -LO https://www.ai999x.com/downloads/desktop/1.4.0/SHA256SUMS
+curl -LO https://downloads.ai999x.com/desktop/1.4.0/ai999x-cli-1.4.0-linux-x86_64.tar.gz
+curl -LO https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS
 sha256sum -c --ignore-missing SHA256SUMS
 mkdir -p ~/.local/share && tar xzf ai999x-cli-1.4.0-linux-x86_64.tar.gz -C ~/.local/share
 echo 'export PATH="$HOME/.local/share/ai999x-cli-1.4.0-linux-x86_64:$PATH"' >> ~/.bashrc && source ~/.bashrc
@@ -69,8 +69,8 @@ The fourth line should print True.
 
 ```powershell
 $F = "ai999x-cli-1.4.0-windows-x86_64.zip"
-Invoke-WebRequest "https://www.ai999x.com/downloads/desktop/1.4.0/$F" -OutFile $F
-Invoke-WebRequest "https://www.ai999x.com/downloads/desktop/1.4.0/SHA256SUMS" -OutFile SHA256SUMS
+Invoke-WebRequest "https://downloads.ai999x.com/desktop/1.4.0/$F" -OutFile $F
+Invoke-WebRequest "https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS" -OutFile SHA256SUMS
 (Get-FileHash $F -Algorithm SHA256).Hash.ToLower() -eq ((Select-String -SimpleMatch $F SHA256SUMS).Line -split ' ')[0]
 Expand-Archive $F -DestinationPath "$env:LOCALAPPDATA\AI999X" -Force
 $D = "$env:LOCALAPPDATA\AI999X\ai999x-cli-1.4.0-windows-x86_64"; $env:Path += ";$D"
@@ -99,43 +99,7 @@ $ geospatial-analytics --version
 geospatial-analytics-ai999x 1.0.3 (Rust build, ax-engine 0.1.0)
 ```
 
-### 2.2 Ask in words
-
-Write the question as you would say it: the program reads the quantities and their units, picks the capability and answers.
-
-```shell
-$ geospatial-analytics ask "Geodesic destination: lat1 = 52.2, lon1 = 0.12, azimuth = 45, distance = 100 km, ellipsoid = WGS84"
-Read as: Geodesic destination point on the ellipsoid (direct problem)
-lat2 = 52.83083647
-lon2 = 1.169145951
-azimuth2 = 45.83253655
-  by: Geodesic destination point on the ellipsoid (direct problem)  (Bessel's auxiliary sphere: solve b*I1(sigma) = s by Newton steps with the arc-length integral by Gauss-Legendre quadrature, then the longitude integral)
-  azimuth = 45
-  distance = 100000 m
-  lat1 = 52.2
-  lon1 = 0.12
-  ellipsoid = WGS84
-  assumes: start latitude strictly between -90 and 90; 0 < distance <= 15000 km
-```
-
-### 2.3 Find a capability
-
-Search the capabilities by what you want to know; the first column is the id to pass to info and solve.
-
-```shell
-$ geospatial-analytics search "geodesic destination point on the ellipsoid (direct problem)"
-geo_geodesic_destination             Geodesic destination point on the ellipsoid (direct problem)  (ellipsoidal geodesy)
-geo_geodesic_midpoint                Midpoint of a geodesic on the ellipsoid  (ellipsoidal geodesy)
-geo_rhumb_line_destination           Destination along a rhumb line (loxodrome) on the ellipsoid  (ellipsoidal geodesy)
-geo_azimuthal_equidistant_forward    Azimuthal equidistant projection (ellipsoidal, geodesic)  (map projections)
-geo_geodesic_polygon_area            Area and perimeter of a geodesic polygon on the ellipsoid  (ellipsoidal geodesy)
-geo_maximal_covering_location        Maximal covering location problem (MCLP) on a network  (facility location)
-geo_geodetic_to_enu                  Geodetic to local east-north-up (ENU) coordinates  (coordinate systems and conversions)
-geo_rhumb_line_inverse               Rhumb-line (loxodrome) distance and bearing on the ellipsoid  (ellipsoidal geodesy)
-… 12 more
-```
-
-### 2.4 List the capabilities
+### 2.2 List the capabilities
 
 Every capability the program answers: its id (what you pass to solve) and its name.
 
@@ -144,103 +108,24 @@ $ geospatial-analytics list
 geo_albers_equal_area_forward            Albers equal-area conic projection: coordinates and scale factors
 geo_albers_equal_area_inverse            Inverse Albers equal-area conic projection
 geo_auxiliary_latitudes                  Auxiliary latitudes: geocentric, reduced, conformal, authalic and rectifying
-geo_azimuthal_equidistant_forward        Azimuthal equidistant projection (ellipsoidal, geodesic)
 geo_bivariate_morans_i                   Bivariate Moran's I (spatial cross-correlation)
 geo_brightness_temperature               At-sensor brightness temperature from thermal radiance
 geo_classification_accuracy              Thematic map accuracy: overall accuracy, kappa, producer's and user's accuracy
-geo_closest_facility                     Closest facility for every node of a network
-… 91 more
+geo_cylindrical_equal_area_forward       Lambert cylindrical equal-area projection (sphere)
+geo_d8_flow_accumulation                 D8 flow accumulation of a small DEM
+… 67 more
 ```
 
-### 2.5 What a capability needs
-
-The equation or method, every input and output with its SI unit. Read this before solve: it tells you the input names.
-
-```shell
-$ geospatial-analytics info geo_geodesic_destination
-Geodesic destination point on the ellipsoid (direct problem)
-  Bessel's auxiliary sphere: solve b*I1(sigma) = s by Newton steps with the arc-length integral by Gauss-Legendre quadrature, then the longitude integral
-  in   lat1     latitude of the start point (decimal degrees) []
-  in   lon1     longitude of the start point (decimal degrees) []
-  in   azimuth  initial azimuth, clockwise from north (decimal degrees) []
-  in   distance geodesic distance travelled [m]
-  in   ellipsoid reference ellipsoid (choice) []
-  out  lat2     latitude of the destination (degrees) []
-  out  lon2     longitude of the destination (degrees) []
-  out  azimuth2 forward azimuth at the destination (degrees clockwise from north) []
-```
-
-### 2.6 Solve
-
-Inputs as name=value, each with any unit of the right kind. The answer lists every output, the method used, each input converted to SI, and the conditions the answer assumes.
-
-```shell
-$ geospatial-analytics solve geo_geodesic_destination lat1=52.2 lon1=0.12 azimuth=45.0 "distance=100 km" ellipsoid=WGS84
-lat2 = 52.83083647
-lon2 = 1.169145951
-azimuth2 = 45.83253655
-  by: Geodesic destination point on the ellipsoid (direct problem)  (Bessel's auxiliary sphere: solve b*I1(sigma) = s by Newton steps with the arc-length integral by Gauss-Legendre quadrature, then the longitude integral)
-  lat1 = 52.2
-  lon1 = 0.12
-  azimuth = 45
-  distance = 100000 m
-  ellipsoid = WGS84
-  assumes: start latitude strictly between -90 and 90; 0 < distance <= 15000 km
-```
-
-### 2.7 Machine-readable answer
-
---json prints the same answer as one line of JSON (values in SI): for scripts and other programs.
-
-```shell
-$ geospatial-analytics solve geo_geodesic_destination lat1=52.2 lon1=0.12 azimuth=45.0 "distance=100 km" ellipsoid=WGS84 --json
-{"outcome":"SOLVED","message":"","value":52.8308364668,"unit":"","solved_for":"lat2","si":[["lat1",52.2],["lon1",0.12],["azimuth",45.0],["distance",100000.0]],"values":[["lat2",52.8308364668,""],["lon2",1.16914595053,""],["azimuth2",45.832536554,""]],"target":"lat2","phrase":"latitude of the destination (degrees)","assumptions":["start latitude strictly between -90 and 90","0 < distance <= 15000 km"],"name":"Geodesic destination point on the ellipsoid (direct problem)","equation":"Bessel's auxiliary sphere: solve b*I1(sigma) = s by Newton steps with the arc-length integral by Gauss-Legendre quadrature, then the longitude integral"}
-```
-
-### 2.8 When an input is missing
+### 2.3 When an input is missing
 
 No number is guessed: the answer names what is missing, shows a complete call, and the program exits with status 1.
 
 ```shell
 $ geospatial-analytics solve geo_geodesic_destination lat1=52.2 lon1=0.12 azimuth=45.0 "distance=100 km"
-NEEDS_INPUT: geo_geodesic_destination needs ellipsoid (reference ellipsoid). Example: solve('geo_geodesic_destination', lat1=52.2, lon1=0.12, azimuth=45, distance='100000 m', ellipsoid='WGS84').
+INVALID_INPUT: unknown capability 'geo_geodesic_destination'
 ```
 
-### 2.9 Draw the figures
-
-The live figures for your own inputs, written as SVG files into the folder given with --out (here the current folder); open them in any browser. Without --out the SVG text comes back as JSON.
-
-```shell
-$ geospatial-analytics figures geo_geodesic_destination lat1=52.2 lon1=0.12 azimuth=45.0 "distance=100 km" ellipsoid=WGS84 --out .
-[
-  {
-    "slug": "geo-geodesic-destination-map",
-    "title": "Geodesic against rhumb line to the destination",
-    "caption": "From latitude 52.2°, longitude 0.12° the geodesic leaves at azimuth 45° for 100 km and arrives at 52.8308°, 1.16915° (arriving azimuth 45.8325°); the rhumb line to the same point keeps bearing 45.4147° and is 100.001 km. Each path is 14 destination points computed by the model and projected by its Mercator projection, on which the rhumb line is straight. Your inputs: lat1 = 52.2, lon1 = 0.12, azimuth = 45.0, distance = 100 km, ellipsoid = WGS84.",
-    "file": ".\\geo-geodesic-destination-map.svg"
-  },
-  {
-    "slug": "geo-geodesic-destination-map-2",
-    "title": "Geodesic circles round the starting point",
-    "caption": "Destinations from latitude 52.2°, longitude 0.12° at every 10° of azimuth for distances 100 km, 200 km and 400 km, each point a run of the model (111 runs), drawn in longitude and latitude (a circle widens east to west where a degree of longitude is short). Marked: azimuth 45° for 100 km → 52.8308°, 1.16915°, arriving at azimuth 45.8325°. Your inputs: lat1 = 52.2, lon1 = 0.12, azimuth = 45.0, distance = 100 km, ellipsoid = WGS84.",
-    "file": ".\\geo-geodesic-destination-map-2.svg"
-  },
-  {
-    "slug": "geo-geodesic-destination-live-1",
-    "title": "Latitude of the destination as latitude of the start point (decimal degrees) varies",
-    "caption": "Latitude of the destination as lat1 runs from 13.05 to 89.39, every other input as you entered it (40 solutions). Marked: your lat1 = 52.2 gives lat2 = 52.83. Your inputs: lat1 = 52.2, lon1 = 0.12, azimuth = 45.0, distance = 100 km, ellipsoid = WGS84.",
-    "file": ".\\geo-geodesic-destination-live-1.svg"
-  },
-  {
-    "slug": "geo-geodesic-destination-live-2",
-    "title": "Latitude of the destination as initial azimuth, clockwise from north (decimal... varies",
-    "caption": "Latitude of the destination as azimuth runs from 11.25 to 78.75, every other input as you entered it (29 solutions). Marked: your azimuth = 45 gives lat2 = 52.83. Your inputs: lat1 = 52.2, lon1 = 0.12, azimuth = 45.0, distance = 100 km, ellipsoid = WGS84.",
-    "file": ".\\geo-geodesic-destination-live-2.svg"
-  }
-]
-```
-
-### 2.10 Many questions at once
+### 2.4 Many questions at once
 
 One JSON request per line in, one JSON answer per line out, in order: for scripts, notebooks and agents (the program starts once). In PowerShell: Get-Content cases.jsonl | geospatial-analytics batch
 
@@ -253,7 +138,7 @@ One JSON request per line in, one JSON answer per line out, in order: for script
 
 ```shell
 $ geospatial-analytics batch < cases.jsonl
-{"outcome":"SOLVED","message":"","value":52.8308364668,"unit":"","solved_for":"lat2","si":[["lat1",52.2],["lon1",0.12],["azimuth",45.0],["distance",100000.0]],"values":[["lat2",52.8308364668,""],["lon2",1.16914595053,""],["azimuth2",45.832536554,""]],"target":"lat2","phrase":"latitude of the destination (degrees)","assumptions":["start latitude strictly between -90 and 90","0 < distance <= 15000 km"],"name":"Geodesic destination point on the ellipsoid (direct problem)","equation":"Bessel's auxiliary sphere: solve b*I1(sigma) = s by Newton steps with the arc-length integral by Gauss-Legendre quadrature, then the longitude integral"}
+{"outcome":"INVALID_INPUT","message":"unknown capability 'geo_geodesic_destination'","value":null,"unit":null}
 {"outcome":"SOLVED","message":"","value":699195.875854,"unit":"m","solved_for":"easting","si":[["lat",51.5],["lon",-0.13]],"values":[["easting",699195.875854,"m"],["northing",5709335.01926,"m"],["k",1.00008718886,""],["gamma",2.24681916539,""],["zone",30,""],["hemisphere","N",""]],"target":"easting","phrase":"UTM easting","assumptions":["80 S <= latitude <= 84 N"],"name":"Latitude and longitude to UTM coordinates (with scale factor and convergence)","equation":"zone from the longitude (Norway and Svalbard exceptions), then transverse Mercator by Krueger's series with k0 = 0.9996, false easting 500 km, false northing 10000 km in the south"}
 ```
 
@@ -313,36 +198,6 @@ answers = [json.loads(line) for line in out.splitlines()]
 
 `geospatial-analytics figures <capability> name=value ... --out DIR` draws the live figures for those inputs and writes each as an SVG file into DIR (an existing folder); without `--out` the SVG text comes back as JSON. The desktop app and the model page draw the same figures as soon as you press Compute.
 
-```shell
-$ geospatial-analytics figures geo_geodesic_destination lat1=52.2 lon1=0.12 azimuth=45.0 "distance=100 km" ellipsoid=WGS84 --out .
-[
-  {
-    "slug": "geo-geodesic-destination-map",
-    "title": "Geodesic against rhumb line to the destination",
-    "caption": "From latitude 52.2°, longitude 0.12° the geodesic leaves at azimuth 45° for 100 km and arrives at 52.8308°, 1.16915° (arriving azimuth 45.8325°); the rhumb line to the same point keeps bearing 45.4147° and is 100.001 km. Each path is 14 destination points computed by the model and projected by its Mercator projection, on which the rhumb line is straight. Your inputs: lat1 = 52.2, lon1 = 0.12, azimuth = 45.0, distance = 100 km, ellipsoid = WGS84.",
-    "file": ".\\geo-geodesic-destination-map.svg"
-  },
-  {
-    "slug": "geo-geodesic-destination-map-2",
-    "title": "Geodesic circles round the starting point",
-    "caption": "Destinations from latitude 52.2°, longitude 0.12° at every 10° of azimuth for distances 100 km, 200 km and 400 km, each point a run of the model (111 runs), drawn in longitude and latitude (a circle widens east to west where a degree of longitude is short). Marked: azimuth 45° for 100 km → 52.8308°, 1.16915°, arriving at azimuth 45.8325°. Your inputs: lat1 = 52.2, lon1 = 0.12, azimuth = 45.0, distance = 100 km, ellipsoid = WGS84.",
-    "file": ".\\geo-geodesic-destination-map-2.svg"
-  },
-  {
-    "slug": "geo-geodesic-destination-live-1",
-    "title": "Latitude of the destination as latitude of the start point (decimal degrees) varies",
-    "caption": "Latitude of the destination as lat1 runs from 13.05 to 89.39, every other input as you entered it (40 solutions). Marked: your lat1 = 52.2 gives lat2 = 52.83. Your inputs: lat1 = 52.2, lon1 = 0.12, azimuth = 45.0, distance = 100 km, ellipsoid = WGS84.",
-    "file": ".\\geo-geodesic-destination-live-1.svg"
-  },
-  {
-    "slug": "geo-geodesic-destination-live-2",
-    "title": "Latitude of the destination as initial azimuth, clockwise from north (decimal... varies",
-    "caption": "Latitude of the destination as azimuth runs from 11.25 to 78.75, every other input as you entered it (29 solutions). Marked: your azimuth = 45 gives lat2 = 52.83. Your inputs: lat1 = 52.2, lon1 = 0.12, azimuth = 45.0, distance = 100 km, ellipsoid = WGS84.",
-    "file": ".\\geo-geodesic-destination-live-2.svg"
-  }
-]
-```
-
 ## 7. In a web page or Node.js: WebAssembly
 
 The same model is a WebAssembly module, `geospatial_analytics_ai999x.wasm` (https://www.ai999x.com/compute/rust/geospatial_analytics_ai999x.wasm), with a small loader, `ax-wasm.js` (https://www.ai999x.com/compute/rust/ax-wasm.js). It runs in a browser, a Web Worker or Node.js, with no server.
@@ -388,8 +243,8 @@ $ geospatial-analytics solve geo_map_scale_ground_distance "map_distance=4.2 cm"
 ground_distance = 2100 m
 ground_km = 2.1
   by: Ground distance from a map distance and a representative fraction  (ground distance = map distance x scale denominator)
-  map_distance = 0.042 m
-  scale = 50000
+  map_distance = 0.042 m   []
+  scale = 50000   []
   assumes: positive map distance and scale
 ```
 
@@ -419,8 +274,8 @@ $ geospatial-analytics solve geo_map_scale_from_distances "map_distance=5 cm" "g
 scale = 50000
 rf = 2e-05
   by: Map scale (representative fraction) from a map and a ground distance  (S = ground distance / map distance in the same unit)
-  map_distance = 0.05 m
-  ground_distance = 2500 m
+  map_distance = 0.05 m   []
+  ground_distance = 2500 m   []
   assumes: ground distance > map distance > 0
 ```
 
@@ -456,7 +311,7 @@ minutes = 28
 seconds = 37.9992
 hemisphere = N
   by: Decimal degrees to degrees, minutes and seconds  (exact decimal arithmetic: degrees = floor(|x|), minutes = floor(60 frac), seconds = the remainder times 3600)
-  decimal = 51.477222
+  decimal = 51.477222   []
   axis = latitude
   assumes: |latitude| <= 90, |longitude| <= 180
 ```
@@ -522,7 +377,7 @@ $ geospatial-analytics solve geo_dms_to_decimal degrees=51 minutes=28 seconds=38
 decimal = 51.47722222
 radians = 0.8984470176
   by: Degrees, minutes and seconds to decimal degrees  (decimal = sign (degrees + minutes/60 + seconds/3600), exact rational arithmetic)
-  seconds = 38
+  seconds = 38   []
   hemisphere = N
   assumes: 0 <= minutes <= 59; 0 <= seconds < 60; at most 90 (N/S) or 180 (E/W) degrees
 ```
@@ -560,8 +415,8 @@ lon_center = 10.40743969
 lat_error = 6.705522537e-07
 lon_error = 6.705522537e-07
   by: Geohash of a point and its cell  (interleaved binary bisection of longitude and latitude (longitude first), five bits per base-32 character)
-  lat = 57.64911
-  lon = 10.40744
+  lat = 57.64911   []
+  lon = 10.40744   []
   assumes: 1 to 12 characters
 ```
 
@@ -585,14 +440,7 @@ $$
 
 **Applies when:** 80 S <= latitude <= 84 N (polar regions use UPS).
 
-```shell
-$ geospatial-analytics solve geo_mgrs_encode lat=50 lon=10
-mgrs = 32UNA7166639109
-  by: MGRS grid reference of a point (1 m)  (UTM coordinates (Krueger series), 100 km column letter from the zone's set (A-H, J-R, S-Z), row letter cycling A-V (offset by 5 in even zones), digits truncated to 1 m; the zone is written with two digits)
-  lat = 50
-  lon = 10
-  assumes: 80 S <= latitude <= 84 N (polar regions use UPS)
-```
+*Not in `geospatial-analytics` 1.1.0 yet:* use the Python package or the model's page in the browser.
 
 **What the worked example means:** This calculation converts the input geographic coordinates, specifically latitude 50 and longitude 10, into a Military Grid Reference System string. The resulting value, 32UNA7166639109, represents a precise location on the Earth's surface to a resolution of one meter. It combines the zone number, latitude band letter, 100 km square identifiers, and truncated easting and northing digits into a single alphanumeric code that is easier to communicate than raw decimal degrees.
 
@@ -628,7 +476,7 @@ conformal = 44.80768406
 authalic = 44.87170287
 rectifying = 44.85568199
   by: Auxiliary latitudes: geocentric, reduced, conformal, authalic and rectifying  (tan(psi) = (1-e^2) tan(phi); tan(beta) = (1-f) tan(phi); chi = atan(sinh(isometric latitude)); xi = asin(q/q_p); mu = (pi/2) m(phi)/m(pi/2))
-  lat = 45
+  lat = 45   []
   ellipsoid = WGS84
   assumes: latitude strictly between -90 and 90
 ```
@@ -663,9 +511,9 @@ lat = 44.55996486
 lon = 10.000037
 h = 49468.66699 m
   by: Geocentric (ECEF) to geodetic coordinates  (fixed-point iteration phi = atan2(Z + e^2 N sin(phi), p) to convergence; h = p cos(phi) + Z sin(phi) - a^2/N)
-  X = 4517590.879 m
-  Y = 796576.168 m
-  Z = 4487348.409 m
+  X = 4517590.879 m   []
+  Y = 796576.168 m   []
+  Z = 4487348.409 m   []
   ellipsoid = WGS84
   assumes: 6200 km <= distance from the centre <= 100000 km; not on the polar axis
 ```
@@ -694,18 +542,7 @@ $$
 
 **Applies when:** latitude between -90 and 90; height between -100 km and 100000 km.
 
-```shell
-$ geospatial-analytics solve geo_geodetic_to_ecef lat=45 lon=10 "h=100 m" ellipsoid=WGS84
-X = 4449028.159 m
-Y = 784483.7023 m
-Z = 4487419.12 m
-  by: Geodetic to geocentric (ECEF) coordinates  (X = (N + h) cos(phi) cos(lambda), Y = (N + h) cos(phi) sin(lambda), Z = (N(1 - e^2) + h) sin(phi))
-  lat = 45
-  lon = 10
-  h = 100 m
-  ellipsoid = WGS84
-  assumes: latitude between -90 and 90; height between -100 km and 100000 km
-```
+*Not in `geospatial-analytics` 1.1.0 yet:* use the Python package or the model's page in the browser.
 
 **What the worked example means:** This calculation converts the geodetic position defined by latitude 45, longitude 10, and ellipsoidal height 100 m into Earth-Centered, Earth-Fixed coordinates. The resulting values 4.44903e+06 m, 784484 m, and 4.48742e+06 m represent the point's location in a three-dimensional Cartesian system relative to the center of mass of the reference ellipsoid, enabling precise spatial analysis and satellite navigation applications.
 
@@ -735,22 +572,7 @@ $$
 
 **Applies when:** origin not at a pole.
 
-```shell
-$ geospatial-analytics solve geo_geodetic_to_enu lat0=46.017 lon0=7.75 "h0=1673 m" lat=45.976 lon=7.658 "h=4531 m" ellipsoid=WGS84
-e = -7134.757196 m
-n = -4556.321514 m
-u = 2852.390424 m
-slant_range = 8933.138145 m
-  by: Geodetic to local east-north-up (ENU) coordinates  (ECEF difference rotated into the local frame: [e n u] = R(lat0, lon0) (X - X0))
-  lat0 = 46.017
-  lon0 = 7.75
-  h0 = 1673 m
-  lat = 45.976
-  lon = 7.658
-  h = 4531 m
-  ellipsoid = WGS84
-  assumes: origin not at a pole
-```
+*Not in `geospatial-analytics` 1.1.0 yet:* use the Python package or the model's page in the browser.
 
 **What the worked example means:** This calculation converts geodetic positions into a local tangent plane frame centered at the origin. Using the reference ellipsoid WGS84, the system computes the straight-line vector from the origin at latitude 46.017, longitude 7.75 and height 1673 m to the target at latitude 45.976, longitude 7.658 and height 4531 m. The resulting east coordinate is -7134.76 m, the north coordinate is -4556.32 m, and the vertical up component is 2852.39 m. These values represent the displacement in meters relative to the local horizontal plane, while the total straight-line distance between the two points is given as the slant range 8933.14 m.
 
@@ -779,21 +601,7 @@ $$
 
 **Applies when:** origin not at a pole; the point not deep inside the Earth.
 
-```shell
-$ geospatial-analytics solve geo_enu_to_geodetic lat0=46.017 lon0=7.75 "h0=1673 m" "e=-7123.1 m" "n=-4557.3 m" "u=2848.2 m" ellipsoid=WGS84
-lat = 45.9759913
-lon = 7.658150269
-h = 4526.797282 m
-  by: Local east-north-up (ENU) to geodetic coordinates  (rotate [e n u] back to an ECEF offset, add the origin's ECEF position, then convert ECEF to geodetic by iteration)
-  lat0 = 46.017
-  lon0 = 7.75
-  h0 = 1673 m
-  e = -7123.1 m
-  n = -4557.3 m
-  u = 2848.2 m
-  ellipsoid = WGS84
-  assumes: origin not at a pole; the point not deep inside the Earth
-```
+*Not in `geospatial-analytics` 1.1.0 yet:* use the Python package or the model's page in the browser.
 
 **What the worked example means:** This calculation determines the global geographic coordinates of a target point by transforming its local east, north, and up distances relative to a specified origin. Using the origin's latitude 46.017, longitude 7.75, and height 1673 m, along with the input offsets of -7123.1 m meters east, -4557.3 m meters north, and 2848.2 m meters up, the method rotates these local vectors into an Earth-centered frame and converts them back to geodetic form. The resulting output provides the absolute latitude 45.976, longitude 7.65815, and ellipsoidal height 4526.8 m, allowing local survey data to be integrated into global mapping systems.
 
@@ -822,21 +630,7 @@ $$
 
 **Applies when:** observer not at a pole; target distinct from the observer.
 
-```shell
-$ geospatial-analytics solve geo_look_angles lat0=40 lon0=-105 "h0=1600 m" lat=0 lon=-100 "h=35786000 m" ellipsoid=WGS84
-azimuth = 172.2432278
-elevation = 43.4643493
-slant_range = 37513689.21 m
-  by: Look angles: azimuth, elevation and range from an observer to a target  (ENU vector of the target; azimuth = atan2(e, n), elevation = atan2(u, sqrt(e^2 + n^2)))
-  lat0 = 40
-  lon0 = -105
-  h0 = 1600 m
-  lat = 0
-  lon = -100
-  h = 35786000 m
-  ellipsoid = WGS84
-  assumes: observer not at a pole; target distinct from the observer
-```
+*Not in `geospatial-analytics` 1.1.0 yet:* use the Python package or the model's page in the browser.
 
 **What the worked example means:** This calculation determines the look angles from an observer to a target using their respective global coordinates. Converting both positions into a local East-North-Up coordinate system relative to the observer gives the vector pointing to the target. The resulting azimuth of 172.243 indicates the direction clockwise from true north, while the elevation of 43.4643 shows the angle above or below the local horizon. The straight-line distance between the two points is found to be 3.75137e+07 m. These values are essential for orienting antennas, cameras, or tracking systems toward the object.
 
@@ -868,8 +662,8 @@ band = U
 hemisphere = N
 central_meridian = -3
   by: UTM zone, latitude band and central meridian  (zone = floor((lon + 180)/6) + 1 with zone 32 widened over south-west Norway and zones 31/33/35/37 over Svalbard; band = 8-degree letter from 80 S (X spans 72-84 N))
-  lat = 51.5
-  lon = -0.13
+  lat = 51.5   []
+  lon = -0.13   []
   assumes: 80 S <= latitude <= 84 N
 ```
 
@@ -903,9 +697,9 @@ $ geospatial-analytics solve geo_parallel_arc lat=60 lon1=0 lon2=1 ellipsoid=WGS
 distance = 55800.00157 m
 radius = 3197104.587 m
   by: Arc length along a parallel of latitude  (radius of the parallel N(phi) cos(phi) times the longitude difference in radians)
-  lat = 60
-  lon1 = 0
-  lon2 = 1
+  lat = 60   []
+  lon1 = 0   []
+  lon2 = 1   []
   ellipsoid = WGS84
   assumes: latitude strictly between -90 and 90; different longitudes
 ```
@@ -932,14 +726,7 @@ $$
 
 **Applies when:** a simple polygon not enclosing a pole; vertices within 88 degrees of the equator; edges at most 90 degrees long.
 
-```shell
-$ geospatial-analytics solve geo_geodesic_polygon_area "lats=[0, 0, 1, 1]" "lons=[0, 1, 1, 0]" ellipsoid=WGS84
-area = 1.230877836e+10 m^2
-perimeter = 443770.9172 m
-  by: Area and perimeter of a geodesic polygon on the ellipsoid  (Green's theorem on the ellipsoid: the authalic strip area a^2 q(phi)/2 integrated against the longitude along each geodesic edge (Gauss-Legendre in the auxiliary-sphere arc), summed over the edges)
-  ellipsoid = WGS84
-  assumes: a simple polygon not enclosing a pole; vertices within 88 degrees of the equator; edges at most 90 degrees long
-```
+*Not in `geospatial-analytics` 1.1.0 yet:* use the Python package or the model's page in the browser.
 
 **What the worked example means:** This calculation determines the true surface area and perimeter of a geodesic polygon defined by its vertices. The area, reported as 1.23088e+10 m^2 square meters, represents the enclosed region on the reference ellipsoid, while the perimeter, given as 443771 m meters, is the sum of the shortest paths along the curved surface connecting each vertex. These values are derived using Green's theorem adapted for the ellipsoidal geometry, ensuring accuracy for land management or boundary analysis where flat-earth approximations fail.
 
@@ -970,10 +757,10 @@ $ geospatial-analytics solve geo_graticule_cell_area lat1=0 lat2=1 lon1=0 lon2=1
 area = 1.230846389e+10 m^2
 fraction_of_ellipsoid = 2.413113797e-05
   by: Area of a latitude-longitude cell on the ellipsoid  (authalic function: area = (a^2/2) [q(phi2) - q(phi1)] (lambda2 - lambda1))
-  lat1 = 0
-  lat2 = 1
-  lon1 = 0
-  lon2 = 1
+  lat1 = 0   []
+  lat2 = 1   []
+  lon1 = 0   []
+  lon2 = 1   []
   ellipsoid = WGS84
   assumes: lat1 < lat2; 0 < lon2 - lon1 <= 360
 ```
@@ -1007,10 +794,10 @@ $ geospatial-analytics solve geo_rhumb_line_destination lat1=50 lon1=-5 bearing=
 lat2 = 53.89168147
 lon2 = -1.361213633
   by: Destination along a rhumb line (loxodrome) on the ellipsoid  (meridian distance advances by s cos(bearing) (Helmert's series, inverted by Newton steps); the longitude by tan(bearing) times the change of isometric latitude)
-  lat1 = 50
-  lon1 = -5
-  bearing = 30
-  distance = 500000 m
+  lat1 = 50   []
+  lon1 = -5   []
+  bearing = 30   []
+  distance = 500000 m   []
   ellipsoid = WGS84
   assumes: the line stays more than 1 degree from the poles; distance > 0
 ```
@@ -1040,19 +827,7 @@ $$
 
 **Applies when:** start latitude strictly between -90 and 90; 0 < distance <= 15000 km.
 
-```shell
-$ geospatial-analytics solve geo_geodesic_destination lat1=52.2 lon1=0.12 azimuth=45 "distance=100 km" ellipsoid=WGS84
-lat2 = 52.83083647
-lon2 = 1.169145951
-azimuth2 = 45.83253655
-  by: Geodesic destination point on the ellipsoid (direct problem)  (Bessel's auxiliary sphere: solve b*I1(sigma) = s by Newton steps with the arc-length integral by Gauss-Legendre quadrature, then the longitude integral)
-  lat1 = 52.2
-  lon1 = 0.12
-  azimuth = 45
-  distance = 100000 m
-  ellipsoid = WGS84
-  assumes: start latitude strictly between -90 and 90; 0 < distance <= 15000 km
-```
+*Not in `geospatial-analytics` 1.1.0 yet:* use the Python package or the model's page in the browser.
 
 **What the worked example means:** This calculation determines the precise location reached after traveling a geodesic distance of 100 km from a starting point at 52.2 latitude and 0.12 longitude. The path follows an initial bearing of 45 on the specified ellipsoid. The resulting destination coordinates are 52.8308 and 1.16915, and the forward azimuth at that point is 45.8325. This method accounts for the Earth's flattening, providing higher accuracy than spherical models for long-distance navigation.
 
@@ -1083,8 +858,8 @@ distance = 10001965.73 m
 m1 = 0 m
 m2 = 10001965.73 m
   by: Meridian arc length between two latitudes  (Helmert's series for the meridian distance in the third flattening n (to n^4))
-  lat1 = 0
-  lat2 = 90
+  lat1 = 0   []
+  lat2 = 90   []
   ellipsoid = WGS84
   assumes: latitudes between -90 and 90 and different
 ```
@@ -1114,19 +889,7 @@ $$
 
 **Applies when:** distinct points at most 150 degrees apart; latitudes strictly between -90 and 90.
 
-```shell
-$ geospatial-analytics solve geo_geodesic_midpoint lat1=51.5 lon1=-0.13 lat2=40.71 lon2=-74.01 ellipsoid=WGS84
-lat_mid = 52.38495524
-lon_mid = -41.27859047
-distance = 5585806.318 m
-  by: Midpoint of a geodesic on the ellipsoid  (inverse problem (iteration on the auxiliary-sphere longitude, exact integrals) for the azimuth and length, then the direct problem over half the length)
-  lat1 = 51.5
-  lon1 = -0.13
-  lat2 = 40.71
-  lon2 = -74.01
-  ellipsoid = WGS84
-  assumes: distinct points at most 150 degrees apart; latitudes strictly between -90 and 90
-```
+*Not in `geospatial-analytics` 1.1.0 yet:* use the Python package or the model's page in the browser.
 
 **What the worked example means:** This calculation determines the geographic center of the shortest path connecting two points on an ellipsoid. Using the specified reference ellipsoid, it computes the azimuth and distance from the first point to the second, then advances halfway along that path to find the midpoint. The resulting coordinates are 52.385 degrees north and -41.2786 degrees east, while the full geodesic length is 5.58581e+06 m meters.
 
@@ -1156,7 +919,7 @@ M = 6367381.816 m
 N = 6388838.29 m
 R_gauss = 6378101.03 m
   by: Radii of curvature of the ellipsoid at a latitude  (M = a(1-e^2)/(1-e^2 sin^2 phi)^(3/2), N = a/sqrt(1-e^2 sin^2 phi))
-  lat = 45
+  lat = 45   []
   ellipsoid = WGS84
   assumes: latitude between -90 and 90
 ```
@@ -1190,10 +953,10 @@ $ geospatial-analytics solve geo_rhumb_line_inverse lat1=50 lon1=-5 lat2=58 lon2
 distance = 1032440.869 m
 bearing = 30.40644034
   by: Rhumb-line (loxodrome) distance and bearing on the ellipsoid  (bearing = atan2(dlambda, dpsi) with the isometric latitude psi; length = dm / cos(bearing) with Helmert's meridian distance (N cos(phi) |dlambda| along a parallel))
-  lat1 = 50
-  lon1 = -5
-  lat2 = 58
-  lon2 = 3
+  lat1 = 50   []
+  lon1 = -5   []
+  lat2 = 58   []
+  lon2 = 3   []
   ellipsoid = WGS84
   assumes: latitudes within 89 degrees of the equator; distinct points
 ```
@@ -1222,14 +985,7 @@ $$
 
 **Applies when:** every node reaches a facility; no node equally near two facilities.
 
-```shell
-$ geospatial-analytics solve geo_closest_facility "edges=0-1 2; 1-2 3; 0-2 6; 2-3 1; 3-4 4" "facilities=0, 3"
-nearest = [0.0,0.0,3.0,3.0,3.0]
-distance = [0.0,2.0,1.0,0.0,4.0]
-mean_distance = 1.4
-  by: Closest facility for every node of a network  (Dijkstra from every facility; each node takes the minimum)
-  assumes: every node reaches a facility; no node equally near two facilities
-```
+*Not in `geospatial-analytics` 1.1.0 yet:* use the Python package or the model's page in the browser.
 
 **What the worked example means:** This calculation determines the nearest service point for every location in the network by measuring shortest path distances. For each node, it identifies the specific facility that minimizes travel cost and records that minimum distance. The resulting mean distance of 1.4 provides a single metric for overall accessibility across the entire network, indicating how far an average user must travel to reach the closest available option among the defined facilities.
 
@@ -1255,14 +1011,7 @@ $$
 
 **Applies when:** at most 20000 candidate combinations.
 
-```shell
-$ geospatial-analytics solve geo_maximal_covering_location "edges=0-1 2; 1-2 3; 0-2 6; 2-3 1; 3-4 4; 4-5 2; 1-5 7" "demand=10, 20, 15, 30, 5, 25" "candidates=0, 1, 2, 3, 4, 5" p=2 coverage=3
-covered = 95
-fraction = 0.9047619048
-  by: Maximal covering location problem (MCLP) on a network  (exact enumeration of the candidate combinations (Church and ReVelle 1974 objective))
-  coverage = 3
-  assumes: at most 20000 candidate combinations
-```
+*Not in `geospatial-analytics` 1.1.0 yet:* use the Python package or the model's page in the browser.
 
 **What the worked example means:** This analysis identifies the best locations for 2 facilities from the candidate set to maximize service coverage within a distance of 3. By evaluating all feasible combinations, the model determines that these specific placements can serve 95 units of demand. This result indicates that 0.904762 of the total demand is accessible within the specified threshold, highlighting the efficiency of the chosen network locations.
 
@@ -1288,14 +1037,7 @@ $$
 
 **Applies when:** connected network; at most 20000 candidate combinations; a unique optimal set.
 
-```shell
-$ geospatial-analytics solve geo_p_median "edges=0-1 2; 1-2 3; 0-2 6; 2-3 1; 3-4 4; 4-5 2; 1-5 7" "demand=10, 20, 15, 30, 5, 25" "candidates=0, 1, 2, 3, 4, 5" p=2
-objective = 150
-facilities = [2.0,5.0]
-mean_distance = 1.428571429
-  by: p-median facility location on a network  (exact enumeration of the candidate combinations with all-pairs Dijkstra distances)
-  assumes: connected network; at most 20000 candidate combinations; a unique optimal set
-```
+*Not in `geospatial-analytics` 1.1.0 yet:* use the Python package or the model's page in the browser.
 
 **What the worked example means:** This analysis determines the best locations for a fixed number of facilities by evaluating all possible combinations from the candidate nodes. Using shortest-path distances on the connected network, it minimizes the sum of demand-weighted distances from every node to its nearest open facility. The result identifies the specific sites [2, 5] that yield the lowest total cost of 150, with an average demand-weighted distance of 1.42857.
 
@@ -1354,16 +1096,7 @@ $$
 
 **Applies when:** the least-squares range has an interior minimum (between min(h)/20 and 20 max(h)).
 
-```shell
-$ geospatial-analytics solve geo_variogram_model_fit "h=[1, 2, 4, 6, 8, 12, 16, 20]" "gamma=[1.6, 2.9, 4.6, 5.6, 6.3, 6.8, 7, 7.05]" model=exponential
-nugget = -0.06288210256
-psill = 7.164348334
-range = 11.32850067
-sill = 7.101466232
-  by: Fit an exponential or Gaussian variogram model (nugget, partial sill, range)  (variable projection: for each range the nugget and partial sill are linear least squares; the range solves d(SSE)/da = 0 (grid search, then bisection, polished in 30-digit arithmetic with mpmath))
-  model = exponential
-  assumes: the least-squares range has an interior minimum (between min(h)/20 and 20 max(h))
-```
+*Not in `geospatial-analytics` 1.1.0 yet:* use the Python package or the model's page in the browser.
 
 **What the worked example means:** This calculation determines the optimal parameters for an exponential or Gaussian variogram model by minimizing the difference between the theoretical curve and the empirical semivariogram data. The result provides the nugget effect -0.0628821, which represents micro-scale variation or measurement error, and the partial sill 7.16435, indicating the variance of spatially correlated data. The practical range 11.3285 defines the distance beyond which spatial correlation becomes negligible, while the total sill 7.10147 marks the plateau value of the semivariance.
 
@@ -1393,9 +1126,9 @@ $$
 $ geospatial-analytics solve geo_idw_interpolation "x=[0, 10, 0, 10]" "y=[0, 0, 10, 10]" "z=[1, 2, 3, 4]" px=2 py=3 power=2
 estimate = 1.65897994
   by: Inverse distance weighted (IDW) interpolation at a point  (z = sum d_i^-p z_i / sum d_i^-p over all samples)
-  px = 2
-  py = 3
-  power = 2
+  px = 2   []
+  py = 3   []
+  power = 2   []
   assumes: power > 0 (at most 10); a location on a sample returns that sample's value
 ```
 
@@ -1427,19 +1160,7 @@ $$
 
 **Applies when:** distinct sample locations; sill > nugget >= 0, range > 0; the variogram is 0 at zero distance (exact interpolation).
 
-```shell
-$ geospatial-analytics solve geo_ordinary_kriging "x=[0, 10, 0, 10]" "y=[0, 0, 10, 10]" "z=[1, 2, 3, 4]" px=4 py=6 model=spherical nugget=0 sill=2 range=20
-estimate = 2.6048
-variance = 0.8771147626
-  by: Ordinary kriging estimate and kriging variance at a point  (solve the ordinary kriging system [Gamma 1; 1' 0][lambda; mu] = [gamma0; 1]; estimate = lambda'z, variance = lambda'gamma0 + mu)
-  px = 4
-  py = 6
-  nugget = 0
-  sill = 2
-  range = 20
-  model = spherical
-  assumes: distinct sample locations; sill > nugget >= 0, range > 0; the variogram is 0 at zero distance (exact interpolation)
-```
+*Not in `geospatial-analytics` 1.1.0 yet:* use the Python package or the model's page in the browser.
 
 **What the worked example means:** This calculation determines the best linear unbiased prediction for a spatial variable at an unsampled location using ordinary kriging. By solving the kriging system with the provided sample coordinates, values, and variogram parameters including nugget, sill, and range, the method computes weights that minimize estimation variance while ensuring unbiasedness. The resulting estimate of 2.6048 represents the predicted value at the target location defined by its x and y coordinates, while the variance of 0.877115 quantifies the uncertainty associated with this prediction based on the spatial structure defined by the model.
 
@@ -1511,12 +1232,12 @@ y = 1894100.14 m
 k = 0.9909686029
 h = 1.009113707
   by: Albers equal-area conic projection: coordinates and scale factors  (n = (m1^2 - m2^2)/(q2 - q1), C = m1^2 + n q1, rho = a sqrt(C - n q)/n with the authalic function q; x = FE + rho sin(theta), y = FN + rho0 - rho cos(theta))
-  lat = 40
-  lon = -100
-  lat1 = 29.5
-  lat2 = 45.5
-  lat0 = 23
-  lon0 = -96
+  lat = 40   []
+  lon = -100   []
+  lat1 = 29.5   []
+  lat2 = 45.5   []
+  lat0 = 23   []
+  lon0 = -96   []
   ellipsoid = GRS80
   assumes: parallels within 89 degrees of the equator and not symmetric about it
 ```
@@ -1549,20 +1270,7 @@ $$
 
 **Applies when:** point distinct from the centre and at most 150 degrees from it; centre within 89 degrees of the equator.
 
-```shell
-$ geospatial-analytics solve geo_azimuthal_equidistant_forward lat=40.71 lon=-74.01 lat0=51.5 lon0=-0.13 ellipsoid=WGS84
-x = -5301063.81 m
-y = 1760668.823 m
-distance = 5585806.318 m
-azimuth = 288.3731331
-  by: Azimuthal equidistant projection (ellipsoidal, geodesic)  (inverse geodesic problem from the centre (exact integrals), then x = s sin(alpha), y = s cos(alpha))
-  lat = 40.71
-  lon = -74.01
-  lat0 = 51.5
-  lon0 = -0.13
-  ellipsoid = WGS84
-  assumes: point distinct from the centre and at most 150 degrees from it; centre within 89 degrees of the equator
-```
+*Not in `geospatial-analytics` 1.1.0 yet:* use the Python package or the model's page in the browser.
 
 **What the worked example means:** This calculation determines the planar coordinates for an ellipsoidal azimuthal equidistant projection centered at latitude 51.5 and longitude -0.13. The target point, located at latitude 40.71 and longitude -74.01, is plotted such that its map distance from the center equals the true geodesic distance on the Earth's surface. The resulting easting is -5.30106e+06 m and the northing is 1.76067e+06 m, derived from a radial distance of 5.58581e+06 m measured along the initial bearing of 288.373 degrees.
 
@@ -1594,12 +1302,12 @@ $ geospatial-analytics solve geo_equirectangular_forward lat=45 lon=10 lat_ts=0 
 x = 1111949.266 m
 y = 5003771.699 m
   by: Equirectangular (equidistant cylindrical / plate carree) projection  (x = R (lambda - lambda0) cos(lat_ts), y = R (phi - phi0))
-  lat = 45
-  lon = 10
-  lat_ts = 0
-  lat0 = 0
-  lon0 = 0
-  R = 6371000 m
+  lat = 45   []
+  lon = 10   []
+  lat_ts = 0   []
+  lat0 = 0   []
+  lon0 = 0   []
+  R = 6371000 m   []
   assumes: sphere of radius R > 0
 ```
 
@@ -1632,11 +1340,11 @@ $ geospatial-analytics solve geo_gnomonic_forward lat=40 lon=10 lat0=45 lon0=0 "
 x = 857807.9193 m
 y = -508965.7799 m
   by: Gnomonic projection (sphere)  (the orthographic numerators divided by cos c, the cosine of the angular distance from the centre)
-  lat = 40
-  lon = 10
-  lat0 = 45
-  lon0 = 0
-  R = 6371000 m
+  lat = 40   []
+  lon = 10   []
+  lat0 = 45   []
+  lon0 = 0   []
+  R = 6371000 m   []
   assumes: the point within about 84 degrees of the centre (cos c >= 0.1)
 ```
 
@@ -1673,12 +1381,12 @@ $ geospatial-analytics solve geo_albers_equal_area_inverse "x=-338796 m" "y=1952
 lat = 40.51852456
 lon = -100.0339515
   by: Inverse Albers equal-area conic projection  (rho and theta from the offsets, q = (C - (rho n/a)^2)/n, latitude from q by Newton iteration; lambda = lambda0 + theta/n)
-  x = -338796 m
-  y = 1952260 m
-  lat1 = 29.5
-  lat2 = 45.5
-  lat0 = 23
-  lon0 = -96
+  x = -338796 m   []
+  y = 1952260 m   []
+  lat1 = 29.5   []
+  lat2 = 45.5   []
+  lat0 = 23   []
+  lon0 = -96   []
   ellipsoid = GRS80
   assumes: parallels within 89 degrees of the equator and not symmetric about it; the point inside the projected area
 ```
@@ -1716,12 +1424,12 @@ $ geospatial-analytics solve geo_lambert_conformal_conic_inverse "x=-339545 m" "
 lat = 40.29658075
 lon = -100.01589
   by: Inverse Lambert conformal conic projection (two standard parallels)  (rho and theta from the offsets, t = (rho/(aF))^(1/n), isometric latitude -ln t, geodetic latitude by Newton iteration; lambda = lambda0 + theta/n)
-  x = -339545 m
-  y = 1937380 m
-  lat1 = 33
-  lat2 = 45
-  lat0 = 23
-  lon0 = -96
+  x = -339545 m   []
+  y = 1937380 m   []
+  lat1 = 33   []
+  lat2 = 45   []
+  lat0 = 23   []
+  lon0 = -96   []
   ellipsoid = GRS80
   assumes: parallels within 89 degrees of the equator and not symmetric about it
 ```
@@ -1755,10 +1463,10 @@ $ geospatial-analytics solve geo_mercator_inverse "x=-14471.5 m" "y=6680752 m" l
 lat = 51.5223892
 lon = -0.1299996963
   by: Inverse Mercator projection (ellipsoidal)  (isometric latitude psi = y/(k0 a); conformal tangent sinh(psi); geodetic latitude by Newton iteration (Karney's tau method))
-  x = -14471.5 m
-  y = 6680752 m
-  lon0 = 0
-  lat_ts = 0
+  x = -14471.5 m   []
+  y = 6680752 m   []
+  lon0 = 0   []
+  lat_ts = 0   []
   ellipsoid = WGS84
   assumes: |lat_ts| <= 85
 ```
@@ -1794,12 +1502,12 @@ $ geospatial-analytics solve geo_lambert_azimuthal_equal_area_forward lat=50 lon
 x = 3962799.451 m
 y = 2999718.853 m
   by: Lambert azimuthal equal-area projection (ellipsoidal)  (authalic latitudes beta = asin(q/q_p) on the authalic sphere R_q, then the spherical azimuthal equal-area formulas with Snyder's D factor)
-  lat = 50
-  lon = 5
-  lat0 = 52
-  lon0 = 10
-  FE = 4321000 m
-  FN = 3210000 m
+  lat = 50   []
+  lon = 5   []
+  lat0 = 52   []
+  lon0 = 10   []
+  FE = 4321000 m   []
+  FN = 3210000 m   []
   ellipsoid = GRS80
   assumes: centre within 89 degrees of the equator; point within 120 degrees of the centre
 ```
@@ -1841,12 +1549,12 @@ y = 1904595.046 m
 k = 0.9946660436
 gamma = -2.521985006
   by: Lambert conformal conic projection (two standard parallels): coordinates, scale factor and convergence  (n = (ln m1 - ln m2)/(ln t1 - ln t2), F = m1/(n t1^n), rho = a F t^n with t = exp(-psi); x = FE + rho sin(theta), y = FN + rho0 - rho cos(theta), theta = n (lambda - lambda0); k = rho n/(a m); convergence = theta)
-  lat = 40
-  lon = -100
-  lat1 = 33
-  lat2 = 45
-  lat0 = 23
-  lon0 = -96
+  lat = 40   []
+  lon = -100   []
+  lat1 = 33   []
+  lat2 = 45   []
+  lat0 = 23   []
+  lon0 = -96   []
   ellipsoid = GRS80
   assumes: parallels within 89 degrees of the equator and not symmetric about it
 ```
@@ -1880,11 +1588,11 @@ $ geospatial-analytics solve geo_cylindrical_equal_area_forward lat=45 lon=10 la
 x = 786266.8666 m
 y = 6371000 m
   by: Lambert cylindrical equal-area projection (sphere)  (x = R (lambda - lambda0) cos(lat_ts), y = R sin(phi)/cos(lat_ts))
-  lat = 45
-  lon = 10
-  lat_ts = 45
-  lon0 = 0
-  R = 6371000 m
+  lat = 45   []
+  lon = 10   []
+  lat_ts = 45   []
+  lon0 = 0   []
+  R = 6371000 m   []
   assumes: standard parallel strictly between -90 and 90
 ```
 
@@ -1923,8 +1631,8 @@ gamma = 2.246819165
 zone = 30
 hemisphere = N
   by: Latitude and longitude to UTM coordinates (with scale factor and convergence)  (zone from the longitude (Norway and Svalbard exceptions), then transverse Mercator by Krueger's series with k0 = 0.9996, false easting 500 km, false northing 10000 km in the south)
-  lat = 51.5
-  lon = -0.13
+  lat = 51.5   []
+  lon = -0.13   []
   ellipsoid = WGS84
   assumes: 80 S <= latitude <= 84 N
 ```
@@ -1955,8 +1663,8 @@ $ geospatial-analytics solve geo_web_mercator_forward lat=51.5 lon=-0.13
 x = -14471.5338 m
 y = 6710219.083 m
   by: Latitude and longitude to Web Mercator (EPSG:3857)  (spherical Mercator formulas on a sphere of radius 6378137 m applied to WGS84 coordinates)
-  lat = 51.5
-  lon = -0.13
+  lat = 51.5   []
+  lon = -0.13   []
   assumes: |latitude| <= 85.06 degrees (the square web-map extent)
 ```
 
@@ -1991,10 +1699,10 @@ x = -14471.5338 m
 y = 6676757.754 m
 k = 1.603091339
   by: Mercator projection (ellipsoidal): coordinates and scale factor  (x = k0 a (lambda - lambda0), y = k0 a psi with the isometric latitude psi; k0 = cos(lat_ts)/sqrt(1 - e^2 sin^2 lat_ts))
-  lat = 51.5
-  lon = -0.13
-  lon0 = 0
-  lat_ts = 0
+  lat = 51.5   []
+  lon = -0.13   []
+  lon0 = 0   []
+  lat_ts = 0   []
   ellipsoid = WGS84
   assumes: |latitude| <= 89.5; |lat_ts| <= 85
 ```
@@ -2027,10 +1735,10 @@ $ geospatial-analytics solve geo_mollweide_forward lat=45 lon=90 lon0=0 "R=63710
 x = 7261188.135 m
 y = 5334269.291 m
   by: Mollweide equal-area projection (sphere)  (auxiliary angle theta from 2 theta + sin 2 theta = pi sin(phi) by Newton's method; x = (2 sqrt2/pi) R dlambda cos(theta), y = sqrt2 R sin(theta))
-  lat = 45
-  lon = 90
-  lon0 = 0
-  R = 6371000 m
+  lat = 45   []
+  lon = 90   []
+  lon0 = 0   []
+  R = 6371000 m   []
   assumes: sphere of radius R > 0
 ```
 
@@ -2063,11 +1771,11 @@ $ geospatial-analytics solve geo_orthographic_forward lat=40 lon=10 lat0=45 lon0
 x = 847484.5736 m
 y = -502840.5978 m
   by: Orthographic projection (sphere)  (x = R cos(phi) sin(dlambda), y = R (cos(phi0) sin(phi) - sin(phi0) cos(phi) cos(dlambda)))
-  lat = 40
-  lon = 10
-  lat0 = 45
-  lon0 = 0
-  R = 6371000 m
+  lat = 40   []
+  lon = 10   []
+  lat0 = 45   []
+  lon0 = 0   []
+  R = 6371000 m   []
   assumes: the point on the visible hemisphere (cos c >= 0)
 ```
 
@@ -2105,12 +1813,12 @@ x = 142401.9812 m
 y = -1627662.093 m
 k = 0.986664282
   by: Polar stereographic projection (standard parallel): coordinates and scale factor  (rho = a m_c t/t_c with t = exp(-psi); x = FE + rho sin(dlambda), y = FN -/+ rho cos(dlambda); k = rho/(a m))
-  lat = 75
-  lon = -40
-  lat_ts = 70
-  lon0 = -45
-  ellipsoid = WGS84
+  lat = 75   []
+  lon = -40   []
+  lat_ts = 70   []
+  lon0 = -45   []
   pole = north
+  ellipsoid = WGS84
   assumes: the point in the pole's hemisphere (not at the pole); 30 <= |lat_ts| <= 89.99 in the same hemisphere
 ```
 
@@ -2142,9 +1850,9 @@ $ geospatial-analytics solve geo_sinusoidal_forward lat=45 lon=10 lon0=0 ellipso
 x = 788468.3509 m
 y = 4984944.378 m
   by: Sinusoidal equal-area projection (ellipsoidal)  (x = N cos(phi) (lambda - lambda0), y = meridian distance m(phi) (Helmert's series))
-  lat = 45
-  lon = 10
-  lon0 = 0
+  lat = 45   []
+  lon = 10   []
+  lon0 = 0   []
   ellipsoid = WGS84
   assumes: |latitude| <= 89.9
 ```
@@ -2186,8 +1894,8 @@ b = 2
 omega = 0
 s = 4
   by: Tissot's indicatrix: scale factors and distortion of a projection at a point  (partial derivatives of the projection: h = |d(x,y)/dphi|, k = |d(x,y)/dlambda|/cos(phi), sin(theta') from their cross product; a' = sqrt(h^2+k^2+2hk sin theta'), b' = sqrt(h^2+k^2-2hk sin theta'), a = (a'+b')/2, b = (a'-b')/2, omega = 2 asin((a-b)/(a+b)), s = hk sin theta')
-  lat = 60
-  lon = 0
+  lat = 60   []
+  lon = 0   []
   projection = mercator
   assumes: |latitude| <= 80
 ```
@@ -2228,13 +1936,13 @@ y = 5817855.241 m
 k = 0.9997447935
 gamma = -1.269488544
   by: Transverse Mercator projection: coordinates, scale factor and grid convergence  (Krueger's series to sixth order in the third flattening (conformal latitude, then the Gauss-Krueger sums); scale and convergence from the series' derivatives (Karney 2011))
-  lat = 52.5
-  lon = 13.4
-  lat0 = 0
-  lon0 = 15
-  k0 = 0.9996
-  FE = 500000 m
-  FN = 0 m
+  lat = 52.5   []
+  lon = 13.4   []
+  lat0 = 0   []
+  lon0 = 15   []
+  k0 = 0.9996   []
+  FE = 500000 m   []
+  FN = 0 m   []
   ellipsoid = GRS80
   assumes: within 10 degrees of longitude of the central meridian; latitude within 89 degrees of the equator
 ```
@@ -2268,10 +1976,10 @@ $ geospatial-analytics solve geo_utm_inverse "easting=699316 m" "northing=571016
 lat = 51.50740226
 lon = -0.1278032352
   by: UTM coordinates to latitude and longitude  (inverse Krueger series to the conformal latitude, then Newton iteration for the geodetic latitude)
-  easting = 699316 m
-  northing = 5710164 m
-  hemisphere = N
+  easting = 699316 m   []
+  northing = 5710164 m   []
   ellipsoid = WGS84
+  hemisphere = N
   assumes: 100 km <= easting <= 900 km; 0 <= northing <= 10000 km
 ```
 
@@ -2301,8 +2009,8 @@ $ geospatial-analytics solve geo_web_mercator_inverse "x=-14471.5 m" "y=6710219.
 lat = 51.50000009
 lon = -0.1299996963
   by: Web Mercator (EPSG:3857) to latitude and longitude  (inverse spherical Mercator: lat = atan(sinh(y/R)), lon = x/R)
-  x = -14471.5 m
-  y = 6710219.1 m
+  x = -14471.5 m   []
+  y = 6710219.1 m   []
   assumes: inside the web-map square
 ```
 
@@ -2335,8 +2043,8 @@ tile_x = 2046
 tile_y = 1362
 quadkey = 031313131130
   by: Web-map tile (slippy map / XYZ) and quadkey containing a point  (Web Mercator fractions x = (lon + 180)/360, y = 1/2 - asinh(tan lat)/(2 pi), scaled by 2^zoom and floored; quadkey digits interleave the bits of x and y)
-  lat = 51.5
-  lon = -0.13
+  lat = 51.5   []
+  lon = -0.13   []
   assumes: |latitude| <= 85.0511; zoom 0-24
 ```
 
@@ -2364,14 +2072,7 @@ $$
 
 **Applies when:** positive edge lengths; a node's own opportunities are excluded; unreachable nodes contribute 0.
 
-```shell
-$ geospatial-analytics solve geo_gravity_accessibility "edges=0-1 2; 1-2 3; 0-2 6; 2-3 1" "opportunities=100, 50, 80, 20" beta=1 impedance=power
-accessibility = [44.3333333333,81.6666666667,56.6666666667,109.166666667]
-  by: Gravity-based (Hansen) accessibility on a road network  (Dijkstra shortest paths from every node; A_i = sum_{j != i} O_j f(d_ij))
-  beta = 1
-  impedance = power
-  assumes: positive edge lengths; a node's own opportunities are excluded; unreachable nodes contribute 0
-```
+*Not in `geospatial-analytics` 1.1.0 yet:* use the Python package or the model's page in the browser.
 
 **What the worked example means:** This calculation determines the Hansen gravity accessibility for each node in the road network. It computes the shortest path distance from every origin to all other nodes using Dijkstra's algorithm, then sums the opportunities at destination nodes discounted by an impedance function based on that distance and the decay parameter beta. The resulting value, [44.3333, 81.6667, 56.6667, 109.167], represents the total accessible potential from a given location, where closer destinations with higher opportunity counts contribute more significantly to the score than distant or sparse ones.
 
@@ -2398,18 +2099,7 @@ $$
 
 **Applies when:** at least 3 vertices; planar formulas for alpha and gamma.
 
-```shell
-$ geospatial-analytics solve geo_network_connectivity_indices "edges=0-1, 1-2, 2-3, 3-0, 0-2"
-vertices = 4
-edges = 5
-components = 1
-cyclomatic = 2
-alpha = 0.6666666667
-beta = 1.25
-gamma = 0.8333333333
-  by: Network connectivity indices: cyclomatic number, alpha, beta and gamma  (count vertices and distinct edges; components by union-find)
-  assumes: at least 3 vertices; planar formulas for alpha and gamma
-```
+*Not in `geospatial-analytics` 1.1.0 yet:* use the Python package or the model's page in the browser.
 
 **What the worked example means:** This calculation determines the structural connectivity of the transport network by counting distinct nodes and links. The result shows there are 4 vertices and 5 edges distributed across 1 connected components. These values allow for the computation of Kansky's indices, specifically an alpha index of 0.666667, a beta index of 1.25, and a gamma index of 0.833333, which together describe the network's complexity and loopiness.
 
@@ -2435,16 +2125,7 @@ $$
 
 **Applies when:** straight edges between the node coordinates; destination reachable.
 
-```shell
-$ geospatial-analytics solve geo_detour_index "coords=[[0, 0], [3, 0], [3, 4], [0, 4]]" "edges=0-1, 1-2, 2-3" origin=0 destination=2
-network_distance = 7
-euclidean_distance = 5
-detour_index = 1.4
-  by: Network detour index (circuity) between two nodes  (Euclidean edge lengths, Dijkstra, ratio to the straight-line distance)
-  origin = 0
-  destination = 2
-  assumes: straight edges between the node coordinates; destination reachable
-```
+*Not in `geospatial-analytics` 1.1.0 yet:* use the Python package or the model's page in the browser.
 
 **What the worked example means:** This calculation determines the circuity between two nodes by comparing the shortest path along the street network to the direct Euclidean distance. The resulting ratio, known as the detour index, indicates how much longer the actual travel route is compared to a theoretical straight line. A value of 1.4 suggests that traveling from the origin to the destination requires covering 7 instead of the direct 5.
 
@@ -2469,16 +2150,7 @@ $$
 
 **Applies when:** positive edge costs; distance <= cutoff counts as reached.
 
-```shell
-$ geospatial-analytics solve geo_service_area "edges=0-1 2; 1-2 3; 0-2 6; 2-3 1; 3-4 4" source=0 cutoff=6
-reachable = [0.0,1.0,2.0,3.0]
-count = 4
-farthest = 6
-  by: Network service area (isochrone) of a facility  (Dijkstra from the facility, keeping the nodes with distance <= cutoff)
-  source = 0
-  cutoff = 6
-  assumes: positive edge costs; distance <= cutoff counts as reached
-```
+*Not in `geospatial-analytics` 1.1.0 yet:* use the Python package or the model's page in the browser.
 
 **What the worked example means:** This calculation determines the network service area by finding all nodes reachable from the facility within the specified cutoff. Starting from the source node, distances are computed along the edges until the limit is exceeded. The result shows that 4 distinct locations fall within this boundary, and the maximum distance covered by any reachable node is 6. This defines the operational reach of the facility based on current network conditions.
 
@@ -2501,14 +2173,7 @@ $$
 
 **Applies when:** connected network with nodes 0 .. n-1.
 
-```shell
-$ geospatial-analytics solve geo_shimbel_index "edges=0-1 2; 1-2 3; 0-2 6; 2-3 1"
-shimbel = [13.0,9.0,9.0,11.0]
-total = 42
-most_accessible = 1
-  by: Shimbel accessibility index of every node  (all-pairs Dijkstra; row sums of the distance matrix)
-  assumes: connected network with nodes 0 .. n-1
-```
+*Not in `geospatial-analytics` 1.1.0 yet:* use the Python package or the model's page in the browser.
 
 **What the worked example means:** This calculation determines the Shimbel accessibility index, which represents the sum of the shortest path distances from every node to all other nodes in the connected network. The resulting indices are [13, 9, 9, 11], indicating how far each location is from the rest of the system. The node with the lowest value, identified as 1, is considered the most central or accessible point. Additionally, the sum of these individual indices yields the total network dispersion, calculated here as 42, which reflects the overall spread and efficiency of connections within the graph.
 
@@ -2534,14 +2199,7 @@ $$
 
 **Applies when:** a catchment includes nodes at network distance <= threshold; a site with no population in reach has ratio 0.
 
-```shell
-$ geospatial-analytics solve geo_two_step_floating_catchment "edges=0-1 2; 1-2 3; 0-2 6; 2-3 1" "population=1000, 500, 800, 200" "supply_nodes=1, 3" "capacity=5, 2" threshold=3
-accessibility = [0.00217391304348,0.00217391304348,0.00417391304348,0.002]
-ratios = [0.00217391304348,0.002]
-  by: Two-step floating catchment area (2SFCA) accessibility  (step 1: R_j = S_j / sum of population within d0 of j; step 2: A_i = sum of R_j over sites within d0 of i (Luo and Wang 2003))
-  threshold = 3
-  assumes: a catchment includes nodes at network distance <= threshold; a site with no population in reach has ratio 0
-```
+*Not in `geospatial-analytics` 1.1.0 yet:* use the Python package or the model's page in the browser.
 
 **What the worked example means:** This method computes spatial accessibility by first determining the supply-to-population ratio for each service site, shown here as [0.00217391, 0.002], based on the capacity of [5, 2] and the surrounding population. It then sums these ratios for all sites within the threshold distance of 3 to produce the final accessibility value of [0.00217391, 0.00217391, 0.00417391, 0.002] for each node. This result indicates how many units of service are available per person at that location, considering both local demand and nearby supply.
 
@@ -2601,7 +2259,7 @@ $ geospatial-analytics solve geo_douglas_peucker_simplification "x=[0, 1, 2, 3, 
 kept = [0.0,2.0,3.0,7.0]
 n_kept = 4
   by: Douglas-Peucker line simplification  (recursive: keep the vertex farthest from the segment joining the ends of a run if its distance exceeds the tolerance, then split there)
-  tolerance = 1
+  tolerance = 1   []
   assumes: distinct vertices; tolerance > 0
 ```
 
@@ -2674,9 +2332,9 @@ $ geospatial-analytics solve geo_kernel_density "x=[0, 1, 2, 5]" "y=[0, 1, 0, 5]
 density = 0.02676479928
 intensity = 0.1070591971
   by: Kernel density estimate of a point pattern at a location  (f(p) = (1/n) sum K_h(|p - x_i|) with 2-D normalized kernels: gaussian exp(-u^2/2)/(2 pi h^2), epanechnikov 2(1 - u^2)/(pi h^2), uniform 1/(pi h^2) for u = d/h < 1)
-  px = 1
-  py = 0.5
-  bandwidth = 2
+  px = 1   []
+  py = 0.5   []
+  bandwidth = 2   []
   kernel = gaussian
   assumes: bandwidth > 0
 ```
@@ -2745,7 +2403,7 @@ R = 0.8854377448
 z = -0.4900692343
 p_value = 0.6240849077
   by: Nearest-neighbour index (Clark-Evans ratio) of a point pattern  (mean of each point's distance to its nearest neighbour; Clark-Evans expectation 0.5/sqrt(density) and standard error 0.26136/sqrt(n^2/A))
-  area = 100
+  area = 100   []
   assumes: distinct points; no edge correction
 ```
 
@@ -2775,16 +2433,7 @@ $$
 
 **Applies when:** the window is the bounding rectangle of the points; cells include their west and south edges; the last column and row include the east and north edges.
 
-```shell
-$ geospatial-analytics solve geo_quadrat_test "x=[1, 2, 3, 8, 9, 2, 1, 7, 8, 9]" "y=[1, 1, 2, 8, 9, 8, 9, 1, 2, 1]" nx=2 ny=2
-chi2 = 0.4
-df = 3
-p_value = 0.9402424948
-vmr = 0.1333333333
-counts = [3.0,3.0,2.0,2.0]
-  by: Quadrat analysis: chi-square test of complete spatial randomness  (equal-size cells over the bounding box; chi2 = sum (O - E)^2 / E with E = n/cells; p from the chi-square upper tail (regularized incomplete gamma))
-  assumes: the window is the bounding rectangle of the points; cells include their west and south edges; the last column and row include the east and north edges
-```
+*Not in `geospatial-analytics` 1.1.0 yet:* use the Python package or the model's page in the browser.
 
 **What the worked example means:** This analysis divides the bounding rectangle into a grid of equal-sized cells and counts the points in each quadrat. The expected count per cell is derived from the total number of points divided by the number of cells. By comparing observed counts to this uniform expectation, the method calculates a chi-square statistic of 0.4 based on 2 columns and 2 rows. A p-value of 0.940242 indicates the probability that such deviation would occur by chance if the points were randomly distributed. The variance-to-mean ratio of 0.133333 further characterizes the dispersion, where values near one suggest randomness, greater than one indicate clustering, and less than one suggest regularity.
 
@@ -2908,9 +2557,9 @@ $$
 $ geospatial-analytics solve geo_brightness_temperature radiance=10.5 K1=774.8853 K2=1321.0789
 T = 306.1739025 K
   by: At-sensor brightness temperature from thermal radiance  (inverted Planck relation T = K2 / ln(K1/L + 1))
-  radiance = 10.5
-  K1 = 774.8853
-  K2 = 1321.0789
+  radiance = 10.5   []
+  K1 = 774.8853   []
+  K2 = 1321.0789   []
   assumes: positive radiance and constants
 ```
 
@@ -2942,9 +2591,9 @@ $ geospatial-analytics solve geo_ground_sample_distance "pixel_pitch=0.0024 mm" 
 gsd = 0.03272727273 m
 swath = 179.0836364 m
   by: Ground sample distance and swath of a nadir-looking camera  (similar triangles: GSD = pixel pitch x height / focal length; swath = GSD x pixels)
-  pixel_pitch = 2.4e-06 m
-  focal_length = 0.0088 m
-  altitude = 120 m
+  pixel_pitch = 2.4e-06 m   []
+  focal_length = 0.0088 m   []
+  altitude = 120 m   []
   assumes: flat ground, nadir view
 ```
 
@@ -3008,9 +2657,9 @@ $ geospatial-analytics solve geo_toa_reflectance radiance=85 esun=1536 doy=172 s
 earth_sun_distance = 1.016687196
 reflectance = 0.2075017002
   by: Top-of-atmosphere reflectance from at-sensor radiance  (rho = pi L d^2 / (ESUN sin(sun elevation)); d^2 from Spencer's (1971) Fourier series for (r0/r)^2)
-  radiance = 85
-  esun = 1536
-  sun_elevation = 60
+  radiance = 85   []
+  esun = 1536   []
+  sun_elevation = 60   []
   assumes: sun above the horizon
 ```
 
@@ -3050,10 +2699,10 @@ OSAVI = 0.5362318841
 MSAVI = 0.5468871126
 EVI2 = 0.5633373934
   by: Vegetation indices: NDVI, EVI, SAVI, OSAVI, MSAVI and EVI2 from band reflectances  (the published formulas (Rouse 1974; Huete 1988, 2002; Rondeaux 1996; Qi 1994; Jiang 2008))
-  red = 0.08
-  nir = 0.45
-  blue = 0.04
-  L = 0.5
+  red = 0.08   []
+  nir = 0.45   []
+  blue = 0.04   []
+  L = 0.5   []
   assumes: reflectances between 0 and 1; positive denominators
 ```
 
@@ -3091,10 +2740,10 @@ NDMI = 0.2
 NBR = 0.5
 NDBI = -0.2
   by: Water, moisture, burn and built-up indices: NDWI, MNDWI, NDMI, NBR and NDBI  (normalized differences of the band pairs (McFeeters 1996; Xu 2006; Gao 1996; Key and Benson 2006; Zha 2003))
-  green = 0.08
-  nir = 0.03
-  swir1 = 0.02
-  swir2 = 0.01
+  green = 0.08   []
+  nir = 0.03   []
+  swir1 = 0.02   []
+  swir2 = 0.01   []
   assumes: reflectances between 0 and 1, band sums non-zero
 ```
 
@@ -3159,7 +2808,7 @@ neighbours = [1.0,2.0,1.0,0.0,0.0]
 s0 = 4
 islands = 2
   by: Distance-band spatial weights  (w_ij = 1 when 0 < d_ij <= threshold)
-  threshold = 2.5
+  threshold = 2.5   []
   assumes: threshold > 0
 ```
 
@@ -3458,7 +3107,7 @@ $ geospatial-analytics solve geo_d8_flow_accumulation "dem=[[78, 72, 69, 71], [7
 accumulation = [[1.0,1.0,1.0,1.0],[1.0,2.0,2.0,3.0],[1.0,4.0,8.0,6.0],[1.0,1.0,1.0,16.0]]
 max_accumulation = 16
   by: D8 flow accumulation of a small DEM  (D8 directions, then accumulation in topological order of the flow graph (Kahn's algorithm))
-  cell_size = 10 m
+  cell_size = 10 m   []
   assumes: D8 directions as in geo_d8_flow_direction
 ```
 
@@ -3486,7 +3135,7 @@ $$
 $ geospatial-analytics solve geo_d8_flow_direction "dem=[[78, 72, 69, 71], [74, 67, 56, 49], [69, 53, 44, 37], [64, 58, 55, 22]]" "cell_size=10 m"
 direction = [[2.0,2.0,2.0,4.0],[2.0,2.0,2.0,4.0],[1.0,1.0,2.0,4.0],[128.0,128.0,1.0,0.0]]
   by: D8 flow direction of every cell of a small DEM  (for each cell the neighbour with the largest drop per unit distance (positive drops only))
-  cell_size = 10 m
+  cell_size = 10 m   []
   assumes: square cells; diagonal distance sqrt(2) cells; ties go to the first direction in the order E, SE, S, SW, W, NW, N, NE
 ```
 
@@ -3518,9 +3167,9 @@ $ geospatial-analytics solve geo_hillshade "window=[[2452.25, 2463, 2473.75], [2
 illumination = 0.656098596
 hillshade = 167.305142
   by: Hillshade (analytical relief shading) of a 3x3 elevation window  (Horn slope and aspect, then cos i = cos(Zenith) cos(Slope) + sin(Zenith) sin(Slope) cos(Azimuth - Aspect))
-  cell_size = 5 m
-  sun_azimuth = 315
-  sun_altitude = 45
+  cell_size = 5 m   []
+  sun_azimuth = 315   []
+  sun_altitude = 45   []
   assumes: row 0 is the northern row; no cast shadows
 ```
 
@@ -3553,8 +3202,8 @@ $ geospatial-analytics solve geo_line_of_sight_profile "d=[0, 100, 200, 300, 400
 visible = [1.0,1.0,1.0,0.0,0.0,0.0]
 n_visible = 2
   by: Line-of-sight visibility along a terrain profile (with Earth curvature and refraction)  (a target is visible when every intermediate ground point lies strictly below the sight line from the eye to the target)
-  observer_height = 2 m
-  target_height = 2 m
+  observer_height = 2 m   []
+  target_height = 2 m   []
   curvature = none
   assumes: distances increase from 0; positive observer and target heights
 ```
@@ -3587,7 +3236,7 @@ slope_deg = 43.33171975
 slope_percent = 94.33981132
 aspect_deg = 327.9946168
   by: Slope and aspect of a 3x3 elevation window (Horn's method)  (Horn (1981): dz/dx = ((c + 2f + i) - (a + 2d + g))/(8 dx), dz/dy = ((a + 2b + c) - (g + 2h + i))/(8 dy) with y north; slope = atan(|grad|), aspect = atan2(-dz/dx, -dz/dy))
-  cell_size = 10 m
+  cell_size = 10 m   []
   assumes: square cells; row 0 is the northern row
 ```
 
@@ -3619,7 +3268,7 @@ curvature = -3
 profile = -1.64
 plan = 1.36
   by: Terrain curvature: total, profile and plan curvature (Zevenbergen-Thorne)  (Zevenbergen and Thorne (1987): D, E, F, G, H from the window; profile = -2(DG^2 + EH^2 + FGH)/(G^2 + H^2), plan = 2(DH^2 + EG^2 - FGH)/(G^2 + H^2) (sign convention of Moore et al. 1991 and ArcGIS, without the factor 100))
-  cell_size = 1 m
+  cell_size = 1 m   []
   assumes: non-zero gradient at the centre for profile and plan curvature
 ```
 
@@ -3677,15 +3326,7 @@ $$
 
 **Applies when:** D8 directions as in geo_d8_flow_direction.
 
-```shell
-$ geospatial-analytics solve geo_watershed_delineation "dem=[[78, 72, 69, 71], [74, 67, 56, 49], [69, 53, 44, 37], [64, 58, 55, 22]]" "cell_size=10 m" row=3 col=3
-cells = 16
-area = 1600 m^2
-mask = [[1.0,1.0,1.0,1.0],[1.0,1.0,1.0,1.0],[1.0,1.0,1.0,1.0],[1.0,1.0,1.0,1.0]]
-  by: Watershed (catchment) of an outlet cell on a small DEM  (D8 directions, then a search upstream from the outlet through the cells that flow into it)
-  cell_size = 10 m
-  assumes: D8 directions as in geo_d8_flow_direction
-```
+*Not in `geospatial-analytics` 1.1.0 yet:* use the Python package or the model's page in the browser.
 
 **What the worked example means:** This calculation identifies all land area that drains to the specified outlet cell. Using D8 flow directions, it traces upstream from the point defined by row 3 and column 3. The result includes the total count of contributing cells, which is 16, and the physical surface area of this region, calculated as 1600 m^2. This spatial extent represents the full watershed boundary for runoff accumulation at that specific location.
 
@@ -3714,16 +3355,7 @@ $$
 
 **Applies when:** every store reachable and not at the origin.
 
-```shell
-$ geospatial-analytics solve geo_huff_model "edges=0-1 2; 1-2 3; 0-2 6; 2-3 1; 1-3 5" origin=0 "stores=1, 2, 3" "attractiveness=5000, 12000, 8000" alpha=1 beta=2
-probabilities = [0.640295959021,0.245873648264,0.113830392715]
-distances = [2.0,5.0,6.0]
-  by: Huff model: probabilities of shopping at each store from an origin (network distances)  (Dijkstra distances from the origin; P_j = S_j^alpha d_j^-beta / sum_k S_k^alpha d_k^-beta)
-  origin = 0
-  alpha = 1
-  beta = 2
-  assumes: every store reachable and not at the origin
-```
+*Not in `geospatial-analytics` 1.1.0 yet:* use the Python package or the model's page in the browser.
 
 **What the worked example means:** This analysis determines the likelihood that a consumer at the specified origin will visit each available store. Applying the Huff model weighs each store's attractiveness against its shortest-path distance on the road network. The resulting probabilities indicate where customers are most likely to shop. For instance, the store with the highest calculated probability shows a value of [0.640296, 0.245874, 0.11383], reflecting its competitive position given its size and accessibility.
 
@@ -3844,15 +3476,7 @@ $$
 
 **Applies when:** non-negative flows, positive masses and distances that vary.
 
-```shell
-$ geospatial-analytics solve geo_gravity_model_poisson_fit "T=[120, 45, 300, 80, 15, 60, 200, 33]" "O=[500000, 200000, 900000, 300000, 100000, 400000, 800000, 250000]" "D=[300000, 400000, 600000, 200000, 300000, 100000, 500000, 200000]" "d=[50, 120, 40, 90, 200, 70, 60, 110]"
-k = 0.0003709570237
-alpha = 0.8028922547
-beta = 0.3347501827
-gamma = 0.5090785098
-  by: Spatial interaction (gravity) model fitted by Poisson regression  (Poisson GLM with log link, ln mu = ln k + alpha ln O + beta ln D - gamma ln d, by iteratively reweighted least squares)
-  assumes: non-negative flows, positive masses and distances that vary
-```
+*Not in `geospatial-analytics` 1.1.0 yet:* use the Python package or the model's page in the browser.
 
 **What the worked example means:** This analysis estimates the parameters of a spatial interaction model by treating observed flows as count data. The resulting constant 0.000370957 scales the overall magnitude of interactions, while the exponents 0.802892 and 0.33475 quantify how sensitive flows are to changes in origin and destination masses respectively. The parameter 0.509079 describes the rate at which interaction volume diminishes with increasing distance between locations.
 
