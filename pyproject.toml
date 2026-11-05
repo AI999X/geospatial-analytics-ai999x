@@ -4,13 +4,13 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "geospatial-analytics-ai999x"
-version = "1.0.3"
+version = "1.1.0"
 description = "Offline geospatial analytics solver: ellipsoidal geodesy, coordinate conversions and map projections, spatial statistics and geostatistics, remote-sensing indices, terrain analysis, and urban and network analysis, with steps, LaTeX and honest refusals"
 readme = "README.md"
 requires-python = ">=3.10"
 license = {text = "Apache-2.0"}
-authors = [{name = "Ibnul Jaif Farabi"}]
-maintainers = [{name = "AI999X"}]
+authors = [{name = "AI999X Labs", email = "support@ai999x.com"}, {name = "Ibnul Jaif Farabi", email = "ibnuljaiffarabi@ai999x.com"}]
+maintainers = [{name = "AI999X Labs", email = "support@ai999x.com"}]
 keywords = ["geospatial analytics", "GIS", "geodesy", "geodesic", "ellipsoid", "WGS84", "UTM", "map projection", "Mercator", "Lambert conformal conic", "Albers", "coordinate conversion", "ECEF", "spatial statistics", "Moran's I", "Getis-Ord", "kriging", "variogram", "kernel density", "NDVI", "remote sensing", "terrain analysis", "slope aspect", "flow accumulation", "network analysis", "accessibility", "facility location", "segregation index", "ai999x", "offline", "cpu", "stem", "education", "step-by-step", "latex", "solver"]
 classifiers = ["License :: OSI Approved :: Apache Software License", "Programming Language :: Python :: 3", "Programming Language :: Python :: 3 :: Only", "Operating System :: OS Independent", "Intended Audience :: Education", "Intended Audience :: Science/Research", "Intended Audience :: Developers", "Topic :: Scientific/Engineering", "Topic :: Education", "Development Status :: 5 - Production/Stable"]
 dependencies = ["sympy>=1.12", "mpmath>=1.3"]
