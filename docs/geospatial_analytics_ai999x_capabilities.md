@@ -412,7 +412,7 @@ $$
 
 ![distance (arc length along the parallel) against lat (latitude of the parallel (decimal degrees)) from 0 to 90](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-parallel-arc-curve)
 
-*distance (arc length along the parallel) against lat (latitude of the parallel (decimal degrees)) from 0 to 90. One curve for each value of lon2 (second longitude (decimal degrees)): 1, 0.5, 2. Other inputs as in the worked example: lon1 = 0, ellipsoid = WGS84. 40 points per curve computed by geospatial-analytics-ai999x; marked: the worked example, lat = 60, distance = 55800 m.*
+*distance (arc length along the parallel) against lat (latitude of the parallel (decimal degrees)) from 0 to 90. One curve for each value of lon2 (second longitude (decimal degrees)): 1, 0.5, 2. Other inputs as in the worked example: lon1 = 0.0, ellipsoid = WGS84. 40 points per curve computed by geospatial-analytics-ai999x; marked: the worked example, lat = 60, distance = 55800 m.*
 
 ```python
 geospatial_analytics_ai999x.solve('geo_parallel_arc', lat=60, lon1=0, lon2=1, ellipsoid='WGS84')
@@ -1343,7 +1343,7 @@ $$
 
 ![y (northing) against lat (latitude (decimal degrees)) from 0 to 90](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-mercator-forward-curve)
 
-*y (northing) against lat (latitude (decimal degrees)) from 0 to 90. One curve for each value of lat_ts (latitude of true scale (standard parallel) (decimal degrees)): 0, 67.5. Other inputs as in the worked example: lon = -0.13, lon0 = 0, ellipsoid = WGS84. 40 points per curve computed by geospatial-analytics-ai999x; marked: the worked example, lat = 51.5, y = 6.67676e+06 m.*
+*y (northing) against lat (latitude (decimal degrees)) from 0 to 90. One curve for each value of lat_ts (latitude of true scale (standard parallel) (decimal degrees)): 0, 67.5. Other inputs as in the worked example: lon = -0.13, lon0 = 0.0, ellipsoid = WGS84. 40 points per curve computed by geospatial-analytics-ai999x; marked: the worked example, lat = 51.5, y = 6.67676e+06 m.*
 
 ```python
 geospatial_analytics_ai999x.solve('geo_mercator_forward', lat=51.5, lon=-0.13, lon0=0, lat_ts=0, ellipsoid='WGS84')
@@ -1453,7 +1453,7 @@ $$
 
 ![x (easting) against lon (longitude (decimal degrees)) from -150 to -50](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-lambert-conformal-conic-forward-curve)
 
-*x (easting) against lon (longitude (decimal degrees)) from -150 to -50. One curve for each value of lon0 (central meridian (decimal degrees)): -96, -48, -192. Other inputs as in the worked example: lat = 40.0, lat1 = 33, lat2 = 45, lat0 = 23, ellipsoid = GRS80. 31 points per curve computed by geospatial-analytics-ai999x; marked: the worked example, lon = -100, x = -339644 m.*
+*x (easting) against lon (longitude (decimal degrees)) from -150 to -50. One curve for each value of lon0 (central meridian (decimal degrees)): -96, -48, -192. Other inputs as in the worked example: lat = 40.0, lat1 = 33.0, lat2 = 45.0, lat0 = 23.0, ellipsoid = GRS80. 31 points per curve computed by geospatial-analytics-ai999x; marked: the worked example, lon = -100, x = -339644 m.*
 
 ```python
 geospatial_analytics_ai999x.solve('geo_lambert_conformal_conic_forward', lat=40.0, lon=-100.0, lat1=33, lat2=45, lat0=23, lon0=-96, ellipsoid='GRS80')
@@ -1567,7 +1567,7 @@ $$
 
 ![x (easting) against lon (longitude (decimal degrees)) from -150 to -50](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-albers-equal-area-forward-curve)
 
-*x (easting) against lon (longitude (decimal degrees)) from -150 to -50. One curve for each value of lon0 (central meridian (decimal degrees)): -96, -48, -192. Other inputs as in the worked example: lat = 40.0, lat1 = 29.5, lat2 = 45.5, lat0 = 23, ellipsoid = GRS80. 31 points per curve computed by geospatial-analytics-ai999x; marked: the worked example, lon = -100, x = -338391 m.*
+*x (easting) against lon (longitude (decimal degrees)) from -150 to -50. One curve for each value of lon0 (central meridian (decimal degrees)): -96, -48, -192. Other inputs as in the worked example: lat = 40.0, lat1 = 29.5, lat2 = 45.5, lat0 = 23.0, ellipsoid = GRS80. 31 points per curve computed by geospatial-analytics-ai999x; marked: the worked example, lon = -100, x = -338391 m.*
 
 ```python
 geospatial_analytics_ai999x.solve('geo_albers_equal_area_forward', lat=40.0, lon=-100.0, lat1=29.5, lat2=45.5, lat0=23, lon0=-96, ellipsoid='GRS80')
@@ -1887,7 +1887,7 @@ $$
 
 ![x (x) against lon (longitude (decimal degrees)) from 9 to 900 on a logarithmic axis](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-mollweide-forward-curve)
 
-*x (x) against lon (longitude (decimal degrees)) from 9 to 900 on a logarithmic axis. One curve for each value of R (radius of the sphere): 6.371e+06 m, 3.1855e+06 m, 1.2742e+07 m. Other inputs as in the worked example: lat = 45.0, lon0 = 0. 36 points per curve computed by geospatial-analytics-ai999x; marked: the worked example, lon = 90, x = 7.26119e+06 m.*
+*x (x) against lon (longitude (decimal degrees)) from 9 to 900 on a logarithmic axis. One curve for each value of R (radius of the sphere): 6.371e+06 m, 3.1855e+06 m, 1.2742e+07 m. Other inputs as in the worked example: lat = 45.0, lon0 = 0.0. 36 points per curve computed by geospatial-analytics-ai999x; marked: the worked example, lon = 90, x = 7.26119e+06 m.*
 
 ```python
 geospatial_analytics_ai999x.solve('geo_mollweide_forward', lat=45.0, lon=90.0, lon0=0, R=6371000.0)
@@ -2146,7 +2146,7 @@ $$
 
 ![h (scale factor along the meridian) against lat (latitude (decimal degrees)) from 0 to 90](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-tissot-indicatrix-curve)
 
-*h (scale factor along the meridian) against lat (latitude (decimal degrees)) from 0 to 90. One curve for each value of projection (projection (spherical form, central meridian 0)): mercator, equirectangular, cylindrical_equal_area, sinusoidal. Other inputs as in the worked example: lon = 0. 36 points per curve computed by geospatial-analytics-ai999x; marked: the worked example, lat = 60, h = 2.*
+*h (scale factor along the meridian) against lat (latitude (decimal degrees)) from 0 to 90. One curve for each value of projection (projection (spherical form, central meridian 0)): mercator, equirectangular, cylindrical_equal_area, sinusoidal. Other inputs as in the worked example: lon = 0.0. 36 points per curve computed by geospatial-analytics-ai999x; marked: the worked example, lat = 60, h = 2.*
 
 ```python
 geospatial_analytics_ai999x.solve('geo_tissot_indicatrix', projection='mercator', lat=60, lon=0)
@@ -3566,7 +3566,7 @@ $$
 
 ![estimate (interpolated value) against py (y of the location) from 0](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-idw-interpolation-curve)
 
-*estimate (interpolated value) against py (y of the location) from 0.3 to 30 on a logarithmic axis. One curve for each value of power (distance power p (> 0)): 2, 1, 4. Other inputs as in the worked example: x = [0, 10, 0, 10], y = [0, 0, 10, 10], z = [1, 2, 3, 4], px = 2. 41 points per curve computed by geospatial-analytics-ai999x; marked: the worked example, py = 3, estimate = 1.65898.*
+*estimate (interpolated value) against py (y of the location) from 0.3 to 30 on a logarithmic axis. One curve for each value of power (distance power p (> 0)): 2, 1, 4. Other inputs as in the worked example: x = [0, 10, 0, 10], y = [0, 0, 10, 10], z = [1, 2, 3, 4], px = 2.0. 41 points per curve computed by geospatial-analytics-ai999x; marked: the worked example, py = 3, estimate = 1.65898.*
 
 ```python
 geospatial_analytics_ai999x.solve('geo_idw_interpolation', x=[0, 10, 0, 10], y=[0, 0, 10, 10], z=[1, 2, 3, 4], px=2, py=3, power=2)
@@ -4969,11 +4969,11 @@ $$
 
 ![The data demand (demand at nodes 0 ](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-maximal-covering-location-xy)
 
-*The data demand (demand at nodes 0 .. n-1) against candidates (candidate facility nodes) as given in the worked example (6 points). Also returned: covered = 95, fraction = 0.904762. Other inputs: edges = 0-1 2; 1-2 3; 0-2 6; 2-3 1; 3-4 4; 4-5 2; 1-5 7, p = 2, coverage = 3.*
+*The data demand (demand at nodes 0 .. n-1) against candidates (candidate facility nodes) as given in the worked example (6 points). Also returned: covered = 95, fraction = 0.904762. Other inputs: edges = 0-1 2; 1-2 3; 0-2 6; 2-3 1; 3-4 4; 4-5 2; 1-5 7, p = 2, coverage = 3.0.*
 
 ![The network edges (undirected network as weighted edges between nodes numbered 0 ](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-maximal-covering-location-graph)
 
-*The network edges (undirected network as weighted edges between nodes numbered 0 .. n-1) of the worked example (6 nodes, 7 edges, laid out on a circle); on each edge its stated weight. Returned: covered = 95, fraction = 0.904762. Other inputs: demand = [10, 20, 15, 30, 5, 25], candidates = [0, 1, 2, 3, 4, 5], p = 2, coverage = 3.*
+*The network edges (undirected network as weighted edges between nodes numbered 0 .. n-1) of the worked example (6 nodes, 7 edges, laid out on a circle); on each edge its stated weight. Returned: covered = 95, fraction = 0.904762. Other inputs: demand = [10, 20, 15, 30, 5, 25], candidates = [0, 1, 2, 3, 4, 5], p = 2, coverage = 3.0.*
 
 ```python
 geospatial_analytics_ai999x.solve('geo_maximal_covering_location', edges='0-1 2; 1-2 3; 0-2 6; 2-3 1; 3-4 4; 4-5 2; 1-5 7', demand=[10, 20, 15, 30, 5, 25], candidates=[0, 1, 2, 3, 4, 5], p=2, coverage=3)
