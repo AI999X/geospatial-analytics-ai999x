@@ -38,7 +38,6 @@ const KINDS: &[(&str, &[&str])] = &[
     ("geo_geohash_decode", &["cells"]),
     ("geo_getis_ord_general_g", &["network"]),
     ("geo_gnomonic_forward", &["graticule"]),
-    ("geo_graticule_cell_area", &["bars"]),
     ("geo_gravity_accessibility", &["network"]),
     ("geo_gravity_model_poisson_fit", &["fit"]),
     ("geo_hillshade", &["compass"]),
