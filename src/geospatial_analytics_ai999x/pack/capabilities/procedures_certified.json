@@ -100,7 +100,7 @@
   "geo_segregation_evenness",
   "geo_segregation_exposure"
  ],
- "generated": "2026-10-24",
+ "generated": "2026-11-14",
  "tool": "tools/certify_procedures.py",
  "report": "release/procedure_certification.json",
  "weak_references": [

@@ -1,5 +1,5 @@
 {
- "package": "1.6.0",
+ "package": "1.6.1",
  "pack": "1.0.0",
  "knowledge_db": null,
  "files": {
@@ -7,8 +7,8 @@
   "dictionary/terms.json": "3781eac9e78cc74a52dfbb7f7c6ecd5f218e2a208be5aad6dabd1094f82ddc60",
   "knowledge/relations.json": "c1837a83c57e2234b562bb78d935ca686887b77627137de6a589b2feff100273",
   "knowledge/reference_cases.json": "7414a14e2c4202a7fae8cdd14e1a2ef7267f35a9665b0633001349c698d4e4e7",
-  "capabilities/procedures.py": "ecda9150614bf88ad04c523a4a4802aca12f6ad747f3a48bd9cce2a27f0bf408",
-  "capabilities/procedures_certified.json": "cb3991f3c7cbec722b6ac322fbb4bff223ddff7169b0e4d36dda5cb51df3ba96",
+  "capabilities/procedures.py": "d3967a12211e5d0e54dcc5941f8d6f8c170d9a081221a3437b275ac41627c316",
+  "capabilities/procedures_certified.json": "2432488df5a7b09a7f8d08d3cca87f22afe99e89ebf271efc200bfe32376e935",
   "geospatial_analytics_knowledge_public.sqlite": "101150e9de8a35c6e369840532f454bfcd51fcb6065bf6057bf4523a4d294cc5"
  },
  "engine": [

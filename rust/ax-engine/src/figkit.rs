@@ -229,7 +229,10 @@ pub fn snap(x: f64, scale: f64) -> f64 {
 
 /// A number to 4 significant digits ("1.424", "6.874e-05").
 pub fn num(x: f64) -> String {
-    py_g(x, 4)
+    // a negative zero, or a value that rounds to zero at 4 digits from below, is written "0" (index and axis labels
+    // read "-0"; signal processing review, 2026-11-14)
+    let s = py_g(x, 4);
+    if s == "-0" { "0".into() } else { s }
 }
 
 /// A quantity with an SI prefix and its unit, 4 significant digits: q(0.00142402, "A") = "1.424 mA",

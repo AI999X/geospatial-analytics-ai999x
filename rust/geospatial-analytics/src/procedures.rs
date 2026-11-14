@@ -505,35 +505,35 @@ pub fn native(key: &str, v: &HashMap<String, Val>) -> Option<Out> {
         }
         "geo_variogram_model_fit" => {
             let r = f_variogram_fit(match v.get("h") { Some(x) => py::from_val(x), None => { return None } }, match v.get("gamma") { Some(x) => py::from_val(x), None => { return None } }, match v.get("model") { Some(x) => py::from_val(x), None => { return None } });
-            finish(r, |i: &Py, o: &Py| -> f64 { match s_7924(i.clone(), o.clone()).and_then(|r| r.f()) { Ok(x) => x, Err(e) => { if std::env::var_os("AX_DEBUG").is_some() { eprintln!("check error: {e:?}"); } f64::NAN } } }, v)
+            finish(r, |i: &Py, o: &Py| -> f64 { match s_7934(i.clone(), o.clone()).and_then(|r| r.f()) { Ok(x) => x, Err(e) => { if std::env::var_os("AX_DEBUG").is_some() { eprintln!("check error: {e:?}"); } f64::NAN } } }, v)
         }
         "geo_vegetation_indices" => {
             let r = f_vegetation_indices(match v.get("red") { Some(x) => py::from_val(x), None => { return None } }, match v.get("nir") { Some(x) => py::from_val(x), None => { return None } }, match v.get("blue") { Some(x) => py::from_val(x), None => { return None } }, match v.get("L") { Some(x) => py::from_val(x), None => { return None } });
-            finish(r, |i: &Py, o: &Py| -> f64 { match s_7996(i.clone(), o.clone()).and_then(|r| r.f()) { Ok(x) => x, Err(e) => { if std::env::var_os("AX_DEBUG").is_some() { eprintln!("check error: {e:?}"); } f64::NAN } } }, v)
+            finish(r, |i: &Py, o: &Py| -> f64 { match s_8006(i.clone(), o.clone()).and_then(|r| r.f()) { Ok(x) => x, Err(e) => { if std::env::var_os("AX_DEBUG").is_some() { eprintln!("check error: {e:?}"); } f64::NAN } } }, v)
         }
         "geo_water_burn_built_indices" => {
             let r = f_water_indices(match v.get("green") { Some(x) => py::from_val(x), None => { return None } }, match v.get("nir") { Some(x) => py::from_val(x), None => { return None } }, match v.get("swir1") { Some(x) => py::from_val(x), None => { return None } }, match v.get("swir2") { Some(x) => py::from_val(x), None => { return None } });
-            finish(r, |i: &Py, o: &Py| -> f64 { match s_8058(i.clone(), o.clone()).and_then(|r| r.f()) { Ok(x) => x, Err(e) => { if std::env::var_os("AX_DEBUG").is_some() { eprintln!("check error: {e:?}"); } f64::NAN } } }, v)
+            finish(r, |i: &Py, o: &Py| -> f64 { match s_8068(i.clone(), o.clone()).and_then(|r| r.f()) { Ok(x) => x, Err(e) => { if std::env::var_os("AX_DEBUG").is_some() { eprintln!("check error: {e:?}"); } f64::NAN } } }, v)
         }
         "geo_watershed_delineation" => {
             let r = f_watershed(match v.get("dem") { Some(x) => py::from_val(x), None => { return None } }, match v.get("cell_size") { Some(x) => py::from_val(x), None => { return None } }, match v.get("row") { Some(x) => py::from_val(x), None => { return None } }, match v.get("col") { Some(x) => py::from_val(x), None => { return None } });
-            finish(r, |i: &Py, o: &Py| -> f64 { match s_8176(i.clone(), o.clone()).and_then(|r| r.f()) { Ok(x) => x, Err(e) => { if std::env::var_os("AX_DEBUG").is_some() { eprintln!("check error: {e:?}"); } f64::NAN } } }, v)
+            finish(r, |i: &Py, o: &Py| -> f64 { match s_8186(i.clone(), o.clone()).and_then(|r| r.f()) { Ok(x) => x, Err(e) => { if std::env::var_os("AX_DEBUG").is_some() { eprintln!("check error: {e:?}"); } f64::NAN } } }, v)
         }
         "geo_web_map_tile" => {
             let r = f_web_map_tile(match v.get("lat") { Some(x) => py::from_val(x), None => { return None } }, match v.get("lon") { Some(x) => py::from_val(x), None => { return None } }, match v.get("zoom") { Some(x) => py::from_val(x), None => { return None } });
-            finish(r, |i: &Py, o: &Py| -> f64 { match s_8240(i.clone(), o.clone()).and_then(|r| r.f()) { Ok(x) => x, Err(e) => { if std::env::var_os("AX_DEBUG").is_some() { eprintln!("check error: {e:?}"); } f64::NAN } } }, v)
+            finish(r, |i: &Py, o: &Py| -> f64 { match s_8250(i.clone(), o.clone()).and_then(|r| r.f()) { Ok(x) => x, Err(e) => { if std::env::var_os("AX_DEBUG").is_some() { eprintln!("check error: {e:?}"); } f64::NAN } } }, v)
         }
         "geo_web_mercator_forward" => {
             let r = f_web_mercator_forward(match v.get("lat") { Some(x) => py::from_val(x), None => { return None } }, match v.get("lon") { Some(x) => py::from_val(x), None => { return None } });
-            finish(r, |i: &Py, o: &Py| -> f64 { match s_8311(i.clone(), o.clone()).and_then(|r| r.f()) { Ok(x) => x, Err(e) => { if std::env::var_os("AX_DEBUG").is_some() { eprintln!("check error: {e:?}"); } f64::NAN } } }, v)
+            finish(r, |i: &Py, o: &Py| -> f64 { match s_8321(i.clone(), o.clone()).and_then(|r| r.f()) { Ok(x) => x, Err(e) => { if std::env::var_os("AX_DEBUG").is_some() { eprintln!("check error: {e:?}"); } f64::NAN } } }, v)
         }
         "geo_web_mercator_inverse" => {
             let r = f_web_mercator_inverse(match v.get("x") { Some(x) => py::from_val(x), None => { return None } }, match v.get("y") { Some(x) => py::from_val(x), None => { return None } });
-            finish(r, |i: &Py, o: &Py| -> f64 { match s_8372(i.clone(), o.clone()).and_then(|r| r.f()) { Ok(x) => x, Err(e) => { if std::env::var_os("AX_DEBUG").is_some() { eprintln!("check error: {e:?}"); } f64::NAN } } }, v)
+            finish(r, |i: &Py, o: &Py| -> f64 { match s_8382(i.clone(), o.clone()).and_then(|r| r.f()) { Ok(x) => x, Err(e) => { if std::env::var_os("AX_DEBUG").is_some() { eprintln!("check error: {e:?}"); } f64::NAN } } }, v)
         }
         "geo_weighted_mean_center" => {
             let r = f_weighted_mean_center(match v.get("x") { Some(x) => py::from_val(x), None => { return None } }, match v.get("y") { Some(x) => py::from_val(x), None => { return None } }, match v.get("w") { Some(x) => py::from_val(x), None => { return None } });
-            finish(r, |i: &Py, o: &Py| -> f64 { match s_8447(i.clone(), o.clone()).and_then(|r| r.f()) { Ok(x) => x, Err(e) => { if std::env::var_os("AX_DEBUG").is_some() { eprintln!("check error: {e:?}"); } f64::NAN } } }, v)
+            finish(r, |i: &Py, o: &Py| -> f64 { match s_8457(i.clone(), o.clone()).and_then(|r| r.f()) { Ok(x) => x, Err(e) => { if std::env::var_os("AX_DEBUG").is_some() { eprintln!("check error: {e:?}"); } f64::NAN } } }, v)
         }
         _ => None,
     }
@@ -735,39 +735,39 @@ fn f__d8(mut v_dem: Py, mut v_cell_size: Py) -> R {
     let mut v_i: Py = Py::None;
     let mut v_j: Py = Py::None;
     let mut v_out: Py = Py::None;
-    let t8115 = (f__dem(v_dem.clone())?).items()?;
-    if t8115.len() != 2 { return Err(PyErr::Value("unpack".into())); }
-    v_R = t8115[0].clone();
-    v_C = t8115[1].clone();
+    let t8125 = (f__dem(v_dem.clone())?).items()?;
+    if t8125.len() != 2 { return Err(PyErr::Value("unpack".into())); }
+    v_R = t8125[0].clone();
+    v_C = t8125[1].clone();
     let _ = f__pos(Py::str("the cell size"), Py::tuple(vec![v_cell_size.clone()]))?;
-    v_out = { let mut out = vec![]; for t8122 in py::range_iter(&[(v_R.clone()).i()?]) { let mut v__: Py; 
-v__ = t8122;
+    v_out = { let mut out = vec![]; for t8132 in py::range_iter(&[(v_R.clone()).i()?]) { let mut v__: Py; 
+v__ = t8132;
 out.push(py::mul(&Py::list(vec![Py::Float(0.0)]), &v_C.clone())?); } Py::list(out) };
-    for t8123 in py::range_iter(&[(v_R.clone()).i()?]) {
-        v_i = t8123;
-        for t8124 in py::range_iter(&[(v_C.clone()).i()?]) {
-            v_j = t8124;
-            let t8125 = (Py::tuple(vec![Py::Float(0.0), Py::Int(0i64)])).items()?;
-            if t8125.len() != 2 { return Err(PyErr::Value("unpack".into())); }
-            v_best = t8125[0].clone();
-            v_code = t8125[1].clone();
-            for t8126 in py::iter(&(c__D8()?))? {
-                let t8139 = (t8126).items()?;
-                if t8139.len() != 3 { return Err(PyErr::Value("unpack".into())); }
-                v_di = t8139[0].clone();
-                v_dj = t8139[1].clone();
-                v_cd = t8139[2].clone();
-                let t8127 = (Py::tuple(vec![py::add(&v_i.clone(), &v_di.clone())?, py::add(&v_j.clone(), &v_dj.clone())?])).items()?;
-                if t8127.len() != 2 { return Err(PyErr::Value("unpack".into())); }
-                v_a = t8127[0].clone();
-                v_b = t8127[1].clone();
-                if ({ let t8134 = { let t8128 = Py::Int(0i64); Py::Bool({ let t8129 = v_a.clone(); if py::le(&t8128, &t8129)? { { let t8130 = v_R.clone(); if py::lt(&t8129, &t8130)? { true } else { false } } } else { false } }) }; if !t8134.truthy() { t8134 } else { { let t8131 = Py::Int(0i64); Py::Bool({ let t8132 = v_b.clone(); if py::le(&t8131, &t8132)? { { let t8133 = v_C.clone(); if py::lt(&t8132, &t8133)? { true } else { false } } } else { false } }) } } }).truthy() {
-                    v_drop = py::truediv(&py::sub(&py::getitem(&py::getitem(&v_dem.clone(), &v_i.clone())?, &v_j.clone())?, &py::getitem(&py::getitem(&v_dem.clone(), &v_a.clone())?, &v_b.clone())?)?, &py::mul(&v_cell_size.clone(), &(if ({ let t8135 = v_di.clone(); if !t8135.truthy() { t8135 } else { v_dj.clone() } }).truthy() { py::math1("sqrt", &Py::Int(2i64))? } else { Py::Float(1.0) }))?)?;
-                    if ({ let t8136 = v_drop.clone(); Py::Bool({ let t8137 = v_best.clone(); if py::gt(&t8136, &t8137)? { true } else { false } }) }).truthy() {
-                        let t8138 = (Py::tuple(vec![v_drop.clone(), v_cd.clone()])).items()?;
-                        if t8138.len() != 2 { return Err(PyErr::Value("unpack".into())); }
-                        v_best = t8138[0].clone();
-                        v_code = t8138[1].clone();
+    for t8133 in py::range_iter(&[(v_R.clone()).i()?]) {
+        v_i = t8133;
+        for t8134 in py::range_iter(&[(v_C.clone()).i()?]) {
+            v_j = t8134;
+            let t8135 = (Py::tuple(vec![Py::Float(0.0), Py::Int(0i64)])).items()?;
+            if t8135.len() != 2 { return Err(PyErr::Value("unpack".into())); }
+            v_best = t8135[0].clone();
+            v_code = t8135[1].clone();
+            for t8136 in py::iter(&(c__D8()?))? {
+                let t8149 = (t8136).items()?;
+                if t8149.len() != 3 { return Err(PyErr::Value("unpack".into())); }
+                v_di = t8149[0].clone();
+                v_dj = t8149[1].clone();
+                v_cd = t8149[2].clone();
+                let t8137 = (Py::tuple(vec![py::add(&v_i.clone(), &v_di.clone())?, py::add(&v_j.clone(), &v_dj.clone())?])).items()?;
+                if t8137.len() != 2 { return Err(PyErr::Value("unpack".into())); }
+                v_a = t8137[0].clone();
+                v_b = t8137[1].clone();
+                if ({ let t8144 = { let t8138 = Py::Int(0i64); Py::Bool({ let t8139 = v_a.clone(); if py::le(&t8138, &t8139)? { { let t8140 = v_R.clone(); if py::lt(&t8139, &t8140)? { true } else { false } } } else { false } }) }; if !t8144.truthy() { t8144 } else { { let t8141 = Py::Int(0i64); Py::Bool({ let t8142 = v_b.clone(); if py::le(&t8141, &t8142)? { { let t8143 = v_C.clone(); if py::lt(&t8142, &t8143)? { true } else { false } } } else { false } }) } } }).truthy() {
+                    v_drop = py::truediv(&py::sub(&py::getitem(&py::getitem(&v_dem.clone(), &v_i.clone())?, &v_j.clone())?, &py::getitem(&py::getitem(&v_dem.clone(), &v_a.clone())?, &v_b.clone())?)?, &py::mul(&v_cell_size.clone(), &(if ({ let t8145 = v_di.clone(); if !t8145.truthy() { t8145 } else { v_dj.clone() } }).truthy() { py::math1("sqrt", &Py::Int(2i64))? } else { Py::Float(1.0) }))?)?;
+                    if ({ let t8146 = v_drop.clone(); Py::Bool({ let t8147 = v_best.clone(); if py::gt(&t8146, &t8147)? { true } else { false } }) }).truthy() {
+                        let t8148 = (Py::tuple(vec![v_drop.clone(), v_cd.clone()])).items()?;
+                        if t8148.len() != 2 { return Err(PyErr::Value("unpack".into())); }
+                        v_best = t8148[0].clone();
+                        v_code = t8148[1].clone();
                     }
                 }
             }
@@ -785,14 +785,14 @@ fn f__dem(mut v_dem: Py) -> R {
     let mut v_row: Py = Py::None;
     let mut v_v: Py = Py::None;
     v_r = py::len(&v_dem.clone())?;
-    let _ = f__need({ let t8107 = { let t8099 = v_r.clone(); Py::Bool({ let t8100 = Py::Int(2i64); if py::ge(&t8099, &t8100)? { true } else { false } }) }; if !t8107.truthy() { t8107 } else { { let t8106 = Py::Bool(({ let mut out = vec![]; for t8101 in py::iter(&(v_dem.clone()))? { let mut v_row: Py; 
-v_row = t8101;
-out.push({ let t8102 = py::len(&v_row.clone())?; Py::Bool({ let t8103 = py::len(&py::getitem(&v_dem.clone(), &Py::Int(0i64))?)?; if py::eq(&t8102, &t8103) { true } else { false } }) }); } Py::list(out) }).items()?.iter().all(|x| x.truthy())); if !t8106.truthy() { t8106 } else { { let t8104 = py::len(&py::getitem(&v_dem.clone(), &Py::Int(0i64))?)?; Py::Bool({ let t8105 = Py::Int(2i64); if py::ge(&t8104, &t8105)? { true } else { false } }) } } } } }, Py::str("the elevation raster must be a rectangular matrix of at least 2 x 2"))?;
-    let _ = f__need({ let t8108 = py::mul(&v_r.clone(), &py::len(&py::getitem(&v_dem.clone(), &Py::Int(0i64))?)?)?; Py::Bool({ let t8109 = Py::Int(900i64); if py::le(&t8108, &t8109)? { true } else { false } }) }, Py::str("the raster may have at most 900 cells"))?;
-    for t8110 in py::iter(&(v_dem.clone()))? {
-        v_row = t8110;
-        for t8111 in py::iter(&(v_row.clone()))? {
-            v_v = t8111;
+    let _ = f__need({ let t8117 = { let t8109 = v_r.clone(); Py::Bool({ let t8110 = Py::Int(2i64); if py::ge(&t8109, &t8110)? { true } else { false } }) }; if !t8117.truthy() { t8117 } else { { let t8116 = Py::Bool(({ let mut out = vec![]; for t8111 in py::iter(&(v_dem.clone()))? { let mut v_row: Py; 
+v_row = t8111;
+out.push({ let t8112 = py::len(&v_row.clone())?; Py::Bool({ let t8113 = py::len(&py::getitem(&v_dem.clone(), &Py::Int(0i64))?)?; if py::eq(&t8112, &t8113) { true } else { false } }) }); } Py::list(out) }).items()?.iter().all(|x| x.truthy())); if !t8116.truthy() { t8116 } else { { let t8114 = py::len(&py::getitem(&v_dem.clone(), &Py::Int(0i64))?)?; Py::Bool({ let t8115 = Py::Int(2i64); if py::ge(&t8114, &t8115)? { true } else { false } }) } } } } }, Py::str("the elevation raster must be a rectangular matrix of at least 2 x 2"))?;
+    let _ = f__need({ let t8118 = py::mul(&v_r.clone(), &py::len(&py::getitem(&v_dem.clone(), &Py::Int(0i64))?)?)?; Py::Bool({ let t8119 = Py::Int(900i64); if py::le(&t8118, &t8119)? { true } else { false } }) }, Py::str("the raster may have at most 900 cells"))?;
+    for t8120 in py::iter(&(v_dem.clone()))? {
+        v_row = t8120;
+        for t8121 in py::iter(&(v_row.clone()))? {
+            v_v = t8121;
             let _ = f__fin(Py::str("each elevation"), Py::tuple(vec![v_v.clone()]))?;
         }
     }
@@ -841,7 +841,7 @@ fn f__dijkstra(mut v_adj: Py, mut v_s: Py) -> R {
 #[allow(unused_mut, unused_variables, unused_assignments, non_snake_case, unreachable_code)]
 fn f__dvmodel(mut v_model: Py, mut v_h: Py, mut v_a: Py) -> R {
     let mut v_c: Py = Py::None;
-    if ({ let t7869 = v_model.clone(); Py::Bool({ let t7870 = Py::str("exponential"); if py::eq(&t7869, &t7870) { true } else { false } }) }).truthy() {
+    if ({ let t7872 = v_model.clone(); Py::Bool({ let t7873 = Py::str("exponential"); if py::eq(&t7872, &t7873) { true } else { false } }) }).truthy() {
         return Ok(py::truediv(&py::mul(&py::mul(&py::neg(&py::math1("exp", &py::truediv(&py::mul(&py::neg(&Py::Int(3i64))?, &v_h.clone())?, &v_a.clone())?)?)?, &Py::Int(3i64))?, &v_h.clone())?, &py::mul(&v_a.clone(), &v_a.clone())?)?);
     }
     v_c = py::truediv(&Py::Float(4.0), &Py::Float(7.0))?;
@@ -909,9 +909,9 @@ fn f__enu_rot(mut v_lat0: Py, mut v_lon0: Py) -> R {
 #[allow(unused_mut, unused_variables, unused_assignments, non_snake_case, unreachable_code)]
 fn f__fin(mut v_name: Py, mut v_vals: Py) -> R {
     let mut v_v: Py = Py::None;
-    for t8352 in py::iter(&(v_vals.clone()))? {
-        v_v = t8352;
-        let _ = f__need({ let t8354 = Py::Bool(matches!(v_v.clone(), Py::Int(_) | Py::Big(_) | Py::Bool(_) | Py::Float(_))); if !t8354.truthy() { t8354 } else { { let t8353 = py::not(&Py::Bool(matches!(v_v.clone(), Py::Bool(_)))); if !t8353.truthy() { t8353 } else { py::math1("isfinite", &v_v.clone())? } } } }, Py::str(&[py::format(&v_name.clone(), "")?, " must be a finite number".to_string()].concat()))?;
+    for t8362 in py::iter(&(v_vals.clone()))? {
+        v_v = t8362;
+        let _ = f__need({ let t8364 = Py::Bool(matches!(v_v.clone(), Py::Int(_) | Py::Big(_) | Py::Bool(_) | Py::Float(_))); if !t8364.truthy() { t8364 } else { { let t8363 = py::not(&Py::Bool(matches!(v_v.clone(), Py::Bool(_)))); if !t8363.truthy() { t8363 } else { py::math1("isfinite", &v_v.clone())? } } } }, Py::str(&[py::format(&v_name.clone(), "")?, " must be a finite number".to_string()].concat()))?;
     }
     #[allow(unreachable_code)]
     Ok(Py::None)
@@ -1322,9 +1322,9 @@ fn f__lam_integral(mut v_E: Py, mut v_sa0: Py, mut v_k2: Py, mut v_s1: Py, mut v
 fn f__lat(mut v_name: Py, mut v_v: Py, mut v_polar_ok: Py) -> R {
     let _ = f__fin(v_name.clone(), Py::tuple(vec![v_v.clone()]))?;
     if (v_polar_ok.clone()).truthy() {
-        let _ = f__need({ let t8284 = py::neg(&Py::Int(90i64))?; Py::Bool({ let t8285 = v_v.clone(); if py::le(&t8284, &t8285)? { { let t8286 = Py::Int(90i64); if py::le(&t8285, &t8286)? { true } else { false } } } else { false } }) }, Py::str(&[py::format(&v_name.clone(), "")?, " must lie between -90 and 90 degrees".to_string()].concat()))?;
+        let _ = f__need({ let t8294 = py::neg(&Py::Int(90i64))?; Py::Bool({ let t8295 = v_v.clone(); if py::le(&t8294, &t8295)? { { let t8296 = Py::Int(90i64); if py::le(&t8295, &t8296)? { true } else { false } } } else { false } }) }, Py::str(&[py::format(&v_name.clone(), "")?, " must lie between -90 and 90 degrees".to_string()].concat()))?;
     } else {
-        let _ = f__need({ let t8287 = py::neg(&Py::Int(90i64))?; Py::Bool({ let t8288 = v_v.clone(); if py::lt(&t8287, &t8288)? { { let t8289 = Py::Int(90i64); if py::lt(&t8288, &t8289)? { true } else { false } } } else { false } }) }, Py::str(&[py::format(&v_name.clone(), "")?, " must lie strictly between -90 and 90 degrees".to_string()].concat()))?;
+        let _ = f__need({ let t8297 = py::neg(&Py::Int(90i64))?; Py::Bool({ let t8298 = v_v.clone(); if py::lt(&t8297, &t8298)? { { let t8299 = Py::Int(90i64); if py::lt(&t8298, &t8299)? { true } else { false } } } else { false } }) }, Py::str(&[py::format(&v_name.clone(), "")?, " must lie strictly between -90 and 90 degrees".to_string()].concat()))?;
     }
     #[allow(unreachable_code)]
     Ok(Py::None)
@@ -1393,25 +1393,25 @@ fn f__linfit(mut v_x: Py, mut v_y: Py) -> R {
     let mut v_sxy: Py = Py::None;
     let mut v_syy: Py = Py::None;
     v_n = py::len(&v_x.clone())?;
-    let t7850 = (Py::tuple(vec![py::truediv(&py::fsum(&v_x.clone())?, &v_n.clone())?, py::truediv(&py::fsum(&v_y.clone())?, &v_n.clone())?])).items()?;
-    if t7850.len() != 2 { return Err(PyErr::Value("unpack".into())); }
-    v_mx = t7850[0].clone();
-    v_my = t7850[1].clone();
-    v_sxx = py::fsum(&{ let mut out = vec![]; for t7851 in py::iter(&(v_x.clone()))? { let mut v_a: Py; 
-v_a = t7851;
+    let t7853 = (Py::tuple(vec![py::truediv(&py::fsum(&v_x.clone())?, &v_n.clone())?, py::truediv(&py::fsum(&v_y.clone())?, &v_n.clone())?])).items()?;
+    if t7853.len() != 2 { return Err(PyErr::Value("unpack".into())); }
+    v_mx = t7853[0].clone();
+    v_my = t7853[1].clone();
+    v_sxx = py::fsum(&{ let mut out = vec![]; for t7854 in py::iter(&(v_x.clone()))? { let mut v_a: Py; 
+v_a = t7854;
 out.push(py::pow(&py::sub(&v_a.clone(), &v_mx.clone())?, &Py::Int(2i64))?); } Py::list(out) })?;
-    v_syy = py::fsum(&{ let mut out = vec![]; for t7852 in py::iter(&(v_y.clone()))? { let mut v_b: Py; 
-v_b = t7852;
+    v_syy = py::fsum(&{ let mut out = vec![]; for t7855 in py::iter(&(v_y.clone()))? { let mut v_b: Py; 
+v_b = t7855;
 out.push(py::pow(&py::sub(&v_b.clone(), &v_my.clone())?, &Py::Int(2i64))?); } Py::list(out) })?;
-    v_sxy = py::fsum(&{ let mut out = vec![]; for t7853 in py::iter(&(py::zip(&[v_x.clone(), v_y.clone()])?))? { let mut v_a: Py; let mut v_b: Py; 
-let t7854 = (t7853).items()?;
-if t7854.len() != 2 { return Err(PyErr::Value("unpack".into())); }
-v_a = t7854[0].clone();
-v_b = t7854[1].clone();
+    v_sxy = py::fsum(&{ let mut out = vec![]; for t7856 in py::iter(&(py::zip(&[v_x.clone(), v_y.clone()])?))? { let mut v_a: Py; let mut v_b: Py; 
+let t7857 = (t7856).items()?;
+if t7857.len() != 2 { return Err(PyErr::Value("unpack".into())); }
+v_a = t7857[0].clone();
+v_b = t7857[1].clone();
 out.push(py::mul(&py::sub(&v_a.clone(), &v_mx.clone())?, &py::sub(&v_b.clone(), &v_my.clone())?)?); } Py::list(out) })?;
-    let _ = f__need({ let t7855 = v_sxx.clone(); Py::Bool({ let t7856 = Py::Int(0i64); if py::gt(&t7855, &t7856)? { true } else { false } }) }, Py::str("the x values must not all be equal"))?;
+    let _ = f__need({ let t7858 = v_sxx.clone(); Py::Bool({ let t7859 = Py::Int(0i64); if py::gt(&t7858, &t7859)? { true } else { false } }) }, Py::str("the x values must not all be equal"))?;
     v_c1 = py::truediv(&v_sxy.clone(), &v_sxx.clone())?;
-    v_r2 = (if ({ let t7857 = v_syy.clone(); Py::Bool({ let t7858 = Py::Int(0i64); if py::gt(&t7857, &t7858)? { true } else { false } }) }).truthy() { py::truediv(&py::mul(&v_sxy.clone(), &v_sxy.clone())?, &py::mul(&v_sxx.clone(), &v_syy.clone())?)? } else { Py::Float(1.0) });
+    v_r2 = (if ({ let t7860 = v_syy.clone(); Py::Bool({ let t7861 = Py::Int(0i64); if py::gt(&t7860, &t7861)? { true } else { false } }) }).truthy() { py::truediv(&py::mul(&v_sxy.clone(), &v_sxy.clone())?, &py::mul(&v_sxx.clone(), &v_syy.clone())?)? } else { Py::Float(1.0) });
     return Ok(Py::tuple(vec![py::sub(&v_my.clone(), &py::mul(&v_c1.clone(), &v_mx.clone())?)?, v_c1.clone(), v_r2.clone()]));
     #[allow(unreachable_code)]
     Ok(Py::None)
@@ -1420,7 +1420,7 @@ out.push(py::mul(&py::sub(&v_a.clone(), &v_mx.clone())?, &py::sub(&v_b.clone(), 
 #[allow(unused_mut, unused_variables, unused_assignments, non_snake_case, unreachable_code)]
 fn f__lon(mut v_name: Py, mut v_v: Py) -> R {
     let _ = f__fin(v_name.clone(), Py::tuple(vec![v_v.clone()]))?;
-    let _ = f__need({ let t8290 = py::neg(&Py::Int(540i64))?; Py::Bool({ let t8291 = v_v.clone(); if py::le(&t8290, &t8291)? { { let t8292 = Py::Int(540i64); if py::le(&t8291, &t8292)? { true } else { false } } } else { false } }) }, Py::str(&[py::format(&v_name.clone(), "")?, " must be a longitude in degrees (-540 to 540)".to_string()].concat()))?;
+    let _ = f__need({ let t8300 = py::neg(&Py::Int(540i64))?; Py::Bool({ let t8301 = v_v.clone(); if py::le(&t8300, &t8301)? { { let t8302 = Py::Int(540i64); if py::le(&t8301, &t8302)? { true } else { false } } } else { false } }) }, Py::str(&[py::format(&v_name.clone(), "")?, " must be a longitude in degrees (-540 to 540)".to_string()].concat()))?;
     #[allow(unreachable_code)]
     Ok(Py::None)
 }
@@ -1565,7 +1565,7 @@ fn f__merid_inv(mut v_E: Py, mut v_m: Py) -> R {
 
 #[allow(unused_mut, unused_variables, unused_assignments, non_snake_case, unreachable_code)]
 fn f__nd(mut v_a: Py, mut v_b: Py) -> R {
-    let _ = f__need({ let t8056 = py::add(&v_a.clone(), &v_b.clone())?; Py::Bool({ let t8057 = Py::Int(0i64); if py::ne(&t8056, &t8057) { true } else { false } }) }, Py::str("a normalized difference needs a non-zero sum of the bands"))?;
+    let _ = f__need({ let t8066 = py::add(&v_a.clone(), &v_b.clone())?; Py::Bool({ let t8067 = Py::Int(0i64); if py::ne(&t8066, &t8067) { true } else { false } }) }, Py::str("a normalized difference needs a non-zero sum of the bands"))?;
     return Ok(py::truediv(&py::sub(&v_a.clone(), &v_b.clone())?, &py::add(&v_a.clone(), &v_b.clone())?)?);
     #[allow(unreachable_code)]
     Ok(Py::None)
@@ -1640,10 +1640,10 @@ out.push(Py::list(vec![])); } Py::list(out) };
 fn f__nlon(mut v_lon: Py) -> R {
     let mut v_x: Py = Py::None;
     v_x = py::fmod(&v_lon.clone(), &Py::Float(360.0))?;
-    if ({ let t8307 = v_x.clone(); Py::Bool({ let t8308 = Py::Float(180.0); if py::gt(&t8307, &t8308)? { true } else { false } }) }).truthy() {
+    if ({ let t8317 = v_x.clone(); Py::Bool({ let t8318 = Py::Float(180.0); if py::gt(&t8317, &t8318)? { true } else { false } }) }).truthy() {
         v_x = py::sub(&v_x, &Py::Float(360.0))?;
     } else {
-        if ({ let t8309 = v_x.clone(); Py::Bool({ let t8310 = py::neg(&Py::Float(180.0))?; if py::le(&t8309, &t8310)? { true } else { false } }) }).truthy() {
+        if ({ let t8319 = v_x.clone(); Py::Bool({ let t8320 = py::neg(&Py::Float(180.0))?; if py::le(&t8319, &t8320)? { true } else { false } }) }).truthy() {
             v_x = py::iadd(&v_x, &Py::Float(360.0))?;
         }
     }
@@ -1665,9 +1665,9 @@ fn f__node(mut v_v: Py, mut v_name: Py) -> R {
 #[allow(unused_mut, unused_variables, unused_assignments, non_snake_case, unreachable_code)]
 fn f__nonneg(mut v_name: Py, mut v_vals: Py) -> R {
     let mut v_v: Py = Py::None;
-    for t8420 in py::iter(&(v_vals.clone()))? {
-        v_v = t8420;
-        let _ = f__need({ let t8425 = Py::Bool(matches!(v_v.clone(), Py::Int(_) | Py::Big(_) | Py::Bool(_) | Py::Float(_))); if !t8425.truthy() { t8425 } else { { let t8424 = py::not(&Py::Bool(matches!(v_v.clone(), Py::Bool(_)))); if !t8424.truthy() { t8424 } else { { let t8423 = py::math1("isfinite", &v_v.clone())?; if !t8423.truthy() { t8423 } else { { let t8421 = v_v.clone(); Py::Bool({ let t8422 = Py::Int(0i64); if py::ge(&t8421, &t8422)? { true } else { false } }) } } } } } } }, Py::str(&[py::format(&v_name.clone(), "")?, " must be zero or positive".to_string()].concat()))?;
+    for t8430 in py::iter(&(v_vals.clone()))? {
+        v_v = t8430;
+        let _ = f__need({ let t8435 = Py::Bool(matches!(v_v.clone(), Py::Int(_) | Py::Big(_) | Py::Bool(_) | Py::Float(_))); if !t8435.truthy() { t8435 } else { { let t8434 = py::not(&Py::Bool(matches!(v_v.clone(), Py::Bool(_)))); if !t8434.truthy() { t8434 } else { { let t8433 = py::math1("isfinite", &v_v.clone())?; if !t8433.truthy() { t8433 } else { { let t8431 = v_v.clone(); Py::Bool({ let t8432 = Py::Int(0i64); if py::ge(&t8431, &t8432)? { true } else { false } }) } } } } } } }, Py::str(&[py::format(&v_name.clone(), "")?, " must be zero or positive".to_string()].concat()))?;
     }
     #[allow(unreachable_code)]
     Ok(Py::None)
@@ -1708,11 +1708,11 @@ fn f__omega(mut v_s_a0: Py, mut v_sigma: Py) -> R {
 
 #[allow(unused_mut, unused_variables, unused_assignments, non_snake_case, unreachable_code)]
 fn f__out(mut v_kw: Py) -> R {
-    return Ok({ let mut out = vec![]; for t8435 in py::iter(&(py::method(&v_kw.clone(), "items", &[])?))? { let mut v_k: Py; let mut v_v: Py; 
-let t8436 = (t8435).items()?;
-if t8436.len() != 2 { return Err(PyErr::Value("unpack".into())); }
-v_k = t8436[0].clone();
-v_v = t8436[1].clone();
+    return Ok({ let mut out = vec![]; for t8445 in py::iter(&(py::method(&v_kw.clone(), "items", &[])?))? { let mut v_k: Py; let mut v_v: Py; 
+let t8446 = (t8445).items()?;
+if t8446.len() != 2 { return Err(PyErr::Value("unpack".into())); }
+v_k = t8446[0].clone();
+v_v = t8446[1].clone();
 out.push((v_k.clone(), f__r(v_v.clone())?)); } Py::dict(out) });
     #[allow(unreachable_code)]
     Ok(Py::None)
@@ -1787,9 +1787,9 @@ fn f__polygon_simple(mut v_x: Py, mut v_y: Py) -> R {
 #[allow(unused_mut, unused_variables, unused_assignments, non_snake_case, unreachable_code)]
 fn f__pos(mut v_name: Py, mut v_vals: Py) -> R {
     let mut v_v: Py = Py::None;
-    for t8116 in py::iter(&(v_vals.clone()))? {
-        v_v = t8116;
-        let _ = f__need({ let t8121 = Py::Bool(matches!(v_v.clone(), Py::Int(_) | Py::Big(_) | Py::Bool(_) | Py::Float(_))); if !t8121.truthy() { t8121 } else { { let t8120 = py::not(&Py::Bool(matches!(v_v.clone(), Py::Bool(_)))); if !t8120.truthy() { t8120 } else { { let t8119 = py::math1("isfinite", &v_v.clone())?; if !t8119.truthy() { t8119 } else { { let t8117 = v_v.clone(); Py::Bool({ let t8118 = Py::Int(0i64); if py::gt(&t8117, &t8118)? { true } else { false } }) } } } } } } }, Py::str(&[py::format(&v_name.clone(), "")?, " must be a positive number".to_string()].concat()))?;
+    for t8126 in py::iter(&(v_vals.clone()))? {
+        v_v = t8126;
+        let _ = f__need({ let t8131 = Py::Bool(matches!(v_v.clone(), Py::Int(_) | Py::Big(_) | Py::Bool(_) | Py::Float(_))); if !t8131.truthy() { t8131 } else { { let t8130 = py::not(&Py::Bool(matches!(v_v.clone(), Py::Bool(_)))); if !t8130.truthy() { t8130 } else { { let t8129 = py::math1("isfinite", &v_v.clone())?; if !t8129.truthy() { t8129 } else { { let t8127 = v_v.clone(); Py::Bool({ let t8128 = Py::Int(0i64); if py::gt(&t8127, &t8128)? { true } else { false } }) } } } } } } }, Py::str(&[py::format(&v_name.clone(), "")?, " must be a positive number".to_string()].concat()))?;
     }
     #[allow(unreachable_code)]
     Ok(Py::None)
@@ -1806,7 +1806,7 @@ fn f__psi(mut v_E: Py, mut v_phi: Py) -> R {
 fn f__pt(mut v_lat: Py, mut v_lon: Py, mut v_lat_lim: Py) -> R {
     let _ = f__lat(Py::str("lat"), v_lat.clone(), Py::Bool(false))?;
     let _ = f__lon(Py::str("lon"), v_lon.clone())?;
-    let _ = f__need({ let t8293 = py::abs(&v_lat.clone())?; Py::Bool({ let t8294 = v_lat_lim.clone(); if py::le(&t8293, &t8294)? { true } else { false } }) }, Py::str(&["the latitude must lie within ".to_string(), py::format(&v_lat_lim.clone(), "g")?, " degrees of the equator".to_string()].concat()))?;
+    let _ = f__need({ let t8303 = py::abs(&v_lat.clone())?; Py::Bool({ let t8304 = v_lat_lim.clone(); if py::le(&t8303, &t8304)? { true } else { false } }) }, Py::str(&["the latitude must lie within ".to_string(), py::format(&v_lat_lim.clone(), "g")?, " degrees of the equator".to_string()].concat()))?;
     #[allow(unreachable_code)]
     Ok(Py::None)
 }
@@ -1824,19 +1824,19 @@ fn f__q_auth(mut v_E: Py, mut v_phi: Py) -> R {
 
 #[allow(unused_mut, unused_variables, unused_assignments, non_snake_case, unreachable_code)]
 fn f__r(mut v_x: Py) -> R {
-    if ({ let t8440 = Py::Bool(matches!(v_x.clone(), Py::Bool(_))); if t8440.truthy() { t8440 } else { { let t8439 = Py::Bool(matches!(v_x.clone(), Py::Str(_))); if t8439.truthy() { t8439 } else { { let t8437 = v_x.clone(); Py::Bool({ let t8438 = Py::None; if py::is(&t8437, &t8438) { true } else { false } }) } } } } }).truthy() {
+    if ({ let t8450 = Py::Bool(matches!(v_x.clone(), Py::Bool(_))); if t8450.truthy() { t8450 } else { { let t8449 = Py::Bool(matches!(v_x.clone(), Py::Str(_))); if t8449.truthy() { t8449 } else { { let t8447 = v_x.clone(); Py::Bool({ let t8448 = Py::None; if py::is(&t8447, &t8448) { true } else { false } }) } } } } }).truthy() {
         return Ok(v_x.clone());
     }
     if (Py::Bool(matches!(v_x.clone(), Py::Int(_) | Py::Big(_) | Py::Bool(_)))).truthy() {
         return Ok(v_x.clone());
     }
     if (Py::Bool(matches!(v_x.clone(), Py::List(_) | Py::Tuple(_)))).truthy() {
-        return Ok({ let mut out = vec![]; for t8441 in py::iter(&(v_x.clone()))? { let mut v_v: Py; 
-v_v = t8441;
+        return Ok({ let mut out = vec![]; for t8451 in py::iter(&(v_x.clone()))? { let mut v_v: Py; 
+v_v = t8451;
 out.push(f__r(v_v.clone())?); } Py::list(out) });
     }
-    if ({ let t8444 = { let t8442 = v_x.clone(); Py::Bool({ let t8443 = Py::Int(0i64); if py::eq(&t8442, &t8443) { true } else { false } }) }; if t8444.truthy() { t8444 } else { py::not(&py::math1("isfinite", &v_x.clone())?) } }).truthy() {
-        return Ok((if ({ let t8445 = v_x.clone(); Py::Bool({ let t8446 = Py::Int(0i64); if py::eq(&t8445, &t8446) { true } else { false } }) }).truthy() { Py::Float(0.0) } else { v_x.clone() }));
+    if ({ let t8454 = { let t8452 = v_x.clone(); Py::Bool({ let t8453 = Py::Int(0i64); if py::eq(&t8452, &t8453) { true } else { false } }) }; if t8454.truthy() { t8454 } else { py::not(&py::math1("isfinite", &v_x.clone())?) } }).truthy() {
+        return Ok((if ({ let t8455 = v_x.clone(); Py::Bool({ let t8456 = Py::Int(0i64); if py::eq(&t8455, &t8456) { true } else { false } }) }).truthy() { Py::Float(0.0) } else { v_x.clone() }));
     }
     return Ok(py::add(&py::float(&Py::str(&[py::format(&v_x.clone(), ".12g")?].concat()))?, &Py::Float(0.0))?);
     #[allow(unreachable_code)]
@@ -1854,28 +1854,28 @@ fn f__receivers(mut v_dirs: Py) -> R {
     let mut v_j: Py = Py::None;
     let mut v_rec: Py = Py::None;
     let mut v_step: Py = Py::None;
-    let t8150 = (Py::tuple(vec![py::len(&v_dirs.clone())?, py::len(&py::getitem(&v_dirs.clone(), &Py::Int(0i64))?)?])).items()?;
-    if t8150.len() != 2 { return Err(PyErr::Value("unpack".into())); }
-    v_R = t8150[0].clone();
-    v_C = t8150[1].clone();
-    v_step = { let mut out = vec![]; for t8151 in py::iter(&(c__D8()?))? { let mut v_cd: Py; let mut v_di: Py; let mut v_dj: Py; 
-let t8152 = (t8151).items()?;
-if t8152.len() != 3 { return Err(PyErr::Value("unpack".into())); }
-v_di = t8152[0].clone();
-v_dj = t8152[1].clone();
-v_cd = t8152[2].clone();
+    let t8160 = (Py::tuple(vec![py::len(&v_dirs.clone())?, py::len(&py::getitem(&v_dirs.clone(), &Py::Int(0i64))?)?])).items()?;
+    if t8160.len() != 2 { return Err(PyErr::Value("unpack".into())); }
+    v_R = t8160[0].clone();
+    v_C = t8160[1].clone();
+    v_step = { let mut out = vec![]; for t8161 in py::iter(&(c__D8()?))? { let mut v_cd: Py; let mut v_di: Py; let mut v_dj: Py; 
+let t8162 = (t8161).items()?;
+if t8162.len() != 3 { return Err(PyErr::Value("unpack".into())); }
+v_di = t8162[0].clone();
+v_dj = t8162[1].clone();
+v_cd = t8162[2].clone();
 out.push((v_cd.clone(), Py::tuple(vec![v_di.clone(), v_dj.clone()]))); } Py::dict(out) };
     v_rec = Py::dict(vec![]);
-    for t8153 in py::range_iter(&[(v_R.clone()).i()?]) {
-        v_i = t8153;
-        for t8154 in py::range_iter(&[(v_C.clone()).i()?]) {
-            v_j = t8154;
+    for t8163 in py::range_iter(&[(v_R.clone()).i()?]) {
+        v_i = t8163;
+        for t8164 in py::range_iter(&[(v_C.clone()).i()?]) {
+            v_j = t8164;
             v_cd = py::int(&py::getitem(&py::getitem(&v_dirs.clone(), &v_i.clone())?, &v_j.clone())?)?;
             if (v_cd.clone()).truthy() {
-                let t8155 = (py::getitem(&v_step.clone(), &v_cd.clone())?).items()?;
-                if t8155.len() != 2 { return Err(PyErr::Value("unpack".into())); }
-                v_di = t8155[0].clone();
-                v_dj = t8155[1].clone();
+                let t8165 = (py::getitem(&v_step.clone(), &v_cd.clone())?).items()?;
+                if t8165.len() != 2 { return Err(PyErr::Value("unpack".into())); }
+                v_di = t8165[0].clone();
+                v_dj = t8165[1].clone();
                 py::setitem(&v_rec.clone(), &Py::tuple(vec![v_i.clone(), v_j.clone()]), Py::tuple(vec![py::add(&v_i.clone(), &v_di.clone())?, py::add(&v_j.clone(), &v_dj.clone())?]))?;
             }
         }
@@ -1905,10 +1905,10 @@ fn f__reduced(mut v_E: Py, mut v_lat: Py) -> R {
 #[allow(unused_mut, unused_variables, unused_assignments, non_snake_case, unreachable_code)]
 fn f__refl(mut v_name: Py, mut v_vals: Py) -> R {
     let mut v_v: Py = Py::None;
-    for t8037 in py::iter(&(v_vals.clone()))? {
-        v_v = t8037;
+    for t8047 in py::iter(&(v_vals.clone()))? {
+        v_v = t8047;
         let _ = f__fin(v_name.clone(), Py::tuple(vec![v_v.clone()]))?;
-        let _ = f__need({ let t8041 = Py::Int(0i64); Py::Bool({ let t8042 = v_v.clone(); if py::le(&t8041, &t8042)? { { let t8043 = Py::Int(1i64); if py::le(&t8042, &t8043)? { true } else { false } } } else { false } }) }, Py::str(&[py::format(&v_name.clone(), "")?, " must be a reflectance between 0 and 1".to_string()].concat()))?;
+        let _ = f__need({ let t8051 = Py::Int(0i64); Py::Bool({ let t8052 = v_v.clone(); if py::le(&t8051, &t8052)? { { let t8053 = Py::Int(1i64); if py::le(&t8052, &t8053)? { true } else { false } } } else { false } }) }, Py::str(&[py::format(&v_name.clone(), "")?, " must be a reflectance between 0 and 1".to_string()].concat()))?;
     }
     #[allow(unreachable_code)]
     Ok(Py::None)
@@ -1917,29 +1917,29 @@ fn f__refl(mut v_name: Py, mut v_vals: Py) -> R {
 #[allow(unused_mut, unused_variables, unused_assignments, non_snake_case, unreachable_code)]
 fn f__rel(mut v_a: Py, mut v_b: Py) -> R {
     let mut v_d: Py = Py::None;
-    if ({ let t8459 = Py::Bool(matches!(v_a.clone(), Py::List(_) | Py::Tuple(_))); if t8459.truthy() { t8459 } else { Py::Bool(matches!(v_b.clone(), Py::List(_) | Py::Tuple(_))) } }).truthy() {
-        if ({ let t8463 = py::not(&{ let t8460 = Py::Bool(matches!(v_a.clone(), Py::List(_) | Py::Tuple(_))); if !t8460.truthy() { t8460 } else { Py::Bool(matches!(v_b.clone(), Py::List(_) | Py::Tuple(_))) } }); if t8463.truthy() { t8463 } else { { let t8461 = py::len(&v_a.clone())?; Py::Bool({ let t8462 = py::len(&v_b.clone())?; if py::ne(&t8461, &t8462) { true } else { false } }) } } }).truthy() {
+    if ({ let t8469 = Py::Bool(matches!(v_a.clone(), Py::List(_) | Py::Tuple(_))); if t8469.truthy() { t8469 } else { Py::Bool(matches!(v_b.clone(), Py::List(_) | Py::Tuple(_))) } }).truthy() {
+        if ({ let t8473 = py::not(&{ let t8470 = Py::Bool(matches!(v_a.clone(), Py::List(_) | Py::Tuple(_))); if !t8470.truthy() { t8470 } else { Py::Bool(matches!(v_b.clone(), Py::List(_) | Py::Tuple(_))) } }); if t8473.truthy() { t8473 } else { { let t8471 = py::len(&v_a.clone())?; Py::Bool({ let t8472 = py::len(&v_b.clone())?; if py::ne(&t8471, &t8472) { true } else { false } }) } } }).truthy() {
             return Ok(Py::Float(f64::INFINITY));
         }
-        return Ok(py::minmax(&[py::add(&{ let mut out = vec![]; for t8464 in py::iter(&(py::zip(&[v_a.clone(), v_b.clone()])?))? { let mut v_x: Py; let mut v_y: Py; 
-let t8465 = (t8464).items()?;
-if t8465.len() != 2 { return Err(PyErr::Value("unpack".into())); }
-v_x = t8465[0].clone();
-v_y = t8465[1].clone();
+        return Ok(py::minmax(&[py::add(&{ let mut out = vec![]; for t8474 in py::iter(&(py::zip(&[v_a.clone(), v_b.clone()])?))? { let mut v_x: Py; let mut v_y: Py; 
+let t8475 = (t8474).items()?;
+if t8475.len() != 2 { return Err(PyErr::Value("unpack".into())); }
+v_x = t8475[0].clone();
+v_y = t8475[1].clone();
 out.push(f__rel(v_x.clone(), v_y.clone())?); } Py::list(out) }, &Py::list(vec![Py::Float(0.0)]))?], true)?);
     }
-    if ({ let t8472 = Py::Bool(matches!(v_a.clone(), Py::Str(_) | Py::Bool(_))); if t8472.truthy() { t8472 } else { { let t8471 = Py::Bool(matches!(v_b.clone(), Py::Str(_) | Py::Bool(_))); if t8471.truthy() { t8471 } else { { let t8470 = { let t8466 = v_a.clone(); Py::Bool({ let t8467 = Py::None; if py::is(&t8466, &t8467) { true } else { false } }) }; if t8470.truthy() { t8470 } else { { let t8468 = v_b.clone(); Py::Bool({ let t8469 = Py::None; if py::is(&t8468, &t8469) { true } else { false } }) } } } } } } }).truthy() {
-        return Ok((if ({ let t8473 = v_a.clone(); Py::Bool({ let t8474 = v_b.clone(); if py::eq(&t8473, &t8474) { true } else { false } }) }).truthy() { Py::Float(0.0) } else { Py::Float(f64::INFINITY) }));
+    if ({ let t8482 = Py::Bool(matches!(v_a.clone(), Py::Str(_) | Py::Bool(_))); if t8482.truthy() { t8482 } else { { let t8481 = Py::Bool(matches!(v_b.clone(), Py::Str(_) | Py::Bool(_))); if t8481.truthy() { t8481 } else { { let t8480 = { let t8476 = v_a.clone(); Py::Bool({ let t8477 = Py::None; if py::is(&t8476, &t8477) { true } else { false } }) }; if t8480.truthy() { t8480 } else { { let t8478 = v_b.clone(); Py::Bool({ let t8479 = Py::None; if py::is(&t8478, &t8479) { true } else { false } }) } } } } } } }).truthy() {
+        return Ok((if ({ let t8483 = v_a.clone(); Py::Bool({ let t8484 = v_b.clone(); if py::eq(&t8483, &t8484) { true } else { false } }) }).truthy() { Py::Float(0.0) } else { Py::Float(f64::INFINITY) }));
     }
-    let t8476: Result<Option<Py>, PyErr> = (|| -> Result<Option<Py>, PyErr> {
-            let t8475 = (Py::tuple(vec![py::float(&v_a.clone())?, py::float(&v_b.clone())?])).items()?;
-            if t8475.len() != 2 { return Err(PyErr::Value("unpack".into())); }
-            v_a = t8475[0].clone();
-            v_b = t8475[1].clone();
+    let t8486: Result<Option<Py>, PyErr> = (|| -> Result<Option<Py>, PyErr> {
+            let t8485 = (Py::tuple(vec![py::float(&v_a.clone())?, py::float(&v_b.clone())?])).items()?;
+            if t8485.len() != 2 { return Err(PyErr::Value("unpack".into())); }
+            v_a = t8485[0].clone();
+            v_b = t8485[1].clone();
             #[allow(unreachable_code)]
             Ok(None)
         })();
-    match t8476 {
+    match t8486 {
         Ok(Some(r)) => { return Ok(r); }
         Ok(None) => {}
         Err(e) if ((matches!(e, PyErr::Type(_)) || matches!(&e, PyErr::Other(c) if c.as_str() == "TypeError"))) || (matches!(e, PyErr::Value(_))) => {
@@ -1947,14 +1947,14 @@ out.push(f__rel(v_x.clone(), v_y.clone())?); } Py::list(out) }, &Py::list(vec![P
         }
         Err(e) => return Err(e),
     }
-    if (py::not(&{ let t8477 = py::math1("isfinite", &v_a.clone())?; if !t8477.truthy() { t8477 } else { py::math1("isfinite", &v_b.clone())? } })).truthy() {
-        return Ok((if ({ let t8478 = v_a.clone(); Py::Bool({ let t8479 = v_b.clone(); if py::eq(&t8478, &t8479) { true } else { false } }) }).truthy() { Py::Float(0.0) } else { Py::Float(f64::INFINITY) }));
+    if (py::not(&{ let t8487 = py::math1("isfinite", &v_a.clone())?; if !t8487.truthy() { t8487 } else { py::math1("isfinite", &v_b.clone())? } })).truthy() {
+        return Ok((if ({ let t8488 = v_a.clone(); Py::Bool({ let t8489 = v_b.clone(); if py::eq(&t8488, &t8489) { true } else { false } }) }).truthy() { Py::Float(0.0) } else { Py::Float(f64::INFINITY) }));
     }
     v_d = py::abs(&py::sub(&v_a.clone(), &v_b.clone())?)?;
-    if ({ let t8480 = v_d.clone(); Py::Bool({ let t8481 = Py::Int(0i64); if py::eq(&t8480, &t8481) { true } else { false } }) }).truthy() {
+    if ({ let t8490 = v_d.clone(); Py::Bool({ let t8491 = Py::Int(0i64); if py::eq(&t8490, &t8491) { true } else { false } }) }).truthy() {
         return Ok(Py::Float(0.0));
     }
-    if ({ let t8486 = { let t8482 = py::abs(&v_a.clone())?; Py::Bool({ let t8483 = Py::Float(1e-15); if py::lt(&t8482, &t8483)? { true } else { false } }) }; if !t8486.truthy() { t8486 } else { { let t8484 = py::abs(&v_b.clone())?; Py::Bool({ let t8485 = Py::Float(1e-15); if py::lt(&t8484, &t8485)? { true } else { false } }) } } }).truthy() {
+    if ({ let t8496 = { let t8492 = py::abs(&v_a.clone())?; Py::Bool({ let t8493 = Py::Float(1e-15); if py::lt(&t8492, &t8493)? { true } else { false } }) }; if !t8496.truthy() { t8496 } else { { let t8494 = py::abs(&v_b.clone())?; Py::Bool({ let t8495 = Py::Float(1e-15); if py::lt(&t8494, &t8495)? { true } else { false } }) } } }).truthy() {
         return Ok(Py::Float(0.0));
     }
     return Ok(py::truediv(&v_d.clone(), &py::minmax(&[py::abs(&v_a.clone())?, py::abs(&v_b.clone())?], true)?)?);
@@ -2374,6 +2374,277 @@ fn f__utm_zone(mut v_lat: Py, mut v_lon: Py) -> R {
         }
     }
     return Ok(v_z.clone());
+    #[allow(unreachable_code)]
+    Ok(Py::None)
+}
+
+#[allow(unused_mut, unused_variables, unused_assignments, non_snake_case, unreachable_code)]
+fn f__vfit(mut v_h: Py, mut v_gamma: Py, mut v_model: Py, mut v_zero_nugget: Py) -> R {
+    let mut v_G: Py = Py::None;
+    let mut v_H: Py = Py::None;
+    let mut v__: Py = Py::None;
+    let mut v_a0: Py = Py::None;
+    let mut v_a1: Py = Py::None;
+    let mut v_am: Py = Py::None;
+    let mut v_c0m: Py = Py::None;
+    let mut v_cm: Py = Py::None;
+    let mut v_dshape: Py = Py::None;
+    let mut v_g0: Py = Py::None;
+    let mut v_g1: Py = Py::None;
+    let mut v_gm: Py = Py::None;
+    let mut v_gmp: Py = Py::None;
+    let mut v_grad: Py = Py::None;
+    let mut v_grid: Py = Py::None;
+    let mut v_hi: Py = Py::None;
+    let mut v_hi_: Py = Py::None;
+    let mut v_i: Py = Py::None;
+    let mut v_lin: Py = Py::None;
+    let mut v_linfit: Py = Py::None;
+    let mut v_lo: Py = Py::None;
+    let mut v_lo_: Py = Py::None;
+    let mut v_m: Py = Py::None;
+    let mut v_mid: Py = Py::None;
+    let mut v_n: Py = Py::None;
+    let mut v_q: Py = Py::None;
+    let mut v_shape: Py = Py::None;
+    let mut v_sse: Py = Py::None;
+    let mut v_vals: Py = Py::None;
+    v_n = py::len(&v_h.clone())?;
+    v_linfit = { let v_gamma = v_gamma.clone(); let v_h = v_h.clone(); let v_linfit = v_linfit.clone(); let v_model = v_model.clone(); let v_n = v_n.clone(); let v_zero_nugget = v_zero_nugget.clone(); py::func(move |a: &[Py]| -> R {
+            #[allow(unused_mut, unused_variables, unused_assignments)]
+{
+            let mut v_a: Py = a.get(0).cloned().unwrap_or(Py::None);
+            let mut v__: Py = Py::None;
+            let mut v_c: Py = Py::None;
+            let mut v_c0: Py = Py::None;
+            let mut v_f: Py = Py::None;
+            let mut v_res: Py = Py::None;
+            v_f = { let mut out = vec![]; for t7843 in py::iter(&(v_h.clone()))? { let mut v_t: Py; 
+v_t = t7843;
+out.push(f__vmodel(v_model.clone(), v_t.clone(), v_a.clone())?); } Py::list(out) };
+            if (v_zero_nugget.clone()).truthy() {
+                v_c0 = Py::Float(0.0);
+                v_c = py::truediv(&py::fsum(&{ let mut out = vec![]; for t7850 in py::iter(&(py::zip(&[v_f.clone(), v_gamma.clone()])?))? { let mut v_fv: Py; let mut v_g: Py; 
+let t7851 = (t7850).items()?;
+if t7851.len() != 2 { return Err(PyErr::Value("unpack".into())); }
+v_fv = t7851[0].clone();
+v_g = t7851[1].clone();
+out.push(py::mul(&v_fv.clone(), &v_g.clone())?); } Py::list(out) })?, &py::fsum(&{ let mut out = vec![]; for t7852 in py::iter(&(v_f.clone()))? { let mut v_fv: Py; 
+v_fv = t7852;
+out.push(py::mul(&v_fv.clone(), &v_fv.clone())?); } Py::list(out) })?)?;
+            } else {
+                let t7862 = (f__linfit(v_f.clone(), v_gamma.clone())?).items()?;
+                if t7862.len() != 3 { return Err(PyErr::Value("unpack".into())); }
+                v_c0 = t7862[0].clone();
+                v_c = t7862[1].clone();
+                v__ = t7862[2].clone();
+            }
+            v_res = { let mut out = vec![]; for t7863 in py::iter(&(py::zip(&[v_gamma.clone(), v_f.clone()])?))? { let mut v_fv: Py; let mut v_g: Py; 
+let t7864 = (t7863).items()?;
+if t7864.len() != 2 { return Err(PyErr::Value("unpack".into())); }
+v_g = t7864[0].clone();
+v_fv = t7864[1].clone();
+out.push(py::sub(&py::sub(&v_g.clone(), &v_c0.clone())?, &py::mul(&v_c.clone(), &v_fv.clone())?)?); } Py::list(out) };
+            return Ok(Py::tuple(vec![v_c0.clone(), v_c.clone(), v_res.clone()]));
+            #[allow(unreachable_code)]
+            Ok(Py::None)
+        }
+        }) };
+    v_sse = { let v_gamma = v_gamma.clone(); let v_h = v_h.clone(); let v_linfit = v_linfit.clone(); let v_model = v_model.clone(); let v_n = v_n.clone(); let v_sse = v_sse.clone(); let v_zero_nugget = v_zero_nugget.clone(); py::func(move |a: &[Py]| -> R {
+            #[allow(unused_mut, unused_variables, unused_assignments)]
+{
+            let mut v_a: Py = a.get(0).cloned().unwrap_or(Py::None);
+            let mut v_f: Py = Py::None;
+            v_f = { let mut out = vec![]; for t7865 in py::iter(&(v_h.clone()))? { let mut v_t: Py; 
+v_t = t7865;
+out.push(f__vmodel(v_model.clone(), v_t.clone(), v_a.clone())?); } Py::list(out) };
+            if ({ let t7866 = py::sub(&py::minmax(&[v_f.clone()], true)?, &py::minmax(&[v_f.clone()], false)?)?; Py::Bool({ let t7867 = Py::Float(1e-09); if py::lt(&t7866, &t7867)? { true } else { false } }) }).truthy() {
+                return Ok(Py::Float(f64::INFINITY));
+            }
+            return Ok(py::fsum(&{ let mut out = vec![]; for t7868 in py::iter(&(py::getitem(&py::call(&v_linfit.clone(), &[v_a.clone()])?, &Py::Int(2i64))?))? { let mut v_r: Py; 
+v_r = t7868;
+out.push(py::mul(&v_r.clone(), &v_r.clone())?); } Py::list(out) })?);
+            #[allow(unreachable_code)]
+            Ok(Py::None)
+        }
+        }) };
+    v_grad = { let v_gamma = v_gamma.clone(); let v_grad = v_grad.clone(); let v_h = v_h.clone(); let v_linfit = v_linfit.clone(); let v_model = v_model.clone(); let v_n = v_n.clone(); let v_sse = v_sse.clone(); let v_zero_nugget = v_zero_nugget.clone(); py::func(move |a: &[Py]| -> R {
+            #[allow(unused_mut, unused_variables, unused_assignments)]
+{
+            let mut v_a: Py = a.get(0).cloned().unwrap_or(Py::None);
+            let mut v_c: Py = Py::None;
+            let mut v_c0: Py = Py::None;
+            let mut v_res: Py = Py::None;
+            let t7869 = (py::call(&v_linfit.clone(), &[v_a.clone()])?).items()?;
+            if t7869.len() != 3 { return Err(PyErr::Value("unpack".into())); }
+            v_c0 = t7869[0].clone();
+            v_c = t7869[1].clone();
+            v_res = t7869[2].clone();
+            return Ok(py::mul(&py::neg(&Py::Int(2i64))?, &py::fsum(&{ let mut out = vec![]; for t7870 in py::iter(&(py::zip(&[v_res.clone(), v_h.clone()])?))? { let mut v_r: Py; let mut v_t: Py; 
+let t7871 = (t7870).items()?;
+if t7871.len() != 2 { return Err(PyErr::Value("unpack".into())); }
+v_r = t7871[0].clone();
+v_t = t7871[1].clone();
+out.push(py::mul(&py::mul(&v_r.clone(), &v_c.clone())?, &f__dvmodel(v_model.clone(), v_t.clone(), v_a.clone())?)?); } Py::list(out) })?)?);
+            #[allow(unreachable_code)]
+            Ok(Py::None)
+        }
+        }) };
+    let t7874 = (Py::tuple(vec![py::truediv(&py::minmax(&[v_h.clone()], false)?, &Py::Int(20i64))?, py::mul(&py::minmax(&[v_h.clone()], true)?, &Py::Int(20i64))?])).items()?;
+    if t7874.len() != 2 { return Err(PyErr::Value("unpack".into())); }
+    v_lo = t7874[0].clone();
+    v_hi = t7874[1].clone();
+    v_grid = { let mut out = vec![]; for t7875 in py::range_iter(&[(Py::Int(401i64)).i()?]) { let mut v_i: Py; 
+v_i = t7875;
+out.push(py::mul(&v_lo.clone(), &py::pow(&py::truediv(&v_hi.clone(), &v_lo.clone())?, &py::truediv(&v_i.clone(), &Py::Int(400i64))?)?)?); } Py::list(out) };
+    v_vals = { let mut out = vec![]; for t7876 in py::iter(&(v_grid.clone()))? { let mut v_a: Py; 
+v_a = t7876;
+out.push(py::call(&v_sse.clone(), &[v_a.clone()])?); } Py::list(out) };
+    v_i = py::minmax_key(&[Py::list((py::range_iter(&[(py::len(&v_grid.clone())?).i()?])).into_iter().collect::<Vec<Py>>())], &{ let v_gamma = v_gamma.clone(); let v_grad = v_grad.clone(); let v_grid = v_grid.clone(); let v_h = v_h.clone(); let v_hi = v_hi.clone(); let v_linfit = v_linfit.clone(); let v_lo = v_lo.clone(); let v_model = v_model.clone(); let v_n = v_n.clone(); let v_sse = v_sse.clone(); let v_vals = v_vals.clone(); let v_zero_nugget = v_zero_nugget.clone(); py::func(move |a: &[Py]| -> R {
+            #[allow(unused_mut, unused_variables, unused_assignments)]
+{
+            let mut v_k: Py = a.get(0).cloned().unwrap_or(Py::None);
+            return Ok(py::getitem(&v_vals.clone(), &v_k.clone())?);
+            #[allow(unreachable_code)]
+            Ok(Py::None)
+        }
+        }) }, false)?;
+    let _ = f__need({ let t7877 = Py::Int(0i64); Py::Bool({ let t7878 = v_i.clone(); if py::lt(&t7877, &t7878)? { { let t7879 = py::sub(&py::len(&v_grid.clone())?, &Py::Int(1i64))?; if py::lt(&t7878, &t7879)? { true } else { false } } } else { false } }) }, Py::str("the fit does not determine the range (no interior minimum)"))?;
+    let t7880 = (Py::tuple(vec![py::getitem(&v_grid.clone(), &py::sub(&v_i.clone(), &Py::Int(1i64))?)?, py::getitem(&v_grid.clone(), &py::add(&v_i.clone(), &Py::Int(1i64))?)?])).items()?;
+    if t7880.len() != 2 { return Err(PyErr::Value("unpack".into())); }
+    v_a0 = t7880[0].clone();
+    v_a1 = t7880[1].clone();
+    let t7881 = (Py::tuple(vec![py::call(&v_grad.clone(), &[v_a0.clone()])?, py::call(&v_grad.clone(), &[v_a1.clone()])?])).items()?;
+    if t7881.len() != 2 { return Err(PyErr::Value("unpack".into())); }
+    v_g0 = t7881[0].clone();
+    v_g1 = t7881[1].clone();
+    let _ = f__need({ let t7882 = v_g0.clone(); Py::Bool({ let t7883 = Py::Int(0i64); if py::lt(&t7882, &t7883)? { { let t7884 = v_g1.clone(); if py::lt(&t7883, &t7884)? { true } else { false } } } else { false } }) }, Py::str("the fit does not determine the range"))?;
+    for t7885 in py::range_iter(&[(Py::Int(200i64)).i()?]) {
+        v__ = t7885;
+        v_m = py::mul(&Py::Float(0.5), &py::add(&v_a0.clone(), &v_a1.clone())?)?;
+        if ({ let t7890 = { let t7886 = v_m.clone(); Py::Bool({ let t7887 = v_a0.clone(); if py::eq(&t7886, &t7887) { true } else { false } }) }; if t7890.truthy() { t7890 } else { { let t7888 = v_m.clone(); Py::Bool({ let t7889 = v_a1.clone(); if py::eq(&t7888, &t7889) { true } else { false } }) } } }).truthy() {
+            break;
+        }
+        v_gm = py::call(&v_grad.clone(), &[v_m.clone()])?;
+        if ({ let t7891 = v_gm.clone(); Py::Bool({ let t7892 = Py::Int(0i64); if py::lt(&t7891, &t7892)? { true } else { false } }) }).truthy() {
+            v_a0 = v_m.clone();
+        } else {
+            v_a1 = v_m.clone();
+        }
+    }
+    {
+        let _g0 = ax_engine::pympf::scope("workdps", &Py::Int(30i64))?;
+        v_H = { let mut out = vec![]; for t7893 in py::iter(&(v_h.clone()))? { let mut v_t: Py; 
+v_t = t7893;
+out.push(ax_engine::pymp::call("mpf", &[Py::str(&py::repr(&py::float(&v_t.clone())?))], &[])?); } Py::list(out) };
+        v_G = { let mut out = vec![]; for t7894 in py::iter(&(v_gamma.clone()))? { let mut v_v: Py; 
+v_v = t7894;
+out.push(ax_engine::pymp::call("mpf", &[Py::str(&py::repr(&py::float(&v_v.clone())?))], &[])?); } Py::list(out) };
+        v_q = py::truediv(&ax_engine::pymp::call("mpf", &[Py::Int(4i64)], &[])?, &Py::Int(7i64))?;
+        v_shape = { let v_G = v_G.clone(); let v_H = v_H.clone(); let v__ = v__.clone(); let v_a0 = v_a0.clone(); let v_a1 = v_a1.clone(); let v_g0 = v_g0.clone(); let v_g1 = v_g1.clone(); let v_gamma = v_gamma.clone(); let v_gm = v_gm.clone(); let v_grad = v_grad.clone(); let v_grid = v_grid.clone(); let v_h = v_h.clone(); let v_hi = v_hi.clone(); let v_i = v_i.clone(); let v_linfit = v_linfit.clone(); let v_lo = v_lo.clone(); let v_m = v_m.clone(); let v_model = v_model.clone(); let v_n = v_n.clone(); let v_q = v_q.clone(); let v_shape = v_shape.clone(); let v_sse = v_sse.clone(); let v_vals = v_vals.clone(); let v_zero_nugget = v_zero_nugget.clone(); py::func(move |a: &[Py]| -> R {
+            #[allow(unused_mut, unused_variables, unused_assignments)]
+{
+            let mut v_t: Py = a.get(0).cloned().unwrap_or(Py::None);
+            let mut v_a: Py = a.get(1).cloned().unwrap_or(Py::None);
+            return Ok((if ({ let t7895 = v_model.clone(); Py::Bool({ let t7896 = Py::str("exponential"); if py::eq(&t7895, &t7896) { true } else { false } }) }).truthy() { py::sub(&Py::Int(1i64), &ax_engine::pymp::call("exp", &[py::truediv(&py::mul(&py::neg(&Py::Int(3i64))?, &v_t.clone())?, &v_a.clone())?], &[])?)? } else { py::sub(&Py::Int(1i64), &ax_engine::pymp::call("exp", &[py::neg(&py::pow(&py::truediv(&v_t.clone(), &py::mul(&v_a.clone(), &v_q.clone())?)?, &Py::Int(2i64))?)?], &[])?)? }));
+            #[allow(unreachable_code)]
+            Ok(Py::None)
+        }
+        }) };
+        v_dshape = { let v_G = v_G.clone(); let v_H = v_H.clone(); let v__ = v__.clone(); let v_a0 = v_a0.clone(); let v_a1 = v_a1.clone(); let v_dshape = v_dshape.clone(); let v_g0 = v_g0.clone(); let v_g1 = v_g1.clone(); let v_gamma = v_gamma.clone(); let v_gm = v_gm.clone(); let v_grad = v_grad.clone(); let v_grid = v_grid.clone(); let v_h = v_h.clone(); let v_hi = v_hi.clone(); let v_i = v_i.clone(); let v_linfit = v_linfit.clone(); let v_lo = v_lo.clone(); let v_m = v_m.clone(); let v_model = v_model.clone(); let v_n = v_n.clone(); let v_q = v_q.clone(); let v_shape = v_shape.clone(); let v_sse = v_sse.clone(); let v_vals = v_vals.clone(); let v_zero_nugget = v_zero_nugget.clone(); py::func(move |a: &[Py]| -> R {
+            #[allow(unused_mut, unused_variables, unused_assignments)]
+{
+            let mut v_t: Py = a.get(0).cloned().unwrap_or(Py::None);
+            let mut v_a: Py = a.get(1).cloned().unwrap_or(Py::None);
+            return Ok((if ({ let t7897 = v_model.clone(); Py::Bool({ let t7898 = Py::str("exponential"); if py::eq(&t7897, &t7898) { true } else { false } }) }).truthy() { py::truediv(&py::mul(&py::mul(&py::neg(&ax_engine::pymp::call("exp", &[py::truediv(&py::mul(&py::neg(&Py::Int(3i64))?, &v_t.clone())?, &v_a.clone())?], &[])?)?, &Py::Int(3i64))?, &v_t.clone())?, &py::pow(&v_a.clone(), &Py::Int(2i64))?)? } else { py::truediv(&py::mul(&py::mul(&py::mul(&py::neg(&ax_engine::pymp::call("exp", &[py::neg(&py::pow(&py::truediv(&v_t.clone(), &py::mul(&v_a.clone(), &v_q.clone())?)?, &Py::Int(2i64))?)?], &[])?)?, &Py::Int(2i64))?, &v_t.clone())?, &v_t.clone())?, &py::mul(&py::mul(&v_q.clone(), &v_q.clone())?, &py::pow(&v_a.clone(), &Py::Int(3i64))?)?)? }));
+            #[allow(unreachable_code)]
+            Ok(Py::None)
+        }
+        }) };
+        v_lin = { let v_G = v_G.clone(); let v_H = v_H.clone(); let v__ = v__.clone(); let v_a0 = v_a0.clone(); let v_a1 = v_a1.clone(); let v_dshape = v_dshape.clone(); let v_g0 = v_g0.clone(); let v_g1 = v_g1.clone(); let v_gamma = v_gamma.clone(); let v_gm = v_gm.clone(); let v_grad = v_grad.clone(); let v_grid = v_grid.clone(); let v_h = v_h.clone(); let v_hi = v_hi.clone(); let v_i = v_i.clone(); let v_lin = v_lin.clone(); let v_linfit = v_linfit.clone(); let v_lo = v_lo.clone(); let v_m = v_m.clone(); let v_model = v_model.clone(); let v_n = v_n.clone(); let v_q = v_q.clone(); let v_shape = v_shape.clone(); let v_sse = v_sse.clone(); let v_vals = v_vals.clone(); let v_zero_nugget = v_zero_nugget.clone(); py::func(move |a: &[Py]| -> R {
+            #[allow(unused_mut, unused_variables, unused_assignments)]
+{
+            let mut v_a: Py = a.get(0).cloned().unwrap_or(Py::None);
+            let mut v_F: Py = Py::None;
+            let mut v_cc: Py = Py::None;
+            let mut v_mf: Py = Py::None;
+            let mut v_mg: Py = Py::None;
+            v_F = { let mut out = vec![]; for t7899 in py::iter(&(v_H.clone()))? { let mut v_t: Py; 
+v_t = t7899;
+out.push(py::call(&v_shape.clone(), &[v_t.clone(), v_a.clone()])?); } Py::list(out) };
+            if (v_zero_nugget.clone()).truthy() {
+                return Ok(Py::tuple(vec![ax_engine::pymp::call("mpf", &[Py::Int(0i64)], &[])?, py::truediv(&ax_engine::pymp::call("fsum", &[{ let mut out = vec![]; for t7900 in py::iter(&(py::zip(&[v_F.clone(), v_G.clone()])?))? { let mut v_fv: Py; let mut v_g: Py; 
+let t7901 = (t7900).items()?;
+if t7901.len() != 2 { return Err(PyErr::Value("unpack".into())); }
+v_fv = t7901[0].clone();
+v_g = t7901[1].clone();
+out.push(py::mul(&v_fv.clone(), &v_g.clone())?); } Py::list(out) }], &[])?, &ax_engine::pymp::call("fsum", &[{ let mut out = vec![]; for t7902 in py::iter(&(v_F.clone()))? { let mut v_fv: Py; 
+v_fv = t7902;
+out.push(py::mul(&v_fv.clone(), &v_fv.clone())?); } Py::list(out) }], &[])?)?, v_F.clone()]));
+            }
+            let t7903 = (Py::tuple(vec![py::truediv(&ax_engine::pymp::call("fsum", &[v_F.clone()], &[])?, &v_n.clone())?, py::truediv(&ax_engine::pymp::call("fsum", &[v_G.clone()], &[])?, &v_n.clone())?])).items()?;
+            if t7903.len() != 2 { return Err(PyErr::Value("unpack".into())); }
+            v_mf = t7903[0].clone();
+            v_mg = t7903[1].clone();
+            v_cc = py::truediv(&ax_engine::pymp::call("fsum", &[{ let mut out = vec![]; for t7904 in py::iter(&(py::zip(&[v_F.clone(), v_G.clone()])?))? { let mut v_fv: Py; let mut v_g: Py; 
+let t7905 = (t7904).items()?;
+if t7905.len() != 2 { return Err(PyErr::Value("unpack".into())); }
+v_fv = t7905[0].clone();
+v_g = t7905[1].clone();
+out.push(py::mul(&py::sub(&v_fv.clone(), &v_mf.clone())?, &py::sub(&v_g.clone(), &v_mg.clone())?)?); } Py::list(out) }], &[])?, &ax_engine::pymp::call("fsum", &[{ let mut out = vec![]; for t7906 in py::iter(&(v_F.clone()))? { let mut v_fv: Py; 
+v_fv = t7906;
+out.push(py::pow(&py::sub(&v_fv.clone(), &v_mf.clone())?, &Py::Int(2i64))?); } Py::list(out) }], &[])?)?;
+            return Ok(Py::tuple(vec![py::sub(&v_mg.clone(), &py::mul(&v_cc.clone(), &v_mf.clone())?)?, v_cc.clone(), v_F.clone()]));
+            #[allow(unreachable_code)]
+            Ok(Py::None)
+        }
+        }) };
+        v_gmp = { let v_G = v_G.clone(); let v_H = v_H.clone(); let v__ = v__.clone(); let v_a0 = v_a0.clone(); let v_a1 = v_a1.clone(); let v_dshape = v_dshape.clone(); let v_g0 = v_g0.clone(); let v_g1 = v_g1.clone(); let v_gamma = v_gamma.clone(); let v_gm = v_gm.clone(); let v_gmp = v_gmp.clone(); let v_grad = v_grad.clone(); let v_grid = v_grid.clone(); let v_h = v_h.clone(); let v_hi = v_hi.clone(); let v_i = v_i.clone(); let v_lin = v_lin.clone(); let v_linfit = v_linfit.clone(); let v_lo = v_lo.clone(); let v_m = v_m.clone(); let v_model = v_model.clone(); let v_n = v_n.clone(); let v_q = v_q.clone(); let v_shape = v_shape.clone(); let v_sse = v_sse.clone(); let v_vals = v_vals.clone(); let v_zero_nugget = v_zero_nugget.clone(); py::func(move |a: &[Py]| -> R {
+            #[allow(unused_mut, unused_variables, unused_assignments)]
+{
+            let mut v_a: Py = a.get(0).cloned().unwrap_or(Py::None);
+            let mut v_F: Py = Py::None;
+            let mut v_c0m: Py = Py::None;
+            let mut v_cm: Py = Py::None;
+            let t7907 = (py::call(&v_lin.clone(), &[v_a.clone()])?).items()?;
+            if t7907.len() != 3 { return Err(PyErr::Value("unpack".into())); }
+            v_c0m = t7907[0].clone();
+            v_cm = t7907[1].clone();
+            v_F = t7907[2].clone();
+            return Ok(py::mul(&py::neg(&Py::Int(2i64))?, &ax_engine::pymp::call("fsum", &[{ let mut out = vec![]; for t7908 in py::iter(&(py::zip(&[v_G.clone(), v_F.clone(), v_H.clone()])?))? { let mut v_fv: Py; let mut v_g: Py; let mut v_t: Py; 
+let t7909 = (t7908).items()?;
+if t7909.len() != 3 { return Err(PyErr::Value("unpack".into())); }
+v_g = t7909[0].clone();
+v_fv = t7909[1].clone();
+v_t = t7909[2].clone();
+out.push(py::mul(&py::mul(&py::sub(&py::sub(&v_g.clone(), &v_c0m.clone())?, &py::mul(&v_cm.clone(), &v_fv.clone())?)?, &v_cm.clone())?, &py::call(&v_dshape.clone(), &[v_t.clone(), v_a.clone()])?)?); } Py::list(out) }], &[])?)?);
+            #[allow(unreachable_code)]
+            Ok(Py::None)
+        }
+        }) };
+        let t7910 = (Py::tuple(vec![ax_engine::pymp::call("mpf", &[Py::str(&py::repr(&v_a0.clone()))], &[])?, ax_engine::pymp::call("mpf", &[Py::str(&py::repr(&v_a1.clone()))], &[])?])).items()?;
+        if t7910.len() != 2 { return Err(PyErr::Value("unpack".into())); }
+        v_lo_ = t7910[0].clone();
+        v_hi_ = t7910[1].clone();
+        if ({ let t7911 = py::call(&v_gmp.clone(), &[v_lo_.clone()])?; Py::Bool({ let t7912 = Py::Int(0i64); if py::lt(&t7911, &t7912)? { { let t7913 = py::call(&v_gmp.clone(), &[v_hi_.clone()])?; if py::lt(&t7912, &t7913)? { true } else { false } } } else { false } }) }).truthy() {
+            for t7914 in py::range_iter(&[(Py::Int(80i64)).i()?]) {
+                v__ = t7914;
+                v_mid = py::truediv(&py::add(&v_lo_.clone(), &v_hi_.clone())?, &Py::Int(2i64))?;
+                if ({ let t7915 = py::call(&v_gmp.clone(), &[v_mid.clone()])?; Py::Bool({ let t7916 = Py::Int(0i64); if py::lt(&t7915, &t7916)? { true } else { false } }) }).truthy() {
+                    v_lo_ = v_mid.clone();
+                } else {
+                    v_hi_ = v_mid.clone();
+                }
+            }
+        }
+        v_am = py::truediv(&py::add(&v_lo_.clone(), &v_hi_.clone())?, &Py::Int(2i64))?;
+        let t7917 = (py::call(&v_lin.clone(), &[v_am.clone()])?).items()?;
+        if t7917.len() != 3 { return Err(PyErr::Value("unpack".into())); }
+        v_c0m = t7917[0].clone();
+        v_cm = t7917[1].clone();
+        v__ = t7917[2].clone();
+        return Ok(f__out(Py::dict(vec![(Py::str("nugget"), py::float(&v_c0m.clone())?), (Py::str("psill"), py::float(&v_cm.clone())?), (Py::str("range"), py::float(&v_am.clone())?), (Py::str("sill"), py::float(&py::add(&v_c0m.clone(), &v_cm.clone())?)?)]))?);
+    }
     #[allow(unreachable_code)]
     Ok(Py::None)
 }
@@ -5632,36 +5903,9 @@ fn f_utm_zone(mut v_lat: Py, mut v_lon: Py) -> R {
 
 #[allow(unused_mut, unused_variables, unused_assignments, non_snake_case, unreachable_code)]
 fn f_variogram_fit(mut v_h: Py, mut v_gamma: Py, mut v_model: Py) -> R {
-    let mut v_G: Py = Py::None;
-    let mut v_H: Py = Py::None;
-    let mut v__: Py = Py::None;
-    let mut v_a0: Py = Py::None;
-    let mut v_a1: Py = Py::None;
-    let mut v_am: Py = Py::None;
-    let mut v_c0m: Py = Py::None;
-    let mut v_cm: Py = Py::None;
-    let mut v_dshape: Py = Py::None;
-    let mut v_g0: Py = Py::None;
-    let mut v_g1: Py = Py::None;
-    let mut v_gm: Py = Py::None;
-    let mut v_gmp: Py = Py::None;
-    let mut v_grad: Py = Py::None;
-    let mut v_grid: Py = Py::None;
-    let mut v_hi: Py = Py::None;
-    let mut v_hi_: Py = Py::None;
-    let mut v_i: Py = Py::None;
-    let mut v_lin: Py = Py::None;
-    let mut v_linfit: Py = Py::None;
-    let mut v_lo: Py = Py::None;
-    let mut v_lo_: Py = Py::None;
-    let mut v_m: Py = Py::None;
-    let mut v_mid: Py = Py::None;
     let mut v_n: Py = Py::None;
-    let mut v_q: Py = Py::None;
-    let mut v_shape: Py = Py::None;
-    let mut v_sse: Py = Py::None;
+    let mut v_r: Py = Py::None;
     let mut v_v: Py = Py::None;
-    let mut v_vals: Py = Py::None;
     v_n = py::len(&v_h.clone())?;
     let _ = f__need({ let t7829 = { let t7825 = v_n.clone(); Py::Bool({ let t7826 = py::len(&v_gamma.clone())?; if py::eq(&t7825, &t7826) { true } else { false } }) }; if !t7829.truthy() { t7829 } else { { let t7827 = v_n.clone(); Py::Bool({ let t7828 = Py::Int(4i64); if py::ge(&t7827, &t7828)? { true } else { false } }) } } }, Py::str("give one semivariance per lag (at least 4)"))?;
     let _ = f__need({ let t7830 = v_model.clone(); Py::Bool({ let t7831 = Py::tuple(vec![Py::str("exponential"), Py::str("gaussian")]); if py::contains(&t7831, &t7830)? { true } else { false } }) }, Py::str("the model must be exponential or gaussian"))?;
@@ -5673,219 +5917,12 @@ fn f_variogram_fit(mut v_h: Py, mut v_gamma: Py, mut v_model: Py) -> R {
         v_v = t7839;
         let _ = f__fin(Py::str("each semivariance"), Py::tuple(vec![v_v.clone()]))?;
     }
-    v_linfit = { let v_gamma = v_gamma.clone(); let v_h = v_h.clone(); let v_linfit = v_linfit.clone(); let v_model = v_model.clone(); let v_n = v_n.clone(); let v_v = v_v.clone(); py::func(move |a: &[Py]| -> R {
-            #[allow(unused_mut, unused_variables, unused_assignments)]
-{
-            let mut v_a: Py = a.get(0).cloned().unwrap_or(Py::None);
-            let mut v__: Py = Py::None;
-            let mut v_c: Py = Py::None;
-            let mut v_c0: Py = Py::None;
-            let mut v_f: Py = Py::None;
-            let mut v_res: Py = Py::None;
-            v_f = { let mut out = vec![]; for t7843 in py::iter(&(v_h.clone()))? { let mut v_t: Py; 
-v_t = t7843;
-out.push(f__vmodel(v_model.clone(), v_t.clone(), v_a.clone())?); } Py::list(out) };
-            let t7859 = (f__linfit(v_f.clone(), v_gamma.clone())?).items()?;
-            if t7859.len() != 3 { return Err(PyErr::Value("unpack".into())); }
-            v_c0 = t7859[0].clone();
-            v_c = t7859[1].clone();
-            v__ = t7859[2].clone();
-            v_res = { let mut out = vec![]; for t7860 in py::iter(&(py::zip(&[v_gamma.clone(), v_f.clone()])?))? { let mut v_fv: Py; let mut v_g: Py; 
-let t7861 = (t7860).items()?;
-if t7861.len() != 2 { return Err(PyErr::Value("unpack".into())); }
-v_g = t7861[0].clone();
-v_fv = t7861[1].clone();
-out.push(py::sub(&py::sub(&v_g.clone(), &v_c0.clone())?, &py::mul(&v_c.clone(), &v_fv.clone())?)?); } Py::list(out) };
-            return Ok(Py::tuple(vec![v_c0.clone(), v_c.clone(), v_res.clone()]));
-            #[allow(unreachable_code)]
-            Ok(Py::None)
-        }
-        }) };
-    v_sse = { let v_gamma = v_gamma.clone(); let v_h = v_h.clone(); let v_linfit = v_linfit.clone(); let v_model = v_model.clone(); let v_n = v_n.clone(); let v_sse = v_sse.clone(); let v_v = v_v.clone(); py::func(move |a: &[Py]| -> R {
-            #[allow(unused_mut, unused_variables, unused_assignments)]
-{
-            let mut v_a: Py = a.get(0).cloned().unwrap_or(Py::None);
-            let mut v_f: Py = Py::None;
-            v_f = { let mut out = vec![]; for t7862 in py::iter(&(v_h.clone()))? { let mut v_t: Py; 
-v_t = t7862;
-out.push(f__vmodel(v_model.clone(), v_t.clone(), v_a.clone())?); } Py::list(out) };
-            if ({ let t7863 = py::sub(&py::minmax(&[v_f.clone()], true)?, &py::minmax(&[v_f.clone()], false)?)?; Py::Bool({ let t7864 = Py::Float(1e-09); if py::lt(&t7863, &t7864)? { true } else { false } }) }).truthy() {
-                return Ok(Py::Float(f64::INFINITY));
-            }
-            return Ok(py::fsum(&{ let mut out = vec![]; for t7865 in py::iter(&(py::getitem(&py::call(&v_linfit.clone(), &[v_a.clone()])?, &Py::Int(2i64))?))? { let mut v_r: Py; 
-v_r = t7865;
-out.push(py::mul(&v_r.clone(), &v_r.clone())?); } Py::list(out) })?);
-            #[allow(unreachable_code)]
-            Ok(Py::None)
-        }
-        }) };
-    v_grad = { let v_gamma = v_gamma.clone(); let v_grad = v_grad.clone(); let v_h = v_h.clone(); let v_linfit = v_linfit.clone(); let v_model = v_model.clone(); let v_n = v_n.clone(); let v_sse = v_sse.clone(); let v_v = v_v.clone(); py::func(move |a: &[Py]| -> R {
-            #[allow(unused_mut, unused_variables, unused_assignments)]
-{
-            let mut v_a: Py = a.get(0).cloned().unwrap_or(Py::None);
-            let mut v_c: Py = Py::None;
-            let mut v_c0: Py = Py::None;
-            let mut v_res: Py = Py::None;
-            let t7866 = (py::call(&v_linfit.clone(), &[v_a.clone()])?).items()?;
-            if t7866.len() != 3 { return Err(PyErr::Value("unpack".into())); }
-            v_c0 = t7866[0].clone();
-            v_c = t7866[1].clone();
-            v_res = t7866[2].clone();
-            return Ok(py::mul(&py::neg(&Py::Int(2i64))?, &py::fsum(&{ let mut out = vec![]; for t7867 in py::iter(&(py::zip(&[v_res.clone(), v_h.clone()])?))? { let mut v_r: Py; let mut v_t: Py; 
-let t7868 = (t7867).items()?;
-if t7868.len() != 2 { return Err(PyErr::Value("unpack".into())); }
-v_r = t7868[0].clone();
-v_t = t7868[1].clone();
-out.push(py::mul(&py::mul(&v_r.clone(), &v_c.clone())?, &f__dvmodel(v_model.clone(), v_t.clone(), v_a.clone())?)?); } Py::list(out) })?)?);
-            #[allow(unreachable_code)]
-            Ok(Py::None)
-        }
-        }) };
-    let t7871 = (Py::tuple(vec![py::truediv(&py::minmax(&[v_h.clone()], false)?, &Py::Int(20i64))?, py::mul(&py::minmax(&[v_h.clone()], true)?, &Py::Int(20i64))?])).items()?;
-    if t7871.len() != 2 { return Err(PyErr::Value("unpack".into())); }
-    v_lo = t7871[0].clone();
-    v_hi = t7871[1].clone();
-    v_grid = { let mut out = vec![]; for t7872 in py::range_iter(&[(Py::Int(401i64)).i()?]) { let mut v_i: Py; 
-v_i = t7872;
-out.push(py::mul(&v_lo.clone(), &py::pow(&py::truediv(&v_hi.clone(), &v_lo.clone())?, &py::truediv(&v_i.clone(), &Py::Int(400i64))?)?)?); } Py::list(out) };
-    v_vals = { let mut out = vec![]; for t7873 in py::iter(&(v_grid.clone()))? { let mut v_a: Py; 
-v_a = t7873;
-out.push(py::call(&v_sse.clone(), &[v_a.clone()])?); } Py::list(out) };
-    v_i = py::minmax_key(&[Py::list((py::range_iter(&[(py::len(&v_grid.clone())?).i()?])).into_iter().collect::<Vec<Py>>())], &{ let v_gamma = v_gamma.clone(); let v_grad = v_grad.clone(); let v_grid = v_grid.clone(); let v_h = v_h.clone(); let v_hi = v_hi.clone(); let v_linfit = v_linfit.clone(); let v_lo = v_lo.clone(); let v_model = v_model.clone(); let v_n = v_n.clone(); let v_sse = v_sse.clone(); let v_v = v_v.clone(); let v_vals = v_vals.clone(); py::func(move |a: &[Py]| -> R {
-            #[allow(unused_mut, unused_variables, unused_assignments)]
-{
-            let mut v_k: Py = a.get(0).cloned().unwrap_or(Py::None);
-            return Ok(py::getitem(&v_vals.clone(), &v_k.clone())?);
-            #[allow(unreachable_code)]
-            Ok(Py::None)
-        }
-        }) }, false)?;
-    let _ = f__need({ let t7874 = Py::Int(0i64); Py::Bool({ let t7875 = v_i.clone(); if py::lt(&t7874, &t7875)? { { let t7876 = py::sub(&py::len(&v_grid.clone())?, &Py::Int(1i64))?; if py::lt(&t7875, &t7876)? { true } else { false } } } else { false } }) }, Py::str("the fit does not determine the range (no interior minimum)"))?;
-    let t7877 = (Py::tuple(vec![py::getitem(&v_grid.clone(), &py::sub(&v_i.clone(), &Py::Int(1i64))?)?, py::getitem(&v_grid.clone(), &py::add(&v_i.clone(), &Py::Int(1i64))?)?])).items()?;
-    if t7877.len() != 2 { return Err(PyErr::Value("unpack".into())); }
-    v_a0 = t7877[0].clone();
-    v_a1 = t7877[1].clone();
-    let t7878 = (Py::tuple(vec![py::call(&v_grad.clone(), &[v_a0.clone()])?, py::call(&v_grad.clone(), &[v_a1.clone()])?])).items()?;
-    if t7878.len() != 2 { return Err(PyErr::Value("unpack".into())); }
-    v_g0 = t7878[0].clone();
-    v_g1 = t7878[1].clone();
-    let _ = f__need({ let t7879 = v_g0.clone(); Py::Bool({ let t7880 = Py::Int(0i64); if py::lt(&t7879, &t7880)? { { let t7881 = v_g1.clone(); if py::lt(&t7880, &t7881)? { true } else { false } } } else { false } }) }, Py::str("the fit does not determine the range"))?;
-    for t7882 in py::range_iter(&[(Py::Int(200i64)).i()?]) {
-        v__ = t7882;
-        v_m = py::mul(&Py::Float(0.5), &py::add(&v_a0.clone(), &v_a1.clone())?)?;
-        if ({ let t7887 = { let t7883 = v_m.clone(); Py::Bool({ let t7884 = v_a0.clone(); if py::eq(&t7883, &t7884) { true } else { false } }) }; if t7887.truthy() { t7887 } else { { let t7885 = v_m.clone(); Py::Bool({ let t7886 = v_a1.clone(); if py::eq(&t7885, &t7886) { true } else { false } }) } } }).truthy() {
-            break;
-        }
-        v_gm = py::call(&v_grad.clone(), &[v_m.clone()])?;
-        if ({ let t7888 = v_gm.clone(); Py::Bool({ let t7889 = Py::Int(0i64); if py::lt(&t7888, &t7889)? { true } else { false } }) }).truthy() {
-            v_a0 = v_m.clone();
-        } else {
-            v_a1 = v_m.clone();
-        }
+    v_r = f__vfit(v_h.clone(), v_gamma.clone(), v_model.clone(), Py::Bool(false))?;
+    if ({ let t7930 = py::getitem(&v_r.clone(), &Py::str("nugget"))?; Py::Bool({ let t7931 = Py::Int(0i64); if py::lt(&t7930, &t7931)? { true } else { false } }) }).truthy() {
+        v_r = f__vfit(v_h.clone(), v_gamma.clone(), v_model.clone(), Py::Bool(true))?;
     }
-    {
-        let _g0 = ax_engine::pympf::scope("workdps", &Py::Int(30i64))?;
-        v_H = { let mut out = vec![]; for t7890 in py::iter(&(v_h.clone()))? { let mut v_t: Py; 
-v_t = t7890;
-out.push(ax_engine::pymp::call("mpf", &[Py::str(&py::repr(&py::float(&v_t.clone())?))], &[])?); } Py::list(out) };
-        v_G = { let mut out = vec![]; for t7891 in py::iter(&(v_gamma.clone()))? { let mut v_v: Py; 
-v_v = t7891;
-out.push(ax_engine::pymp::call("mpf", &[Py::str(&py::repr(&py::float(&v_v.clone())?))], &[])?); } Py::list(out) };
-        v_q = py::truediv(&ax_engine::pymp::call("mpf", &[Py::Int(4i64)], &[])?, &Py::Int(7i64))?;
-        v_shape = { let v_G = v_G.clone(); let v_H = v_H.clone(); let v__ = v__.clone(); let v_a0 = v_a0.clone(); let v_a1 = v_a1.clone(); let v_g0 = v_g0.clone(); let v_g1 = v_g1.clone(); let v_gamma = v_gamma.clone(); let v_gm = v_gm.clone(); let v_grad = v_grad.clone(); let v_grid = v_grid.clone(); let v_h = v_h.clone(); let v_hi = v_hi.clone(); let v_i = v_i.clone(); let v_linfit = v_linfit.clone(); let v_lo = v_lo.clone(); let v_m = v_m.clone(); let v_model = v_model.clone(); let v_n = v_n.clone(); let v_q = v_q.clone(); let v_shape = v_shape.clone(); let v_sse = v_sse.clone(); let v_v = v_v.clone(); let v_vals = v_vals.clone(); py::func(move |a: &[Py]| -> R {
-            #[allow(unused_mut, unused_variables, unused_assignments)]
-{
-            let mut v_t: Py = a.get(0).cloned().unwrap_or(Py::None);
-            let mut v_a: Py = a.get(1).cloned().unwrap_or(Py::None);
-            return Ok((if ({ let t7892 = v_model.clone(); Py::Bool({ let t7893 = Py::str("exponential"); if py::eq(&t7892, &t7893) { true } else { false } }) }).truthy() { py::sub(&Py::Int(1i64), &ax_engine::pymp::call("exp", &[py::truediv(&py::mul(&py::neg(&Py::Int(3i64))?, &v_t.clone())?, &v_a.clone())?], &[])?)? } else { py::sub(&Py::Int(1i64), &ax_engine::pymp::call("exp", &[py::neg(&py::pow(&py::truediv(&v_t.clone(), &py::mul(&v_a.clone(), &v_q.clone())?)?, &Py::Int(2i64))?)?], &[])?)? }));
-            #[allow(unreachable_code)]
-            Ok(Py::None)
-        }
-        }) };
-        v_dshape = { let v_G = v_G.clone(); let v_H = v_H.clone(); let v__ = v__.clone(); let v_a0 = v_a0.clone(); let v_a1 = v_a1.clone(); let v_dshape = v_dshape.clone(); let v_g0 = v_g0.clone(); let v_g1 = v_g1.clone(); let v_gamma = v_gamma.clone(); let v_gm = v_gm.clone(); let v_grad = v_grad.clone(); let v_grid = v_grid.clone(); let v_h = v_h.clone(); let v_hi = v_hi.clone(); let v_i = v_i.clone(); let v_linfit = v_linfit.clone(); let v_lo = v_lo.clone(); let v_m = v_m.clone(); let v_model = v_model.clone(); let v_n = v_n.clone(); let v_q = v_q.clone(); let v_shape = v_shape.clone(); let v_sse = v_sse.clone(); let v_v = v_v.clone(); let v_vals = v_vals.clone(); py::func(move |a: &[Py]| -> R {
-            #[allow(unused_mut, unused_variables, unused_assignments)]
-{
-            let mut v_t: Py = a.get(0).cloned().unwrap_or(Py::None);
-            let mut v_a: Py = a.get(1).cloned().unwrap_or(Py::None);
-            return Ok((if ({ let t7894 = v_model.clone(); Py::Bool({ let t7895 = Py::str("exponential"); if py::eq(&t7894, &t7895) { true } else { false } }) }).truthy() { py::truediv(&py::mul(&py::mul(&py::neg(&ax_engine::pymp::call("exp", &[py::truediv(&py::mul(&py::neg(&Py::Int(3i64))?, &v_t.clone())?, &v_a.clone())?], &[])?)?, &Py::Int(3i64))?, &v_t.clone())?, &py::pow(&v_a.clone(), &Py::Int(2i64))?)? } else { py::truediv(&py::mul(&py::mul(&py::mul(&py::neg(&ax_engine::pymp::call("exp", &[py::neg(&py::pow(&py::truediv(&v_t.clone(), &py::mul(&v_a.clone(), &v_q.clone())?)?, &Py::Int(2i64))?)?], &[])?)?, &Py::Int(2i64))?, &v_t.clone())?, &v_t.clone())?, &py::mul(&py::mul(&v_q.clone(), &v_q.clone())?, &py::pow(&v_a.clone(), &Py::Int(3i64))?)?)? }));
-            #[allow(unreachable_code)]
-            Ok(Py::None)
-        }
-        }) };
-        v_lin = { let v_G = v_G.clone(); let v_H = v_H.clone(); let v__ = v__.clone(); let v_a0 = v_a0.clone(); let v_a1 = v_a1.clone(); let v_dshape = v_dshape.clone(); let v_g0 = v_g0.clone(); let v_g1 = v_g1.clone(); let v_gamma = v_gamma.clone(); let v_gm = v_gm.clone(); let v_grad = v_grad.clone(); let v_grid = v_grid.clone(); let v_h = v_h.clone(); let v_hi = v_hi.clone(); let v_i = v_i.clone(); let v_lin = v_lin.clone(); let v_linfit = v_linfit.clone(); let v_lo = v_lo.clone(); let v_m = v_m.clone(); let v_model = v_model.clone(); let v_n = v_n.clone(); let v_q = v_q.clone(); let v_shape = v_shape.clone(); let v_sse = v_sse.clone(); let v_v = v_v.clone(); let v_vals = v_vals.clone(); py::func(move |a: &[Py]| -> R {
-            #[allow(unused_mut, unused_variables, unused_assignments)]
-{
-            let mut v_a: Py = a.get(0).cloned().unwrap_or(Py::None);
-            let mut v_F: Py = Py::None;
-            let mut v_cc: Py = Py::None;
-            let mut v_mf: Py = Py::None;
-            let mut v_mg: Py = Py::None;
-            v_F = { let mut out = vec![]; for t7896 in py::iter(&(v_H.clone()))? { let mut v_t: Py; 
-v_t = t7896;
-out.push(py::call(&v_shape.clone(), &[v_t.clone(), v_a.clone()])?); } Py::list(out) };
-            let t7897 = (Py::tuple(vec![py::truediv(&ax_engine::pymp::call("fsum", &[v_F.clone()], &[])?, &v_n.clone())?, py::truediv(&ax_engine::pymp::call("fsum", &[v_G.clone()], &[])?, &v_n.clone())?])).items()?;
-            if t7897.len() != 2 { return Err(PyErr::Value("unpack".into())); }
-            v_mf = t7897[0].clone();
-            v_mg = t7897[1].clone();
-            v_cc = py::truediv(&ax_engine::pymp::call("fsum", &[{ let mut out = vec![]; for t7898 in py::iter(&(py::zip(&[v_F.clone(), v_G.clone()])?))? { let mut v_fv: Py; let mut v_g: Py; 
-let t7899 = (t7898).items()?;
-if t7899.len() != 2 { return Err(PyErr::Value("unpack".into())); }
-v_fv = t7899[0].clone();
-v_g = t7899[1].clone();
-out.push(py::mul(&py::sub(&v_fv.clone(), &v_mf.clone())?, &py::sub(&v_g.clone(), &v_mg.clone())?)?); } Py::list(out) }], &[])?, &ax_engine::pymp::call("fsum", &[{ let mut out = vec![]; for t7900 in py::iter(&(v_F.clone()))? { let mut v_fv: Py; 
-v_fv = t7900;
-out.push(py::pow(&py::sub(&v_fv.clone(), &v_mf.clone())?, &Py::Int(2i64))?); } Py::list(out) }], &[])?)?;
-            return Ok(Py::tuple(vec![py::sub(&v_mg.clone(), &py::mul(&v_cc.clone(), &v_mf.clone())?)?, v_cc.clone(), v_F.clone()]));
-            #[allow(unreachable_code)]
-            Ok(Py::None)
-        }
-        }) };
-        v_gmp = { let v_G = v_G.clone(); let v_H = v_H.clone(); let v__ = v__.clone(); let v_a0 = v_a0.clone(); let v_a1 = v_a1.clone(); let v_dshape = v_dshape.clone(); let v_g0 = v_g0.clone(); let v_g1 = v_g1.clone(); let v_gamma = v_gamma.clone(); let v_gm = v_gm.clone(); let v_gmp = v_gmp.clone(); let v_grad = v_grad.clone(); let v_grid = v_grid.clone(); let v_h = v_h.clone(); let v_hi = v_hi.clone(); let v_i = v_i.clone(); let v_lin = v_lin.clone(); let v_linfit = v_linfit.clone(); let v_lo = v_lo.clone(); let v_m = v_m.clone(); let v_model = v_model.clone(); let v_n = v_n.clone(); let v_q = v_q.clone(); let v_shape = v_shape.clone(); let v_sse = v_sse.clone(); let v_v = v_v.clone(); let v_vals = v_vals.clone(); py::func(move |a: &[Py]| -> R {
-            #[allow(unused_mut, unused_variables, unused_assignments)]
-{
-            let mut v_a: Py = a.get(0).cloned().unwrap_or(Py::None);
-            let mut v_F: Py = Py::None;
-            let mut v_c0m: Py = Py::None;
-            let mut v_cm: Py = Py::None;
-            let t7901 = (py::call(&v_lin.clone(), &[v_a.clone()])?).items()?;
-            if t7901.len() != 3 { return Err(PyErr::Value("unpack".into())); }
-            v_c0m = t7901[0].clone();
-            v_cm = t7901[1].clone();
-            v_F = t7901[2].clone();
-            return Ok(py::mul(&py::neg(&Py::Int(2i64))?, &ax_engine::pymp::call("fsum", &[{ let mut out = vec![]; for t7902 in py::iter(&(py::zip(&[v_G.clone(), v_F.clone(), v_H.clone()])?))? { let mut v_fv: Py; let mut v_g: Py; let mut v_t: Py; 
-let t7903 = (t7902).items()?;
-if t7903.len() != 3 { return Err(PyErr::Value("unpack".into())); }
-v_g = t7903[0].clone();
-v_fv = t7903[1].clone();
-v_t = t7903[2].clone();
-out.push(py::mul(&py::mul(&py::sub(&py::sub(&v_g.clone(), &v_c0m.clone())?, &py::mul(&v_cm.clone(), &v_fv.clone())?)?, &v_cm.clone())?, &py::call(&v_dshape.clone(), &[v_t.clone(), v_a.clone()])?)?); } Py::list(out) }], &[])?)?);
-            #[allow(unreachable_code)]
-            Ok(Py::None)
-        }
-        }) };
-        let t7904 = (Py::tuple(vec![ax_engine::pymp::call("mpf", &[Py::str(&py::repr(&v_a0.clone()))], &[])?, ax_engine::pymp::call("mpf", &[Py::str(&py::repr(&v_a1.clone()))], &[])?])).items()?;
-        if t7904.len() != 2 { return Err(PyErr::Value("unpack".into())); }
-        v_lo_ = t7904[0].clone();
-        v_hi_ = t7904[1].clone();
-        if ({ let t7905 = py::call(&v_gmp.clone(), &[v_lo_.clone()])?; Py::Bool({ let t7906 = Py::Int(0i64); if py::lt(&t7905, &t7906)? { { let t7907 = py::call(&v_gmp.clone(), &[v_hi_.clone()])?; if py::lt(&t7906, &t7907)? { true } else { false } } } else { false } }) }).truthy() {
-            for t7908 in py::range_iter(&[(Py::Int(80i64)).i()?]) {
-                v__ = t7908;
-                v_mid = py::truediv(&py::add(&v_lo_.clone(), &v_hi_.clone())?, &Py::Int(2i64))?;
-                if ({ let t7909 = py::call(&v_gmp.clone(), &[v_mid.clone()])?; Py::Bool({ let t7910 = Py::Int(0i64); if py::lt(&t7909, &t7910)? { true } else { false } }) }).truthy() {
-                    v_lo_ = v_mid.clone();
-                } else {
-                    v_hi_ = v_mid.clone();
-                }
-            }
-        }
-        v_am = py::truediv(&py::add(&v_lo_.clone(), &v_hi_.clone())?, &Py::Int(2i64))?;
-        let t7911 = (py::call(&v_lin.clone(), &[v_am.clone()])?).items()?;
-        if t7911.len() != 3 { return Err(PyErr::Value("unpack".into())); }
-        v_c0m = t7911[0].clone();
-        v_cm = t7911[1].clone();
-        v__ = t7911[2].clone();
-        return Ok(f__out(Py::dict(vec![(Py::str("nugget"), py::float(&v_c0m.clone())?), (Py::str("psill"), py::float(&v_cm.clone())?), (Py::str("range"), py::float(&v_am.clone())?), (Py::str("sill"), py::float(&py::add(&v_c0m.clone(), &v_cm.clone())?)?)]))?);
-    }
+    let _ = f__need({ let t7932 = py::getitem(&v_r.clone(), &Py::str("psill"))?; Py::Bool({ let t7933 = Py::Int(0i64); if py::gt(&t7932, &t7933)? { true } else { false } }) }, Py::str("the fit gives no positive partial sill (the semivariances do not rise with the lag)"))?;
+    return Ok(v_r.clone());
     #[allow(unreachable_code)]
     Ok(Py::None)
 }
@@ -5896,10 +5933,10 @@ fn f_vegetation_indices(mut v_red: Py, mut v_nir: Py, mut v_blue: Py, mut v_L: P
     let mut v_msavi_disc: Py = Py::None;
     let _ = f__refl(Py::str("each band"), Py::tuple(vec![v_red.clone(), v_nir.clone(), v_blue.clone()]))?;
     let _ = f__fin(Py::str("L"), Py::tuple(vec![v_L.clone()]))?;
-    let _ = f__need({ let t7972 = Py::Int(0i64); Py::Bool({ let t7973 = v_L.clone(); if py::le(&t7972, &t7973)? { { let t7974 = Py::Int(1i64); if py::le(&t7973, &t7974)? { true } else { false } } } else { false } }) }, Py::str("the soil adjustment factor L must lie between 0 and 1"))?;
+    let _ = f__need({ let t7982 = Py::Int(0i64); Py::Bool({ let t7983 = v_L.clone(); if py::le(&t7982, &t7983)? { { let t7984 = Py::Int(1i64); if py::le(&t7983, &t7984)? { true } else { false } } } else { false } }) }, Py::str("the soil adjustment factor L must lie between 0 and 1"))?;
     v_evi_den = py::add(&py::sub(&py::add(&v_nir.clone(), &py::mul(&Py::Int(6i64), &v_red.clone())?)?, &py::mul(&Py::Float(7.5), &v_blue.clone())?)?, &Py::Int(1i64))?;
-    let _ = f__need({ let t7975 = v_evi_den.clone(); Py::Bool({ let t7976 = Py::Int(0i64); if py::gt(&t7975, &t7976)? { true } else { false } }) }, Py::str("the EVI denominator must be positive"))?;
-    let _ = f__need({ let t7981 = { let t7977 = py::add(&py::add(&v_nir.clone(), &v_red.clone())?, &v_L.clone())?; Py::Bool({ let t7978 = Py::Int(0i64); if py::gt(&t7977, &t7978)? { true } else { false } }) }; if !t7981.truthy() { t7981 } else { { let t7979 = py::add(&py::add(&v_nir.clone(), &v_red.clone())?, &Py::Float(0.16))?; Py::Bool({ let t7980 = Py::Int(0i64); if py::gt(&t7979, &t7980)? { true } else { false } }) } } }, Py::str("the band sums must be positive"))?;
+    let _ = f__need({ let t7985 = v_evi_den.clone(); Py::Bool({ let t7986 = Py::Int(0i64); if py::gt(&t7985, &t7986)? { true } else { false } }) }, Py::str("the EVI denominator must be positive"))?;
+    let _ = f__need({ let t7991 = { let t7987 = py::add(&py::add(&v_nir.clone(), &v_red.clone())?, &v_L.clone())?; Py::Bool({ let t7988 = Py::Int(0i64); if py::gt(&t7987, &t7988)? { true } else { false } }) }; if !t7991.truthy() { t7991 } else { { let t7989 = py::add(&py::add(&v_nir.clone(), &v_red.clone())?, &Py::Float(0.16))?; Py::Bool({ let t7990 = Py::Int(0i64); if py::gt(&t7989, &t7990)? { true } else { false } }) } } }, Py::str("the band sums must be positive"))?;
     v_msavi_disc = py::sub(&py::pow(&py::add(&py::mul(&Py::Int(2i64), &v_nir.clone())?, &Py::Int(1i64))?, &Py::Int(2i64))?, &py::mul(&Py::Int(8i64), &py::sub(&v_nir.clone(), &v_red.clone())?)?)?;
     return Ok(f__out(Py::dict(vec![(Py::str("NDVI"), f__nd(v_nir.clone(), v_red.clone())?), (Py::str("EVI"), py::truediv(&py::mul(&Py::Float(2.5), &py::sub(&v_nir.clone(), &v_red.clone())?)?, &v_evi_den.clone())?), (Py::str("SAVI"), py::truediv(&py::mul(&py::add(&Py::Int(1i64), &v_L.clone())?, &py::sub(&v_nir.clone(), &v_red.clone())?)?, &py::add(&py::add(&v_nir.clone(), &v_red.clone())?, &v_L.clone())?)?), (Py::str("OSAVI"), py::truediv(&py::sub(&v_nir.clone(), &v_red.clone())?, &py::add(&py::add(&v_nir.clone(), &v_red.clone())?, &Py::Float(0.16))?)?), (Py::str("MSAVI"), py::mul(&Py::Float(0.5), &py::sub(&py::add(&py::mul(&Py::Int(2i64), &v_nir.clone())?, &Py::Int(1i64))?, &py::math1("sqrt", &v_msavi_disc.clone())?)?)?), (Py::str("EVI2"), py::truediv(&py::mul(&Py::Float(2.5), &py::sub(&v_nir.clone(), &v_red.clone())?)?, &py::add(&py::add(&v_nir.clone(), &py::mul(&Py::Float(2.4), &v_red.clone())?)?, &Py::Int(1i64))?)?)]))?);
     #[allow(unreachable_code)]
@@ -5928,39 +5965,39 @@ fn f_watershed(mut v_dem: Py, mut v_cell_size: Py, mut v_row: Py, mut v_col: Py)
     let mut v_up: Py = Py::None;
     let mut v_v: Py = Py::None;
     v_dirs = f__d8(v_dem.clone(), v_cell_size.clone())?;
-    let t8140 = (Py::tuple(vec![py::len(&v_dem.clone())?, py::len(&py::getitem(&v_dem.clone(), &Py::Int(0i64))?)?])).items()?;
-    if t8140.len() != 2 { return Err(PyErr::Value("unpack".into())); }
-    v_R = t8140[0].clone();
-    v_C = t8140[1].clone();
-    let _ = f__need({ let t8149 = Py::Bool(matches!(v_row.clone(), Py::Int(_) | Py::Big(_) | Py::Bool(_))); if !t8149.truthy() { t8149 } else { { let t8148 = Py::Bool(matches!(v_col.clone(), Py::Int(_) | Py::Big(_) | Py::Bool(_))); if !t8148.truthy() { t8148 } else { { let t8147 = { let t8141 = Py::Int(0i64); Py::Bool({ let t8142 = v_row.clone(); if py::le(&t8141, &t8142)? { { let t8143 = v_R.clone(); if py::lt(&t8142, &t8143)? { true } else { false } } } else { false } }) }; if !t8147.truthy() { t8147 } else { { let t8144 = Py::Int(0i64); Py::Bool({ let t8145 = v_col.clone(); if py::le(&t8144, &t8145)? { { let t8146 = v_C.clone(); if py::lt(&t8145, &t8146)? { true } else { false } } } else { false } }) } } } } } } }, Py::str("the outlet must be a cell of the raster (row and column from 0)"))?;
+    let t8150 = (Py::tuple(vec![py::len(&v_dem.clone())?, py::len(&py::getitem(&v_dem.clone(), &Py::Int(0i64))?)?])).items()?;
+    if t8150.len() != 2 { return Err(PyErr::Value("unpack".into())); }
+    v_R = t8150[0].clone();
+    v_C = t8150[1].clone();
+    let _ = f__need({ let t8159 = Py::Bool(matches!(v_row.clone(), Py::Int(_) | Py::Big(_) | Py::Bool(_))); if !t8159.truthy() { t8159 } else { { let t8158 = Py::Bool(matches!(v_col.clone(), Py::Int(_) | Py::Big(_) | Py::Bool(_))); if !t8158.truthy() { t8158 } else { { let t8157 = { let t8151 = Py::Int(0i64); Py::Bool({ let t8152 = v_row.clone(); if py::le(&t8151, &t8152)? { { let t8153 = v_R.clone(); if py::lt(&t8152, &t8153)? { true } else { false } } } else { false } }) }; if !t8157.truthy() { t8157 } else { { let t8154 = Py::Int(0i64); Py::Bool({ let t8155 = v_col.clone(); if py::le(&t8154, &t8155)? { { let t8156 = v_C.clone(); if py::lt(&t8155, &t8156)? { true } else { false } } } else { false } }) } } } } } } }, Py::str("the outlet must be a cell of the raster (row and column from 0)"))?;
     v_rec = f__receivers(v_dirs.clone())?;
     v_up = Py::dict(vec![]);
-    for t8156 in py::iter(&(py::method(&v_rec.clone(), "items", &[])?))? {
-        let t8157 = (t8156).items()?;
-        if t8157.len() != 2 { return Err(PyErr::Value("unpack".into())); }
-        v_k = t8157[0].clone();
-        v_v = t8157[1].clone();
+    for t8166 in py::iter(&(py::method(&v_rec.clone(), "items", &[])?))? {
+        let t8167 = (t8166).items()?;
+        if t8167.len() != 2 { return Err(PyErr::Value("unpack".into())); }
+        v_k = t8167[0].clone();
+        v_v = t8167[1].clone();
         let _ = py::method(&py::method(&v_up.clone(), "setdefault", &[v_v.clone(), Py::list(vec![])])?, "append", &[v_k.clone()])?;
     }
-    let t8158 = (Py::tuple(vec![py::set(&Py::list(vec![Py::tuple(vec![v_row.clone(), v_col.clone()])]))?, Py::list(vec![Py::tuple(vec![v_row.clone(), v_col.clone()])])])).items()?;
-    if t8158.len() != 2 { return Err(PyErr::Value("unpack".into())); }
-    v_seen = t8158[0].clone();
-    v_stack = t8158[1].clone();
+    let t8168 = (Py::tuple(vec![py::set(&Py::list(vec![Py::tuple(vec![v_row.clone(), v_col.clone()])]))?, Py::list(vec![Py::tuple(vec![v_row.clone(), v_col.clone()])])])).items()?;
+    if t8168.len() != 2 { return Err(PyErr::Value("unpack".into())); }
+    v_seen = t8168[0].clone();
+    v_stack = t8168[1].clone();
     while (v_stack.clone()).truthy() {
         v_k = py::method(&v_stack.clone(), "pop", &[])?;
-        for t8159 in py::iter(&(py::method(&v_up.clone(), "get", &[v_k.clone(), Py::list(vec![])])?))? {
-            v_u = t8159;
-            if ({ let t8160 = v_u.clone(); Py::Bool({ let t8161 = v_seen.clone(); if !py::contains(&t8161, &t8160)? { true } else { false } }) }).truthy() {
+        for t8169 in py::iter(&(py::method(&v_up.clone(), "get", &[v_k.clone(), Py::list(vec![])])?))? {
+            v_u = t8169;
+            if ({ let t8170 = v_u.clone(); Py::Bool({ let t8171 = v_seen.clone(); if !py::contains(&t8171, &t8170)? { true } else { false } }) }).truthy() {
                 let _ = py::method(&v_seen.clone(), "add", &[v_u.clone()])?;
                 let _ = py::method(&v_stack.clone(), "append", &[v_u.clone()])?;
             }
         }
     }
-    v_mask = { let mut out = vec![]; for t8162 in py::range_iter(&[(v_R.clone()).i()?]) { let mut v_i: Py; 
-v_i = t8162;
-out.push({ let mut out = vec![]; for t8163 in py::range_iter(&[(v_C.clone()).i()?]) { let mut v_j: Py; 
-v_j = t8163;
-out.push((if ({ let t8164 = Py::tuple(vec![v_i.clone(), v_j.clone()]); Py::Bool({ let t8165 = v_seen.clone(); if py::contains(&t8165, &t8164)? { true } else { false } }) }).truthy() { Py::Float(1.0) } else { Py::Float(0.0) })); } Py::list(out) }); } Py::list(out) };
+    v_mask = { let mut out = vec![]; for t8172 in py::range_iter(&[(v_R.clone()).i()?]) { let mut v_i: Py; 
+v_i = t8172;
+out.push({ let mut out = vec![]; for t8173 in py::range_iter(&[(v_C.clone()).i()?]) { let mut v_j: Py; 
+v_j = t8173;
+out.push((if ({ let t8174 = Py::tuple(vec![v_i.clone(), v_j.clone()]); Py::Bool({ let t8175 = v_seen.clone(); if py::contains(&t8175, &t8174)? { true } else { false } }) }).truthy() { Py::Float(1.0) } else { Py::Float(0.0) })); } Py::list(out) }); } Py::list(out) };
     return Ok(Py::dict(vec![(Py::str("cells"), py::float(&py::len(&v_seen.clone())?)?), (Py::str("area"), f__r(py::mul(&py::mul(&py::len(&v_seen.clone())?, &v_cell_size.clone())?, &v_cell_size.clone())?)?), (Py::str("mask"), v_mask.clone())]));
     #[allow(unreachable_code)]
     Ok(Py::None)
@@ -5975,14 +6012,14 @@ fn f_web_map_tile(mut v_lat: Py, mut v_lon: Py, mut v_zoom: Py) -> R {
     let mut v_xf: Py = Py::None;
     let mut v_yf: Py = Py::None;
     let _ = f__pt(v_lat.clone(), v_lon.clone(), Py::Float(85.0511))?;
-    let _ = f__need({ let t8234 = Py::Bool(matches!(v_zoom.clone(), Py::Int(_) | Py::Big(_) | Py::Bool(_))); if !t8234.truthy() { t8234 } else { { let t8231 = Py::Int(0i64); Py::Bool({ let t8232 = v_zoom.clone(); if py::le(&t8231, &t8232)? { { let t8233 = Py::Int(24i64); if py::le(&t8232, &t8233)? { true } else { false } } } else { false } }) } } }, Py::str("the zoom must be a whole number from 0 to 24"))?;
+    let _ = f__need({ let t8244 = Py::Bool(matches!(v_zoom.clone(), Py::Int(_) | Py::Big(_) | Py::Bool(_))); if !t8244.truthy() { t8244 } else { { let t8241 = Py::Int(0i64); Py::Bool({ let t8242 = v_zoom.clone(); if py::le(&t8241, &t8242)? { { let t8243 = Py::Int(24i64); if py::le(&t8242, &t8243)? { true } else { false } } } else { false } }) } } }, Py::str("the zoom must be a whole number from 0 to 24"))?;
     v_Z = py::pow(&Py::Int(2i64), &v_zoom.clone())?;
     v_xf = py::truediv(&py::add(&f__nlon(v_lon.clone())?, &Py::Float(180.0))?, &Py::Float(360.0))?;
     v_yf = py::sub(&Py::Float(0.5), &py::truediv(&py::math1("asinh", &py::math1("tan", &py::mul(&v_lat.clone(), &c_DEG()?)?)?)?, &py::mul(&Py::Int(2i64), &Py::Float(std::f64::consts::PI))?)?)?;
     v_tx = py::minmax(&[py::sub(&v_Z.clone(), &Py::Int(1i64))?, py::minmax(&[Py::Int(0i64), py::int(&py::math1("floor", &py::mul(&v_xf.clone(), &v_Z.clone())?)?)?], true)?], false)?;
     v_ty = py::minmax(&[py::sub(&v_Z.clone(), &Py::Int(1i64))?, py::minmax(&[Py::Int(0i64), py::int(&py::math1("floor", &py::mul(&v_yf.clone(), &v_Z.clone())?)?)?], true)?], false)?;
-    v_qk = py::method(&Py::str(""), "join", &[{ let mut out = vec![]; for t8239 in py::range_iter(&[(v_zoom.clone()).i()?, (Py::Int(0i64)).i()?, (py::neg(&Py::Int(1i64))?).i()?]) { let mut v_i: Py; 
-v_i = t8239;
+    v_qk = py::method(&Py::str(""), "join", &[{ let mut out = vec![]; for t8249 in py::range_iter(&[(v_zoom.clone()).i()?, (Py::Int(0i64)).i()?, (py::neg(&Py::Int(1i64))?).i()?]) { let mut v_i: Py; 
+v_i = t8249;
 out.push(Py::str(&py::to_str(&py::add(&(if (py::bitand(&v_tx.clone(), &py::lshift(&Py::Int(1i64), &py::sub(&v_i.clone(), &Py::Int(1i64))?)?)?).truthy() { Py::Int(1i64) } else { Py::Int(0i64) }), &(if (py::bitand(&v_ty.clone(), &py::lshift(&Py::Int(1i64), &py::sub(&v_i.clone(), &Py::Int(1i64))?)?)?).truthy() { Py::Int(2i64) } else { Py::Int(0i64) }))?))); } Py::list(out) }])?;
     return Ok(Py::dict(vec![(Py::str("tile_x"), v_tx.clone()), (Py::str("tile_y"), v_ty.clone()), (Py::str("quadkey"), v_qk.clone())]));
     #[allow(unreachable_code)]
@@ -6002,7 +6039,7 @@ fn f_web_mercator_inverse(mut v_x: Py, mut v_y: Py) -> R {
     let mut v_lim: Py = Py::None;
     let _ = f__fin(Py::str("x and y"), Py::tuple(vec![v_x.clone(), v_y.clone()]))?;
     v_lim = py::mul(&c_WEB_MERCATOR_A()?, &Py::Float(std::f64::consts::PI))?;
-    let _ = f__need({ let t8359 = { let t8355 = py::abs(&v_x.clone())?; Py::Bool({ let t8356 = py::mul(&v_lim.clone(), &py::add(&Py::Int(1i64), &Py::Float(1e-12))?)?; if py::le(&t8355, &t8356)? { true } else { false } }) }; if !t8359.truthy() { t8359 } else { { let t8357 = py::abs(&v_y.clone())?; Py::Bool({ let t8358 = py::mul(&v_lim.clone(), &Py::Float(1.0001))?; if py::le(&t8357, &t8358)? { true } else { false } }) } } }, Py::str("x and y must lie within the web-map square (about 20037.5 km)"))?;
+    let _ = f__need({ let t8369 = { let t8365 = py::abs(&v_x.clone())?; Py::Bool({ let t8366 = py::mul(&v_lim.clone(), &py::add(&Py::Int(1i64), &Py::Float(1e-12))?)?; if py::le(&t8365, &t8366)? { true } else { false } }) }; if !t8369.truthy() { t8369 } else { { let t8367 = py::abs(&v_y.clone())?; Py::Bool({ let t8368 = py::mul(&v_lim.clone(), &Py::Float(1.0001))?; if py::le(&t8367, &t8368)? { true } else { false } }) } } }, Py::str("x and y must lie within the web-map square (about 20037.5 km)"))?;
     return Ok(f__out(Py::dict(vec![(Py::str("lat"), py::truediv(&py::math1("atan", &py::math1("sinh", &py::truediv(&v_y.clone(), &c_WEB_MERCATOR_A()?)?)?)?, &c_DEG()?)?), (Py::str("lon"), py::truediv(&py::truediv(&v_x.clone(), &c_WEB_MERCATOR_A()?)?, &c_DEG()?)?)]))?);
     #[allow(unreachable_code)]
     Ok(Py::None)
@@ -6017,33 +6054,33 @@ fn f_weighted_mean_center(mut v_x: Py, mut v_y: Py, mut v_w: Py) -> R {
     let mut v_sd: Py = Py::None;
     let mut v_v: Py = Py::None;
     v_n = py::len(&v_x.clone())?;
-    let _ = f__need({ let t8418 = { let t8413 = v_n.clone(); Py::Bool({ let t8414 = py::len(&v_y.clone())?; if py::eq(&t8413, &t8414) { { let t8415 = py::len(&v_w.clone())?; if py::eq(&t8414, &t8415) { true } else { false } } } else { false } }) }; if !t8418.truthy() { t8418 } else { { let t8416 = v_n.clone(); Py::Bool({ let t8417 = Py::Int(1i64); if py::ge(&t8416, &t8417)? { true } else { false } }) } } }, Py::str("give one y and one weight per x"))?;
-    for t8419 in py::iter(&(v_w.clone()))? {
-        v_v = t8419;
+    let _ = f__need({ let t8428 = { let t8423 = v_n.clone(); Py::Bool({ let t8424 = py::len(&v_y.clone())?; if py::eq(&t8423, &t8424) { { let t8425 = py::len(&v_w.clone())?; if py::eq(&t8424, &t8425) { true } else { false } } } else { false } }) }; if !t8428.truthy() { t8428 } else { { let t8426 = v_n.clone(); Py::Bool({ let t8427 = Py::Int(1i64); if py::ge(&t8426, &t8427)? { true } else { false } }) } } }, Py::str("give one y and one weight per x"))?;
+    for t8429 in py::iter(&(v_w.clone()))? {
+        v_v = t8429;
         let _ = f__nonneg(Py::str("each weight"), Py::tuple(vec![v_v.clone()]))?;
     }
     v_W = py::fsum(&v_w.clone())?;
-    let _ = f__need({ let t8426 = v_W.clone(); Py::Bool({ let t8427 = Py::Int(0i64); if py::gt(&t8426, &t8427)? { true } else { false } }) }, Py::str("the weights must not all be zero"))?;
-    let t8432 = (Py::tuple(vec![py::truediv(&py::fsum(&{ let mut out = vec![]; for t8428 in py::iter(&(py::zip(&[v_w.clone(), v_x.clone()])?))? { let mut v_a: Py; let mut v_b: Py; 
-let t8429 = (t8428).items()?;
-if t8429.len() != 2 { return Err(PyErr::Value("unpack".into())); }
-v_a = t8429[0].clone();
-v_b = t8429[1].clone();
-out.push(py::mul(&v_a.clone(), &v_b.clone())?); } Py::list(out) })?, &v_W.clone())?, py::truediv(&py::fsum(&{ let mut out = vec![]; for t8430 in py::iter(&(py::zip(&[v_w.clone(), v_y.clone()])?))? { let mut v_a: Py; let mut v_b: Py; 
-let t8431 = (t8430).items()?;
-if t8431.len() != 2 { return Err(PyErr::Value("unpack".into())); }
-v_a = t8431[0].clone();
-v_b = t8431[1].clone();
+    let _ = f__need({ let t8436 = v_W.clone(); Py::Bool({ let t8437 = Py::Int(0i64); if py::gt(&t8436, &t8437)? { true } else { false } }) }, Py::str("the weights must not all be zero"))?;
+    let t8442 = (Py::tuple(vec![py::truediv(&py::fsum(&{ let mut out = vec![]; for t8438 in py::iter(&(py::zip(&[v_w.clone(), v_x.clone()])?))? { let mut v_a: Py; let mut v_b: Py; 
+let t8439 = (t8438).items()?;
+if t8439.len() != 2 { return Err(PyErr::Value("unpack".into())); }
+v_a = t8439[0].clone();
+v_b = t8439[1].clone();
+out.push(py::mul(&v_a.clone(), &v_b.clone())?); } Py::list(out) })?, &v_W.clone())?, py::truediv(&py::fsum(&{ let mut out = vec![]; for t8440 in py::iter(&(py::zip(&[v_w.clone(), v_y.clone()])?))? { let mut v_a: Py; let mut v_b: Py; 
+let t8441 = (t8440).items()?;
+if t8441.len() != 2 { return Err(PyErr::Value("unpack".into())); }
+v_a = t8441[0].clone();
+v_b = t8441[1].clone();
 out.push(py::mul(&v_a.clone(), &v_b.clone())?); } Py::list(out) })?, &v_W.clone())?])).items()?;
-    if t8432.len() != 2 { return Err(PyErr::Value("unpack".into())); }
-    v_mx = t8432[0].clone();
-    v_my = t8432[1].clone();
-    v_sd = py::math1("sqrt", &py::truediv(&py::fsum(&{ let mut out = vec![]; for t8433 in py::iter(&(py::zip(&[v_x.clone(), v_y.clone(), v_w.clone()])?))? { let mut v_a: Py; let mut v_b: Py; let mut v_c: Py; 
-let t8434 = (t8433).items()?;
-if t8434.len() != 3 { return Err(PyErr::Value("unpack".into())); }
-v_a = t8434[0].clone();
-v_b = t8434[1].clone();
-v_c = t8434[2].clone();
+    if t8442.len() != 2 { return Err(PyErr::Value("unpack".into())); }
+    v_mx = t8442[0].clone();
+    v_my = t8442[1].clone();
+    v_sd = py::math1("sqrt", &py::truediv(&py::fsum(&{ let mut out = vec![]; for t8443 in py::iter(&(py::zip(&[v_x.clone(), v_y.clone(), v_w.clone()])?))? { let mut v_a: Py; let mut v_b: Py; let mut v_c: Py; 
+let t8444 = (t8443).items()?;
+if t8444.len() != 3 { return Err(PyErr::Value("unpack".into())); }
+v_a = t8444[0].clone();
+v_b = t8444[1].clone();
+v_c = t8444[2].clone();
 out.push(py::mul(&v_c.clone(), &py::add(&py::pow(&py::sub(&v_a.clone(), &v_mx.clone())?, &Py::Int(2i64))?, &py::pow(&py::sub(&v_b.clone(), &v_my.clone())?, &Py::Int(2i64))?)?)?); } Py::list(out) })?, &v_W.clone())?)?;
     return Ok(f__out(Py::dict(vec![(Py::str("wmean_x"), v_mx.clone()), (Py::str("wmean_y"), v_my.clone()), (Py::str("weighted_std_distance"), v_sd.clone())]))?);
     #[allow(unreachable_code)]
@@ -10187,7 +10224,7 @@ fn s_7784(mut v_inputs: Py, mut v_outputs: Py) -> R {
 }
 
 #[allow(unused_mut, unused_variables, unused_assignments, non_snake_case, unreachable_code)]
-fn s_7924(mut v_inputs: Py, mut v_outputs: Py) -> R {
+fn s_7934(mut v_inputs: Py, mut v_outputs: Py) -> R {
     let mut v_memo: Py = Py::dict(vec![]);
     let mut v_k: Py = Py::None;
     let mut v_key: Py = Py::None;
@@ -10195,13 +10232,13 @@ fn s_7924(mut v_inputs: Py, mut v_outputs: Py) -> R {
     let mut v_want: Py = Py::None;
     let mut v_worst: Py = Py::None;
     v_key = Py::str(&py::repr(&py::sorted(&py::method(&v_inputs.clone(), "items", &[])?, (Py::Bool(false)).truthy())?));
-    if ({ let t7925 = v_key.clone(); Py::Bool({ let t7926 = v_memo.clone(); if !py::contains(&t7926, &t7925)? { true } else { false } }) }).truthy() {
-        let t7928: Result<Option<Py>, PyErr> = (|| -> Result<Option<Py>, PyErr> {
-                py::setitem(&v_memo.clone(), &v_key.clone(), { let t7927 = v_inputs.clone(); f_variogram_fit(py::getitem(&t7927, &Py::str("h"))?, py::getitem(&t7927, &Py::str("gamma"))?, py::getitem(&t7927, &Py::str("model"))?)? })?;
+    if ({ let t7935 = v_key.clone(); Py::Bool({ let t7936 = v_memo.clone(); if !py::contains(&t7936, &t7935)? { true } else { false } }) }).truthy() {
+        let t7938: Result<Option<Py>, PyErr> = (|| -> Result<Option<Py>, PyErr> {
+                py::setitem(&v_memo.clone(), &v_key.clone(), { let t7937 = v_inputs.clone(); f_variogram_fit(py::getitem(&t7937, &Py::str("h"))?, py::getitem(&t7937, &Py::str("gamma"))?, py::getitem(&t7937, &Py::str("model"))?)? })?;
                 #[allow(unreachable_code)]
                 Ok(None)
             })();
-        match t7928 {
+        match t7938 {
             Ok(Some(r)) => { return Ok(r); }
             Ok(None) => {}
             Err(e) if (!matches!(e, PyErr::Unsupported(_))) => {
@@ -10209,21 +10246,21 @@ fn s_7924(mut v_inputs: Py, mut v_outputs: Py) -> R {
             }
             Err(e) => return Err(e),
         }
-        if ({ let t7929 = py::len(&v_memo.clone())?; Py::Bool({ let t7930 = Py::Int(64i64); if py::gt(&t7929, &t7930)? { true } else { false } }) }).truthy() {
+        if ({ let t7939 = py::len(&v_memo.clone())?; Py::Bool({ let t7940 = Py::Int(64i64); if py::gt(&t7939, &t7940)? { true } else { false } }) }).truthy() {
             let _ = py::method(&v_memo.clone(), "pop", &[(match (v_memo.clone()).items()?.into_iter().next() { Some(x) => x, None => return Err(PyErr::Other("StopIteration".into())) })])?;
         }
     }
     v_want = py::getitem(&v_memo.clone(), &v_key.clone())?;
-    if ({ let t7931 = v_want.clone(); Py::Bool({ let t7932 = Py::None; if py::is(&t7931, &t7932) { true } else { false } }) }).truthy() {
+    if ({ let t7941 = v_want.clone(); Py::Bool({ let t7942 = Py::None; if py::is(&t7941, &t7942) { true } else { false } }) }).truthy() {
         return Ok(Py::Float(f64::INFINITY));
     }
     v_worst = Py::Float(0.0);
-    for t7933 in py::iter(&(py::method(&v_want.clone(), "items", &[])?))? {
-        let t7964 = (t7933).items()?;
-        if t7964.len() != 2 { return Err(PyErr::Value("unpack".into())); }
-        v_k = t7964[0].clone();
-        v_v = t7964[1].clone();
-        if ({ let t7934 = v_k.clone(); Py::Bool({ let t7935 = v_outputs.clone(); if !py::contains(&t7935, &t7934)? { true } else { false } }) }).truthy() {
+    for t7943 in py::iter(&(py::method(&v_want.clone(), "items", &[])?))? {
+        let t7974 = (t7943).items()?;
+        if t7974.len() != 2 { return Err(PyErr::Value("unpack".into())); }
+        v_k = t7974[0].clone();
+        v_v = t7974[1].clone();
+        if ({ let t7944 = v_k.clone(); Py::Bool({ let t7945 = v_outputs.clone(); if !py::contains(&t7945, &t7944)? { true } else { false } }) }).truthy() {
             return Ok(Py::Float(f64::INFINITY));
         }
         v_worst = py::minmax(&[v_worst.clone(), f__rel(py::getitem(&v_outputs.clone(), &v_k.clone())?, v_v.clone())?], true)?;
@@ -10234,7 +10271,7 @@ fn s_7924(mut v_inputs: Py, mut v_outputs: Py) -> R {
 }
 
 #[allow(unused_mut, unused_variables, unused_assignments, non_snake_case, unreachable_code)]
-fn s_7996(mut v_inputs: Py, mut v_outputs: Py) -> R {
+fn s_8006(mut v_inputs: Py, mut v_outputs: Py) -> R {
     let mut v_memo: Py = Py::dict(vec![]);
     let mut v_k: Py = Py::None;
     let mut v_key: Py = Py::None;
@@ -10242,13 +10279,13 @@ fn s_7996(mut v_inputs: Py, mut v_outputs: Py) -> R {
     let mut v_want: Py = Py::None;
     let mut v_worst: Py = Py::None;
     v_key = Py::str(&py::repr(&py::sorted(&py::method(&v_inputs.clone(), "items", &[])?, (Py::Bool(false)).truthy())?));
-    if ({ let t7997 = v_key.clone(); Py::Bool({ let t7998 = v_memo.clone(); if !py::contains(&t7998, &t7997)? { true } else { false } }) }).truthy() {
-        let t8000: Result<Option<Py>, PyErr> = (|| -> Result<Option<Py>, PyErr> {
-                py::setitem(&v_memo.clone(), &v_key.clone(), { let t7999 = v_inputs.clone(); f_vegetation_indices(py::getitem(&t7999, &Py::str("red"))?, py::getitem(&t7999, &Py::str("nir"))?, py::getitem(&t7999, &Py::str("blue"))?, py::getitem(&t7999, &Py::str("L"))?)? })?;
+    if ({ let t8007 = v_key.clone(); Py::Bool({ let t8008 = v_memo.clone(); if !py::contains(&t8008, &t8007)? { true } else { false } }) }).truthy() {
+        let t8010: Result<Option<Py>, PyErr> = (|| -> Result<Option<Py>, PyErr> {
+                py::setitem(&v_memo.clone(), &v_key.clone(), { let t8009 = v_inputs.clone(); f_vegetation_indices(py::getitem(&t8009, &Py::str("red"))?, py::getitem(&t8009, &Py::str("nir"))?, py::getitem(&t8009, &Py::str("blue"))?, py::getitem(&t8009, &Py::str("L"))?)? })?;
                 #[allow(unreachable_code)]
                 Ok(None)
             })();
-        match t8000 {
+        match t8010 {
             Ok(Some(r)) => { return Ok(r); }
             Ok(None) => {}
             Err(e) if (!matches!(e, PyErr::Unsupported(_))) => {
@@ -10256,21 +10293,21 @@ fn s_7996(mut v_inputs: Py, mut v_outputs: Py) -> R {
             }
             Err(e) => return Err(e),
         }
-        if ({ let t8001 = py::len(&v_memo.clone())?; Py::Bool({ let t8002 = Py::Int(64i64); if py::gt(&t8001, &t8002)? { true } else { false } }) }).truthy() {
+        if ({ let t8011 = py::len(&v_memo.clone())?; Py::Bool({ let t8012 = Py::Int(64i64); if py::gt(&t8011, &t8012)? { true } else { false } }) }).truthy() {
             let _ = py::method(&v_memo.clone(), "pop", &[(match (v_memo.clone()).items()?.into_iter().next() { Some(x) => x, None => return Err(PyErr::Other("StopIteration".into())) })])?;
         }
     }
     v_want = py::getitem(&v_memo.clone(), &v_key.clone())?;
-    if ({ let t8003 = v_want.clone(); Py::Bool({ let t8004 = Py::None; if py::is(&t8003, &t8004) { true } else { false } }) }).truthy() {
+    if ({ let t8013 = v_want.clone(); Py::Bool({ let t8014 = Py::None; if py::is(&t8013, &t8014) { true } else { false } }) }).truthy() {
         return Ok(Py::Float(f64::INFINITY));
     }
     v_worst = Py::Float(0.0);
-    for t8005 in py::iter(&(py::method(&v_want.clone(), "items", &[])?))? {
-        let t8036 = (t8005).items()?;
-        if t8036.len() != 2 { return Err(PyErr::Value("unpack".into())); }
-        v_k = t8036[0].clone();
-        v_v = t8036[1].clone();
-        if ({ let t8006 = v_k.clone(); Py::Bool({ let t8007 = v_outputs.clone(); if !py::contains(&t8007, &t8006)? { true } else { false } }) }).truthy() {
+    for t8015 in py::iter(&(py::method(&v_want.clone(), "items", &[])?))? {
+        let t8046 = (t8015).items()?;
+        if t8046.len() != 2 { return Err(PyErr::Value("unpack".into())); }
+        v_k = t8046[0].clone();
+        v_v = t8046[1].clone();
+        if ({ let t8016 = v_k.clone(); Py::Bool({ let t8017 = v_outputs.clone(); if !py::contains(&t8017, &t8016)? { true } else { false } }) }).truthy() {
             return Ok(Py::Float(f64::INFINITY));
         }
         v_worst = py::minmax(&[v_worst.clone(), f__rel(py::getitem(&v_outputs.clone(), &v_k.clone())?, v_v.clone())?], true)?;
@@ -10281,7 +10318,7 @@ fn s_7996(mut v_inputs: Py, mut v_outputs: Py) -> R {
 }
 
 #[allow(unused_mut, unused_variables, unused_assignments, non_snake_case, unreachable_code)]
-fn s_8058(mut v_inputs: Py, mut v_outputs: Py) -> R {
+fn s_8068(mut v_inputs: Py, mut v_outputs: Py) -> R {
     let mut v_memo: Py = Py::dict(vec![]);
     let mut v_k: Py = Py::None;
     let mut v_key: Py = Py::None;
@@ -10289,13 +10326,13 @@ fn s_8058(mut v_inputs: Py, mut v_outputs: Py) -> R {
     let mut v_want: Py = Py::None;
     let mut v_worst: Py = Py::None;
     v_key = Py::str(&py::repr(&py::sorted(&py::method(&v_inputs.clone(), "items", &[])?, (Py::Bool(false)).truthy())?));
-    if ({ let t8059 = v_key.clone(); Py::Bool({ let t8060 = v_memo.clone(); if !py::contains(&t8060, &t8059)? { true } else { false } }) }).truthy() {
-        let t8062: Result<Option<Py>, PyErr> = (|| -> Result<Option<Py>, PyErr> {
-                py::setitem(&v_memo.clone(), &v_key.clone(), { let t8061 = v_inputs.clone(); f_water_indices(py::getitem(&t8061, &Py::str("green"))?, py::getitem(&t8061, &Py::str("nir"))?, py::getitem(&t8061, &Py::str("swir1"))?, py::getitem(&t8061, &Py::str("swir2"))?)? })?;
+    if ({ let t8069 = v_key.clone(); Py::Bool({ let t8070 = v_memo.clone(); if !py::contains(&t8070, &t8069)? { true } else { false } }) }).truthy() {
+        let t8072: Result<Option<Py>, PyErr> = (|| -> Result<Option<Py>, PyErr> {
+                py::setitem(&v_memo.clone(), &v_key.clone(), { let t8071 = v_inputs.clone(); f_water_indices(py::getitem(&t8071, &Py::str("green"))?, py::getitem(&t8071, &Py::str("nir"))?, py::getitem(&t8071, &Py::str("swir1"))?, py::getitem(&t8071, &Py::str("swir2"))?)? })?;
                 #[allow(unreachable_code)]
                 Ok(None)
             })();
-        match t8062 {
+        match t8072 {
             Ok(Some(r)) => { return Ok(r); }
             Ok(None) => {}
             Err(e) if (!matches!(e, PyErr::Unsupported(_))) => {
@@ -10303,21 +10340,21 @@ fn s_8058(mut v_inputs: Py, mut v_outputs: Py) -> R {
             }
             Err(e) => return Err(e),
         }
-        if ({ let t8063 = py::len(&v_memo.clone())?; Py::Bool({ let t8064 = Py::Int(64i64); if py::gt(&t8063, &t8064)? { true } else { false } }) }).truthy() {
+        if ({ let t8073 = py::len(&v_memo.clone())?; Py::Bool({ let t8074 = Py::Int(64i64); if py::gt(&t8073, &t8074)? { true } else { false } }) }).truthy() {
             let _ = py::method(&v_memo.clone(), "pop", &[(match (v_memo.clone()).items()?.into_iter().next() { Some(x) => x, None => return Err(PyErr::Other("StopIteration".into())) })])?;
         }
     }
     v_want = py::getitem(&v_memo.clone(), &v_key.clone())?;
-    if ({ let t8065 = v_want.clone(); Py::Bool({ let t8066 = Py::None; if py::is(&t8065, &t8066) { true } else { false } }) }).truthy() {
+    if ({ let t8075 = v_want.clone(); Py::Bool({ let t8076 = Py::None; if py::is(&t8075, &t8076) { true } else { false } }) }).truthy() {
         return Ok(Py::Float(f64::INFINITY));
     }
     v_worst = Py::Float(0.0);
-    for t8067 in py::iter(&(py::method(&v_want.clone(), "items", &[])?))? {
-        let t8098 = (t8067).items()?;
-        if t8098.len() != 2 { return Err(PyErr::Value("unpack".into())); }
-        v_k = t8098[0].clone();
-        v_v = t8098[1].clone();
-        if ({ let t8068 = v_k.clone(); Py::Bool({ let t8069 = v_outputs.clone(); if !py::contains(&t8069, &t8068)? { true } else { false } }) }).truthy() {
+    for t8077 in py::iter(&(py::method(&v_want.clone(), "items", &[])?))? {
+        let t8108 = (t8077).items()?;
+        if t8108.len() != 2 { return Err(PyErr::Value("unpack".into())); }
+        v_k = t8108[0].clone();
+        v_v = t8108[1].clone();
+        if ({ let t8078 = v_k.clone(); Py::Bool({ let t8079 = v_outputs.clone(); if !py::contains(&t8079, &t8078)? { true } else { false } }) }).truthy() {
             return Ok(Py::Float(f64::INFINITY));
         }
         v_worst = py::minmax(&[v_worst.clone(), f__rel(py::getitem(&v_outputs.clone(), &v_k.clone())?, v_v.clone())?], true)?;
@@ -10328,7 +10365,7 @@ fn s_8058(mut v_inputs: Py, mut v_outputs: Py) -> R {
 }
 
 #[allow(unused_mut, unused_variables, unused_assignments, non_snake_case, unreachable_code)]
-fn s_8176(mut v_inputs: Py, mut v_outputs: Py) -> R {
+fn s_8186(mut v_inputs: Py, mut v_outputs: Py) -> R {
     let mut v_memo: Py = Py::dict(vec![]);
     let mut v_k: Py = Py::None;
     let mut v_key: Py = Py::None;
@@ -10336,13 +10373,13 @@ fn s_8176(mut v_inputs: Py, mut v_outputs: Py) -> R {
     let mut v_want: Py = Py::None;
     let mut v_worst: Py = Py::None;
     v_key = Py::str(&py::repr(&py::sorted(&py::method(&v_inputs.clone(), "items", &[])?, (Py::Bool(false)).truthy())?));
-    if ({ let t8177 = v_key.clone(); Py::Bool({ let t8178 = v_memo.clone(); if !py::contains(&t8178, &t8177)? { true } else { false } }) }).truthy() {
-        let t8180: Result<Option<Py>, PyErr> = (|| -> Result<Option<Py>, PyErr> {
-                py::setitem(&v_memo.clone(), &v_key.clone(), { let t8179 = v_inputs.clone(); f_watershed(py::getitem(&t8179, &Py::str("dem"))?, py::getitem(&t8179, &Py::str("cell_size"))?, py::getitem(&t8179, &Py::str("row"))?, py::getitem(&t8179, &Py::str("col"))?)? })?;
+    if ({ let t8187 = v_key.clone(); Py::Bool({ let t8188 = v_memo.clone(); if !py::contains(&t8188, &t8187)? { true } else { false } }) }).truthy() {
+        let t8190: Result<Option<Py>, PyErr> = (|| -> Result<Option<Py>, PyErr> {
+                py::setitem(&v_memo.clone(), &v_key.clone(), { let t8189 = v_inputs.clone(); f_watershed(py::getitem(&t8189, &Py::str("dem"))?, py::getitem(&t8189, &Py::str("cell_size"))?, py::getitem(&t8189, &Py::str("row"))?, py::getitem(&t8189, &Py::str("col"))?)? })?;
                 #[allow(unreachable_code)]
                 Ok(None)
             })();
-        match t8180 {
+        match t8190 {
             Ok(Some(r)) => { return Ok(r); }
             Ok(None) => {}
             Err(e) if (!matches!(e, PyErr::Unsupported(_))) => {
@@ -10350,21 +10387,21 @@ fn s_8176(mut v_inputs: Py, mut v_outputs: Py) -> R {
             }
             Err(e) => return Err(e),
         }
-        if ({ let t8181 = py::len(&v_memo.clone())?; Py::Bool({ let t8182 = Py::Int(64i64); if py::gt(&t8181, &t8182)? { true } else { false } }) }).truthy() {
+        if ({ let t8191 = py::len(&v_memo.clone())?; Py::Bool({ let t8192 = Py::Int(64i64); if py::gt(&t8191, &t8192)? { true } else { false } }) }).truthy() {
             let _ = py::method(&v_memo.clone(), "pop", &[(match (v_memo.clone()).items()?.into_iter().next() { Some(x) => x, None => return Err(PyErr::Other("StopIteration".into())) })])?;
         }
     }
     v_want = py::getitem(&v_memo.clone(), &v_key.clone())?;
-    if ({ let t8183 = v_want.clone(); Py::Bool({ let t8184 = Py::None; if py::is(&t8183, &t8184) { true } else { false } }) }).truthy() {
+    if ({ let t8193 = v_want.clone(); Py::Bool({ let t8194 = Py::None; if py::is(&t8193, &t8194) { true } else { false } }) }).truthy() {
         return Ok(Py::Float(f64::INFINITY));
     }
     v_worst = Py::Float(0.0);
-    for t8185 in py::iter(&(py::method(&v_want.clone(), "items", &[])?))? {
-        let t8216 = (t8185).items()?;
-        if t8216.len() != 2 { return Err(PyErr::Value("unpack".into())); }
-        v_k = t8216[0].clone();
-        v_v = t8216[1].clone();
-        if ({ let t8186 = v_k.clone(); Py::Bool({ let t8187 = v_outputs.clone(); if !py::contains(&t8187, &t8186)? { true } else { false } }) }).truthy() {
+    for t8195 in py::iter(&(py::method(&v_want.clone(), "items", &[])?))? {
+        let t8226 = (t8195).items()?;
+        if t8226.len() != 2 { return Err(PyErr::Value("unpack".into())); }
+        v_k = t8226[0].clone();
+        v_v = t8226[1].clone();
+        if ({ let t8196 = v_k.clone(); Py::Bool({ let t8197 = v_outputs.clone(); if !py::contains(&t8197, &t8196)? { true } else { false } }) }).truthy() {
             return Ok(Py::Float(f64::INFINITY));
         }
         v_worst = py::minmax(&[v_worst.clone(), f__rel(py::getitem(&v_outputs.clone(), &v_k.clone())?, v_v.clone())?], true)?;
@@ -10375,7 +10412,7 @@ fn s_8176(mut v_inputs: Py, mut v_outputs: Py) -> R {
 }
 
 #[allow(unused_mut, unused_variables, unused_assignments, non_snake_case, unreachable_code)]
-fn s_8240(mut v_inputs: Py, mut v_outputs: Py) -> R {
+fn s_8250(mut v_inputs: Py, mut v_outputs: Py) -> R {
     let mut v_memo: Py = Py::dict(vec![]);
     let mut v_k: Py = Py::None;
     let mut v_key: Py = Py::None;
@@ -10383,13 +10420,13 @@ fn s_8240(mut v_inputs: Py, mut v_outputs: Py) -> R {
     let mut v_want: Py = Py::None;
     let mut v_worst: Py = Py::None;
     v_key = Py::str(&py::repr(&py::sorted(&py::method(&v_inputs.clone(), "items", &[])?, (Py::Bool(false)).truthy())?));
-    if ({ let t8241 = v_key.clone(); Py::Bool({ let t8242 = v_memo.clone(); if !py::contains(&t8242, &t8241)? { true } else { false } }) }).truthy() {
-        let t8244: Result<Option<Py>, PyErr> = (|| -> Result<Option<Py>, PyErr> {
-                py::setitem(&v_memo.clone(), &v_key.clone(), { let t8243 = v_inputs.clone(); f_web_map_tile(py::getitem(&t8243, &Py::str("lat"))?, py::getitem(&t8243, &Py::str("lon"))?, py::getitem(&t8243, &Py::str("zoom"))?)? })?;
+    if ({ let t8251 = v_key.clone(); Py::Bool({ let t8252 = v_memo.clone(); if !py::contains(&t8252, &t8251)? { true } else { false } }) }).truthy() {
+        let t8254: Result<Option<Py>, PyErr> = (|| -> Result<Option<Py>, PyErr> {
+                py::setitem(&v_memo.clone(), &v_key.clone(), { let t8253 = v_inputs.clone(); f_web_map_tile(py::getitem(&t8253, &Py::str("lat"))?, py::getitem(&t8253, &Py::str("lon"))?, py::getitem(&t8253, &Py::str("zoom"))?)? })?;
                 #[allow(unreachable_code)]
                 Ok(None)
             })();
-        match t8244 {
+        match t8254 {
             Ok(Some(r)) => { return Ok(r); }
             Ok(None) => {}
             Err(e) if (!matches!(e, PyErr::Unsupported(_))) => {
@@ -10397,21 +10434,21 @@ fn s_8240(mut v_inputs: Py, mut v_outputs: Py) -> R {
             }
             Err(e) => return Err(e),
         }
-        if ({ let t8245 = py::len(&v_memo.clone())?; Py::Bool({ let t8246 = Py::Int(64i64); if py::gt(&t8245, &t8246)? { true } else { false } }) }).truthy() {
+        if ({ let t8255 = py::len(&v_memo.clone())?; Py::Bool({ let t8256 = Py::Int(64i64); if py::gt(&t8255, &t8256)? { true } else { false } }) }).truthy() {
             let _ = py::method(&v_memo.clone(), "pop", &[(match (v_memo.clone()).items()?.into_iter().next() { Some(x) => x, None => return Err(PyErr::Other("StopIteration".into())) })])?;
         }
     }
     v_want = py::getitem(&v_memo.clone(), &v_key.clone())?;
-    if ({ let t8247 = v_want.clone(); Py::Bool({ let t8248 = Py::None; if py::is(&t8247, &t8248) { true } else { false } }) }).truthy() {
+    if ({ let t8257 = v_want.clone(); Py::Bool({ let t8258 = Py::None; if py::is(&t8257, &t8258) { true } else { false } }) }).truthy() {
         return Ok(Py::Float(f64::INFINITY));
     }
     v_worst = Py::Float(0.0);
-    for t8249 in py::iter(&(py::method(&v_want.clone(), "items", &[])?))? {
-        let t8280 = (t8249).items()?;
-        if t8280.len() != 2 { return Err(PyErr::Value("unpack".into())); }
-        v_k = t8280[0].clone();
-        v_v = t8280[1].clone();
-        if ({ let t8250 = v_k.clone(); Py::Bool({ let t8251 = v_outputs.clone(); if !py::contains(&t8251, &t8250)? { true } else { false } }) }).truthy() {
+    for t8259 in py::iter(&(py::method(&v_want.clone(), "items", &[])?))? {
+        let t8290 = (t8259).items()?;
+        if t8290.len() != 2 { return Err(PyErr::Value("unpack".into())); }
+        v_k = t8290[0].clone();
+        v_v = t8290[1].clone();
+        if ({ let t8260 = v_k.clone(); Py::Bool({ let t8261 = v_outputs.clone(); if !py::contains(&t8261, &t8260)? { true } else { false } }) }).truthy() {
             return Ok(Py::Float(f64::INFINITY));
         }
         v_worst = py::minmax(&[v_worst.clone(), f__rel(py::getitem(&v_outputs.clone(), &v_k.clone())?, v_v.clone())?], true)?;
@@ -10422,7 +10459,7 @@ fn s_8240(mut v_inputs: Py, mut v_outputs: Py) -> R {
 }
 
 #[allow(unused_mut, unused_variables, unused_assignments, non_snake_case, unreachable_code)]
-fn s_8311(mut v_inputs: Py, mut v_outputs: Py) -> R {
+fn s_8321(mut v_inputs: Py, mut v_outputs: Py) -> R {
     let mut v_memo: Py = Py::dict(vec![]);
     let mut v_k: Py = Py::None;
     let mut v_key: Py = Py::None;
@@ -10430,13 +10467,13 @@ fn s_8311(mut v_inputs: Py, mut v_outputs: Py) -> R {
     let mut v_want: Py = Py::None;
     let mut v_worst: Py = Py::None;
     v_key = Py::str(&py::repr(&py::sorted(&py::method(&v_inputs.clone(), "items", &[])?, (Py::Bool(false)).truthy())?));
-    if ({ let t8312 = v_key.clone(); Py::Bool({ let t8313 = v_memo.clone(); if !py::contains(&t8313, &t8312)? { true } else { false } }) }).truthy() {
-        let t8315: Result<Option<Py>, PyErr> = (|| -> Result<Option<Py>, PyErr> {
-                py::setitem(&v_memo.clone(), &v_key.clone(), { let t8314 = v_inputs.clone(); f_web_mercator_forward(py::getitem(&t8314, &Py::str("lat"))?, py::getitem(&t8314, &Py::str("lon"))?)? })?;
+    if ({ let t8322 = v_key.clone(); Py::Bool({ let t8323 = v_memo.clone(); if !py::contains(&t8323, &t8322)? { true } else { false } }) }).truthy() {
+        let t8325: Result<Option<Py>, PyErr> = (|| -> Result<Option<Py>, PyErr> {
+                py::setitem(&v_memo.clone(), &v_key.clone(), { let t8324 = v_inputs.clone(); f_web_mercator_forward(py::getitem(&t8324, &Py::str("lat"))?, py::getitem(&t8324, &Py::str("lon"))?)? })?;
                 #[allow(unreachable_code)]
                 Ok(None)
             })();
-        match t8315 {
+        match t8325 {
             Ok(Some(r)) => { return Ok(r); }
             Ok(None) => {}
             Err(e) if (!matches!(e, PyErr::Unsupported(_))) => {
@@ -10444,21 +10481,21 @@ fn s_8311(mut v_inputs: Py, mut v_outputs: Py) -> R {
             }
             Err(e) => return Err(e),
         }
-        if ({ let t8316 = py::len(&v_memo.clone())?; Py::Bool({ let t8317 = Py::Int(64i64); if py::gt(&t8316, &t8317)? { true } else { false } }) }).truthy() {
+        if ({ let t8326 = py::len(&v_memo.clone())?; Py::Bool({ let t8327 = Py::Int(64i64); if py::gt(&t8326, &t8327)? { true } else { false } }) }).truthy() {
             let _ = py::method(&v_memo.clone(), "pop", &[(match (v_memo.clone()).items()?.into_iter().next() { Some(x) => x, None => return Err(PyErr::Other("StopIteration".into())) })])?;
         }
     }
     v_want = py::getitem(&v_memo.clone(), &v_key.clone())?;
-    if ({ let t8318 = v_want.clone(); Py::Bool({ let t8319 = Py::None; if py::is(&t8318, &t8319) { true } else { false } }) }).truthy() {
+    if ({ let t8328 = v_want.clone(); Py::Bool({ let t8329 = Py::None; if py::is(&t8328, &t8329) { true } else { false } }) }).truthy() {
         return Ok(Py::Float(f64::INFINITY));
     }
     v_worst = Py::Float(0.0);
-    for t8320 in py::iter(&(py::method(&v_want.clone(), "items", &[])?))? {
-        let t8351 = (t8320).items()?;
-        if t8351.len() != 2 { return Err(PyErr::Value("unpack".into())); }
-        v_k = t8351[0].clone();
-        v_v = t8351[1].clone();
-        if ({ let t8321 = v_k.clone(); Py::Bool({ let t8322 = v_outputs.clone(); if !py::contains(&t8322, &t8321)? { true } else { false } }) }).truthy() {
+    for t8330 in py::iter(&(py::method(&v_want.clone(), "items", &[])?))? {
+        let t8361 = (t8330).items()?;
+        if t8361.len() != 2 { return Err(PyErr::Value("unpack".into())); }
+        v_k = t8361[0].clone();
+        v_v = t8361[1].clone();
+        if ({ let t8331 = v_k.clone(); Py::Bool({ let t8332 = v_outputs.clone(); if !py::contains(&t8332, &t8331)? { true } else { false } }) }).truthy() {
             return Ok(Py::Float(f64::INFINITY));
         }
         v_worst = py::minmax(&[v_worst.clone(), f__rel(py::getitem(&v_outputs.clone(), &v_k.clone())?, v_v.clone())?], true)?;
@@ -10469,7 +10506,7 @@ fn s_8311(mut v_inputs: Py, mut v_outputs: Py) -> R {
 }
 
 #[allow(unused_mut, unused_variables, unused_assignments, non_snake_case, unreachable_code)]
-fn s_8372(mut v_inputs: Py, mut v_outputs: Py) -> R {
+fn s_8382(mut v_inputs: Py, mut v_outputs: Py) -> R {
     let mut v_memo: Py = Py::dict(vec![]);
     let mut v_k: Py = Py::None;
     let mut v_key: Py = Py::None;
@@ -10477,13 +10514,13 @@ fn s_8372(mut v_inputs: Py, mut v_outputs: Py) -> R {
     let mut v_want: Py = Py::None;
     let mut v_worst: Py = Py::None;
     v_key = Py::str(&py::repr(&py::sorted(&py::method(&v_inputs.clone(), "items", &[])?, (Py::Bool(false)).truthy())?));
-    if ({ let t8373 = v_key.clone(); Py::Bool({ let t8374 = v_memo.clone(); if !py::contains(&t8374, &t8373)? { true } else { false } }) }).truthy() {
-        let t8376: Result<Option<Py>, PyErr> = (|| -> Result<Option<Py>, PyErr> {
-                py::setitem(&v_memo.clone(), &v_key.clone(), { let t8375 = v_inputs.clone(); f_web_mercator_inverse(py::getitem(&t8375, &Py::str("x"))?, py::getitem(&t8375, &Py::str("y"))?)? })?;
+    if ({ let t8383 = v_key.clone(); Py::Bool({ let t8384 = v_memo.clone(); if !py::contains(&t8384, &t8383)? { true } else { false } }) }).truthy() {
+        let t8386: Result<Option<Py>, PyErr> = (|| -> Result<Option<Py>, PyErr> {
+                py::setitem(&v_memo.clone(), &v_key.clone(), { let t8385 = v_inputs.clone(); f_web_mercator_inverse(py::getitem(&t8385, &Py::str("x"))?, py::getitem(&t8385, &Py::str("y"))?)? })?;
                 #[allow(unreachable_code)]
                 Ok(None)
             })();
-        match t8376 {
+        match t8386 {
             Ok(Some(r)) => { return Ok(r); }
             Ok(None) => {}
             Err(e) if (!matches!(e, PyErr::Unsupported(_))) => {
@@ -10491,21 +10528,21 @@ fn s_8372(mut v_inputs: Py, mut v_outputs: Py) -> R {
             }
             Err(e) => return Err(e),
         }
-        if ({ let t8377 = py::len(&v_memo.clone())?; Py::Bool({ let t8378 = Py::Int(64i64); if py::gt(&t8377, &t8378)? { true } else { false } }) }).truthy() {
+        if ({ let t8387 = py::len(&v_memo.clone())?; Py::Bool({ let t8388 = Py::Int(64i64); if py::gt(&t8387, &t8388)? { true } else { false } }) }).truthy() {
             let _ = py::method(&v_memo.clone(), "pop", &[(match (v_memo.clone()).items()?.into_iter().next() { Some(x) => x, None => return Err(PyErr::Other("StopIteration".into())) })])?;
         }
     }
     v_want = py::getitem(&v_memo.clone(), &v_key.clone())?;
-    if ({ let t8379 = v_want.clone(); Py::Bool({ let t8380 = Py::None; if py::is(&t8379, &t8380) { true } else { false } }) }).truthy() {
+    if ({ let t8389 = v_want.clone(); Py::Bool({ let t8390 = Py::None; if py::is(&t8389, &t8390) { true } else { false } }) }).truthy() {
         return Ok(Py::Float(f64::INFINITY));
     }
     v_worst = Py::Float(0.0);
-    for t8381 in py::iter(&(py::method(&v_want.clone(), "items", &[])?))? {
-        let t8412 = (t8381).items()?;
-        if t8412.len() != 2 { return Err(PyErr::Value("unpack".into())); }
-        v_k = t8412[0].clone();
-        v_v = t8412[1].clone();
-        if ({ let t8382 = v_k.clone(); Py::Bool({ let t8383 = v_outputs.clone(); if !py::contains(&t8383, &t8382)? { true } else { false } }) }).truthy() {
+    for t8391 in py::iter(&(py::method(&v_want.clone(), "items", &[])?))? {
+        let t8422 = (t8391).items()?;
+        if t8422.len() != 2 { return Err(PyErr::Value("unpack".into())); }
+        v_k = t8422[0].clone();
+        v_v = t8422[1].clone();
+        if ({ let t8392 = v_k.clone(); Py::Bool({ let t8393 = v_outputs.clone(); if !py::contains(&t8393, &t8392)? { true } else { false } }) }).truthy() {
             return Ok(Py::Float(f64::INFINITY));
         }
         v_worst = py::minmax(&[v_worst.clone(), f__rel(py::getitem(&v_outputs.clone(), &v_k.clone())?, v_v.clone())?], true)?;
@@ -10563,7 +10600,7 @@ fn s_841(mut v_inputs: Py, mut v_outputs: Py) -> R {
 }
 
 #[allow(unused_mut, unused_variables, unused_assignments, non_snake_case, unreachable_code)]
-fn s_8447(mut v_inputs: Py, mut v_outputs: Py) -> R {
+fn s_8457(mut v_inputs: Py, mut v_outputs: Py) -> R {
     let mut v_memo: Py = Py::dict(vec![]);
     let mut v_k: Py = Py::None;
     let mut v_key: Py = Py::None;
@@ -10571,13 +10608,13 @@ fn s_8447(mut v_inputs: Py, mut v_outputs: Py) -> R {
     let mut v_want: Py = Py::None;
     let mut v_worst: Py = Py::None;
     v_key = Py::str(&py::repr(&py::sorted(&py::method(&v_inputs.clone(), "items", &[])?, (Py::Bool(false)).truthy())?));
-    if ({ let t8448 = v_key.clone(); Py::Bool({ let t8449 = v_memo.clone(); if !py::contains(&t8449, &t8448)? { true } else { false } }) }).truthy() {
-        let t8451: Result<Option<Py>, PyErr> = (|| -> Result<Option<Py>, PyErr> {
-                py::setitem(&v_memo.clone(), &v_key.clone(), { let t8450 = v_inputs.clone(); f_weighted_mean_center(py::getitem(&t8450, &Py::str("x"))?, py::getitem(&t8450, &Py::str("y"))?, py::getitem(&t8450, &Py::str("w"))?)? })?;
+    if ({ let t8458 = v_key.clone(); Py::Bool({ let t8459 = v_memo.clone(); if !py::contains(&t8459, &t8458)? { true } else { false } }) }).truthy() {
+        let t8461: Result<Option<Py>, PyErr> = (|| -> Result<Option<Py>, PyErr> {
+                py::setitem(&v_memo.clone(), &v_key.clone(), { let t8460 = v_inputs.clone(); f_weighted_mean_center(py::getitem(&t8460, &Py::str("x"))?, py::getitem(&t8460, &Py::str("y"))?, py::getitem(&t8460, &Py::str("w"))?)? })?;
                 #[allow(unreachable_code)]
                 Ok(None)
             })();
-        match t8451 {
+        match t8461 {
             Ok(Some(r)) => { return Ok(r); }
             Ok(None) => {}
             Err(e) if (!matches!(e, PyErr::Unsupported(_))) => {
@@ -10585,21 +10622,21 @@ fn s_8447(mut v_inputs: Py, mut v_outputs: Py) -> R {
             }
             Err(e) => return Err(e),
         }
-        if ({ let t8452 = py::len(&v_memo.clone())?; Py::Bool({ let t8453 = Py::Int(64i64); if py::gt(&t8452, &t8453)? { true } else { false } }) }).truthy() {
+        if ({ let t8462 = py::len(&v_memo.clone())?; Py::Bool({ let t8463 = Py::Int(64i64); if py::gt(&t8462, &t8463)? { true } else { false } }) }).truthy() {
             let _ = py::method(&v_memo.clone(), "pop", &[(match (v_memo.clone()).items()?.into_iter().next() { Some(x) => x, None => return Err(PyErr::Other("StopIteration".into())) })])?;
         }
     }
     v_want = py::getitem(&v_memo.clone(), &v_key.clone())?;
-    if ({ let t8454 = v_want.clone(); Py::Bool({ let t8455 = Py::None; if py::is(&t8454, &t8455) { true } else { false } }) }).truthy() {
+    if ({ let t8464 = v_want.clone(); Py::Bool({ let t8465 = Py::None; if py::is(&t8464, &t8465) { true } else { false } }) }).truthy() {
         return Ok(Py::Float(f64::INFINITY));
     }
     v_worst = Py::Float(0.0);
-    for t8456 in py::iter(&(py::method(&v_want.clone(), "items", &[])?))? {
-        let t8487 = (t8456).items()?;
-        if t8487.len() != 2 { return Err(PyErr::Value("unpack".into())); }
-        v_k = t8487[0].clone();
-        v_v = t8487[1].clone();
-        if ({ let t8457 = v_k.clone(); Py::Bool({ let t8458 = v_outputs.clone(); if !py::contains(&t8458, &t8457)? { true } else { false } }) }).truthy() {
+    for t8466 in py::iter(&(py::method(&v_want.clone(), "items", &[])?))? {
+        let t8497 = (t8466).items()?;
+        if t8497.len() != 2 { return Err(PyErr::Value("unpack".into())); }
+        v_k = t8497[0].clone();
+        v_v = t8497[1].clone();
+        if ({ let t8467 = v_k.clone(); Py::Bool({ let t8468 = v_outputs.clone(); if !py::contains(&t8468, &t8467)? { true } else { false } }) }).truthy() {
             return Ok(Py::Float(f64::INFINITY));
         }
         v_worst = py::minmax(&[v_worst.clone(), f__rel(py::getitem(&v_outputs.clone(), &v_k.clone())?, v_v.clone())?], true)?;

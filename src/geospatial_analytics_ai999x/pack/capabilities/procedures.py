@@ -4319,10 +4319,27 @@ def variogram_fit(h, gamma, model):
         _pos("each lag", v)
     for v in gamma:
         _fin("each semivariance", v)
+    # A nugget is a variance and cannot be negative: when the free least-squares optimum puts it below zero, the fit is
+    # the bounded one, nugget 0 with the partial sill and range fitted through the origin (PyKrige also bounds the
+    # nugget at 0). Geospatial review, 2026-11-14: the worked example gave a nugget of -0.06288.
+    r = _vfit(h, gamma, model, False)
+    if r["nugget"] < 0:
+        r = _vfit(h, gamma, model, True)
+    _need(r["psill"] > 0, "the fit gives no positive partial sill (the semivariances do not rise with the lag)")
+    return r
+
+
+def _vfit(h, gamma, model, zero_nugget):
+    """The least-squares variogram fit; with zero_nugget, the nugget held at 0."""
+    n = len(h)
 
     def linfit(a):
         f = [_vmodel(model, t, a) for t in h]
-        c0, c, _ = _linfit(f, gamma)
+        if zero_nugget:
+            c0 = 0.0
+            c = math.fsum(fv * g for fv, g in zip(f, gamma)) / math.fsum(fv * fv for fv in f)
+        else:
+            c0, c, _ = _linfit(f, gamma)
         res = [g - c0 - c * fv for g, fv in zip(gamma, f)]
         return c0, c, res
 
@@ -4367,6 +4384,8 @@ def variogram_fit(h, gamma, model):
 
         def lin(a):
             F = [shape(t, a) for t in H]
+            if zero_nugget:
+                return mpmath.mpf(0), mpmath.fsum(fv * g for fv, g in zip(F, G)) / mpmath.fsum(fv * fv for fv in F), F
             mf, mg = mpmath.fsum(F) / n, mpmath.fsum(G) / n
             cc = mpmath.fsum((fv - mf) * (g - mg) for fv, g in zip(F, G)) / mpmath.fsum((fv - mf) ** 2 for fv in F)
             return mg - cc * mf, cc, F
@@ -4408,7 +4427,21 @@ def _ref_variogram_fit(h, gamma, model):
         res = y - f(t, *p)
         p = p + _gn_step(J, res)
     p = [float(v) for v in p]
-    return {"nugget": p[0], "psill": p[1], "range": p[2], "sill": p[0] + p[1]}
+    if p[0] >= 0:
+        return {"nugget": p[0], "psill": p[1], "range": p[2], "sill": p[0] + p[1]}
+    # the free optimum has a negative nugget: the bounded optimum lies on the bound, nugget 0 (a convex problem in the
+    # nugget for each range: the constrained minimum is at the boundary); fit c and a through the origin
+    f2 = lambda t, c, a: f(t, 0.0, c, a)
+    jac2 = lambda t, c, a: jac(t, 0.0, c, a)[:, 1:]
+    q2, _ = curve_fit(f2, np.array(h, dtype=float), np.array(gamma, dtype=float), p0=[p[1], p[2]],
+                      jac=jac2, method="lm", xtol=1e-15, ftol=1e-15, gtol=1e-15, maxfev=100000)
+    q2 = np.array(q2, dtype=L)
+    for _ in range(8):
+        J = jac2(t, *q2)
+        res = y - f2(t, *q2)
+        q2 = q2 + _gn_step(J, res)
+    c, a = float(q2[0]), float(q2[1])
+    return {"nugget": 0.0, "psill": c, "range": a, "sill": c}
 
 
 def _gn_step(J, res):
@@ -6432,7 +6465,7 @@ _EXV = {'geo_albers_equal_area_forward': [{'h': 1.00911370664, 'k': 0.9909686028
                   {'band': 'V', 'central_meridian': 9.0, 'hemisphere': 'N', 'zone': 32},
                   {'band': 'X', 'central_meridian': 15.0, 'hemisphere': 'N', 'zone': 33},
                   {'band': 'H', 'central_meridian': 21.0, 'hemisphere': 'S', 'zone': 34}],
- 'geo_variogram_model_fit': [{'nugget': -0.0628821025575, 'psill': 7.16434833449, 'range': 11.3285006727, 'sill': 7.10146623193},
+ 'geo_variogram_model_fit': [{'nugget': 0.0, 'psill': 7.1121029605, 'range': 11.491822247, 'sill': 7.1121029605},
                              {'nugget': 0.428936895438, 'psill': 6.57148309768, 'range': 10.5441569706, 'sill': 7.00041999312}],
  'geo_vegetation_indices': [{'EVI': 0.567484662577,
                              'EVI2': 0.563337393423,

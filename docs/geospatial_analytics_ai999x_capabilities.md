@@ -3669,7 +3669,7 @@ $$
 
 ```python
 geospatial_analytics_ai999x.solve('geo_variogram_model_fit', h=[1, 2, 4, 6, 8, 12, 16, 20], gamma=[1.6, 2.9, 4.6, 5.6, 6.3, 6.8, 7.0, 7.05], model='exponential')
-# -> nugget = -0.0628821, psill = 7.16435, range = 11.3285, sill = 7.10147   (SOLVED)
+# -> nugget = 0, psill = 7.1121, range = 11.4918, sill = 7.1121   (SOLVED)
 ```
 
 ```python
@@ -3681,7 +3681,7 @@ geospatial_analytics_ai999x.solve('geo_variogram_model_fit', h=[1, 2, 4, 6, 8, 1
 
 | question | outcome | result |
 |---|---|---|
-| Variogram model fit: h = [1, 2, 4, 6, 8, 12, 16, 20], gamma = [1.6, 2.9, 4.6, 5.6, 6.3, 6.8, 7, 7.05], model = exponential | SOLVED | nugget = -0.0628821, psill = 7.16435, range = 11.3285, sill = 7.10147 |
+| Variogram model fit: h = [1, 2, 4, 6, 8, 12, 16, 20], gamma = [1.6, 2.9, 4.6, 5.6, 6.3, 6.8, 7, 7.05], model = exponential | SOLVED | nugget = 0, psill = 7.1121, range = 11.4918, sill = 7.1121 |
 | Variogram model fit: h = [1, 2, 4, 6, 8, 12, 16, 20], gamma = [0.6, 1.1, 2.8, 4.6, 5.8, 6.9, 7, 7], model = gaussian | SOLVED | nugget = 0.428937, psill = 6.57148, range = 10.5442, sill = 7.00042 |
 | Variogram model fit: gamma = [1.6, 2.9, 4.6, 5.6, 6.3, 6.8, 7, 7.05], model = exponential | NEEDS_INPUT | geo_variogram_model_fit needs h (lag distances). Example: solve('geo_variogram_model_fit', h=[1, 2, 4, 6, 8, 12, 16, 20] |
 | Variogram model fit: h = [1, 2, 4, 6, 8, 12, 16, 20], gamma = [1.6, 2.9, 4.6, 5.6, 6.3, 6.8, 7, 7.05], model = exponential, zz = 1 | UNRECOGNIZED_FORMAT | I could not match this question to a documented form, so I will not guess. Every form: geospatial_analytics_ai999x.templ |
