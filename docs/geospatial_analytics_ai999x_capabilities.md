@@ -460,10 +460,6 @@ $$
 - **Assumes:** lat1 < lat2; 0 < lon2 - lon1 <= 360
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![The area of a 1° × 1° graticule cell on the WGS84 ellipsoid returned by the package for cells starting every 5° from the equator to 85° N: it falls with the cosine of latitude as the meridians converge](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-graticule-cell-area-bars)
-
-*The area of a 1° × 1° graticule cell on the WGS84 ellipsoid returned by the package for cells starting every 5° from the equator to 85° N: it falls with the cosine of latitude as the meridians converge. Marked: the worked example, 0°–1° N, 12308.5 km² (2.4131e-05 of the ellipsoid).*
-
 ```python
 geospatial_analytics_ai999x.solve('geo_graticule_cell_area', lat1=0, lat2=1, lon1=0, lon2=1, ellipsoid='WGS84')
 # -> area = 1.23085e+10 m^2, fraction_of_ellipsoid = 2.41311e-05   (SOLVED)
@@ -3665,7 +3661,7 @@ $$
 
 ![The empirical semivariances γ = [1](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-variogram-model-fit-variogram)
 
-*The empirical semivariances γ = [1.6, 2.9, 4.6, 5.6, 6.3, 6.8, 7.0, 7.05] at lags h = [1, 2, 4, 6, 8, 12, 16, 20] and the exponential model with the parameters the package fits: nugget -0.0628821, partial sill 7.16435, sill 7.10147, practical range 11.3285 (where the model reaches 95 % of its partial sill); the curve γ(h) = nugget + partial sill·(1 − e^(−3h/range)) is evaluated here from those returned values.*
+*The empirical semivariances γ = [1.6, 2.9, 4.6, 5.6, 6.3, 6.8, 7.0, 7.05] at lags h = [1, 2, 4, 6, 8, 12, 16, 20] and the exponential model with the parameters the package fits: nugget 0, partial sill 7.1121, sill 7.1121, practical range 11.4918 (where the model reaches 95 % of its partial sill); the curve γ(h) = nugget + partial sill·(1 − e^(−3h/range)) is evaluated here from those returned values.*
 
 ```python
 geospatial_analytics_ai999x.solve('geo_variogram_model_fit', h=[1, 2, 4, 6, 8, 12, 16, 20], gamma=[1.6, 2.9, 4.6, 5.6, 6.3, 6.8, 7.0, 7.05], model='exponential')

@@ -1,6 +1,6 @@
 # geospatial-analytics: the Geospatial Analytics program, user guide
 
-**geospatial-analytics-ai999x 1.6.0**, Rust build: command line, desktop app and browser. **Creator / engineer:** Ibnul Jaif Farabi · **Company:** AI999X · support@ai999x.com
+**geospatial-analytics-ai999x 1.6.3**, Rust build: command line, desktop app and browser. **Creator / engineer:** Ibnul Jaif Farabi · **Company:** AI999X · support@ai999x.com
 
 Geospatial Analytics covers map projections and coordinates, geodesic distance and area, spatial statistics, remote-sensing indices, solar position and terrain, and urban and network analysis. This guide is about `geospatial-analytics`, the model as a self-contained program for Windows and Linux: 99 capabilities in 14 topics, answered on your own computer with no network, no Python and nothing else to install. The same compiled model runs in the AI999X desktop app and in the browser on the model's page (https://www.ai999x.com/models/geospatial-analytics-ai999x/); the Python package (`pip install geospatial-analytics-ai999x`) has its own guide. Every command output printed here is what the program printed.
 
@@ -96,7 +96,7 @@ Prints the model, its version and that this is the Rust build.
 
 ```shell
 $ geospatial-analytics --version
-geospatial-analytics-ai999x 1.6.0 (Rust build, ax-engine 1.6.0)
+geospatial-analytics-ai999x 1.6.3 (Rust build, ax-engine 1.6.3)
 ```
 
 ### 2.2 Ask in words
@@ -1292,16 +1292,16 @@ $$
 
 ```shell
 $ geospatial-analytics solve geo_variogram_model_fit "h=[1, 2, 4, 6, 8, 12, 16, 20]" "gamma=[1.6, 2.9, 4.6, 5.6, 6.3, 6.8, 7, 7.05]" model=exponential
-nugget = -0.06288210256
-psill = 7.164348334
-range = 11.32850067
-sill = 7.101466232
+nugget = 0
+psill = 7.11210296
+range = 11.49182225
+sill = 7.11210296
   by: Fit an exponential or Gaussian variogram model (nugget, partial sill, range)  (variable projection: for each range the nugget and partial sill are linear least squares; the range solves d(SSE)/da = 0 (grid search, then bisection, polished in 30-digit arithmetic with mpmath))
   model = exponential
   assumes: the least-squares range has an interior minimum (between min(h)/20 and 20 max(h))
 ```
 
-**What the worked example means:** This calculation determines the optimal parameters for an exponential or Gaussian variogram model by minimizing the difference between the theoretical curve and the empirical semivariogram data. The result provides the nugget effect -0.0628821, which represents micro-scale variation or measurement error, and the partial sill 7.16435, indicating the variance of spatially correlated data. The practical range 11.3285 defines the distance beyond which spatial correlation becomes negligible, while the total sill 7.10147 marks the plateau value of the semivariance.
+**What the worked example means:** This calculation determines the optimal parameters for an exponential or Gaussian variogram model by minimizing the difference between the theoretical curve and the empirical semivariogram data. The result provides the nugget effect 0, which represents micro-scale variation or measurement error, and the partial sill 7.1121, indicating the variance of spatially correlated data. The practical range 11.4918 defines the distance beyond which spatial correlation becomes negligible, while the total sill 7.1121 marks the plateau value of the semivariance.
 
 <a id="geo_idw_interpolation"></a>
 
