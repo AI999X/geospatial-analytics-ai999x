@@ -205,7 +205,7 @@ $$
 
 ![Destinations from latitude 52](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-geodesic-destination-map-2)
 
-*Destinations from latitude 52.2°, longitude 0.12° (WGS84) at every 10° of azimuth for distances 100, 200 and 400 km, each point a run of the package (111 runs), drawn in longitude–latitude (the circles widen east–west because a degree of longitude is shorter here). Marked: the worked example, azimuth 45° for 100 km → 52.8308°, 1.16915°, arriving at azimuth 45.8325°.*
+*Destinations from latitude 52.2°, longitude 0.12° (WGS84) at every 10° of azimuth for distances 100, 200 and 400 km, each point a run of the package (111 runs), drawn in longitude–latitude (the circles widen east–west because a degree of longitude is shorter here). Marked: the worked example, azimuth 45.0° for 100 km → 52.8308°, 1.16915°, arriving at azimuth 45.8325°.*
 
 ```python
 geospatial_analytics_ai999x.solve('geo_geodesic_destination', lat1=52.2, lon1=0.12, azimuth=45, distance=100000.0, ellipsoid='WGS84')
@@ -606,7 +606,7 @@ $$
 
 ![Rhumb lines from latitude 50°, longitude -5° at bearings 0° to 330° for 1500 km, every point a destination returned by the package and projected by its Mercator projection (132 points): each constant-bearing path is a straight ray on this map](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-rhumb-line-destination-map)
 
-*Rhumb lines from latitude 50°, longitude -5° at bearings 0° to 330° for 1500 km, every point a destination returned by the package and projected by its Mercator projection (132 points): each constant-bearing path is a straight ray on this map. Marked: the worked example, bearing 30° for 500 km → 53.8917°, -1.36121°.*
+*Rhumb lines from latitude 50°, longitude -5° at bearings 0° to 330° for 1500 km, every point a destination returned by the package and projected by its Mercator projection (132 points): each constant-bearing path is a straight ray on this map. Marked: the worked example, bearing 30.0° for 500 km → 53.8917°, -1.36121°.*
 
 ```python
 geospatial_analytics_ai999x.solve('geo_rhumb_line_destination', lat1=50.0, lon1=-5.0, bearing=30, distance=500000.0, ellipsoid='WGS84')
@@ -654,9 +654,9 @@ $$
 - **Assumes:** latitude between -90 and 90; height between -100 km and 100000 km
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![The point latitude 45°, longitude 10°, height 100](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-geodetic-to-ecef-frames)
+![The point latitude 45](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-geodetic-to-ecef-frames)
 
-*The point latitude 45°, longitude 10°, height 100.0 m in Earth-centred, Earth-fixed coordinates as returned: X = 4.44903e+06 m, Y = 784484 m, Z = 4.48742e+06 m. Top: the meridian section through the point (the ellipsoid traced by the package at every 5° of latitude; horizontal axis √(X² + Y²), computed here from the returned X and Y). Bottom: the equatorial plane, the equator traced every 10° of longitude, and the point's X and Y.*
+*The point latitude 45.0°, longitude 10.0°, height 100.0 m in Earth-centred, Earth-fixed coordinates as returned: X = 4.44903e+06 m, Y = 784484 m, Z = 4.48742e+06 m. Top: the meridian section through the point (the ellipsoid traced by the package at every 5° of latitude; horizontal axis √(X² + Y²), computed here from the returned X and Y). Bottom: the equatorial plane, the equator traced every 10° of longitude, and the point's X and Y.*
 
 ```python
 geospatial_analytics_ai999x.solve('geo_geodetic_to_ecef', lat=45, lon=10, h=100.0, ellipsoid='WGS84')
@@ -916,7 +916,7 @@ $$
 
 ![The five auxiliary latitudes the package returns on the WGS84 ellipsoid, every 3° of geodetic latitude, drawn as their difference from the geodetic latitude in arc-minutes (difference computed here): all vanish at the equator and the pole and are largest near 45°](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-auxiliary-latitudes-curve)
 
-*The five auxiliary latitudes the package returns on the WGS84 ellipsoid, every 3° of geodetic latitude, drawn as their difference from the geodetic latitude in arc-minutes (difference computed here): all vanish at the equator and the pole and are largest near 45°. Marked: the worked example at 45°, geocentric latitude 44.8076° (-11.5454′).*
+*The five auxiliary latitudes the package returns on the WGS84 ellipsoid, every 3° of geodetic latitude, drawn as their difference from the geodetic latitude in arc-minutes (difference computed here): all vanish at the equator and the pole and are largest near 45°. Marked: the worked example at 45.0°, geocentric latitude 44.8076° (-11.5454′).*
 
 ```python
 geospatial_analytics_ai999x.solve('geo_auxiliary_latitudes', lat=45, ellipsoid='WGS84')
@@ -1031,9 +1031,9 @@ $$
 - **Assumes:** within 10 degrees of longitude of the central meridian; latitude within 89 degrees of the equator
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Transverse Mercator about the 15° E meridian: the graticule (parallels every 10°, meridians every 6°) traced through the package's forward projection with lat0 = 0, lon0 = 15, k0 = 0](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-transverse-mercator-forward-graticule)
+![Transverse Mercator about the 15° E meridian: the graticule (parallels every 10°, meridians every 6°) traced through the package's forward projection with lat0 = 0](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-transverse-mercator-forward-graticule)
 
-*Transverse Mercator about the 15° E meridian: the graticule (parallels every 10°, meridians every 6°) traced through the package's forward projection with lat0 = 0, lon0 = 15, k0 = 0.9996, ellipsoid = GRS80, FE = 500000.0, FN = 0.0 (222 projected points). Marked: the worked example, latitude 52.5°, longitude 13.4° → x = 391391 m, y = 5.81786e+06 m. Scale factor k = 0.999745, convergence γ = -1.26949°.*
+*Transverse Mercator about the 15° E meridian: the graticule (parallels every 10°, meridians every 6°) traced through the package's forward projection with lat0 = 0.0, lon0 = 15.0, k0 = 0.9996, ellipsoid = GRS80, FE = 500000.0, FN = 0.0 (222 projected points). Marked: the worked example, latitude 52.5°, longitude 13.4° → x = 391391 m, y = 5.81786e+06 m. Scale factor k = 0.999745, convergence γ = -1.26949°.*
 
 ```python
 geospatial_analytics_ai999x.solve('geo_transverse_mercator_forward', lat=52.5, lon=13.4, lat0=0, lon0=15, k0=0.9996, ellipsoid='GRS80', FE=500000.0, FN=0.0)
@@ -1333,9 +1333,9 @@ $$
 - **Assumes:** |latitude| <= 89.5; |lat_ts| <= 85
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Mercator world graticule: the graticule (parallels every 20°, meridians every 30°) traced through the package's forward projection with lon0 = 0, lat_ts = 0, ellipsoid = WGS84 (1086 projected points)](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-mercator-forward-graticule)
+![Mercator world graticule: the graticule (parallels every 20°, meridians every 30°) traced through the package's forward projection with lon0 = 0](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-mercator-forward-graticule)
 
-*Mercator world graticule: the graticule (parallels every 20°, meridians every 30°) traced through the package's forward projection with lon0 = 0, lat_ts = 0, ellipsoid = WGS84 (1086 projected points). Marked: the worked example, latitude 51.5°, longitude -0.13° → x = -14471.5 m, y = 6.67676e+06 m. Scale factor at the point k = 1.60309.*
+*Mercator world graticule: the graticule (parallels every 20°, meridians every 30°) traced through the package's forward projection with lon0 = 0.0, lat_ts = 0.0, ellipsoid = WGS84 (1086 projected points). Marked: the worked example, latitude 51.5°, longitude -0.13° → x = -14471.5 m, y = 6.67676e+06 m. Scale factor at the point k = 1.60309.*
 
 ![y (northing) against lat (latitude (decimal degrees)) from 0 to 90](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-mercator-forward-curve)
 
@@ -1443,9 +1443,9 @@ $$
 - **Assumes:** parallels within 89 degrees of the equator and not symmetric about it
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Lambert conformal conic over North America: the graticule (parallels every 5°, meridians every 10°) traced through the package's forward projection with lat1 = 33, lat2 = 45, lat0 = 23, lon0 = -96, ellipsoid = GRS80 (503 projected points)](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-lambert-conformal-conic-forward-graticule)
+![Lambert conformal conic over North America: the graticule (parallels every 5°, meridians every 10°) traced through the package's forward projection with lat1 = 33](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-lambert-conformal-conic-forward-graticule)
 
-*Lambert conformal conic over North America: the graticule (parallels every 5°, meridians every 10°) traced through the package's forward projection with lat1 = 33, lat2 = 45, lat0 = 23, lon0 = -96, ellipsoid = GRS80 (503 projected points). Marked: the worked example, latitude 40°, longitude -100° → x = -339644 m, y = 1.9046e+06 m. Scale factor k = 0.994666, convergence γ = -2.52199°.*
+*Lambert conformal conic over North America: the graticule (parallels every 5°, meridians every 10°) traced through the package's forward projection with lat1 = 33.0, lat2 = 45.0, lat0 = 23.0, lon0 = -96.0, ellipsoid = GRS80 (503 projected points). Marked: the worked example, latitude 40°, longitude -100° → x = -339644 m, y = 1.9046e+06 m. Scale factor k = 0.994666, convergence γ = -2.52199°.*
 
 ![x (easting) against lon (longitude (decimal degrees)) from -150 to -50](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-lambert-conformal-conic-forward-curve)
 
@@ -1559,7 +1559,7 @@ $$
 
 ![Albers equal-area conic over North America: the graticule (parallels every 5°, meridians every 10°) traced through the package's forward projection with lat1 = 29](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-albers-equal-area-forward-graticule)
 
-*Albers equal-area conic over North America: the graticule (parallels every 5°, meridians every 10°) traced through the package's forward projection with lat1 = 29.5, lat2 = 45.5, lat0 = 23, lon0 = -96, ellipsoid = GRS80 (503 projected points). Marked: the worked example, latitude 40°, longitude -100° → x = -338391 m, y = 1.8941e+06 m. Scale factors at the point: k = 0.990969 along the parallel, h = 1.00911 along the meridian.*
+*Albers equal-area conic over North America: the graticule (parallels every 5°, meridians every 10°) traced through the package's forward projection with lat1 = 29.5, lat2 = 45.5, lat0 = 23.0, lon0 = -96.0, ellipsoid = GRS80 (503 projected points). Marked: the worked example, latitude 40°, longitude -100° → x = -338391 m, y = 1.8941e+06 m. Scale factors at the point: k = 0.990969 along the parallel, h = 1.00911 along the meridian.*
 
 ![x (easting) against lon (longitude (decimal degrees)) from -150 to -50](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-albers-equal-area-forward-curve)
 
@@ -1669,9 +1669,9 @@ $$
 - **Assumes:** the point in the pole's hemisphere (not at the pole); 30 <= |lat_ts| <= 89.99 in the same hemisphere
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![North polar stereographic graticule: the graticule (parallels every 5°, meridians every 30°) traced through the package's forward projection with pole = north, lat_ts = 70, lon0 = -45, ellipsoid = WGS84 (835 projected points)](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-polar-stereographic-forward-graticule)
+![North polar stereographic graticule: the graticule (parallels every 5°, meridians every 30°) traced through the package's forward projection with pole = north, lat_ts = 70](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-polar-stereographic-forward-graticule)
 
-*North polar stereographic graticule: the graticule (parallels every 5°, meridians every 30°) traced through the package's forward projection with pole = north, lat_ts = 70, lon0 = -45, ellipsoid = WGS84 (835 projected points). Marked: the worked example, latitude 75°, longitude -40° → x = 142402 m, y = -1.62766e+06 m. Scale factor k = 0.986664.*
+*North polar stereographic graticule: the graticule (parallels every 5°, meridians every 30°) traced through the package's forward projection with pole = north, lat_ts = 70.0, lon0 = -45.0, ellipsoid = WGS84 (835 projected points). Marked: the worked example, latitude 75°, longitude -40° → x = 142402 m, y = -1.62766e+06 m. Scale factor k = 0.986664.*
 
 ```python
 geospatial_analytics_ai999x.solve('geo_polar_stereographic_forward', lat=75.0, lon=-40.0, pole='north', lat_ts=70, lon0=-45, ellipsoid='WGS84')
@@ -1721,9 +1721,9 @@ $$
 - **Assumes:** centre within 89 degrees of the equator; point within 120 degrees of the centre
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Lambert azimuthal equal-area over Europe: the graticule (parallels every 10°, meridians every 10°) traced through the package's forward projection with lat0 = 52, lon0 = 10, ellipsoid = GRS80, FE = 4321000](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-lambert-azimuthal-equal-area-forward-graticule)
+![Lambert azimuthal equal-area over Europe: the graticule (parallels every 10°, meridians every 10°) traced through the package's forward projection with lat0 = 52](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-lambert-azimuthal-equal-area-forward-graticule)
 
-*Lambert azimuthal equal-area over Europe: the graticule (parallels every 10°, meridians every 10°) traced through the package's forward projection with lat0 = 52, lon0 = 10, ellipsoid = GRS80, FE = 4321000.0, FN = 3210000.0 (302 projected points). Marked: the worked example, latitude 50°, longitude 5° → x = 3.9628e+06 m, y = 2.99972e+06 m.*
+*Lambert azimuthal equal-area over Europe: the graticule (parallels every 10°, meridians every 10°) traced through the package's forward projection with lat0 = 52.0, lon0 = 10.0, ellipsoid = GRS80, FE = 4321000.0, FN = 3210000.0 (302 projected points). Marked: the worked example, latitude 50°, longitude 5° → x = 3.9628e+06 m, y = 2.99972e+06 m.*
 
 ```python
 geospatial_analytics_ai999x.solve('geo_lambert_azimuthal_equal_area_forward', lat=50.0, lon=5.0, lat0=52, lon0=10, ellipsoid='GRS80', FE=4321000.0, FN=3210000.0)
@@ -1828,9 +1828,9 @@ $$
 - **Assumes:** |latitude| <= 89.9
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Sinusoidal world graticule: the graticule (parallels every 20°, meridians every 30°) traced through the package's forward projection with lon0 = 0, ellipsoid = WGS84 (1086 projected points)](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-sinusoidal-forward-graticule)
+![Sinusoidal world graticule: the graticule (parallels every 20°, meridians every 30°) traced through the package's forward projection with lon0 = 0](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-sinusoidal-forward-graticule)
 
-*Sinusoidal world graticule: the graticule (parallels every 20°, meridians every 30°) traced through the package's forward projection with lon0 = 0, ellipsoid = WGS84 (1086 projected points). Marked: the worked example, latitude 45°, longitude 10° → x = 788468 m, y = 4.98494e+06 m.*
+*Sinusoidal world graticule: the graticule (parallels every 20°, meridians every 30°) traced through the package's forward projection with lon0 = 0.0, ellipsoid = WGS84 (1086 projected points). Marked: the worked example, latitude 45°, longitude 10° → x = 788468 m, y = 4.98494e+06 m.*
 
 ```python
 geospatial_analytics_ai999x.solve('geo_sinusoidal_forward', lat=45.0, lon=10.0, lon0=0, ellipsoid='WGS84')
@@ -1931,9 +1931,9 @@ $$
 - **Assumes:** the point on the visible hemisphere (cos c >= 0)
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Orthographic view of the hemisphere centred at 45° N, 0°: the graticule (parallels every 20°, meridians every 30°) traced through the package's forward projection with lat0 = 45, lon0 = 0, R = 6371000](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-orthographic-forward-graticule)
+![Orthographic view of the hemisphere centred at 45° N, 0°: the graticule (parallels every 20°, meridians every 30°) traced through the package's forward projection with lat0 = 45](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-orthographic-forward-graticule)
 
-*Orthographic view of the hemisphere centred at 45° N, 0°: the graticule (parallels every 20°, meridians every 30°) traced through the package's forward projection with lat0 = 45, lon0 = 0, R = 6371000.0 (614 projected points) (the visible hemisphere only). Marked: the worked example, latitude 40°, longitude 10° → x = 847485 m, y = -502841 m.*
+*Orthographic view of the hemisphere centred at 45° N, 0°: the graticule (parallels every 20°, meridians every 30°) traced through the package's forward projection with lat0 = 45.0, lon0 = 0.0, R = 6371000.0 (614 projected points) (the visible hemisphere only). Marked: the worked example, latitude 40°, longitude 10° → x = 847485 m, y = -502841 m.*
 
 ```python
 geospatial_analytics_ai999x.solve('geo_orthographic_forward', lat=40.0, lon=10.0, lat0=45, lon0=0, R=6371000.0)
@@ -1982,9 +1982,9 @@ $$
 - **Assumes:** the point within about 84 degrees of the centre (cos c >= 0.1)
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Gnomonic projection centred at 45° N, 0°: the graticule (parallels every 10°, meridians every 15°) traced through the package's forward projection with lat0 = 45, lon0 = 0, R = 6371000](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-gnomonic-forward-graticule)
+![Gnomonic projection centred at 45° N, 0°: the graticule (parallels every 10°, meridians every 15°) traced through the package's forward projection with lat0 = 45](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-gnomonic-forward-graticule)
 
-*Gnomonic projection centred at 45° N, 0°: the graticule (parallels every 10°, meridians every 15°) traced through the package's forward projection with lat0 = 45, lon0 = 0, R = 6371000.0 (896 projected points) (points more than 62° from the centre left out). Marked: the worked example, latitude 40°, longitude 10° → x = 857808 m, y = -508966 m.*
+*Gnomonic projection centred at 45° N, 0°: the graticule (parallels every 10°, meridians every 15°) traced through the package's forward projection with lat0 = 45.0, lon0 = 0.0, R = 6371000.0 (896 projected points) (points more than 62° from the centre left out). Marked: the worked example, latitude 40°, longitude 10° → x = 857808 m, y = -508966 m.*
 
 ```python
 geospatial_analytics_ai999x.solve('geo_gnomonic_forward', lat=40.0, lon=10.0, lat0=45, lon0=0, R=6371000.0)
@@ -2033,9 +2033,9 @@ $$
 - **Assumes:** sphere of radius $R > 0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Equirectangular world graticule: the graticule (parallels every 20°, meridians every 30°) traced through the package's forward projection with lat_ts = 0, lat0 = 0, lon0 = 0, R = 6371000](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-equirectangular-forward-graticule)
+![Equirectangular world graticule: the graticule (parallels every 20°, meridians every 30°) traced through the package's forward projection with lat_ts = 0](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-equirectangular-forward-graticule)
 
-*Equirectangular world graticule: the graticule (parallels every 20°, meridians every 30°) traced through the package's forward projection with lat_ts = 0, lat0 = 0, lon0 = 0, R = 6371000.0 (554 projected points). Marked: the worked example, latitude 45°, longitude 10° → x = 1.11195e+06 m, y = 5.00377e+06 m.*
+*Equirectangular world graticule: the graticule (parallels every 20°, meridians every 30°) traced through the package's forward projection with lat_ts = 0.0, lat0 = 0.0, lon0 = 0.0, R = 6371000.0 (554 projected points). Marked: the worked example, latitude 45°, longitude 10° → x = 1.11195e+06 m, y = 5.00377e+06 m.*
 
 ```python
 geospatial_analytics_ai999x.solve('geo_equirectangular_forward', lat=45.0, lon=10.0, lat_ts=0, lat0=0, lon0=0, R=6371000.0)
@@ -2083,9 +2083,9 @@ $$
 - **Assumes:** standard parallel strictly between -90 and 90
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Cylindrical equal-area world graticule: the graticule (parallels every 20°, meridians every 30°) traced through the package's forward projection with lat_ts = 45, lon0 = 0, R = 6371000](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-cylindrical-equal-area-forward-graticule)
+![Cylindrical equal-area world graticule: the graticule (parallels every 20°, meridians every 30°) traced through the package's forward projection with lat_ts = 45](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-cylindrical-equal-area-forward-graticule)
 
-*Cylindrical equal-area world graticule: the graticule (parallels every 20°, meridians every 30°) traced through the package's forward projection with lat_ts = 45, lon0 = 0, R = 6371000.0 (1208 projected points). Marked: the worked example, latitude 45°, longitude 10° → x = 786267 m, y = 6.371e+06 m.*
+*Cylindrical equal-area world graticule: the graticule (parallels every 20°, meridians every 30°) traced through the package's forward projection with lat_ts = 45.0, lon0 = 0.0, R = 6371000.0 (1208 projected points). Marked: the worked example, latitude 45°, longitude 10° → x = 786267 m, y = 6.371e+06 m.*
 
 ```python
 geospatial_analytics_ai999x.solve('geo_cylindrical_equal_area_forward', lat=45.0, lon=10.0, lat_ts=45, lon0=0, R=6371000.0)
@@ -3199,7 +3199,7 @@ $$
 
 ![The 5 points x = [1, 2, 8, 9, 5], y = [1, 2, 8, 9, 5] with an arrow to each one's nearest neighbour (found here from the inputs)](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-nearest-neighbour-index-map)
 
-*The 5 points x = [1, 2, 8, 9, 5], y = [1, 2, 8, 9, 5] with an arrow to each one's nearest neighbour (found here from the inputs). The package returns the mean nearest-neighbour distance 1.9799 against 2.23607 expected for a random pattern in area 100: R = 0.885438 (below 1 leans to clustering), z = -0.490069, p = 0.624085.*
+*The 5 points x = [1, 2, 8, 9, 5], y = [1, 2, 8, 9, 5] with an arrow to each one's nearest neighbour (found here from the inputs). The package returns the mean nearest-neighbour distance 1.9799 against 2.23607 expected for a random pattern in area 100.0: R = 0.885438 (below 1 leans to clustering), z = -0.490069, p = 0.624085.*
 
 ![R (nearest-neighbour index d_obs/d_exp) against area (area of the study region (square coordinate units)) from 50 to 150](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-nearest-neighbour-index-curve)
 
@@ -3502,9 +3502,9 @@ $$
 - **Assumes:** bandwidth > 0
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Kernel density of four events (x = [0, 1, 2, 5], y = [0, 1, 0, 5]) with a gaussian kernel of bandwidth 2: each of 576 cells is shaded by the density the package returns at its centre](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-kernel-density-map)
+![Kernel density of four events (x = [0, 1, 2, 5], y = [0, 1, 0, 5]) with a gaussian kernel of bandwidth 2](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-kernel-density-map)
 
-*Kernel density of four events (x = [0, 1, 2, 5], y = [0, 1, 0, 5]) with a gaussian kernel of bandwidth 2: each of 576 cells is shaded by the density the package returns at its centre. Marked: the worked example at (1, 0.5), density 0.0267648 (intensity 0.107059 events per unit area).*
+*Kernel density of four events (x = [0, 1, 2, 5], y = [0, 1, 0, 5]) with a gaussian kernel of bandwidth 2.0: each of 576 cells is shaded by the density the package returns at its centre. Marked: the worked example at (1.0, 0.5), density 0.0267648 (intensity 0.107059 events per unit area).*
 
 ![density (density (per square coordinate unit, integrates to 1)) against bandwidth (bandwidth h (coordinate units)) from 0](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-kernel-density-curve)
 
@@ -3556,9 +3556,9 @@ $$
 - **Assumes:** power > 0 (at most 10); a location on a sample returns that sample's value
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Inverse-distance-weighted surface (power 2) from four samples z = [1, 2, 3, 4] at the corners (x = [0, 10, 0, 10], y = [0, 0, 10, 10]): each of the 576 cells is shaded by the estimate the package returns at its centre](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-idw-interpolation-map)
+![Inverse-distance-weighted surface (power 2](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-idw-interpolation-map)
 
-*Inverse-distance-weighted surface (power 2) from four samples z = [1, 2, 3, 4] at the corners (x = [0, 10, 0, 10], y = [0, 0, 10, 10]): each of the 576 cells is shaded by the estimate the package returns at its centre. Marked: the worked example at (2, 3), estimate 1.65898.*
+*Inverse-distance-weighted surface (power 2.0) from four samples z = [1, 2, 3, 4] at the corners (x = [0, 10, 0, 10], y = [0, 0, 10, 10]): each of the 576 cells is shaded by the estimate the package returns at its centre. Marked: the worked example at (2.0, 3.0), estimate 1.65898.*
 
 ![estimate (interpolated value) against py (y of the location) from 0](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-idw-interpolation-curve)
 
@@ -3713,9 +3713,9 @@ $$
 - **Assumes:** distinct sample locations; sill > nugget >= 0, range > 0; the variogram is 0 at zero distance (exact interpolation)
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Ordinary kriging from four samples z = [1, 2, 3, 4] at the corners of a 10 × 10 square (spherical variogram, nugget 0, sill 2, range 20): top, the estimate the package returns at each of 400 cell centres; bottom, the kriging variance, zero at the samples and largest away from them](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-ordinary-kriging-map)
+![Ordinary kriging from four samples z = [1, 2, 3, 4] at the corners of a 10 × 10 square (spherical variogram, nugget 0](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-ordinary-kriging-map)
 
-*Ordinary kriging from four samples z = [1, 2, 3, 4] at the corners of a 10 × 10 square (spherical variogram, nugget 0, sill 2, range 20): top, the estimate the package returns at each of 400 cell centres; bottom, the kriging variance, zero at the samples and largest away from them. Marked: the worked example at (4, 6), estimate 2.6048, variance 0.877115.*
+*Ordinary kriging from four samples z = [1, 2, 3, 4] at the corners of a 10 × 10 square (spherical variogram, nugget 0.0, sill 2.0, range 20.0): top, the estimate the package returns at each of 400 cell centres; bottom, the kriging variance, zero at the samples and largest away from them. Marked: the worked example at (4.0, 6.0), estimate 2.6048, variance 0.877115.*
 
 ```python
 geospatial_analytics_ai999x.solve('geo_ordinary_kriging', x=[0, 10, 0, 10], y=[0, 0, 10, 10], z=[1, 2, 3, 4], px=4, py=6, model='spherical', nugget=0, sill=2, range=20)
@@ -4074,7 +4074,7 @@ $$
 
 ![Top-of-atmosphere reflectance returned by the package for radiance 85](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-toa-reflectance-curve)
 
-*Top-of-atmosphere reflectance returned by the package for radiance 85.0 W/(m² sr µm) and solar irradiance 1536: top, against the sun's elevation (day 172); bottom, the Earth–Sun distance it uses through the year (farthest in early July). Marked: the worked example, elevation 60°, day 172 → reflectance 0.207502, distance 1.01669 AU.*
+*Top-of-atmosphere reflectance returned by the package for radiance 85.0 W/(m² sr µm) and solar irradiance 1536.0: top, against the sun's elevation (day 172); bottom, the Earth–Sun distance it uses through the year (farthest in early July). Marked: the worked example, elevation 60.0°, day 172 → reflectance 0.207502, distance 1.01669 AU.*
 
 ```python
 geospatial_analytics_ai999x.solve('geo_toa_reflectance', radiance=85.0, esun=1536, doy=172, sun_elevation=60)
@@ -4323,7 +4323,7 @@ $$
 
 ![Hillshade of the worked example's 3 × 3 window (cell size 5](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-hillshade-compass)
 
-*Hillshade of the worked example's 3 × 3 window (cell size 5.0 m) as the sun goes round: distance from the centre is the hillshade value (0–255) the package returns for a sun at that azimuth (clockwise from north, every 10°), at altitudes 45° and 20°; the slope faces roughly west, so it is brightest under a western sun. Marked: the worked example, sun at 315°, hillshade 167.305 (illumination 0.656099).*
+*Hillshade of the worked example's 3 × 3 window (cell size 5.0 m) as the sun goes round: distance from the centre is the hillshade value (0–255) the package returns for a sun at that azimuth (clockwise from north, every 10°), at altitudes 45.0° and 20°; the slope faces roughly west, so it is brightest under a western sun. Marked: the worked example, sun at 315.0°, hillshade 167.305 (illumination 0.656099).*
 
 ```python
 geospatial_analytics_ai999x.solve('geo_hillshade', window=[[2452.25, 2463, 2473.75], [2450, 2461, 2472], [2447.75, 2459, 2470.25]], cell_size=5.0, sun_azimuth=315, sun_altitude=45)
@@ -4716,9 +4716,9 @@ $$
 - **Assumes:** every store reachable and not at the origin
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Huff model on the worked example's network (edge lengths printed; layout without meaning): a shopper at node 0 chooses among stores 1, 2, 3 with attractiveness [5000, 12000, 8000] (α = 1, distance decay β = 2)](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-huff-model-network)
+![Huff model on the worked example's network (edge lengths printed; layout without meaning): a shopper at node 0 chooses among stores 1, 2, 3 with attractiveness [5000, 12000, 8000] (α = 1](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-huff-model-network)
 
-*Huff model on the worked example's network (edge lengths printed; layout without meaning): a shopper at node 0 chooses among stores 1, 2, 3 with attractiveness [5000, 12000, 8000] (α = 1, distance decay β = 2). The package returns shortest-path distances 2, 5, 6 and patronage probabilities 0.640296, 0.245874, 0.11383: the nearest store wins despite being the least attractive.*
+*Huff model on the worked example's network (edge lengths printed; layout without meaning): a shopper at node 0 chooses among stores 1, 2, 3 with attractiveness [5000, 12000, 8000] (α = 1.0, distance decay β = 2.0). The package returns shortest-path distances 2, 5, 6 and patronage probabilities 0.640296, 0.245874, 0.11383: the nearest store wins despite being the least attractive.*
 
 ```python
 geospatial_analytics_ai999x.solve('geo_huff_model', edges='0-1 2; 1-2 3; 0-2 6; 2-3 1; 1-3 5', origin=0, stores=[1, 2, 3], attractiveness=[5000, 12000, 8000], alpha=1, beta=2)
@@ -4815,9 +4815,9 @@ $$
 - **Assumes:** positive edge costs; distance <= cutoff counts as reached
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Service area from node 0 with cutoff 6 on the worked example's network (edge lengths printed; layout without meaning): the nodes the package returns as reachable (0, 1, 2, 3; 4 nodes, farthest at 6) are highlighted](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-service-area-network)
+![Service area from node 0 with cutoff 6](https://www.ai999x.com/?ax_fig=geospatial-analytics-ai999x/geo-service-area-network)
 
-*Service area from node 0 with cutoff 6 on the worked example's network (edge lengths printed; layout without meaning): the nodes the package returns as reachable (0, 1, 2, 3; 4 nodes, farthest at 6) are highlighted.*
+*Service area from node 0 with cutoff 6.0 on the worked example's network (edge lengths printed; layout without meaning): the nodes the package returns as reachable (0, 1, 2, 3; 4 nodes, farthest at 6) are highlighted.*
 
 ```python
 geospatial_analytics_ai999x.solve('geo_service_area', edges='0-1 2; 1-2 3; 0-2 6; 2-3 1; 3-4 4', source=0, cutoff=6)
