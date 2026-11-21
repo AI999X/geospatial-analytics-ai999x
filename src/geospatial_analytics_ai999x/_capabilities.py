@@ -40,7 +40,7 @@ def geo_albers_equal_area_forward(lat=None, lon=None, lat1=None, lat2=None, lat0
         lat2: second standard parallel (decimal degrees)
         lat0: latitude of origin (decimal degrees)
         lon0: central meridian (decimal degrees)
-        ellipsoid: reference ellipsoid
+        ellipsoid: reference ellipsoid (default WGS84) (optional)
         FE: false easting (default 0) (optional)
         FN: false northing (default 0) (optional)
     Outputs: x (easting), y (northing), k (scale factor along the parallel), h (scale factor along the meridian)
@@ -59,7 +59,7 @@ def geo_albers_equal_area_inverse(x=None, y=None, lat1=None, lat2=None, lat0=Non
         lat2: second standard parallel (decimal degrees)
         lat0: latitude of origin (decimal degrees)
         lon0: central meridian (decimal degrees)
-        ellipsoid: reference ellipsoid
+        ellipsoid: reference ellipsoid (default WGS84) (optional)
         FE: false easting (default 0) (optional)
         FN: false northing (default 0) (optional)
     Outputs: lat (latitude (degrees)), lon (longitude (degrees))
@@ -73,7 +73,7 @@ def geo_auxiliary_latitudes(lat=None, ellipsoid=None):
     Formula: \\tan\\psi = (1-e^2)\\tan\\varphi,\\ \\tan\\beta = (1-f)\\tan\\varphi,\\ \\chi = \\operatorname{gd}\\psi_{iso},\\ \\xi = \\arcsin\\frac{q}{q_p},\\ \\mu = \\frac{\\pi}{2}\\frac{m(\\varphi)}{m(\\pi/2)}
     Inputs:
         lat: geodetic latitude (decimal degrees)
-        ellipsoid: reference ellipsoid
+        ellipsoid: reference ellipsoid (default WGS84) (optional)
     Outputs: geocentric (geocentric latitude (degrees)), reduced (reduced (parametric) latitude (degrees)), conformal (conformal latitude (degrees)), authalic (authalic latitude (degrees)), rectifying (rectifying latitude (degrees))
     See also: help("geo_auxiliary_latitudes")
     """
@@ -88,7 +88,7 @@ def geo_azimuthal_equidistant_forward(lat=None, lon=None, lat0=None, lon0=None, 
         lon: longitude (decimal degrees)
         lat0: latitude of the centre (decimal degrees)
         lon0: longitude of the centre (decimal degrees)
-        ellipsoid: reference ellipsoid
+        ellipsoid: reference ellipsoid (default WGS84) (optional)
         FE: false easting (default 0) (optional)
         FN: false northing (default 0) (optional)
     Outputs: x (easting), y (northing), distance (geodesic distance from the centre), azimuth (geodesic azimuth from the centre (degrees))
@@ -284,7 +284,7 @@ def geo_ecef_to_geodetic(X=None, Y=None, Z=None, ellipsoid=None):
         X: geocentric X
         Y: geocentric Y
         Z: geocentric Z
-        ellipsoid: reference ellipsoid
+        ellipsoid: reference ellipsoid (default WGS84) (optional)
     Outputs: lat (geodetic latitude (degrees)), lon (longitude (degrees)), h (ellipsoidal height)
     See also: help("geo_ecef_to_geodetic")
     """
@@ -315,7 +315,7 @@ def geo_enu_to_geodetic(lat0=None, lon0=None, h0=None, e=None, n=None, u=None, e
         e: east coordinate
         n: north coordinate
         u: up coordinate
-        ellipsoid: reference ellipsoid
+        ellipsoid: reference ellipsoid (default WGS84) (optional)
     Outputs: lat (latitude (degrees)), lon (longitude (degrees)), h (ellipsoidal height)
     See also: help("geo_enu_to_geodetic")
     """
@@ -359,7 +359,7 @@ def geo_geodesic_destination(lat1=None, lon1=None, azimuth=None, distance=None, 
         lon1: longitude of the start point (decimal degrees)
         azimuth: initial azimuth, clockwise from north (decimal degrees)
         distance: geodesic distance travelled
-        ellipsoid: reference ellipsoid
+        ellipsoid: reference ellipsoid (default WGS84) (optional)
     Outputs: lat2 (latitude of the destination (degrees)), lon2 (longitude of the destination (degrees)), azimuth2 (forward azimuth at the destination (degrees clockwise from north))
     See also: help("geo_geodesic_destination")
     """
@@ -374,7 +374,7 @@ def geo_geodesic_midpoint(lat1=None, lon1=None, lat2=None, lon2=None, ellipsoid=
         lon1: longitude of the first point (decimal degrees)
         lat2: latitude of the second point (decimal degrees)
         lon2: longitude of the second point (decimal degrees)
-        ellipsoid: reference ellipsoid
+        ellipsoid: reference ellipsoid (default WGS84) (optional)
     Outputs: lat_mid (latitude of the midpoint (degrees)), lon_mid (longitude of the midpoint (degrees)), distance (length of the geodesic between the two points)
     See also: help("geo_geodesic_midpoint")
     """
@@ -387,7 +387,7 @@ def geo_geodesic_polygon_area(lats=None, lons=None, ellipsoid=None):
     Inputs:
         lats: latitudes of the vertices in order (decimal degrees)
         lons: longitudes of the vertices in the same order (decimal degrees)
-        ellipsoid: reference ellipsoid
+        ellipsoid: reference ellipsoid (default WGS84) (optional)
     Outputs: area (enclosed area on the ellipsoid), perimeter (perimeter (sum of the geodesic edge lengths))
     See also: help("geo_geodesic_polygon_area")
     """
@@ -401,7 +401,7 @@ def geo_geodetic_to_ecef(lat=None, lon=None, h=None, ellipsoid=None):
         lat: geodetic latitude (decimal degrees)
         lon: longitude (decimal degrees)
         h: ellipsoidal height
-        ellipsoid: reference ellipsoid
+        ellipsoid: reference ellipsoid (default WGS84) (optional)
     Outputs: X (X (towards latitude 0, longitude 0)), Y (Y (towards longitude 90 E)), Z (Z (towards the north pole))
     See also: help("geo_geodetic_to_ecef")
     """
@@ -418,7 +418,7 @@ def geo_geodetic_to_enu(lat0=None, lon0=None, h0=None, lat=None, lon=None, h=Non
         lat: latitude of the point (decimal degrees)
         lon: longitude of the point (decimal degrees)
         h: ellipsoidal height of the point
-        ellipsoid: reference ellipsoid
+        ellipsoid: reference ellipsoid (default WGS84) (optional)
     Outputs: e (east coordinate), n (north coordinate), u (up coordinate), slant_range (straight-line distance from the origin)
     See also: help("geo_geodetic_to_enu")
     """
@@ -484,7 +484,7 @@ def geo_graticule_cell_area(lat1=None, lat2=None, lon1=None, lon2=None, ellipsoi
         lat2: northern latitude (decimal degrees)
         lon1: western longitude (decimal degrees)
         lon2: eastern longitude (east of lon1) (decimal degrees)
-        ellipsoid: reference ellipsoid
+        ellipsoid: reference ellipsoid (default WGS84) (optional)
     Outputs: area (area of the cell), fraction_of_ellipsoid (area as a fraction of the ellipsoid's total surface)
     See also: help("geo_graticule_cell_area")
     """
@@ -628,7 +628,7 @@ def geo_lambert_azimuthal_equal_area_forward(lat=None, lon=None, lat0=None, lon0
         lon: longitude (decimal degrees)
         lat0: latitude of the centre (decimal degrees)
         lon0: longitude of the centre (decimal degrees)
-        ellipsoid: reference ellipsoid
+        ellipsoid: reference ellipsoid (default WGS84) (optional)
         FE: false easting (default 0) (optional)
         FN: false northing (default 0) (optional)
     Outputs: x (easting), y (northing)
@@ -647,7 +647,7 @@ def geo_lambert_conformal_conic_forward(lat=None, lon=None, lat1=None, lat2=None
         lat2: second standard parallel (decimal degrees)
         lat0: latitude of origin (decimal degrees)
         lon0: central meridian (decimal degrees)
-        ellipsoid: reference ellipsoid
+        ellipsoid: reference ellipsoid (default WGS84) (optional)
         FE: false easting (default 0) (optional)
         FN: false northing (default 0) (optional)
     Outputs: x (easting), y (northing), k (point scale factor), gamma (grid convergence (degrees))
@@ -666,7 +666,7 @@ def geo_lambert_conformal_conic_inverse(x=None, y=None, lat1=None, lat2=None, la
         lat2: second standard parallel (decimal degrees)
         lat0: latitude of origin (decimal degrees)
         lon0: central meridian (decimal degrees)
-        ellipsoid: reference ellipsoid
+        ellipsoid: reference ellipsoid (default WGS84) (optional)
         FE: false easting (default 0) (optional)
         FN: false northing (default 0) (optional)
     Outputs: lat (latitude (degrees)), lon (longitude (degrees))
@@ -725,7 +725,7 @@ def geo_look_angles(lat0=None, lon0=None, h0=None, lat=None, lon=None, h=None, e
         lat: target latitude (decimal degrees)
         lon: target longitude (decimal degrees)
         h: target ellipsoidal height
-        ellipsoid: reference ellipsoid
+        ellipsoid: reference ellipsoid (default WGS84) (optional)
     Outputs: azimuth (azimuth (degrees clockwise from north)), elevation (elevation angle (degrees, negative below the horizon)), slant_range (straight-line distance)
     See also: help("geo_look_angles")
     """
@@ -791,7 +791,7 @@ def geo_mercator_forward(lat=None, lon=None, lon0=None, lat_ts=None, ellipsoid=N
         lon: longitude (decimal degrees)
         lon0: central meridian (decimal degrees)
         lat_ts: latitude of true scale (standard parallel) (decimal degrees)
-        ellipsoid: reference ellipsoid
+        ellipsoid: reference ellipsoid (default WGS84) (optional)
     Outputs: x (easting), y (northing), k (point scale factor)
     See also: help("geo_mercator_forward")
     """
@@ -806,7 +806,7 @@ def geo_mercator_inverse(x=None, y=None, lon0=None, lat_ts=None, ellipsoid=None)
         y: northing
         lon0: central meridian (decimal degrees)
         lat_ts: latitude of true scale (decimal degrees)
-        ellipsoid: reference ellipsoid
+        ellipsoid: reference ellipsoid (default WGS84) (optional)
     Outputs: lat (latitude (degrees)), lon (longitude (degrees))
     See also: help("geo_mercator_inverse")
     """
@@ -819,7 +819,7 @@ def geo_meridian_arc(lat1=None, lat2=None, ellipsoid=None):
     Inputs:
         lat1: first latitude (decimal degrees)
         lat2: second latitude (decimal degrees)
-        ellipsoid: reference ellipsoid
+        ellipsoid: reference ellipsoid (default WGS84) (optional)
     Outputs: distance (meridian arc length between the latitudes), m1 (meridian distance from the equator to lat1 (negative south)), m2 (meridian distance from the equator to lat2 (negative south))
     See also: help("geo_meridian_arc")
     """
@@ -944,7 +944,7 @@ def geo_parallel_arc(lat=None, lon1=None, lon2=None, ellipsoid=None):
         lat: latitude of the parallel (decimal degrees)
         lon1: first longitude (decimal degrees)
         lon2: second longitude (decimal degrees)
-        ellipsoid: reference ellipsoid
+        ellipsoid: reference ellipsoid (default WGS84) (optional)
     Outputs: distance (arc length along the parallel), radius (radius of the parallel N cos(phi))
     See also: help("geo_parallel_arc")
     """
@@ -960,7 +960,7 @@ def geo_polar_stereographic_forward(lat=None, lon=None, pole=None, lat_ts=None, 
         pole: pole at the projection centre
         lat_ts: latitude of true scale (decimal degrees)
         lon0: longitude of the downward (north pole) or upward (south pole) y axis (decimal degrees)
-        ellipsoid: reference ellipsoid
+        ellipsoid: reference ellipsoid (default WGS84) (optional)
         FE: false easting (default 0) (optional)
         FN: false northing (default 0) (optional)
     Outputs: x (easting), y (northing), k (point scale factor)
@@ -1000,7 +1000,7 @@ def geo_radii_of_curvature(lat=None, ellipsoid=None):
     Formula: M = \\frac{a(1-e^2)}{(1-e^2\\sin^2\\varphi)^{3/2}},\\quad N = \\frac{a}{\\sqrt{1-e^2\\sin^2\\varphi}},\\quad R_G = \\sqrt{MN}
     Inputs:
         lat: latitude (decimal degrees)
-        ellipsoid: reference ellipsoid
+        ellipsoid: reference ellipsoid (default WGS84) (optional)
     Outputs: M (meridional radius of curvature), N (prime-vertical radius of curvature), R_gauss (Gaussian mean radius sqrt(M N))
     See also: help("geo_radii_of_curvature")
     """
@@ -1026,7 +1026,7 @@ def geo_rhumb_line_destination(lat1=None, lon1=None, bearing=None, distance=None
         lon1: longitude of the start point (decimal degrees)
         bearing: constant bearing, clockwise from north (decimal degrees)
         distance: distance travelled
-        ellipsoid: reference ellipsoid
+        ellipsoid: reference ellipsoid (default WGS84) (optional)
     Outputs: lat2 (latitude of the destination (degrees)), lon2 (longitude of the destination (degrees))
     See also: help("geo_rhumb_line_destination")
     """
@@ -1041,7 +1041,7 @@ def geo_rhumb_line_inverse(lat1=None, lon1=None, lat2=None, lon2=None, ellipsoid
         lon1: longitude of the start point (decimal degrees)
         lat2: latitude of the end point (decimal degrees)
         lon2: longitude of the end point (decimal degrees)
-        ellipsoid: reference ellipsoid
+        ellipsoid: reference ellipsoid (default WGS84) (optional)
     Outputs: distance (rhumb-line length), bearing (constant bearing (degrees clockwise from north))
     See also: help("geo_rhumb_line_inverse")
     """
@@ -1116,7 +1116,7 @@ def geo_sinusoidal_forward(lat=None, lon=None, lon0=None, ellipsoid=None):
         lat: latitude (decimal degrees)
         lon: longitude (decimal degrees)
         lon0: central meridian (decimal degrees)
-        ellipsoid: reference ellipsoid
+        ellipsoid: reference ellipsoid (default WGS84) (optional)
     Outputs: x (easting), y (northing)
     See also: help("geo_sinusoidal_forward")
     """
@@ -1219,7 +1219,7 @@ def geo_transverse_mercator_forward(lat=None, lon=None, lat0=None, lon0=None, k0
         lat0: latitude of origin (decimal degrees)
         lon0: central meridian (decimal degrees)
         k0: scale factor on the central meridian
-        ellipsoid: reference ellipsoid
+        ellipsoid: reference ellipsoid (default WGS84) (optional)
         FE: false easting (default 0) (optional)
         FN: false northing (default 0) (optional)
     Outputs: x (easting), y (northing), k (point scale factor), gamma (grid convergence (degrees, positive east of the central meridian in the north))
@@ -1263,7 +1263,7 @@ def geo_utm_forward(lat=None, lon=None, ellipsoid=None):
     Inputs:
         lat: latitude (decimal degrees)
         lon: longitude (decimal degrees)
-        ellipsoid: reference ellipsoid
+        ellipsoid: reference ellipsoid (default WGS84) (optional)
     Outputs: easting (UTM easting), northing (UTM northing), zone (UTM zone number), hemisphere (N or S), k (point scale factor), gamma (grid convergence (degrees))
     See also: help("geo_utm_forward")
     """
@@ -1278,7 +1278,7 @@ def geo_utm_inverse(easting=None, northing=None, zone=None, hemisphere=None, ell
         northing: UTM northing
         zone: UTM zone number
         hemisphere: hemisphere of the zone (N: false northing 0; S: false northing 10000 km)
-        ellipsoid: reference ellipsoid
+        ellipsoid: reference ellipsoid (default WGS84) (optional)
     Outputs: lat (latitude (degrees)), lon (longitude (degrees))
     See also: help("geo_utm_inverse")
     """

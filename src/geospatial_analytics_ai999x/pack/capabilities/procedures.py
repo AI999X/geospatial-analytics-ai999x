@@ -78,7 +78,8 @@ prose is refused, never guessed. The reading guard (tools/ask_sweep.py, 2026-10-
   2. the capability phrase must open the question and be followed by the colon, so wording that names a different
      capability (destination vs midpoint, geodesic vs rhumb, forward vs inverse projection) never reaches this reader;
   3. a convention is an input (ellipsoid, hemisphere, weights transform, kernel, variogram model, impedance function):
-     required, never assumed;
+     required, never assumed, with ONE documented exception: an ellipsoid not given is WGS84, and the answer says so
+     in its assumptions ("ellipsoid: WGS84 (default)", owner 2026-11-21);
   4. physical values are passed to the runtime with their units, so a value is converted exactly once.
 """
 from __future__ import annotations
@@ -411,7 +412,8 @@ def _reader(phrases, inputs, aliases=None):
          refuses the whole question (a stray number can never be ignored);
       2. the capability phrase must open the question and be followed by the colon, so wording that names a different
          capability never reaches this reader;
-      3. a convention is an input (ellipsoid, hemisphere, transform, kernel, model): required, never assumed; a value
+      3. a convention is an input (ellipsoid, hemisphere, transform, kernel, model): required, never assumed (the one
+         documented exception: an ellipsoid not given is WGS84, stated in the answer's assumptions); a value
          without its unit (a physical quantity) or with a unit on a pure number is refused (degrees may carry a
          degree sign);
       4. physical values are passed to the runtime with their units, so a value is converted exactly once.
@@ -592,7 +594,10 @@ def _textin(sym, meaning, required=True, lo=1, hi=40):
 
 
 def _ellin():
-    return _choice("ellipsoid", ["WGS84", "GRS80"], "reference ellipsoid")
+    # owner, 2026-11-21: the ONE documented default convention of this model. Not given -> WGS84, stated in the
+    # answer's assumptions as "ellipsoid: WGS84 (default)" (runtime/product.py and the Rust engine read "default")
+    return {**_choice("ellipsoid", ["WGS84", "GRS80"], "reference ellipsoid (default WGS84)", required=False),
+            "default": "WGS84"}
 
 
 def _o(sym, kind, meaning):

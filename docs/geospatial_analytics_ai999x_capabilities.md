@@ -187,7 +187,7 @@ $$
 | `lon1` | longitude of the start point (decimal degrees) |  |
 | `azimuth` | initial azimuth, clockwise from north (decimal degrees) |  |
 | `distance` | geodesic distance travelled |  |
-| `ellipsoid` | reference ellipsoid |  |
+| `ellipsoid` | reference ellipsoid (default WGS84) |  |
 
 | output | meaning |
 |---|---|
@@ -245,7 +245,7 @@ $$
 | `lon1` | longitude of the first point (decimal degrees) |  |
 | `lat2` | latitude of the second point (decimal degrees) |  |
 | `lon2` | longitude of the second point (decimal degrees) |  |
-| `ellipsoid` | reference ellipsoid |  |
+| `ellipsoid` | reference ellipsoid (default WGS84) |  |
 
 | output | meaning |
 |---|---|
@@ -296,7 +296,7 @@ $$
 |---|---|---|
 | `lats` | latitudes of the vertices in order (decimal degrees) |  |
 | `lons` | longitudes of the vertices in the same order (decimal degrees) |  |
-| `ellipsoid` | reference ellipsoid |  |
+| `ellipsoid` | reference ellipsoid (default WGS84) |  |
 
 | output | meaning |
 |---|---|
@@ -345,7 +345,7 @@ $$
 |---|---|---|
 | `lat1` | first latitude (decimal degrees) |  |
 | `lat2` | second latitude (decimal degrees) |  |
-| `ellipsoid` | reference ellipsoid |  |
+| `ellipsoid` | reference ellipsoid (default WGS84) |  |
 
 | output | meaning |
 |---|---|
@@ -399,7 +399,7 @@ $$
 | `lat` | latitude of the parallel (decimal degrees) |  |
 | `lon1` | first longitude (decimal degrees) |  |
 | `lon2` | second longitude (decimal degrees) |  |
-| `ellipsoid` | reference ellipsoid |  |
+| `ellipsoid` | reference ellipsoid (default WGS84) |  |
 
 | output | meaning |
 |---|---|
@@ -449,7 +449,7 @@ $$
 | `lat2` | northern latitude (decimal degrees) |  |
 | `lon1` | western longitude (decimal degrees) |  |
 | `lon2` | eastern longitude (east of lon1) (decimal degrees) |  |
-| `ellipsoid` | reference ellipsoid |  |
+| `ellipsoid` | reference ellipsoid (default WGS84) |  |
 
 | output | meaning |
 |---|---|
@@ -492,7 +492,7 @@ $$
 | input | meaning | condition |
 |---|---|---|
 | `lat` | latitude (decimal degrees) |  |
-| `ellipsoid` | reference ellipsoid |  |
+| `ellipsoid` | reference ellipsoid (default WGS84) |  |
 
 | output | meaning |
 |---|---|
@@ -543,7 +543,7 @@ $$
 | `lon1` | longitude of the start point (decimal degrees) |  |
 | `lat2` | latitude of the end point (decimal degrees) |  |
 | `lon2` | longitude of the end point (decimal degrees) |  |
-| `ellipsoid` | reference ellipsoid |  |
+| `ellipsoid` | reference ellipsoid (default WGS84) |  |
 
 | output | meaning |
 |---|---|
@@ -593,7 +593,7 @@ $$
 | `lon1` | longitude of the start point (decimal degrees) |  |
 | `bearing` | constant bearing, clockwise from north (decimal degrees) |  |
 | `distance` | distance travelled |  |
-| `ellipsoid` | reference ellipsoid |  |
+| `ellipsoid` | reference ellipsoid (default WGS84) |  |
 
 | output | meaning |
 |---|---|
@@ -642,7 +642,7 @@ $$
 | `lat` | geodetic latitude (decimal degrees) |  |
 | `lon` | longitude (decimal degrees) |  |
 | `h` | ellipsoidal height |  |
-| `ellipsoid` | reference ellipsoid |  |
+| `ellipsoid` | reference ellipsoid (default WGS84) |  |
 
 | output | meaning |
 |---|---|
@@ -692,7 +692,7 @@ $$
 | `X` | geocentric X |  |
 | `Y` | geocentric Y |  |
 | `Z` | geocentric Z |  |
-| `ellipsoid` | reference ellipsoid |  |
+| `ellipsoid` | reference ellipsoid (default WGS84) |  |
 
 | output | meaning |
 |---|---|
@@ -745,7 +745,7 @@ $$
 | `lat` | latitude of the point (decimal degrees) |  |
 | `lon` | longitude of the point (decimal degrees) |  |
 | `h` | ellipsoidal height of the point |  |
-| `ellipsoid` | reference ellipsoid |  |
+| `ellipsoid` | reference ellipsoid (default WGS84) |  |
 
 | output | meaning |
 |---|---|
@@ -799,7 +799,7 @@ $$
 | `e` | east coordinate |  |
 | `n` | north coordinate |  |
 | `u` | up coordinate |  |
-| `ellipsoid` | reference ellipsoid |  |
+| `ellipsoid` | reference ellipsoid (default WGS84) |  |
 
 | output | meaning |
 |---|---|
@@ -852,7 +852,7 @@ $$
 | `lat` | target latitude (decimal degrees) |  |
 | `lon` | target longitude (decimal degrees) |  |
 | `h` | target ellipsoidal height |  |
-| `ellipsoid` | reference ellipsoid |  |
+| `ellipsoid` | reference ellipsoid (default WGS84) |  |
 
 | output | meaning |
 |---|---|
@@ -900,7 +900,7 @@ $$
 | input | meaning | condition |
 |---|---|---|
 | `lat` | geodetic latitude (decimal degrees) |  |
-| `ellipsoid` | reference ellipsoid |  |
+| `ellipsoid` | reference ellipsoid (default WGS84) |  |
 
 | output | meaning |
 |---|---|
@@ -1016,7 +1016,7 @@ $$
 | `lat0` | latitude of origin (decimal degrees) |  |
 | `lon0` | central meridian (decimal degrees) |  |
 | `k0` | scale factor on the central meridian |  |
-| `ellipsoid` | reference ellipsoid |  |
+| `ellipsoid` | reference ellipsoid (default WGS84) |  |
 | `FE` | false easting (default 0) |  |
 | `FN` | false northing (default 0) |  |
 
@@ -1068,7 +1068,7 @@ $$
 |---|---|---|
 | `lat` | latitude (decimal degrees) |  |
 | `lon` | longitude (decimal degrees) |  |
-| `ellipsoid` | reference ellipsoid |  |
+| `ellipsoid` | reference ellipsoid (default WGS84) |  |
 
 | output | meaning |
 |---|---|
@@ -1128,7 +1128,7 @@ $$
 | `northing` | UTM northing |  |
 | `zone` | UTM zone number |  |
 | `hemisphere` | hemisphere of the zone (N: false northing 0; S: false northing 10000 km) |  |
-| `ellipsoid` | reference ellipsoid |  |
+| `ellipsoid` | reference ellipsoid (default WGS84) |  |
 
 | output | meaning |
 |---|---|
@@ -1321,7 +1321,7 @@ $$
 | `lon` | longitude (decimal degrees) |  |
 | `lon0` | central meridian (decimal degrees) |  |
 | `lat_ts` | latitude of true scale (standard parallel) (decimal degrees) |  |
-| `ellipsoid` | reference ellipsoid |  |
+| `ellipsoid` | reference ellipsoid (default WGS84) |  |
 
 | output | meaning |
 |---|---|
@@ -1376,7 +1376,7 @@ $$
 | `y` | northing |  |
 | `lon0` | central meridian (decimal degrees) |  |
 | `lat_ts` | latitude of true scale (decimal degrees) |  |
-| `ellipsoid` | reference ellipsoid |  |
+| `ellipsoid` | reference ellipsoid (default WGS84) |  |
 
 | output | meaning |
 |---|---|
@@ -1428,7 +1428,7 @@ $$
 | `lat2` | second standard parallel (decimal degrees) |  |
 | `lat0` | latitude of origin (decimal degrees) |  |
 | `lon0` | central meridian (decimal degrees) |  |
-| `ellipsoid` | reference ellipsoid |  |
+| `ellipsoid` | reference ellipsoid (default WGS84) |  |
 | `FE` | false easting (default 0) |  |
 | `FN` | false northing (default 0) |  |
 
@@ -1488,7 +1488,7 @@ $$
 | `lat2` | second standard parallel (decimal degrees) |  |
 | `lat0` | latitude of origin (decimal degrees) |  |
 | `lon0` | central meridian (decimal degrees) |  |
-| `ellipsoid` | reference ellipsoid |  |
+| `ellipsoid` | reference ellipsoid (default WGS84) |  |
 | `FE` | false easting (default 0) |  |
 | `FN` | false northing (default 0) |  |
 
@@ -1542,7 +1542,7 @@ $$
 | `lat2` | second standard parallel (decimal degrees) |  |
 | `lat0` | latitude of origin (decimal degrees) |  |
 | `lon0` | central meridian (decimal degrees) |  |
-| `ellipsoid` | reference ellipsoid |  |
+| `ellipsoid` | reference ellipsoid (default WGS84) |  |
 | `FE` | false easting (default 0) |  |
 | `FN` | false northing (default 0) |  |
 
@@ -1602,7 +1602,7 @@ $$
 | `lat2` | second standard parallel (decimal degrees) |  |
 | `lat0` | latitude of origin (decimal degrees) |  |
 | `lon0` | central meridian (decimal degrees) |  |
-| `ellipsoid` | reference ellipsoid |  |
+| `ellipsoid` | reference ellipsoid (default WGS84) |  |
 | `FE` | false easting (default 0) |  |
 | `FN` | false northing (default 0) |  |
 
@@ -1655,7 +1655,7 @@ $$
 | `pole` | pole at the projection centre |  |
 | `lat_ts` | latitude of true scale (decimal degrees) |  |
 | `lon0` | longitude of the downward (north pole) or upward (south pole) y axis (decimal degrees) |  |
-| `ellipsoid` | reference ellipsoid |  |
+| `ellipsoid` | reference ellipsoid (default WGS84) |  |
 | `FE` | false easting (default 0) |  |
 | `FN` | false northing (default 0) |  |
 
@@ -1708,7 +1708,7 @@ $$
 | `lon` | longitude (decimal degrees) |  |
 | `lat0` | latitude of the centre (decimal degrees) |  |
 | `lon0` | longitude of the centre (decimal degrees) |  |
-| `ellipsoid` | reference ellipsoid |  |
+| `ellipsoid` | reference ellipsoid (default WGS84) |  |
 | `FE` | false easting (default 0) |  |
 | `FN` | false northing (default 0) |  |
 
@@ -1760,7 +1760,7 @@ $$
 | `lon` | longitude (decimal degrees) |  |
 | `lat0` | latitude of the centre (decimal degrees) |  |
 | `lon0` | longitude of the centre (decimal degrees) |  |
-| `ellipsoid` | reference ellipsoid |  |
+| `ellipsoid` | reference ellipsoid (default WGS84) |  |
 | `FE` | false easting (default 0) |  |
 | `FN` | false northing (default 0) |  |
 
@@ -1817,7 +1817,7 @@ $$
 | `lat` | latitude (decimal degrees) |  |
 | `lon` | longitude (decimal degrees) |  |
 | `lon0` | central meridian (decimal degrees) |  |
-| `ellipsoid` | reference ellipsoid |  |
+| `ellipsoid` | reference ellipsoid (default WGS84) |  |
 
 | output | meaning |
 |---|---|
