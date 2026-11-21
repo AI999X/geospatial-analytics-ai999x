@@ -1,6 +1,6 @@
 # geospatial-analytics: the Geospatial Analytics program, user guide
 
-**geospatial-analytics-ai999x 1.6.4**, Rust build: command line, desktop app and browser. **Creator / engineer:** Ibnul Jaif Farabi · **Company:** AI999X · support@ai999x.com
+**geospatial-analytics-ai999x 1.6.6**, Rust build: command line, desktop app and browser. **Creator / engineer:** Ibnul Jaif Farabi · **Company:** AI999X · support@ai999x.com
 
 Geospatial Analytics covers map projections and coordinates, geodesic distance and area, spatial statistics, remote-sensing indices, solar position and terrain, and urban and network analysis. This guide is about `geospatial-analytics`, the model as a self-contained program for Windows and Linux: 99 capabilities in 14 topics, answered on your own computer with no network, no Python and nothing else to install. The same compiled model runs in the AI999X desktop app and in the browser on the model's page (https://www.ai999x.com/models/geospatial-analytics-ai999x/); the Python package (`pip install geospatial-analytics-ai999x`) has its own guide. Every command output printed here is what the program printed.
 
@@ -96,7 +96,7 @@ Prints the model, its version and that this is the Rust build.
 
 ```shell
 $ geospatial-analytics --version
-geospatial-analytics-ai999x 1.6.4 (Rust build, ax-engine 1.6.4)
+geospatial-analytics-ai999x 1.6.6 (Rust build, ax-engine 1.6.6)
 ```
 
 ### 2.2 Ask in words
