@@ -10,8 +10,8 @@ Geospatial Analytics covers map projections and coordinates, geodesic distance a
 
 | | |
 |---|---|
-| **Desktop app** (Windows, Linux) | [Windows](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.5/ai999x-geospatial-analytics-1.6.5-windows-x86_64.zip) · [Linux](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.5/ai999x-geospatial-analytics-1.6.5-linux-x86_64.tar.gz) |
-| **Command line** `geospatial-analytics` (Windows, Linux) | [Windows](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.4/ai999x-cli-1.6.4-windows-x86_64.zip) · [Linux](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.4/ai999x-cli-1.6.4-linux-x86_64.tar.gz) |
+| **Desktop app** (Windows, Linux) | [Windows](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.6/ai999x-geospatial-analytics-1.6.6-windows-x86_64.zip) · [Linux](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.6/ai999x-geospatial-analytics-1.6.6-linux-x86_64.tar.gz) |
+| **Command line** `geospatial-analytics` (Windows, Linux) | [Windows](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.6/ai999x-cli-1.6.6-windows-x86_64.zip) · [Linux](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.6/ai999x-cli-1.6.6-linux-x86_64.tar.gz) |
 | **Browser** (any device) | [Try it on the model page](https://www.ai999x.com/models/geospatial-analytics-ai999x/#capabilities) |
 | **Python** 3.10+ | `pip install geospatial-analytics-ai999x`: on Windows and Linux (x86-64) `pip` installs the same compiled engine; on other systems (macOS, ARM) it installs a pure-Python build that gives the same answers |
 
@@ -220,103 +220,6 @@ scale = 50000
 rf = 2e-05
 ```
 
-## Rust library: 15 examples
-
-The crate `geospatial-analytics-ai999x` (in `rust/` of the GitHub repository) answers a JSON request with `geospatial_analytics_ai999x::solve_json`. Each call below was compiled and run on this release; the comment under it is what it printed. The whole program is `rust/geospatial-analytics/examples/readme.rs`: `cd rust && cargo run --release --example readme -p geospatial-analytics-ai999x`.
-
-```rust
-use serde_json::{json, Value};
-
-fn show(request: Value) {
-    let answer: Value = serde_json::from_str(&geospatial_analytics_ai999x::solve_json(&request.to_string())).unwrap();
-    println!("{}", answer["outcome"].as_str().unwrap_or(""));
-    for v in answer["values"].as_array().into_iter().flatten() {
-        let unit = v[2].as_str().unwrap_or("");
-        let unit = if unit.is_empty() || unit == "1" { String::new() } else { format!(" {unit}") };
-        println!("{} = {}{}", v[0].as_str().unwrap_or(""), v[1], unit);
-    }
-}
-
-show(json!({"key": "geo_map_scale_ground_distance", "inputs": {"map_distance": "4.2 cm", "scale": "50000"}}));
-// SOLVED
-// ground_distance = 2100.0 m
-// ground_km = 2.1
-
-show(json!({"key": "geo_decimal_to_dms", "inputs": {"decimal": "51.477222", "axis": "latitude"}}));
-// SOLVED
-// degrees = 51
-// minutes = 28
-// seconds = 37.9992
-// hemisphere = "N"
-
-show(json!({"key": "geo_auxiliary_latitudes", "inputs": {"lat": "45", "ellipsoid": "WGS84"}}));
-// SOLVED
-// geocentric = 44.807576784
-// reduced = 44.9037878494
-// conformal = 44.8076840561
-// authalic = 44.8717028734
-// rectifying = 44.8556819889
-
-show(json!({"key": "geo_parallel_arc", "inputs": {"lat": "60", "lon1": "0", "lon2": "1", "ellipsoid": "WGS84"}}));
-// SOLVED
-// distance = 55800.0015724 m
-// radius = 3197104.58692 m
-
-show(json!({"key": "geo_closest_facility", "inputs": {"edges": "0-1 2; 1-2 3; 0-2 6; 2-3 1; 3-4 4", "facilities": "0, 3"}}));
-// SOLVED
-// nearest = [0.0,0.0,3.0,3.0,3.0]
-// distance = [0.0,2.0,1.0,0.0,4.0]
-// mean_distance = 1.4
-
-show(json!({"key": "geo_empirical_semivariogram", "inputs": {"x": [0, 1, 2, 3, 4], "y": [0, 0, 0, 0, 0], "z": [1, 3, 2, 5, 4], "bin_edges": [0, 1.5, 2.5, 4.5]}}));
-// SOLVED
-// gamma = [1.875,1.5,4.33333333333]
-// counts = [4.0,3.0,3.0]
-
-show(json!({"key": "geo_albers_equal_area_forward", "inputs": {"lat": "40", "lon": "-100", "lat1": "29.5", "lat2": "45.5", "lat0": "23", "lon0": "-96", "ellipsoid": "GRS80"}}));
-// SOLVED
-// x = -338390.587551 m
-// y = 1894100.14004 m
-// k = 0.990968602864
-// h = 1.00911370664
-
-show(json!({"key": "geo_gravity_accessibility", "inputs": {"edges": "0-1 2; 1-2 3; 0-2 6; 2-3 1", "opportunities": "100, 50, 80, 20", "beta": "1", "impedance": "power"}}));
-// SOLVED
-// accessibility = [44.3333333333,81.6666666667,56.6666666667,109.166666667]
-
-show(json!({"key": "geo_discrete_frechet_distance", "inputs": {"x1": [0, 1, 2], "y1": [0, 0, 0], "x2": [0, 2], "y2": [1, 1]}}));
-// SOLVED
-// distance = 1.4142135623730951
-
-show(json!({"key": "geo_kernel_density", "inputs": {"x": [0, 1, 2, 5], "y": [0, 1, 0, 5], "px": "1", "py": "0.5", "bandwidth": "2", "kernel": "gaussian"}}));
-// SOLVED
-// density = 0.0267647992836
-// intensity = 0.107059197135
-
-show(json!({"key": "geo_brightness_temperature", "inputs": {"radiance": "10.5", "K1": "774.8853", "K2": "1321.0789"}}));
-// SOLVED
-// T = 306.173902537 K
-
-show(json!({"key": "geo_bivariate_morans_i", "inputs": {"x": [8, 6, 6, 3, 2, 1], "y": [7, 7, 5, 4, 1, 2], "W": [[0, 1, 0, 0, 0, 0], [1, 0, 1, 0, 0, 0], [0, 1, 0, 1, 0, 0], [0, 0, 1, 0, 1, 0], [0, 0, 0, 1, 0, 1], [0, 0, 0, 0, 1, 0]]}}));
-// SOLVED
-// I_xy = 0.891760344576
-
-show(json!({"key": "geo_d8_flow_accumulation", "inputs": {"dem": [[78, 72, 69, 71], [74, 67, 56, 49], [69, 53, 44, 37], [64, 58, 55, 22]], "cell_size": "10 m"}}));
-// SOLVED
-// accumulation = [[1.0,1.0,1.0,1.0],[1.0,2.0,2.0,3.0],[1.0,4.0,8.0,6.0],[1.0,1.0,1.0,16.0]]
-// max_accumulation = 16.0
-
-show(json!({"key": "geo_huff_model", "inputs": {"edges": "0-1 2; 1-2 3; 0-2 6; 2-3 1; 1-3 5", "origin": "0", "stores": "1, 2, 3", "attractiveness": "5000, 12000, 8000", "alpha": "1", "beta": "2"}}));
-// SOLVED
-// probabilities = [0.640295959021,0.245873648264,0.113830392715]
-// distances = [2.0,5.0,6.0]
-
-show(json!({"key": "geo_map_scale_from_distances", "inputs": {"map_distance": "5 cm", "ground_distance": "2.5 km"}}));
-// SOLVED
-// scale = 50000.0
-// rf = 0.00002
-```
-
 ## Guides
 
 - Desktop app guide: the window, every calculation, scenes and charts: [PDF](https://huggingface.co/AI999X/geospatial-analytics-ai999x/blob/main/docs/geospatial_analytics_ai999x_desktop_guide.pdf) · [HTML](https://huggingface.co/AI999X/geospatial-analytics-ai999x/blob/main/docs/geospatial_analytics_ai999x_desktop_guide.html) · [Markdown](https://huggingface.co/AI999X/geospatial-analytics-ai999x/blob/main/docs/geospatial_analytics_ai999x_desktop_guide.md)
@@ -325,7 +228,7 @@ show(json!({"key": "geo_map_scale_from_distances", "inputs": {"map_distance": "5
 
 Every calculation, with its formula, a worked example and its figures: **[Geospatial Analytics on ai999x.com](https://www.ai999x.com/models/geospatial-analytics-ai999x/)**. Install guides for the app and the command line: [https://www.ai999x.com/desktop-cli/](https://www.ai999x.com/desktop-cli/).
 
-Version 1.6.4 · License: Apache-2.0 · Author: Ibnul Jaif Farabi · Organization: AI999X · Contact: support@ai999x.com · [Support the project](https://buymeacoffee.com/ibnuljaiffarabi)
+Version 1.6.6 · License: Apache-2.0 · Author: Ibnul Jaif Farabi · Organization: AI999X · Contact: support@ai999x.com · [Support the project](https://buymeacoffee.com/ibnuljaiffarabi)
 
 *The Future Is Self-Improving.*
 
